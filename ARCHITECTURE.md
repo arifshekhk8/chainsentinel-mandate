@@ -45,6 +45,8 @@ Step 3 uses a small Node HTTP service, built-in SQLite and plain browser ES modu
 
 The dev launcher starts a separate disposable Anvil chain and seeds configuration using local signers. An optional public owner address is impersonated **only during local setup**, then locked again for browser signing; no owner private key is read. Session IDs prevent approvals from an earlier ephemeral chain instance being reused as current. See [Step 3 evidence](evidence/STEP3_RESULTS.md).
 
+Repository CI on 18 October exposed unused browser TCP preconnections keeping server shutdown open. The server now tracks connections, closes only never-requested sockets during shutdown and lets active HTTP requests finish. `close()` reuses one promise for repeated calls. Two regression checks cover this cleanup; payment permissions and receipt rules are unchanged.
+
 ## Implemented agent workflow
 
 1. `app/model.mjs` calls the OpenAI Responses REST API using Node fetch, strict JSON Schema and `store: false`. It provides no model tools and does not retry automatically. Requests time out after 20 seconds; refusals, incomplete or invalid output fail safely. All proposals also pass local shape/type/length validation. API credentials stay in private backend fields. The requested/returned model, prompt version, latency and available token counts accompany valid proposals.

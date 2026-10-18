@@ -1,26 +1,30 @@
-# Mandate — FinTechathon 2026 Topic F
+# Mandate
 
-Mandate is an AI wallet project for owner-approved business bills. The local contract, owner-review workspace and restricted payment agent are implemented. OpenAI support is prepared; live AI testing is deferred by the user.
+**ChainSentinel · 2026 Shenzhen International FinTech Competition · International Track, Topic F — Agent Wallet**
 
-**Team:** ChainSentinel. **Project:** Mandate.
+[Automated checks](https://github.com/arifshekhk8/chainsentinel-mandate/actions/workflows/checks.yml) · [Reviewer guide](SUBMISSION.md) · [Architecture](ARCHITECTURE.md) · [Security](SECURITY.md) · [Test evidence](TESTING.md#saved-evidence-index)
 
-**Status: Step 4 local implementation tested; live AI verification pending. No public deployment. We complete one agreed step at a time.** See [contract results](evidence/STEP2_RESULTS.md), [owner-workflow results](evidence/STEP3_RESULTS.md) and [agent results](evidence/STEP4_RESULTS.md).
+Mandate helps a small business pay approved supplier bills. The owner reviews each invoice, approves exact recipients/amounts/windows, and sets spending limits, a protected reserve and expiring agent access. A separate agent processes eligible bills; the vault contract independently enforces permission, limits, revocation and duplicate-payment protection.
 
-**18 October:** preparing the private competition source repository. Current implementation/evidence and the remaining live-AI checks are recorded in [PROGRESS.md](PROGRESS.md). No public blockchain deployment has occurred.
+The prototype uses fictional **Orbit Studio**, synthetic invoices and **MDT test tokens with no cash value**. Its normal batch pays 200 + 150 MDT from 1,000, leaves 650, and explains why a 75 MDT bill must wait when only 50 of the daily budget remains.
 
-**Step 1 baseline:** [business, bills and rules](demo/SCENARIO.md), [40 agent-evaluation cases](demo/cases.json), and [registration/email drafts](competition/REGISTRATION_DRAFT.md). The user started Step 2 with this baseline. The 40 agent cases have not run; contract tests are separate. Nothing has been sent.
+**Current status:** the local contract, owner workspace and restricted executor are implemented and tested. OpenAI support is prepared, but live-model verification, the fixed 40-case evaluation and public-testnet evidence are pending. This is a private development repository, not a claim that the final competition entry is complete. See the [submission checklist](SUBMISSION.md#remaining-submission-checklist) and [working progress](PROGRESS.md).
+
+For a quick visual review, open the [desktop payment workflow](evidence/step4-agent-desktop.png), [source/field review](evidence/step3-review.png) and [mobile workspace](evidence/step4-agent-mobile.png). All screenshots show local synthetic tests; no actual user wallet extension was operated.
 
 ## Open the owner-review app
 
-Use Node.js **22.18 or later** with npm (tested with Node 25.2.1/npm 11.6.2). From this folder:
+Use Node.js **22.18 or later** with npm; the tested/CI version is **25.2.1** (local npm 11.6.2). GitHub access is required to clone this private repository:
 
 ```sh
+git clone https://github.com/arifshekhk8/chainsentinel-mandate.git
+cd chainsentinel-mandate
 npm ci
 npm run build
 npm run dev
 ```
 
-`npm run build` creates the contract artifacts required by the browser bundle. Installed dependencies are already present in this workspace, so `npm ci` is only needed for fresh setup or reinstall. `npm run dev` rebuilds the UI, starts a fresh local chain at **http://127.0.0.1:8545** (chain **31337**), deploys/funds MDT and a paused vault, then serves **http://127.0.0.1:4173**. Press Ctrl+C to stop both services. No model key or actual wallet is required to upload, review and preview approvals.
+For an existing checkout, start at `npm run build`; reinstall only when needed. This creates the contract artifacts required by the browser bundle. `npm run dev` rebuilds the UI, starts a fresh local chain at **http://127.0.0.1:8545** (chain **31337**), deploys/funds MDT and a paused vault, then serves **http://127.0.0.1:4173**. Press Ctrl+C to stop both services. No model key or actual wallet is required to upload, review and preview approvals.
 
 1. Click **Try three sample bills**, or upload a supported CSV/text PDF. CSV/PDF examples are downloadable from the app.
 2. Open **Review**, compare the source text and fields, make corrections and mark the bill reviewed. Select ready bills and open **Review approval** to see exact recipients, amounts and windows.
@@ -47,6 +51,9 @@ Drafts and extracted source text are stored in ignored `local-data/mandate.sqlit
 ## Run checks and the contract demonstration
 
 ```sh
+npm run check:repo
+npm run build
+npm run format:check
 npm test
 npm run test:identity
 npm run test:app
@@ -56,7 +63,9 @@ npm run test:ui
 npm run demo:local
 ```
 
-Browser tests use installed Google Chrome in a separate headless test profile; no existing browser profile/wallet is accessed. If Chrome is unavailable, install it or explicitly change the Playwright configuration to a separately installed Chromium. The first install/build needs internet access for pinned packages and Solidity. Node currently labels its built-in SQLite API experimental; that warning is expected on the tested version.
+Local browser tests use installed Google Chrome in a separate headless profile. To use isolated Chromium instead, run `npx playwright install chromium`, then `CI=true npm run test:ui`. GitHub Actions installs Chromium with its system dependencies on Ubuntu 24.04. No existing browser profile/wallet is accessed. The first install/build needs internet access for pinned packages and Solidity. Node labels its built-in SQLite API experimental on the tested version; that warning is expected.
+
+[The checks workflow](.github/workflows/checks.yml) runs repository hygiene, formatting, contract/identity, intake/owner, agent/recovery, bundling and browser checks on pushes and pull requests. Actions are pinned to full commit hashes, checkout credentials are not persisted, and job permissions are read-only. It runs no live-model calls or public blockchain deployment and needs no API/wallet secrets. Its actual results are visible in [GitHub Actions](https://github.com/arifshekhk8/chainsentinel-mandate/actions).
 
 The contract demonstration starts a separate ephemeral local node, verifies two payment receipts, saves [local payment evidence](evidence/step2-local-demo.json) and stops it. Agent tests save [separate local payment evidence](evidence/step4-local-agent.json). Browser tests save [local approval evidence](evidence/step3-owner-approval.json) and screenshots. Successful reruns replace their evidence files. These are local hashes with no public explorer links; no suite is the 40-case live-agent evaluation.
 
@@ -66,7 +75,8 @@ Additional commands: `npm run build`, `npm run format:check`, and `npm run test:
 
 | Location | Keep here |
 | --- | --- |
-| Root Markdown files | The seven working documents, plus this README as the entry point |
+| Root Markdown files | This README, the reviewer/submission guide and the seven working documents |
+| [.github/](.github/) | Automated checks and the pull-request review template |
 | [app/](app/) | Backend, local database handling, AI adapter, payment workflow and browser UI source |
 | [contracts/](contracts/) | MDT token and permission-enforcing vault |
 | [scripts/](scripts/) | Build, local-chain, demonstration and later live-check commands |
@@ -77,7 +87,7 @@ Additional commands: `npm run build`, `npm run format:check`, and `npm run test:
 | `local-data/` | Private ignored drafts/runtime metadata; retained, not a public submission artifact |
 | `node_modules/`, `out/`, `cache/` | Ignored installed tools and generated contract/cache files; retained to make resuming faster |
 
-Disposable `dist/`, `test-results/`, `playwright-report/` and `broadcast/` output can be regenerated. The closing cleanup removed the existing browser build/test output and `.DS_Store`; source and saved evidence stay in their folders. No extra research pack or duplicate handoff file is needed. Credentials belong only in an ignored local `.env`; the safe configuration template is [.env.example](.env.example).
+Disposable `dist/`, `test-results/`, `playwright-report/` and `broadcast/` output can be regenerated. Dependencies/builds and local drafts are excluded from Git. Credentials belong only in an ignored local `.env`; the safe template is [.env.example](.env.example). Complete registration/identity documents only under ignored `competition/private/`; the tracked workbook is the unchanged blank organizer template. `npm run check:repo` checks the Git index for private paths, common credential patterns, local documentation links and original-template hashes; it supplements human review.
 
 ## Implemented files
 
@@ -103,10 +113,11 @@ Disposable `dist/`, `test-results/`, `playwright-report/` and `broadcast/` outpu
 | [SECURITY.md](SECURITY.md) | Permissions, secrets, privacy, threats and limits |
 | [TESTING.md](TESTING.md) | Tests, evaluation and demonstration plan |
 | [PROGRESS.md](PROGRESS.md) | Current step, completed work, blockers and next action |
+| [SUBMISSION.md](SUBMISSION.md) | Reviewer route, current readiness, private access and final handover checklist |
 
 Event rules and original files stay in [competition/](competition/): [checklist and sources](competition/requirements.md), [rulebook](competition/rules.pdf), [registration form](competition/registration.xlsx), and [poster](competition/poster.jpeg). Application requirements live in the root REQUIREMENTS.md; event requirements live under competition/.
 
-**Registration and submission:** 20 October 2026, **21:59 Bangladesh time** (23:59 Beijing time). Start with PROGRESS.md, then follow the active step in PROJECT_PLAN.md.
+**Registration and submission:** preserved deadline of 20 October 2026, **21:59 Bangladesh time** (23:59 Beijing time); see the dated [source notes](competition/requirements.md). Repository creation does not register the team or submit the entry.
 
 ## Pinned tools and third-party sources
 
@@ -127,3 +138,5 @@ SQLite uses [Node's built-in API](https://nodejs.org/download/release/v25.1.0/do
 AI uses OpenAI's REST API through Node fetch with no additional SDK dependency. API usage has separate provider terms/costs; [data controls](https://developers.openai.com/api/docs/guides/your-data) describe retention boundaries. Transaction preparation/signing follows [ethers Signer](https://docs.ethers.org/v6/api/providers/#Signer) and [Wallet](https://docs.ethers.org/v6/api/wallet/) APIs.
 
 Exact npm versions and integrity hashes are in [package-lock.json](package-lock.json). Foundry's native packages are installed inside node_modules; no shell configuration was changed. Compiler binaries use Foundry's normal user cache. Dependency licenses remain with their installed packages. All invoices and test businesses are synthetic; no external dataset is included.
+
+CI additionally uses the official [checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1) and [setup-node v7.1.0](https://github.com/actions/setup-node/releases/tag/v7.1.0) actions at the immutable hashes recorded in the workflow. Organizer documents remain unchanged and their original source links are recorded in [competition/requirements.md](competition/requirements.md).

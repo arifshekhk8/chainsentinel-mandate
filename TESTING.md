@@ -4,6 +4,16 @@ These checks cover [REQUIREMENTS.md](REQUIREMENTS.md). Steps 2–4 have local co
 
 **17 October handoff:** test results below are the recorded implementation results. This closing session checks documents, protected-file hashes and shutdown only; it does not rerun application tests or replace their evidence. On return, follow the [resume checklist](PROGRESS.md#resume-on-18-october-2026). Run new checks when changes/failures or the pending live integration require them.
 
+## Repository checks and CI
+
+The private source repository was prepared on 18 October. Run `npm run check:repo` after staging: it inspects tracked/indexed paths for local/private data and common credential patterns, verifies local Markdown file links and code fences, and checks that the blank organizer templates are unchanged. An isolated staged `.env` fixture was correctly rejected without printing its value. This is a guard plus human review, not a complete secret-detection guarantee.
+
+[GitHub Actions](.github/workflows/checks.yml) runs the repository check, contract build/format/tests, identity, intake/owner, agent/recovery, browser bundle and 12 browser checks using Node 25.2.1/Ubuntu 24.04. It installs isolated Chromium with `CI=true`; local tests default to installed Chrome. Actions are pinned to immutable commits with read-only permissions and no persisted checkout credentials. No live API/wallet secret, model call or public-chain transaction is part of CI. Actual run status belongs to the [workflow record](https://github.com/arifshekhk8/chainsentinel-mandate/actions), not an assumed pass.
+
+CI reruns overwrite only that temporary checkout's local test artifacts; the original committed evidence is not changed by a workflow run. These regressions are separate from the unexecuted 40-case live-agent evaluation. The reviewer path and remaining delivery items are in [SUBMISSION.md](SUBMISSION.md).
+
+The first Linux browser run exposed a shutdown hang after a successful correction assertion: an unused speculative TCP connection was not covered by Node's HTTP idle-connection cleanup. The server now stops accepting connections, closes sockets that have never carried an HTTP request and lets active requests finish. Two new regression checks reproduce the unused connection and preserve active-response/idempotent-close behavior. `npm run test:app` now has **35 checks** (the earlier 33 plus these two); historical Step 3/4 reports keep their original counts. No test timeout was raised and no failing case was skipped.
+
 ## Saved evidence index
 
 | Stage | Report and artifacts | Meaning |

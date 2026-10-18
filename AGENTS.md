@@ -20,7 +20,7 @@ These instructions apply to this workspace. Follow the user's latest instruction
 
 ## Folder and handoff rules
 
-- Keep the seven requested planning files and README at the root. Use the existing `app/`, `contracts/`, `scripts/`, `test/`, `demo/`, `competition/` and `evidence/` folders; avoid duplicate plans or unnecessary downloads.
+- Keep the seven requested planning files, README and the competition reviewer guide (SUBMISSION.md) at the root. Use the existing `app/`, `contracts/`, `scripts/`, `test/`, `demo/`, `competition/` and `evidence/` folders; `.github/` contains CI/review configuration. Avoid duplicate plans or unnecessary downloads.
 - Treat PROGRESS.md as the current status. Earlier step reports are historical evidence, not the current task list. Preserve their results and link to the latest report.
 - Keep originals, source code, case definitions and saved evidence. Never clear `.env`, local drafts, registration identity files or installed dependencies as routine cleanup. Only remove known disposable build/test output and metadata.
 - On return, read the dated resume checklist in PROGRESS.md. Do not repeat completed tests merely because a session restarted; test again when changes, failures or unresolved concerns justify it.

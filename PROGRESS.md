@@ -1,6 +1,6 @@
 # Mandate progress
 
-**Updated:** 18 October 2026, Asia/Dhaka. **Current task:** the user explicitly requested a private competition repository, meaningful commits and multiple pushes, without AI co-author tags. This authorizes GitHub repository creation/pushes and necessary repository documentation/checks. **Latest fully verified step:** Step 3 — Owner workflow. Step 4 local implementation/checks are ready; live AI verification remains pending by user choice. No actual user-wallet operation, public blockchain deployment, email or registration submission is authorized.
+**Updated:** 18 October 2026, Asia/Dhaka. **Repository handover:** private competition source, automated checks and reviewer guide prepared under the user's explicit request for meaningful commits/multiple pushes and no AI co-author tags. **Repository:** [arifshekhk8/chainsentinel-mandate](https://github.com/arifshekhk8/chainsentinel-mandate), private, branch `main`. **Latest fully verified project step:** Step 3 — Owner workflow. Step 4 local implementation/checks are ready; live AI verification remains pending by user choice. Repository work does not authorize actual user-wallet operation, public blockchain deployment, email or registration submission.
 
 ## Resume on 18 October 2026
 
@@ -30,12 +30,14 @@ The user returned on 18 October to prepare the private repository first. No back
 - Passed 33 intake/owner/API/storage checks and seven isolated browser checks. Saved [Step 3 results](evidence/STEP3_RESULTS.md), [local approval receipt](evidence/step3-owner-approval.json) and desktop/review/mobile screenshots. Actual user-wallet extensions were not operated.
 - User started Step 4 with “next step please,” then chose “Prepare it now; test live AI later.” Added structured OpenAI support, clarification context, explicit draft corrections, exact deterministic plans, confirmed batch execution, durable queue/hash storage and original-receipt recovery. No OpenAI call was made.
 - Passed 38 agent/transport/queue development checks, 12 total browser checks, 33 intake/owner regressions, 58 contract regressions and four identity checks. See [Step 4 results](evidence/STEP4_RESULTS.md), [local payment proof](evidence/step4-local-agent.json) and [desktop](evidence/step4-agent-desktop.png)/[mobile](evidence/step4-agent-mobile.png) screenshots. New interaction cases use a scripted development adapter, not live AI or the fixed evaluation set.
+- On 18 October, created the requested private GitHub repository and imported the existing prototype as an honest current-date baseline. Separate changes add automated repository/contract/application/browser checks and a competition reviewer guide. Commits use the configured `arif-shekh` identity with plain messages and no AI co-author trailers. The repository URL alone does not grant organizer access or submit the entry.
+- Added [SUBMISSION.md](SUBMISSION.md), a reviewer-focused README, private registration-copy instructions, a pull-request template and a Git-index hygiene check. Local credentials/data/dependencies/builds remain excluded. The workflow uses immutable official action hashes, read-only permissions, Node 25.2.1 and isolated Chromium; no API/wallet secrets or live calls are required.
 
 The local contract, owner workspace and restricted payment workflow exist. The OpenAI adapter is prepared; live verification is deliberately pending. Scripted development tests have executed real local approvals/payments. There is no public deployment or measured 40-case live-agent evaluation result.
 
 ## Current work
 
-Prepare a private `arifshekhk8/chainsentinel-mandate` repository: verify exclusions, import the existing prototype honestly, add automated checks and provide a reviewer/submission guide. Use meaningful current-date commits and separate pushes, with no AI co-author tags. Live AI, evaluation, registration and organizer clarification retain the pending states below.
+The private repository, automated checks and reviewer/submission guide are prepared. Source history consists of an existing-prototype import, CI setup, a separate shutdown regression fix found by CI, and reviewer documentation. Actual per-commit workflow status is inspectable in [GitHub Actions](https://github.com/arifshekhk8/chainsentinel-mandate/actions); verify the intended final commit when preparing submission. No numbered project step has advanced. Live AI, evaluation, registration and organizer clarification retain the pending states below.
 
 ## Step tracker
 
@@ -48,6 +50,8 @@ Prepare a private `arifshekhk8/chainsentinel-mandate` repository: verify exclusi
 | 4 — AI and executor | Local implementation/checks ready; live verification pending by user choice | 38 agent tests, 12 browser tests and real local batch receipts; API adapter not tested live |
 | 5 — Evaluation and Sepolia | Not started | Requires full Step 4 live checks and a user instruction; public actions need explicit authorization |
 | 6 — Submission | Not started | Measured results and reviewable evidence package |
+
+Source-repository preparation is complete independently of Step 6's final reports, media and submission. Use [SUBMISSION.md](SUBMISSION.md#remaining-submission-checklist) for that distinction.
 
 ## Decisions
 
@@ -113,7 +117,10 @@ Never request private keys in chat. Draft organizer questions and registration m
 - Public transactions and deployment: none.
 - Closing handoff, 17 October: reviewed all 14 project Markdown files, corrected stale Step 4 references and setup instructions, refreshed the remaining dates/tasks and added the folder/evidence map. Removed only disposable browser build/test output and macOS metadata; preserved source, original competition files, test evidence, case definitions, installed tools and local drafts. Documentation/content checks are separate from the application test results above.
 - Closing validation passed: 14 Markdown files, 160 local links/anchors and code fences; all 55 protected non-Markdown files unchanged, including source, original competition documents, dataset, receipts/screenshots and local drafts. R01–R15, the 40-case version and recorded test counts remain consistent. Ports 4173/8545 are closed. No application tests, API calls, wallet operations or external submissions were run during this closing session.
+- Repository task, 18 October: GitHub privacy verified before the initial push; `main` tracks `origin/main`. Initial staged-file review excluded private/generated paths and credential patterns and verified original rulebook/form hashes. Contract build, browser bundle, Solidity format and four identity checks passed locally. The repository guard correctly rejected an isolated force-staged `.env` fixture without revealing its value.
+- Automated checks are recorded in [GitHub Actions](https://github.com/arifshekhk8/chainsentinel-mandate/actions); use the actual run/commit status. CI regressions do not execute the 40-case evaluation, connect live AI, update saved evidence in the main checkout or deploy publicly.
+- The first Linux run passed contract, identity, intake/owner and agent checks but timed out in browser-test shutdown after the correction assertions. Reproduced the unused-TCP-connection hang locally, fixed graceful connection cleanup and added two checks without skipping the browser case or extending its timeout. The app suite now contains 35 checks; older evidence reports correctly retain 33. Contract/payment rules and the 40-case dataset were not changed.
 
 ## Next step
 
-Finish the requested private repository and verify its visibility, pushed history and checks. Then return to the [18 October checklist](#resume-on-18-october-2026): review Step 4 locally and configure/test live AI when the user is ready, before the fixed evaluation. Step 5 has not started.
+After repository handover, return to the [18 October checklist](#resume-on-18-october-2026): review Step 4 locally and configure/test live AI when the user is ready, before the fixed evaluation. Step 5 has not started. The private source package and reviewer guide are prepared; the competition entry still needs the remaining items in SUBMISSION.md.

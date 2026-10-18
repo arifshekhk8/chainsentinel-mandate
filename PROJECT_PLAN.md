@@ -48,6 +48,8 @@ Complete one step before starting the next. Registration acknowledgment and orga
 
 **Session handoff, 17 October:** paused for the night at the user's request. Resume on 18 October only when the user returns; start with the [dated checklist](PROGRESS.md#resume-on-18-october-2026). No overnight work is scheduled.
 
+**18 October repository task:** the user returned and explicitly requested a private competition repository with meaningful commits/pushes and no AI co-author tags. The source is at [arifshekhk8/chainsentinel-mandate](https://github.com/arifshekhk8/chainsentinel-mandate); [SUBMISSION.md](SUBMISSION.md) gives the reviewer route, access boundary and remaining package checklist. Repository preparation does not mark live AI, evaluation, public evidence, registration or Step 6 submission complete.
+
 ## Step 1 review package
 
 Read [demo/SCENARIO.md](demo/SCENARIO.md) for the business, exact rules, bills, identity rules and expected outcomes. [demo/cases.json](demo/cases.json) contains five demo bills and 40 candidate evaluation cases, including the six interaction cases. The user started Step 2 using this baseline. The 40 agent cases remain unexecuted; freeze the set before agent evaluation. Contract tests and scripted local receipt evidence are separate checks.

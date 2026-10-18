@@ -46,6 +46,12 @@ Do not put raw documents, passport details, bank information or full prompts int
 
 For submission, record third-party code/data sources, their licenses and relevant API/model usage terms. Use only materials we are allowed to include and credit them in the report/repository. Test-token demonstrations must not be presented as a licensed payment service or real business adoption.
 
+## Private repository boundary
+
+The source repository is private. Git excludes `.env`, local drafts/databases, keystores, generated output, installed dependencies and `competition/private/`. Complete registration/identity documents only in that ignored folder; the tracked workbook must retain the original blank-template hash. `npm run check:repo` scans the Git index and checks these boundaries before a push. It is a pattern/path guard, not proof that arbitrary secrets cannot be hidden in a file or image; inspect staged content.
+
+The GitHub Actions workflow pins official actions by full commit hash, requests read-only contents access, disables persisted checkout credentials and uses no model/wallet secrets. It runs synthetic local-chain tests only. Reviewer access or source-archive delivery needs the accepted competition process; repository creation does not grant organizer access or submit the project. See [SUBMISSION.md](SUBMISSION.md#private-access-and-source-handover).
+
 ## Limits to state honestly
 
 - Test tokens have no promised cash value. This prototype is not approved for mainnet or real funds.
