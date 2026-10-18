@@ -1,6 +1,6 @@
 # Mandate testing and demonstration
 
-These checks cover [REQUIREMENTS.md](REQUIREMENTS.md). Steps 2–4 have local contract, intake, review, restricted-agent and browser checks. The user authorized Gemini live development checks on 18 October; [actual results](evidence/STEP4_GEMINI_RESULTS.md) are separate from the still-unexecuted 40-case agent evaluation. Commands, limitations and current status are recorded in [PROGRESS.md](PROGRESS.md).
+These checks cover [REQUIREMENTS.md](REQUIREMENTS.md). Steps 2–4 have local contract, intake, review, restricted-agent and browser checks. The user authorized Gemini live checks on 18 October; the [browser/local-payment workflow](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md) now passes. Earlier [development results](evidence/STEP4_GEMINI_RESULTS.md) and the still-unexecuted 40-case evaluation remain separate. Commands, limitations and current status are recorded in [PROGRESS.md](PROGRESS.md).
 
 **17 October handoff:** test results below are the recorded implementation results. This closing session checks documents, protected-file hashes and shutdown only; it does not rerun application tests or replace their evidence. On return, follow the [resume checklist](PROGRESS.md#resume-on-18-october-2026). Run new checks when changes/failures or the pending live integration require them.
 
@@ -22,6 +22,7 @@ The first Linux browser run exposed a shutdown hang after a successful correctio
 | Step 3 | [Owner results](evidence/STEP3_RESULTS.md), [approval receipt](evidence/step3-owner-approval.json), [desktop](evidence/step3-desktop.png), [review](evidence/step3-review.png), [mobile](evidence/step3-mobile.png) | 33 intake/owner checks and seven browser checks; approval itself pays no tokens |
 | Step 4 | [Agent results](evidence/STEP4_RESULTS.md), [payment receipts](evidence/step4-local-agent.json), [desktop](evidence/step4-agent-desktop.png), [mobile](evidence/step4-agent-mobile.png) | 38 agent checks and 12 total browser checks; the 12 include the seven owner checks. No live model used |
 | Step 4 Gemini | [Integration results](evidence/STEP4_GEMINI_RESULTS.md), [safe live metadata](evidence/step4-gemini-live-check.json) | Seven live development tasks passed across attempts; 46 agent and 13 browser regressions. Provider failures disclosed; not fixed evaluation |
+| Step 4 live workflow | [Review results](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md), [run history/receipts](evidence/step4-live-workflow.json), [browser screenshot](evidence/step4-live-workflow-desktop.png) | 10 workflow checks / seven real model calls / two exact local payments; injected outages labeled separately; failed harness attempt retained |
 | Later | No fixed live-evaluation or Sepolia artifact yet | Keep pending; do not create empty reports or claim results |
 
 All saved chain receipts are ephemeral local-chain evidence. Reports are historical by step; [PROGRESS.md](PROGRESS.md) gives the current status. Do not sum repeated regressions or fuzz trials as independent evaluation cases.
@@ -48,6 +49,8 @@ Run `npm run test:agent` for 46 agent/transport/queue checks (the original 38 pl
 - Browser traces: AI-off label/manual preview and exact batch, read-only/clarification, correction/review, stale owner stop, mobile layout and inert hostile text. Actual user extensions remain untested.
 
 `npm run test:live` explicitly makes up to seven synthetic development calls: extraction, read-only, clarification, clarification answer, draft correction, unsupported authority and hostile-source extraction. Gemini requests are paced 12 seconds apart to reduce quota bursts; a failure stops without retry/fallback. Safe model/timing/token metadata goes to stdout; no transactions are sent. On 18 October all seven tasks passed across bounded attempts, with an intervening HTTP 503 and HTTP 429 disclosed in [Gemini results](evidence/STEP4_GEMINI_RESULTS.md). This is not one uninterrupted successful run, the 40-case evaluation or proof of full live-app/payment behavior. Free-tier availability depends on project settings/quota; the optional OpenAI provider is billed separately. The original [Step 4 results](evidence/STEP4_RESULTS.md) remain historical local evidence.
+
+`npm run test:live-workflow` is an explicit local command, excluded from CI. It drives PDF upload/AI extraction/apply/source review, exact owner approvals/Resume, live read-only/clarification/correction, stale-plan rejection, injected RPC failure, a fresh live payment plan, one confirmation, exact receipts/balances, replay/recovery and explicit manual fallback after an injected provider failure. It uses isolated Chrome, an in-memory database and a fresh chain 31337 with disposable local accounts. The passing run has 10 checks and seven real model calls; a prior harness dialog-wait failure is retained. No application source/contract or fixed evaluation data changed. Do not rerun existing development checks merely to inflate totals.
 
 ## Functional checks
 

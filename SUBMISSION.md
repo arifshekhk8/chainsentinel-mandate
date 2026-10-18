@@ -2,7 +2,7 @@
 
 **Team:** ChainSentinel. **Event:** 2026 Shenzhen International FinTech Competition, International Track. **Topic:** F — Agent Wallet. **Repository:** [arifshekhk8/chainsentinel-mandate](https://github.com/arifshekhk8/chainsentinel-mandate), private. **Snapshot date:** 18 October 2026, Asia/Dhaka.
 
-This repository contains the local prototype, reproducible tests, synthetic fixtures and existing local receipts. Gemini live development checks are [recorded separately](evidence/STEP4_GEMINI_RESULTS.md); full live-app verification, measured agent evaluation and public evidence remain pending. Use this guide to inspect the source package; do not describe the current snapshot as a finished competition submission.
+This repository contains the local prototype, reproducible tests, synthetic fixtures and existing local receipts. The [live Gemini/browser/local-payment workflow](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md) passes; measured agent evaluation and public evidence remain pending. Earlier [Gemini development checks](evidence/STEP4_GEMINI_RESULTS.md) retain their original limitations. Use this guide to inspect the source package; do not describe the current snapshot as a finished competition submission.
 
 ## Review route
 
@@ -16,7 +16,7 @@ This repository contains the local prototype, reproducible tests, synthetic fixt
 
 | Criterion | Current material | Evidence still needed |
 | --- | --- | --- |
-| Task completion — 40% | [Owner workflow](evidence/STEP3_RESULTS.md), [local batch receipts](evidence/step4-local-agent.json), reproducible source/tests | Live-agent traces, fixed evaluation and organizer-accepted public receipts |
+| Task completion — 40% | [Owner workflow](evidence/STEP3_RESULTS.md), [live browser/local batch](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md), reproducible source/tests | Fixed evaluation and organizer-accepted public receipts |
 | Security/compliance — 30% | [Contract checks](evidence/STEP2_RESULTS.md), [security boundaries](SECURITY.md), [queue/recovery checks](evidence/STEP4_RESULTS.md) | Measured live hostile cases, final self-assessment and authorized public stop/replay demonstration |
 | Innovation/interaction — 30% | [Orbit Studio scenario](demo/SCENARIO.md), controlled clarification/correction/fallback traces | All six live interaction cases and matched manual/security comparisons |
 
@@ -26,7 +26,8 @@ The recorded Step 4 local results are 58 contract, four identity, 33 intake/owne
 
 - [ ] Complete team registration privately and retain the organizer acknowledgment; choose/confirm the leader and all required member details.
 - [ ] Obtain organizer clarification before claiming that Sepolia alone satisfies Topic F evidence rules.
-- [ ] Finish live app/payment integration review after the [Gemini development checks](evidence/STEP4_GEMINI_RESULTS.md); retain model/prompt, latency and API-error metadata. Replace any key shared in chat only in local configuration.
+- [x] Complete live app/payment review: [10 passing workflow checks](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md), seven real model calls, two exact local receipts; failures and safe metadata preserved.
+- [ ] Replace any key shared in chat only in local configuration; confirm the API project stays on Free tier.
 - [ ] Freeze and execute [the 40-case set](demo/cases.json), measure results against [TESTING.md](TESTING.md#fixed-evaluation-set-and-targets) and complete both matched comparisons. Fix or disclose misses.
 - [ ] With explicit authorization, collect public evidence with chain/vault/token/recipient/amount/bill references, successful receipts and revocation/replay demonstrations.
 - [ ] Complete the technical report, security self-assessment, English presentation (up to 10 minutes) and English video (up to 5 minutes). Follow the [organizer checklist/templates](competition/requirements.md#submission-checklist).

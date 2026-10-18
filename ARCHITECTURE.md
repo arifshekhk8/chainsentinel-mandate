@@ -1,6 +1,6 @@
 # Mandate architecture
 
-This describes the implemented local core, owner workflow and AI/payment workflow in [PROJECT_PLAN.md](PROJECT_PLAN.md). On 18 October the user chose Gemini and authorized live development checks; [Gemini results](evidence/STEP4_GEMINI_RESULTS.md) record what actually passed and remains. A smart contract checks payment rules even if the AI makes a mistake.
+This describes the implemented local core, owner workflow and AI/payment workflow in [PROJECT_PLAN.md](PROJECT_PLAN.md). On 18 October the user chose Gemini and authorized live checks; the [full browser/local-payment review](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md) now passes. Earlier [Gemini results](evidence/STEP4_GEMINI_RESULTS.md) retain development failures and limits. A smart contract checks payment rules even if the AI makes a mistake.
 
 **17 October handoff:** source/design unchanged during documentation cleanup. The app and local chain are stopped. On a new launch, drafts remain but the ephemeral chain, approvals, session ID and in-memory agent key are new; follow the [resume checklist](PROGRESS.md#resume-on-18-october-2026).
 
@@ -56,7 +56,7 @@ Repository CI on 18 October exposed unused browser TCP preconnections keeping se
 5. `app/executor.mjs` holds only the restricted agent signer. It claims the durable queue, refreshes permissions, draft/approval versions and UTC day, and simulates each fixed `payBill(key,version)` call. It signs that call, computes and stores its hash/nonce **before broadcast**, then verifies the actual chain/sender/destination/calldata and exact payment event. It stops at the first uncertain/reverted/stale outcome. The contract independently checks every payment rule.
 6. SQLite retains plans and original payment references. A compare-and-set claim serializes batches across executor objects. Pending/unknown/invalid payment outcomes block new sends. Recovery only reads original hashes; it never broadcasts. A crashed run can be marked interrupted only when its recorded process PID no longer exists. Live/reused PIDs remain locked for investigation. A fresh plan is required after recovery; there is no automatic queue resume or fee replacement.
 
-The local launcher now creates a random separate agent wallet **in memory**, gives it local test ETH and grants its bounded session. It never prints or saves this key. Restarting the entire launcher creates a new chain/session and discards that key; same-chain backend/store recovery is tested separately. This is not public-testnet key management. See [Step 4 results](evidence/STEP4_RESULTS.md).
+The local launcher now creates a random separate agent wallet **in memory**, gives it local test ETH and grants its bounded session. It never prints or saves this key. Restarting the entire launcher creates a new chain/session and discards that key; same-chain backend/store recovery is tested separately. This is not public-testnet key management. See [Step 4 results](evidence/STEP4_RESULTS.md) and the later [live browser/payment proof](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md). The explicit `scripts/live-workflow.mjs` review uses a separate ephemeral chain, in-memory store and isolated Chrome context; owner signing is an EIP-1193 test double, not an existing wallet extension. It does not run in CI or read the fixed evaluation set.
 
 ## Signing boundaries
 

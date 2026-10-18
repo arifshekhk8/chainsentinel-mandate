@@ -1,0 +1,289 @@
+{
+  "evidenceType": "live-Gemini-browser-and-disposable-local-chain",
+  "runs": [
+    {
+      "recordedAt": "2026-10-18T17:29:55.416Z",
+      "status": "failed",
+      "chainId": 31337,
+      "liveModelUsed": true,
+      "publicTestnetEvidence": false,
+      "fixed40CaseEvaluation": false,
+      "walletType": "EIP-1193 test double using disposable local Anvil accounts",
+      "realWalletExtensionTested": false,
+      "promptVersion": "mandate-step4-v1",
+      "calls": [
+        {
+          "stage": "PDF extraction and explicit apply",
+          "kind": "extract",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 3159,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 306,
+          "outputTokens": 219,
+          "thoughtTokens": 0
+        }
+      ],
+      "checks": [
+        {
+          "name": "Live PDF fields require apply and fresh source review",
+          "status": "passed"
+        }
+      ],
+      "failedStage": "owner approvals and resume",
+      "error": "Workflow assertion failed at: owner approvals and resume."
+    },
+    {
+      "recordedAt": "2026-10-18T17:31:29.245Z",
+      "status": "passed",
+      "chainId": 31337,
+      "liveModelUsed": true,
+      "publicTestnetEvidence": false,
+      "fixed40CaseEvaluation": false,
+      "walletType": "EIP-1193 test double using disposable local Anvil accounts",
+      "realWalletExtensionTested": false,
+      "promptVersion": "mandate-step4-v1",
+      "calls": [
+        {
+          "stage": "PDF extraction and explicit apply",
+          "kind": "extract",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 8994,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 306,
+          "outputTokens": 219,
+          "thoughtTokens": 0
+        },
+        {
+          "stage": "read-only request",
+          "kind": "interpret",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 5051,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 522,
+          "outputTokens": 38,
+          "thoughtTokens": 347
+        },
+        {
+          "stage": "clarification",
+          "kind": "interpret",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 3732,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 531,
+          "outputTokens": 70,
+          "thoughtTokens": 115
+        },
+        {
+          "stage": "clarification answer",
+          "kind": "interpret",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 4150,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 564,
+          "outputTokens": 38,
+          "thoughtTokens": 304
+        },
+        {
+          "stage": "draft correction and stale plan",
+          "kind": "interpret",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 4878,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 556,
+          "outputTokens": 142,
+          "thoughtTokens": 370
+        },
+        {
+          "stage": "RPC failure with live plan",
+          "kind": "interpret",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 5535,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 540,
+          "outputTokens": 154,
+          "thoughtTokens": 414
+        },
+        {
+          "stage": "confirmed live batch",
+          "kind": "interpret",
+          "liveProviderCall": true,
+          "status": "completed",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 6635,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 528,
+          "outputTokens": 154,
+          "thoughtTokens": 556
+        },
+        {
+          "stage": "provider failure and explicit manual fallback",
+          "kind": "interpret",
+          "liveProviderCall": false,
+          "status": "injected-429"
+        }
+      ],
+      "checks": [
+        {
+          "name": "Live PDF fields require apply and fresh source review",
+          "status": "passed"
+        },
+        {
+          "name": "Exact owner approvals and explicit resume send no bill payments",
+          "status": "passed",
+          "ownerActions": 2
+        },
+        {
+          "name": "Live read-only question causes no payment",
+          "status": "passed"
+        },
+        {
+          "name": "Live ambiguous request asks without payment",
+          "status": "passed"
+        },
+        {
+          "name": "Live clarification answer prepares exact 350 MDT plan, awaiting confirmation",
+          "status": "passed"
+        },
+        {
+          "name": "Live draft correction cannot change chain approval; stale plan blocked before payment",
+          "status": "passed"
+        },
+        {
+          "name": "Injected RPC simulation failure stops live plan before broadcast",
+          "status": "passed"
+        },
+        {
+          "name": "One confirmation pays exactly 200 + 150 MDT with verified receipts and no extra owner signature",
+          "status": "passed"
+        },
+        {
+          "name": "75 MDT deferred, completed plan cannot replay, receipt recovery sends nothing",
+          "status": "passed"
+        },
+        {
+          "name": "Injected provider quota error allows labeled manual preview, without extra payment or exposed key",
+          "status": "passed"
+        }
+      ],
+      "payments": [
+        {
+          "id": "38ed0535-76c6-48d2-adfb-37781cde416f",
+          "instance_id": "387de168-f14d-4cc6-8cdf-bd7a3a06941c",
+          "payload": {
+            "planId": "d3dd189c-7c18-487f-b58a-72c63f89f31b",
+            "draftId": "928b8875-ee85-4ed0-a97d-b13b2d9225c7",
+            "billKey": "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+            "invoice": "HOST-1001",
+            "agent": "0xffaB095DcDfF8D6d36A00AdACAF74c96fB9F7938",
+            "nonce": 0,
+            "data": "0x116f4b20e0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda001420000000000000000000000000000000000000000000000000000000000000007",
+            "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+            "amount": "200000000",
+            "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+            "policyVersion": "7",
+            "utcDay": "20744",
+            "createdAt": "2026-10-18T17:33:22.420Z"
+          },
+          "status": "confirmed",
+          "hash": "0x3d88a6f27bfcc5c992239a9b2fa7a399b851c798701475b92f91fcddff7135c3",
+          "receipt": {
+            "hash": "0x3d88a6f27bfcc5c992239a9b2fa7a399b851c798701475b92f91fcddff7135c3",
+            "chainId": 31337,
+            "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+            "blockNumber": 10,
+            "blockHash": "0x0f93abd67f832ffbf3fa006310343237a939d68cd960738a347a69dbd0e239a4",
+            "status": 1,
+            "gasUsed": "138704",
+            "payment": {
+              "billKey": "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+              "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+              "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+              "amount": "200000000",
+              "policyVersion": "7",
+              "utcDay": "20744",
+              "dailySpent": "200000000"
+            }
+          },
+          "error": null
+        },
+        {
+          "id": "3416a3b2-705f-4f0a-8bed-eea91ec1f992",
+          "instance_id": "387de168-f14d-4cc6-8cdf-bd7a3a06941c",
+          "payload": {
+            "planId": "d3dd189c-7c18-487f-b58a-72c63f89f31b",
+            "draftId": "18fc4eda-f081-45c4-b851-63a5b9294607",
+            "billKey": "0xac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d2",
+            "invoice": "ART-2001",
+            "agent": "0xffaB095DcDfF8D6d36A00AdACAF74c96fB9F7938",
+            "nonce": 1,
+            "data": "0x116f4b20ac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d20000000000000000000000000000000000000000000000000000000000000007",
+            "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+            "amount": "150000000",
+            "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+            "policyVersion": "7",
+            "utcDay": "20744",
+            "createdAt": "2026-10-18T17:33:22.732Z"
+          },
+          "status": "confirmed",
+          "hash": "0xb2a3550e3f5fdc07d75958cde61b1cdefe34d873038a13db16610cf01cee9126",
+          "receipt": {
+            "hash": "0xb2a3550e3f5fdc07d75958cde61b1cdefe34d873038a13db16610cf01cee9126",
+            "chainId": 31337,
+            "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+            "blockNumber": 11,
+            "blockHash": "0xb54fe03bb389fb6ac68ec1b6344d7b4699cc117706b1ed6fd083901999c53a23",
+            "status": 1,
+            "gasUsed": "121604",
+            "payment": {
+              "billKey": "0xac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d2",
+              "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+              "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+              "amount": "150000000",
+              "policyVersion": "7",
+              "utcDay": "20744",
+              "dailySpent": "350000000"
+            }
+          },
+          "error": null
+        }
+      ],
+      "ownerActionsBeforeBatch": 3,
+      "ownerActionsAfterBatch": 3,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "finalVaultBalanceBaseUnits": "650000000",
+      "finalDailySpentBaseUnits": "350000000",
+      "ownerActionsObserved": 3
+    }
+  ]
+}

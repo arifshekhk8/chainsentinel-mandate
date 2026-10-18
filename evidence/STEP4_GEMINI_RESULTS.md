@@ -1,5 +1,7 @@
 # Step 4 — Gemini integration, 18 October 2026
 
+**Later follow-up:** the [full browser/local-payment review](STEP4_LIVE_WORKFLOW_RESULTS.md) now passes. This report preserves the earlier connection/development stage and its failures.
+
 The user selected Google's free API and authorized connection/live synthetic checks. Gemini is configured in an ignored, owner-only `.env`; no credential is in this report or Git. `gemini-3.8-flash` is pinned because Google's [pricing](https://ai.google.dev/gemini-api/docs/pricing) documents free quota. The project's actual billing tier must be checked by its owner in AI Studio; a successful API response does not establish that tier.
 
 ## Implemented and checked

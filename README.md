@@ -8,7 +8,7 @@ Mandate helps a small business pay approved supplier bills. The owner reviews ea
 
 The prototype uses fictional **Orbit Studio**, synthetic invoices and **MDT test tokens with no cash value**. Its normal batch pays 200 + 150 MDT from 1,000, leaves 650, and explains why a 75 MDT bill must wait when only 50 of the daily budget remains.
 
-**Current status:** the local contract, owner workspace and restricted executor are implemented and tested. Gemini is connected; live development checks and limitations are in the [Gemini results](evidence/STEP4_GEMINI_RESULTS.md). The fixed 40-case evaluation and public-testnet evidence remain pending. This is a private development repository, not a claim that the final competition entry is complete. See the [submission checklist](SUBMISSION.md#remaining-submission-checklist) and [working progress](PROGRESS.md).
+**Current status:** the local contract, owner workspace and restricted executor are implemented and tested. Step 4 now passes the [live Gemini/browser/local-payment workflow](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md). Earlier development checks and limitations are in the [Gemini results](evidence/STEP4_GEMINI_RESULTS.md). The fixed 40-case evaluation and public-testnet evidence remain pending. This is a private development repository, not a claim that the final competition entry is complete. See the [submission checklist](SUBMISSION.md#remaining-submission-checklist) and [working progress](PROGRESS.md).
 
 For a quick visual review, open the [desktop payment workflow](evidence/step4-agent-desktop.png), [source/field review](evidence/step3-review.png) and [mobile workspace](evidence/step4-agent-mobile.png). All screenshots show local synthetic tests; no actual user wallet extension was operated.
 
@@ -52,7 +52,7 @@ GEMINI_API_KEY=
 
 Put your key only in that ignored local file; never share it in chat. Keep the project on the Free tier in [Google AI Studio](https://aistudio.google.com/). The adapter pins `gemini-3.8-flash`, which has documented [free quota](https://ai.google.dev/gemini-api/docs/pricing); the server cannot inspect your project's billing tier. There is no provider/model fallback or automatic retry. A quota/access error leaves manual review available. The original optional OpenAI adapter remains available by explicitly setting `AI_PROVIDER=openai`, `OPENAI_API_KEY` and `OPENAI_MODEL`.
 
-Restart the app; **Ask AI** sends your short message and bill summaries to the displayed provider. Questions and unclear requests cannot execute. A draft correction needs **Apply to draft, then review**, with fresh owner approval if details change. For one synthetic invoice per file, the bill-review screen also offers explicit AI field assistance; manual review remains available. `npm run test:live` explicitly makes up to seven synthetic development calls and sends no transactions; see the [actual results](evidence/STEP4_GEMINI_RESULTS.md).
+Restart the app; **Ask AI** sends your short message and bill summaries to the displayed provider. Questions and unclear requests cannot execute. A draft correction needs **Apply to draft, then review**, with fresh owner approval if details change. For one synthetic invoice per file, the bill-review screen also offers explicit AI field assistance; manual review remains available. `npm run test:live` explicitly makes up to seven synthetic development calls and sends no transactions; see the [actual results](evidence/STEP4_GEMINI_RESULTS.md). For the full isolated browser/Gemini/local-payment review, use `npm run test:live-workflow` only when needed: it makes up to seven paced model calls and sends disposable local test transactions. See the [passing workflow and receipts](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md). This command does not run in CI or use your existing wallet/drafts.
 
 Drafts and extracted source text are stored in ignored `local-data/mandate.sqlite` with restricted file permissions. Original PDF/CSV bytes are not retained after parsing. Removing a source removes all its drafts; opaque receipt/approval references and on-chain records remain. Restarting `npm run dev` starts a **new local chain session**: drafts persist, but old local approvals and prepared actions are not treated as current. Fresh review/signing is required. The app is for local synthetic test data only.
 
@@ -106,7 +106,7 @@ Disposable `dist/`, `test-results/`, `playwright-report/` and `broadcast/` outpu
 | [test/](test/) | C01–C06 contract checks and invoice-identity tests |
 | [local-demo.mjs](scripts/local-demo.mjs) | Scripted local execution with verified receipts; no AI |
 | [app/](app/) | Local intake, SQLite drafts, exact owner transaction reviews, receipt checks and responsive browser UI |
-| [agent.mjs](app/agent.mjs), [model.mjs](app/model.mjs) | Structured AI proposals, clarification and explicit draft corrections; live verification pending |
+| [agent.mjs](app/agent.mjs), [model.mjs](app/model.mjs) | Structured AI proposals, clarification and explicit draft corrections; live local workflow verified |
 | [planner.mjs](app/planner.mjs), [executor.mjs](app/executor.mjs) | Integer planning, restricted signing, durable queue and receipt reconciliation |
 | [dev.mjs](scripts/dev.mjs) | Local-only setup/preview and optional public owner-address configuration |
 

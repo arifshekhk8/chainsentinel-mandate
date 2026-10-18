@@ -1,6 +1,6 @@
 # Mandate requirements
 
-This file defines required application behavior. [competition/requirements.md](competition/requirements.md) contains event rules. Local contract, owner-workflow and agent/executor checks are recorded in [PROGRESS.md](PROGRESS.md). On 18 October the user authorized Gemini setup and live development checks; see [actual Gemini results](evidence/STEP4_GEMINI_RESULTS.md). The 40-case evaluation and public evidence remain unexecuted. Acceptance targets are unchanged.
+This file defines required application behavior. [competition/requirements.md](competition/requirements.md) contains event rules. Local contract, owner-workflow and agent/executor checks are recorded in [PROGRESS.md](PROGRESS.md). On 18 October the user authorized Gemini setup and live review; [the browser/local-payment workflow](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md) now passes. Earlier [Gemini development results](evidence/STEP4_GEMINI_RESULTS.md) remain separate evidence. The 40-case evaluation and public evidence remain unexecuted. Acceptance targets are unchanged.
 
 **Handoff, 17 October:** work is paused until the user returns on 18 October. Requirements and acceptance targets are unchanged; documentation cleanup does not count as a new test pass.
 
@@ -42,10 +42,10 @@ Use the evaluation targets in [TESTING.md](TESTING.md). A feature is done only w
 
 | Requirements | Existing local evidence | Still pending |
 | --- | --- | --- |
-| R01–R04 | Intake, source review, vendor checks, exact approval previews and matching local approval receipts | Live extraction accuracy and actual wallet-extension verification |
+| R01–R04 | Intake, live PDF field assistance/apply/review, trusted vendors and exact browser/local approvals | Fixed-set extraction accuracy and actual wallet-extension verification |
 | R05–R09 | Contract permissions/limits/replay/stop tests and local executor state checks | Authorized public-network repetition and evidence |
-| R10–R12 | Deterministic plans, blocked reasons, receipt recovery and controlled hostile proposals | Fixed live-agent evaluation and measured explanation/completion results |
-| R13–R14 | Local configuration/privacy guards, synthetic inputs, private signer/API fields and honest mode labels | Configured live-provider checks and public deployment/key setup |
-| R15 | Scripted development conversation traces and browser handling | Real model understanding and all six interactions in the fixed evaluation set |
+| R10–R12 | Live browser plan, exact local batch/receipts, deferred reason, stale/replayed plans and injected-failure recovery | Fixed live-agent evaluation and measured explanation/completion results |
+| R13–R14 | Live provider/backend-key checks, isolated synthetic inputs, signer boundaries and honest fallback labels | Public deployment/key setup and actual extension checks |
+| R15 | Live browser clarification/follow-up/correction and injected tool/provider failures, plus earlier unsupported-request development checks | All six interactions measured in the fixed evaluation set |
 
 Start the next session with [PROGRESS.md's resume checklist](PROGRESS.md#resume-on-18-october-2026). Do not treat controlled test-adapter output as proof of live-model performance.

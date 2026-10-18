@@ -1,6 +1,6 @@
 # Mandate project plan
 
-**Product:** an AI wallet agent that pays approved business bills within the owner's rules. **Status:** Step 4 local implementation/checks ready; the user authorized Gemini setup and live development checks on 18 October. See [Gemini results and remaining checks](evidence/STEP4_GEMINI_RESULTS.md). Public evidence remains later work. See [contract results](evidence/STEP2_RESULTS.md), [owner-workflow results](evidence/STEP3_RESULTS.md) and [agent results](evidence/STEP4_RESULTS.md).
+**Product:** an AI wallet agent that pays approved business bills within the owner's rules. **Status:** Step 4 complete for the local prototype, including live Gemini/browser/payment review on 18 October. See [live workflow results](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md). Public evidence remains later work. See [contract results](evidence/STEP2_RESULTS.md), [owner-workflow results](evidence/STEP3_RESULTS.md) and [agent results](evidence/STEP4_RESULTS.md).
 
 The owner approves a group of bills and payment rules once. The agent plans eligible payments, preserves a minimum token balance, explains exceptions and produces receipts. Blockchain code checks permission independently before every payment.
 
@@ -44,7 +44,7 @@ Read [REQUIREMENTS.md](REQUIREMENTS.md) for pass conditions, [ARCHITECTURE.md](A
 
 Complete one step before starting the next. Registration acknowledgment and organizer clarification may remain pending while unrelated local work proceeds. Do not present unresolved testnet eligibility as settled.
 
-**Step 4 implementation status:** local agent/executor and test-adapter interaction checks are implemented. On 18 October the user chose Gemini's free API and explicitly authorized connection/live testing, superseding the earlier deferral. The bounded development checks and provider errors are recorded in [Gemini results](evidence/STEP4_GEMINI_RESULTS.md); these do not complete the 40-case evaluation or all live app/receipt scenarios. Step 5 has not started.
+**Step 4 implementation status:** complete for the local prototype. The [live browser/Gemini/local-chain review](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md) passed 10 checks and seven real model calls, including explicit confirmation, exact 350 MDT payment, correction/stale-plan protection and injected-failure recovery. Earlier [development attempts](evidence/STEP4_GEMINI_RESULTS.md) remain recorded. This is not the fixed 40-case evaluation, a real wallet-extension test or public-network evidence. Step 5 has not started.
 
 **Session handoff, 17 October:** paused for the night at the user's request. Resume on 18 October only when the user returns; start with the [dated checklist](PROGRESS.md#resume-on-18-october-2026). No overnight work is scheduled.
 
@@ -65,7 +65,7 @@ All dates and times below use Bangladesh time (Asia/Dhaka). Updated at the 17 Oc
 | Date | Target |
 | --- | --- |
 | 17 October 2026 — completed locally | Planning/scope, contract core, owner workflow and Step 4 local implementation/checks; registration and live AI still pending |
-| 18 October — first work after return | Review Step 4, configure/test live AI when ready, record corrections/failures; prepare registration and the organizer question privately. Start Step 5 evaluation only after the live checks and user instruction |
+| 18 October — completed local Step 4 | Connected Gemini; passed live browser/local payment review and saved failures/receipts. Registration and the organizer question remain pending. Begin Step 5 evaluation after the next user instruction |
 | 19 October — target | Finish evaluation/comparisons; collect explicitly authorized public-testnet evidence; prepare the report, slides and video |
 | 20 October — target | Finish/review/rehearse Step 6; aim for a reviewable package by 18:00; submit only on explicit instruction before 21:59 |
 
