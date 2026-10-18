@@ -6,6 +6,7 @@
   "engines": { "node": ">=22.18.0" },
   "description": "Mandate: owner-approved bill payments, test tokens only",
   "scripts": {
+    "check:repo": "node scripts/check-repo.mjs",
     "build": "node scripts/foundry.mjs forge build",
     "test": "node scripts/foundry.mjs forge test -vv",
     "test:identity": "node --test test/bill-identity.test.mjs",

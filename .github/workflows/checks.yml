@@ -1,0 +1,56 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Repository, contracts and application
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CI: 'true'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '25.2.1'
+          cache: npm
+      - name: Check tracked files and documentation
+        run: node scripts/check-repo.mjs
+      - name: Install pinned dependencies
+        run: npm ci --no-fund
+      - name: Build contracts
+        run: npm run build
+      - name: Check Solidity formatting
+        run: npm run format:check
+      - name: Test contract permissions and money boundaries
+        run: npm test
+      - name: Test invoice identity
+        run: npm run test:identity
+      - name: Test intake and owner workflow
+        run: npm run test:app
+      - name: Test restricted agent and recovery
+        run: npm run test:agent
+      - name: Build browser application
+        run: npm run build:app
+      - name: Install isolated Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Test browser workflows
+        run: npm run test:ui
+
+    # No model API secrets, live calls, real wallets or public deployment in CI.
