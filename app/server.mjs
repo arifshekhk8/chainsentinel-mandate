@@ -11,7 +11,10 @@ export async function startServer(service, { port = 4173, publicDir = new URL('.
   const csrf = randomBytes(32).toString('hex');
   let origin;
   let uploading = false;
+  let closing = false, closePromise;
+  const sockets = new Set(), requested = new WeakSet();
   const server = createServer(async (req, res) => {
+    requested.add(req.socket);
     const json = (status, value) => { res.writeHead(status, { 'content-type': 'application/json; charset=utf-8' }); res.end(JSON.stringify(value)); };
     res.setHeader('cache-control', 'no-store');
     res.setHeader('x-content-type-options', 'nosniff');
@@ -101,9 +104,23 @@ export async function startServer(service, { port = 4173, publicDir = new URL('.
       else res.end();
     }
   });
+  server.on('connection', (socket) => {
+    if (closing) { socket.destroy(); return; }
+    sockets.add(socket); socket.once('close', () => sockets.delete(socket));
+  });
   server.requestTimeout = 15000;
   server.headersTimeout = 10000;
   await new Promise((resolve, reject) => { server.once('error', reject); server.listen(port, '127.0.0.1', resolve); });
   origin = `http://127.0.0.1:${server.address().port}`;
-  return { server, origin, close: async () => { server.closeIdleConnections(); await new Promise((resolve) => server.close(resolve)); } };
+  return { server, origin, close: () => {
+    if (!closePromise) {
+      closing = true;
+      closePromise = new Promise((resolve) => server.close(resolve));
+      // Browser preconnections have no HTTP request, so Node's HTTP idle reaper misses them.
+      // Active requests keep their sockets and finish normally before the close promise resolves.
+      for (const socket of sockets) if (!requested.has(socket)) socket.destroy();
+      server.closeIdleConnections();
+    }
+    return closePromise;
+  } };
 }
