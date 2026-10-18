@@ -1,0 +1,33 @@
+{
+  "name": "chainsentinel-mandate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18.0" },
+  "description": "Mandate: owner-approved bill payments, test tokens only",
+  "scripts": {
+    "build": "node scripts/foundry.mjs forge build",
+    "test": "node scripts/foundry.mjs forge test -vv",
+    "test:identity": "node --test test/bill-identity.test.mjs",
+    "test:gas": "node scripts/foundry.mjs forge test --gas-report",
+    "format:check": "node scripts/foundry.mjs forge fmt --check",
+    "demo:local": "node scripts/local-demo.mjs",
+    "build:app": "node scripts/build-app.mjs",
+    "dev": "node scripts/dev.mjs",
+    "test:app": "node --test test/intake.test.mjs test/owner-workflow.test.mjs",
+    "test:agent": "node --test test/agent.test.mjs",
+    "test:live": "node scripts/live-check.mjs",
+    "test:ui": "playwright test"
+  },
+  "devDependencies": {
+    "@foundry-rs/anvil": "1.7.1",
+    "@foundry-rs/forge": "1.7.1",
+    "@openzeppelin/contracts": "5.6.1",
+    "ethers": "6.17.0",
+    "esbuild": "0.28.2",
+    "csv-parse": "7.0.3",
+    "pdfjs-dist": "6.4.299",
+    "pdf-lib": "1.17.1",
+    "@playwright/test": "1.64.1"
+  }
+}

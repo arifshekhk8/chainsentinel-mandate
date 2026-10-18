@@ -1,0 +1,134 @@
+{
+  "evidenceType": "local-anvil-only",
+  "mode": "scripted-no-model",
+  "chainId": 31337,
+  "publicTestnetEvidence": false,
+  "persistentChain": false,
+  "notice": "Ephemeral local execution. Hashes cannot be verified on Sepolia/Etherscan. Re-run the script to reproduce.",
+  "recordedAt": "2026-10-17T15:36:20.739Z",
+  "fixtureVersion": "step1-candidate-v1",
+  "fixtureSha256": "55c9adfb923653ba851a13652fb885b55afd6120345a65597d90dc6c9ccc505b",
+  "toolVersions": {
+    "forge": "1.7.1",
+    "anvil": "1.7.1",
+    "solc": "0.8.37",
+    "openzeppelin": "5.6.1",
+    "ethers": "6.17.0",
+    "node": "v25.2.1"
+  },
+  "contracts": {
+    "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  },
+  "accounts": {
+    "owner": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "agent": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "host": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+    "design": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+  },
+  "deploymentHashes": {
+    "token": "0x11b422e9c9e85ec9d099ca9c0201248c28f1abe09754dff63b1f39544517d1f6",
+    "vault": "0xa07916d5d08b18458fe5f0abd937c3461f39454869cfbb7ffc7285877027a9cd"
+  },
+  "fundingHash": "0x40e983e544b3b46e53f0a9dee7bed59ea23fc0826fa7579378b53695e95f05d3",
+  "approvalHash": "0x6041962377237965805ef795987bc4c8925f8103fe7a4b940320e6b80f732dd2",
+  "openingBalanceBaseUnits": "1000000000",
+  "payments": [
+    {
+      "billId": "D01",
+      "billKey": "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "amountBaseUnits": "200000000",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "policyVersion": "6",
+      "dailySpentBaseUnits": "200000000",
+      "transactionHash": "0xc7bbae4b26038145d47357210e925592e7bdb65c597b8b33991fb6b05d9235a8",
+      "blockNumber": 9,
+      "blockHash": "0xffc9b65382825a8427efdb89632e80eaf1432eac0bf4471d9e02c0a9f5531134",
+      "status": 1,
+      "gasUsed": "138704",
+      "gasCostWei": "187828355988320",
+      "logs": [
+        {
+          "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x000000000000000000000000e7f1725e7734ce288f8367e1bb143e90bb3f0512",
+            "0x0000000000000000000000003c44cdddb6a900fa2b585dd299e03d12fa4293bc"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000000bebc200"
+        },
+        {
+          "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+          "topics": [
+            "0xb9220cfa709084bd4797a5a5710a2a2db9fe723fddbc3214597eef877792506b",
+            "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+            "0x0000000000000000000000003c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+            "0x0000000000000000000000005fbdb2315678afecb367f032d93f642f64180aa3"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000000bebc20000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000005107000000000000000000000000000000000000000000000000000000000bebc200"
+        }
+      ]
+    },
+    {
+      "billId": "D02",
+      "billKey": "0xac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d2",
+      "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "amountBaseUnits": "150000000",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "policyVersion": "6",
+      "dailySpentBaseUnits": "350000000",
+      "transactionHash": "0x42eaad1b36de1ca27e56b22ab430b71e1ca41b7db516a94a6c2c84d99fe3d8d4",
+      "blockNumber": 10,
+      "blockHash": "0x13668d12a1a0681494dcea07075920bc55496b9d10439c03db867d0328862fce",
+      "status": 1,
+      "gasUsed": "121604",
+      "gasCostWei": "159338371294984",
+      "logs": [
+        {
+          "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x000000000000000000000000e7f1725e7734ce288f8367e1bb143e90bb3f0512",
+            "0x00000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000008f0d180"
+        },
+        {
+          "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+          "topics": [
+            "0xb9220cfa709084bd4797a5a5710a2a2db9fe723fddbc3214597eef877792506b",
+            "0xac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d2",
+            "0x00000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906",
+            "0x0000000000000000000000005fbdb2315678afecb367f032d93f642f64180aa3"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000008f0d180000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000051070000000000000000000000000000000000000000000000000000000014dc9380"
+        }
+      ]
+    }
+  ],
+  "blocked": {
+    "duplicate": {
+      "billKey": "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+      "reason": "BillAlreadyPaid",
+      "checkedBy": "eth_call"
+    },
+    "dailyLimit": {
+      "billId": "D03",
+      "reason": "DailyLimitExceeded",
+      "transactionHash": "0x58b87d68be4aa37a8bcc9dd31e3082d619b983826b96b132314b05978a31c0e1",
+      "blockNumber": 11,
+      "blockHash": "0x5bef9478d9983b1988edcc84cacdbe2e559cc6d8a2f42e6eee6c9bcbcc364406",
+      "status": 0,
+      "gasUsed": "58458",
+      "logs": []
+    }
+  },
+  "finalState": {
+    "paidBaseUnits": "350000000",
+    "vaultBalanceBaseUnits": "650000000",
+    "remainingDailyBudgetBaseUnits": "50000000",
+    "hostBalanceBaseUnits": "200000000",
+    "designBalanceBaseUnits": "150000000"
+  }
+}

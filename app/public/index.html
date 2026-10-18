@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Mandate — review business bills and approve exact payments within your rules.">
+  <title>Mandate · Owner workspace</title>
+  <link rel="stylesheet" href="/app.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Mandate home"><span class="brand-mark">m<span>↗</span></span>mandate<span class="brand-dot">.</span></a>
+    <div class="workspace"><span class="workspace-icon">OS</span><div><strong>Orbit Studio</strong><small>Business workspace</small></div><span>⌄</span></div>
+    <p class="nav-label">WORKSPACE</p>
+    <nav aria-label="Workspace navigation">
+      <button class="nav active" data-tab="bills"><span>▤</span> Bills <b id="bill-count">0</b></button>
+      <button class="nav" data-tab="vendors"><span>♧</span> Vendors</button>
+      <button class="nav" data-tab="controls"><span>☷</span> Rules & access</button>
+      <button class="nav" data-tab="activity"><span>◷</span> Activity</button>
+    </nav>
+    <div class="sidebar-bottom"><span class="tiny-shield">◇</span><strong>Your rules. Every payment.</strong><p>Exact approvals. Clear limits.<br>Owner control, on-chain.</p><div class="team-label">CHAINSENTINEL / MANDATE</div></div>
+  </aside>
+  <div class="shell">
+    <header><div class="breadcrumb">Workspace <span>/</span> <strong id="page-name">Bills</strong></div><div class="header-actions"><span class="network"><i></i> <span id="network-name">Local test network</span></span><button id="wallet" class="button button-outline">Connect wallet <span>↗</span></button></div></header>
+    <main>
+      <div id="notice" role="status" aria-live="polite" hidden></div>
+      <section class="intro"><div><p class="eyebrow">OWNER WORKSPACE</p><h1 id="page-title">Good decisions start here.</h1><p id="page-description">Review your bills. Approve the details. Stay in control.</p></div><button id="refresh" class="button button-quiet">↻ Refresh</button></section>
+      <section class="stats" aria-label="Vault summary">
+        <article class="stat"><span>Vault balance <b>↗</b></span><strong id="vault-balance">—</strong><small>MDT test tokens</small></article>
+        <article class="stat"><span>Daily budget left <b>◴</b></span><strong id="budget-left">—</strong><small id="budget-description">Resets at 00:00 UTC</small></article>
+        <article class="stat"><span>Protected reserve <b>◇</b></span><strong id="reserve">—</strong><small>Kept after agent payments</small></article>
+        <article class="stat accent-stat"><span>Ready for approval <b>✓</b></span><strong id="ready-count">0</strong><small>Reviewed bills, awaiting your signature</small></article>
+      </section>
+      <section id="bills-panel" class="tab-panel">
+        <div class="panel-heading"><div><h2>Your bills <span id="list-count" class="count">0</span></h2><p>Start with a bill. Nothing moves until you approve it.</p></div><button id="approve-selected" class="button button-primary" disabled>Review approval <span id="selected-count">0</span> ↗</button></div>
+        <section class="upload-card" id="drop-zone" aria-label="Invoice upload">
+          <span class="upload-icon">↥</span><div><strong>Bring your bills into one place</strong><p>Drop a CSV or text PDF here. Up to 5 MB per file.</p><div class="sample-links"><button id="load-sample">Try three sample bills ↗</button><span>·</span><a href="/api/sample.csv" download>CSV example</a><span>·</span><a href="/api/sample.pdf" download>PDF example</a></div></div>
+          <label class="button button-outline" for="upload">Upload bill <span>＋</span></label><input id="upload" type="file" accept=".csv,.pdf" hidden>
+        </section>
+        <div class="table-card"><div class="table-toolbar"><strong>All bills</strong><span id="bill-summary">Waiting for a local chain…</span></div><div class="table-scroll"><table><thead><tr><th class="selection"><input id="select-all" type="checkbox" aria-label="Select all ready bills"></th><th>Invoice / vendor</th><th>Due date</th><th class="amount">Amount</th><th>Status</th><th></th></tr></thead><tbody id="bills-body"></tbody></table></div><div id="empty-bills" class="empty"><span>▤</span><h3>A clear view of every bill.</h3><p>Upload an invoice or try the sample bills to begin.</p></div><div class="table-footer"><span>◇ Approvals set permission. They do not transfer tokens.</span><span>MDT · 6 decimals</span></div></div>
+        <div class="bottom-note"><span>✦</span><div><strong>One review. Exact permission.</strong><p>Only approved recipients and amounts can be paid. The contract checks the limits again at payment time.</p></div><span id="model-badge" class="mode-badge">MANUAL REVIEW · AI NOT CONNECTED</span></div>
+        <section id="agent-workspace" class="agent-card" aria-label="Payment agent" hidden>
+          <div class="panel-heading"><div><p class="eyebrow">PAYMENT AGENT</p><h2>Give your bills a clear next step.</h2><p id="agent-mode">AI is off.</p></div><button id="manual-preview" class="button button-outline">Preview without AI ↗</button></div>
+          <form id="agent-form-request"><label for="agent-message">Ask about approved bills, or request a draft correction</label><textarea id="agent-message" maxlength="2000" placeholder="Pay all approved bills within my rules."></textarea><p class="form-note">Only synthetic data. AI questions send your message and bill summaries to OpenAI. Reading an invoice with AI also sends its source text. Every payment needs the separate confirmation below.</p><button id="ask-agent" class="button button-primary">Ask AI ↗</button></form>
+          <div id="agent-result" aria-live="polite"></div>
+          <div id="payment-results"></div>
+        </section>
+      </section>
+      <section id="vendors-panel" class="tab-panel" hidden><div class="panel-heading"><div><h2>Trusted vendors</h2><p>Only owner-signed changes can update payment recipients.</p></div></div><div id="vendors-list" class="vendor-grid"></div></section>
+      <section id="controls-panel" class="tab-panel" hidden>
+        <div class="panel-heading"><div><h2>Rules & agent access</h2><p>Review every change before your wallet signs it.</p></div><span id="pause-status" class="pill">Loading</span></div>
+        <div class="controls-grid">
+          <form id="limits-form" class="form-card"><p class="eyebrow">SPENDING RULES</p><h3>Keep your budget in bounds.</h3><label>Maximum per bill <span>MDT</span><input name="maxPerBill" inputmode="decimal" required></label><label>Maximum per UTC day <span>MDT</span><input name="dailyLimit" inputmode="decimal" required></label><label>Minimum balance to keep <span>MDT</span><input name="reserve" inputmode="decimal" required></label><p class="form-note">Daily usage includes every agent session. Updating limits does not reset spending.</p><button class="button button-primary">Review rule change ↗</button></form>
+          <form id="agent-form" class="form-card"><p class="eyebrow">TIME-LIMITED ACCESS</p><h3>Delegate with a clear end.</h3><label>Separate agent address<input name="agent" autocomplete="off" required></label><label>Access starts <span>your local time</span><input name="notBefore" type="datetime-local" step="1" required></label><label>Access expires <span>your local time</span><input name="expiresAt" type="datetime-local" step="1" required></label><p class="form-note">This account can only pay approved bills. It cannot approve bills or change your rules.</p><button class="button button-primary">Review access grant ↗</button></form>
+        </div><div class="stop-card"><div><h3>Stay in control.</h3><p>Pause payments or revoke the agent. A stop takes effect after the transaction is confirmed.</p></div><div><button id="pause" class="button button-outline">Review pause</button><button id="revoke" class="button button-danger">Review revocation</button></div></div>
+      </section>
+      <section id="activity-panel" class="tab-panel" hidden><div class="panel-heading"><div><h2>Approval activity</h2><p>Real transaction status, checked against the reviewed action.</p></div></div><div id="activity-list" class="activity-list"></div></section>
+      <footer><span>ChainSentinel <b>·</b> Mandate prototype</span><span>Local test tokens only. No cash value. <span id="block-number"></span></span></footer>
+    </main>
+  </div>
+  <dialog id="bill-dialog" class="review-dialog" aria-labelledby="review-title"><div class="dialog-top"><div><p class="eyebrow">BILL REVIEW</p><h2 id="review-title">Review invoice</h2></div><button class="icon-button close-dialog" aria-label="Close bill review">✕</button></div><div class="review-layout"><section class="source-pane"><div class="source-heading"><strong>Original source text</strong><span id="source-name"></span></div><pre id="source-text"></pre><p class="form-note">Text is shown as data. Invoice instructions cannot change wallet permissions.</p><button id="delete-source" class="text-danger">Remove this source and its drafts</button></section><section class="fields-pane"><div id="review-issues"></div><form id="bill-form"></form></section></div></dialog>
+  <dialog id="transaction-dialog" class="transaction-dialog" aria-labelledby="transaction-title"><div class="dialog-top"><div><p class="eyebrow">BEFORE YOU SIGN</p><h2 id="transaction-title">Review owner action</h2></div><button id="close-transaction" class="icon-button" aria-label="Close transaction review">✕</button></div><div id="transaction-details"></div><p id="transaction-status" class="form-note" role="status"></p><div class="transaction-actions"><button id="cancel-transaction" class="button button-outline">Cancel</button><button id="send-transaction" class="button button-primary">Send to wallet ↗</button></div></dialog>
+</body>
+</html>

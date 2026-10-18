@@ -1,0 +1,34 @@
+# Installed tools and generated output
+node_modules/
+out/
+cache/
+broadcast/
+dist/
+test-results/
+playwright-report/
+coverage/
+*.log
+
+# Credentials, local invoices/databases and completed registration material
+.env
+.env.*
+!.env.example
+local-data/
+competition/private/
+secrets/
+credentials/
+keystore/
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+
+# Editor and operating-system metadata
+.DS_Store
+.idea/
+.vscode/
