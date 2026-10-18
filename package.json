@@ -16,7 +16,7 @@
     "build:app": "node scripts/build-app.mjs",
     "dev": "node scripts/dev.mjs",
     "test:app": "node --test test/intake.test.mjs test/owner-workflow.test.mjs test/server-shutdown.test.mjs",
-    "test:agent": "node --test test/agent.test.mjs",
+    "test:agent": "node --test test/agent.test.mjs test/gemini-model.test.mjs",
     "test:live": "node scripts/live-check.mjs",
     "test:ui": "playwright test"
   },

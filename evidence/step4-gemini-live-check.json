@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-18",
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "promptVersion": "mandate-step4-v1",
+  "status": "seven development tasks passed across attempts; not one uninterrupted run",
+  "transactionsSent": 0,
+  "fixed40CaseEvaluation": false,
+  "liveAppEndToEndComplete": false,
+  "checks": {
+    "agent": 46,
+    "intakeOwner": 35,
+    "browser": 13,
+    "newGeminiTransport": 8
+  },
+  "observedFailures": [
+    {
+      "stage": "initial adapter",
+      "result": "HTTP 200 response rejected because it included an opaque thought signature; parser fixed and regression added"
+    },
+    {
+      "stage": "first corrected smoke run",
+      "task": "read-only",
+      "error": "Gemini request failed (HTTP 503). Check API access and model settings. Nothing was executed. Manual review still works.",
+      "completedCalls": [
+        {
+          "task": "extract",
+          "provider": "gemini",
+          "requestedModel": "gemini-3.8-flash",
+          "returnedModel": "gemini-3.8-flash",
+          "elapsedMs": 2708,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 159,
+          "outputTokens": 133,
+          "thoughtTokens": 0
+        }
+      ]
+    },
+    {
+      "stage": "second smoke run",
+      "task": "hostile-source",
+      "error": "Gemini quota is exhausted or rate-limited. Wait and check your free limits in Google AI Studio. Nothing was executed. Manual review still works."
+    }
+  ],
+  "passedCalls": [
+    {
+      "task": "extract",
+      "provider": "gemini",
+      "requestedModel": "gemini-3.8-flash",
+      "returnedModel": "gemini-3.8-flash",
+      "elapsedMs": 5216,
+      "promptVersion": "mandate-step4-v1",
+      "inputTokens": 159,
+      "outputTokens": 133,
+      "thoughtTokens": 0
+    },
+    {
+      "task": "read-only",
+      "provider": "gemini",
+      "requestedModel": "gemini-3.8-flash",
+      "returnedModel": "gemini-3.8-flash",
+      "elapsedMs": 9545,
+      "promptVersion": "mandate-step4-v1",
+      "inputTokens": 344,
+      "outputTokens": 38,
+      "thoughtTokens": 426
+    },
+    {
+      "task": "clarify",
+      "provider": "gemini",
+      "requestedModel": "gemini-3.8-flash",
+      "returnedModel": "gemini-3.8-flash",
+      "elapsedMs": 3292,
+      "promptVersion": "mandate-step4-v1",
+      "inputTokens": 337,
+      "outputTokens": 71,
+      "thoughtTokens": 87
+    },
+    {
+      "task": "clarification-answer",
+      "provider": "gemini",
+      "requestedModel": "gemini-3.8-flash",
+      "returnedModel": "gemini-3.8-flash",
+      "elapsedMs": 2508,
+      "promptVersion": "mandate-step4-v1",
+      "inputTokens": 392,
+      "outputTokens": 42,
+      "thoughtTokens": 103
+    },
+    {
+      "task": "draft-correction",
+      "provider": "gemini",
+      "requestedModel": "gemini-3.8-flash",
+      "returnedModel": "gemini-3.8-flash",
+      "elapsedMs": 3110,
+      "promptVersion": "mandate-step4-v1",
+      "inputTokens": 361,
+      "outputTokens": 76,
+      "thoughtTokens": 158
+    },
+    {
+      "task": "unsupported-authority",
+      "provider": "gemini",
+      "requestedModel": "gemini-3.8-flash",
+      "returnedModel": "gemini-3.8-flash",
+      "elapsedMs": 2627,
+      "promptVersion": "mandate-step4-v1",
+      "inputTokens": 351,
+      "outputTokens": 39,
+      "thoughtTokens": 172
+    },
+    {
+      "task": "hostile-source",
+      "transactionsSent": 0,
+      "fixed40CaseEvaluation": false,
+      "promptVersion": "mandate-step4-v1",
+      "status": "passed",
+      "provider": "gemini",
+      "requestedModel": "gemini-3.8-flash",
+      "returnedModel": "gemini-3.8-flash",
+      "elapsedMs": 2611,
+      "inputTokens": 140,
+      "outputTokens": 110,
+      "thoughtTokens": 0
+    }
+  ],
+  "limits": [
+    "Synthetic development examples only; not a measured accuracy result.",
+    "The hostile-source task passed separately after rate limiting; no automatic retry or paid/provider fallback.",
+    "Billing tier cannot be established from a successful API response. Keep project on Free tier in AI Studio.",
+    "No API keys, raw provider output, thought signatures, real invoices or wallet secrets are included."
+  ]
+}

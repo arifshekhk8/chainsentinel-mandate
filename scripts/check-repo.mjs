@@ -7,6 +7,8 @@ const files = execFileSync('git', ['ls-files', '-z'], { encoding: 'utf8' }).spli
 const contents = new Map(files.map((name) => [name, execFileSync('git', ['show', `:${name}`], { maxBuffer: 10 * 1024 * 1024 })]));
 const errors = [];
 const patterns = [
+  /AIza[A-Za-z0-9_-]{30,}/,
+  /AQ\.[A-Za-z0-9_-]{30,}/,
   /sk-[A-Za-z0-9_-]{24,}/,
   /gh[pousr]_[A-Za-z0-9]{30,}/,
   /github_pat_[A-Za-z0-9_]{30,}/,

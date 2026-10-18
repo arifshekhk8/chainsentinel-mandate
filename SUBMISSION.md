@@ -2,7 +2,7 @@
 
 **Team:** ChainSentinel. **Event:** 2026 Shenzhen International FinTech Competition, International Track. **Topic:** F — Agent Wallet. **Repository:** [arifshekhk8/chainsentinel-mandate](https://github.com/arifshekhk8/chainsentinel-mandate), private. **Snapshot date:** 18 October 2026, Asia/Dhaka.
 
-This repository contains the local prototype, reproducible tests, synthetic fixtures and existing local receipts. Live AI verification, measured agent evaluation and public evidence remain pending. Use this guide to inspect the source package; do not describe the current snapshot as a finished competition submission.
+This repository contains the local prototype, reproducible tests, synthetic fixtures and existing local receipts. Gemini live development checks are [recorded separately](evidence/STEP4_GEMINI_RESULTS.md); full live-app verification, measured agent evaluation and public evidence remain pending. Use this guide to inspect the source package; do not describe the current snapshot as a finished competition submission.
 
 ## Review route
 
@@ -20,13 +20,13 @@ This repository contains the local prototype, reproducible tests, synthetic fixt
 | Security/compliance — 30% | [Contract checks](evidence/STEP2_RESULTS.md), [security boundaries](SECURITY.md), [queue/recovery checks](evidence/STEP4_RESULTS.md) | Measured live hostile cases, final self-assessment and authorized public stop/replay demonstration |
 | Innovation/interaction — 30% | [Orbit Studio scenario](demo/SCENARIO.md), controlled clarification/correction/fallback traces | All six live interaction cases and matched manual/security comparisons |
 
-The recorded Step 4 local results are 58 contract, four identity, 33 intake/owner, 38 agent and 12 browser checks. Repository verification added two server-shutdown regressions, making the current `test:app` suite **35 checks**. Earlier step reports overlap these totals; they are not extra independent evaluation cases. The 40-case dataset is separate and unexecuted. Test adapters/mock transport do not establish live-model accuracy. No guaranteed score or finalist-selection claim is made.
+The recorded Step 4 local results are 58 contract, four identity, 33 intake/owner, 38 agent and 12 browser checks. Repository verification added two server-shutdown regressions, making the current `test:app` suite **35 checks**. Earlier step reports overlap these totals; they are not extra independent evaluation cases. Gemini integration subsequently passed 46 agent and 13 browser regressions, plus seven live development tasks across attempts; [provider errors and limits](evidence/STEP4_GEMINI_RESULTS.md) are disclosed. The 40-case dataset is separate and unexecuted. Test adapters/mock transport do not establish live-model accuracy. No guaranteed score or finalist-selection claim is made.
 
 ## Remaining submission checklist
 
 - [ ] Complete team registration privately and retain the organizer acknowledgment; choose/confirm the leader and all required member details.
 - [ ] Obtain organizer clarification before claiming that Sepolia alone satisfies Topic F evidence rules.
-- [ ] Configure the chosen model locally and verify real extraction, clarification, corrections, read-only behavior and fallback. Record model/prompt version, latency, API errors and corrections.
+- [ ] Finish live app/payment integration review after the [Gemini development checks](evidence/STEP4_GEMINI_RESULTS.md); retain model/prompt, latency and API-error metadata. Replace any key shared in chat only in local configuration.
 - [ ] Freeze and execute [the 40-case set](demo/cases.json), measure results against [TESTING.md](TESTING.md#fixed-evaluation-set-and-targets) and complete both matched comparisons. Fix or disclose misses.
 - [ ] With explicit authorization, collect public evidence with chain/vault/token/recipient/amount/bill references, successful receipts and revocation/replay demonstrations.
 - [ ] Complete the technical report, security self-assessment, English presentation (up to 10 minutes) and English video (up to 5 minutes). Follow the [organizer checklist/templates](competition/requirements.md#submission-checklist).

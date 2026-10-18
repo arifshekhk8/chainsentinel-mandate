@@ -1,6 +1,6 @@
 # Mandate requirements
 
-This file defines required application behavior. [competition/requirements.md](competition/requirements.md) contains event rules. Local contract, owner-workflow and agent/executor checks are recorded in [PROGRESS.md](PROGRESS.md). The OpenAI adapter is prepared; the user deferred live-model verification. The 40-case evaluation and public evidence remain unexecuted.
+This file defines required application behavior. [competition/requirements.md](competition/requirements.md) contains event rules. Local contract, owner-workflow and agent/executor checks are recorded in [PROGRESS.md](PROGRESS.md). On 18 October the user authorized Gemini setup and live development checks; see [actual Gemini results](evidence/STEP4_GEMINI_RESULTS.md). The 40-case evaluation and public evidence remain unexecuted. Acceptance targets are unchanged.
 
 **Handoff, 17 October:** work is paused until the user returns on 18 October. Requirements and acceptance targets are unchanged; documentation cleanup does not count as a new test pass.
 

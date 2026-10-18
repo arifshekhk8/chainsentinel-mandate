@@ -1,6 +1,6 @@
 # Mandate project plan
 
-**Product:** an AI wallet agent that pays approved business bills within the owner's rules. **Status:** Step 4 local implementation/checks ready; live AI verification deferred by the user. Public evidence remains later work. See [contract results](evidence/STEP2_RESULTS.md), [owner-workflow results](evidence/STEP3_RESULTS.md) and [agent results](evidence/STEP4_RESULTS.md).
+**Product:** an AI wallet agent that pays approved business bills within the owner's rules. **Status:** Step 4 local implementation/checks ready; the user authorized Gemini setup and live development checks on 18 October. See [Gemini results and remaining checks](evidence/STEP4_GEMINI_RESULTS.md). Public evidence remains later work. See [contract results](evidence/STEP2_RESULTS.md), [owner-workflow results](evidence/STEP3_RESULTS.md) and [agent results](evidence/STEP4_RESULTS.md).
 
 The owner approves a group of bills and payment rules once. The agent plans eligible payments, preserves a minimum token balance, explains exceptions and produces receipts. Blockchain code checks permission independently before every payment.
 
@@ -44,7 +44,7 @@ Read [REQUIREMENTS.md](REQUIREMENTS.md) for pass conditions, [ARCHITECTURE.md](A
 
 Complete one step before starting the next. Registration acknowledgment and organizer clarification may remain pending while unrelated local work proceeds. Do not present unresolved testnet eligibility as settled.
 
-**Step 4 implementation status:** local agent/executor and test-adapter interaction checks are implemented. The user chose “Prepare it now; test live AI later.” Keep live-model extraction/conversation checks pending; local scripted tests do not satisfy that part of the completion check. See [Step 4 results](evidence/STEP4_RESULTS.md). Step 5 has not started.
+**Step 4 implementation status:** local agent/executor and test-adapter interaction checks are implemented. On 18 October the user chose Gemini's free API and explicitly authorized connection/live testing, superseding the earlier deferral. The bounded development checks and provider errors are recorded in [Gemini results](evidence/STEP4_GEMINI_RESULTS.md); these do not complete the 40-case evaluation or all live app/receipt scenarios. Step 5 has not started.
 
 **Session handoff, 17 October:** paused for the night at the user's request. Resume on 18 October only when the user returns; start with the [dated checklist](PROGRESS.md#resume-on-18-october-2026). No overnight work is scheduled.
 

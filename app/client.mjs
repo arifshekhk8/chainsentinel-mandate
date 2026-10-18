@@ -74,10 +74,10 @@ function renderAgent() {
   const agent = state.agent;
   $('#agent-workspace').hidden = !agent;
   if (!agent) return;
-  const live = agent.mode === 'live-openai';
+  const live = ['live-openai', 'live-gemini'].includes(agent.mode);
   const testAdapter = agent.mode === 'scripted-test';
   $('#model-badge').textContent = live ? 'LIVE AI CONFIGURED' : testAdapter ? 'TEST ADAPTER · NO LIVE AI' : 'AI OFF · MANUAL PREVIEW AVAILABLE';
-  $('#agent-mode').textContent = live ? `Live OpenAI configured · ${agent.model}. Execution still needs your confirmation.` : testAdapter ? 'Scripted test adapter. No live model is used.' : 'AI is off. You can use a scripted manual preview and the restricted local test agent.';
+  $('#agent-mode').textContent = live ? `Live ${agent.mode === 'live-gemini' ? 'Gemini' : 'OpenAI'} configured · ${agent.model}. Execution still needs your confirmation.` : testAdapter ? 'Scripted test adapter. No live model is used.' : 'AI is off. You can use a scripted manual preview and the restricted local test agent.';
   $('#ask-agent').disabled = agentBusy || !(live || testAdapter);
   $('#manual-preview').disabled = agentBusy;
   const plan = agent.plans.find((p) => p.id === activePlanId) ?? agent.plans[0];
@@ -85,7 +85,7 @@ function renderAgent() {
   const result = $('#agent-result');
   if (!plan) { result.innerHTML = ''; } else {
     const p = plan.payload;
-    let html = `<article class="agent-response"><span class="eyebrow">${esc(p.mode === 'live-openai' ? 'LIVE AI PROPOSAL' : p.mode === 'scripted-manual' ? 'SCRIPTED MANUAL PREVIEW · NO AI' : 'TEST ADAPTER · NO LIVE AI')}</span><p>${esc(p.message)}</p>`;
+    let html = `<article class="agent-response"><span class="eyebrow">${esc(['live-openai', 'live-gemini'].includes(p.mode) ? 'LIVE AI PROPOSAL' : p.mode === 'scripted-manual' ? 'SCRIPTED MANUAL PREVIEW · NO AI' : 'TEST ADAPTER · NO LIVE AI')}</span><p>${esc(p.message)}</p>`;
     if (p.plan && !['clarify', 'unsupported'].includes(p.intent)) {
       html += `<p class="form-note">Plan snapshot at block ${esc(p.plan.blockNumber)} · ${esc(plan.status)}. Entries below describe that preview; confirmed outcomes are listed separately.</p>`;
       html += `<p class="plan-totals">Eligible total <strong>${esc(units(p.plan.total))} MDT</strong> · Projected balance ${esc(units(p.plan.projectedBalance))} · Projected daily budget left ${esc(units(p.plan.projectedDailyLeft))} MDT</p>`;
@@ -202,7 +202,7 @@ function showBill(id) {
     <div class="review-actions"><button type="button" id="save-draft" class="button button-outline" ${row.locked ? 'disabled' : ''}>Save changes</button><button type="button" id="mark-reviewed" class="button button-primary" disabled>Mark reviewed ✓</button></div>
     ${activeApproval ? '<button type="button" id="cancel-bill" class="button button-danger">Review cancellation</button>' : ''}
     <p class="form-note">Saving a change clears the earlier review. New or changed details need a fresh owner signature before they can be used.</p>
-    ${state.agent ? `<button type="button" id="ai-extract" class="button button-outline" ${state.agent.mode !== 'live-openai' || row.locked ? 'disabled' : ''}>Send synthetic source to AI for field suggestions ↗</button>` : ''}`;
+    ${state.agent ? `<button type="button" id="ai-extract" class="button button-outline" ${!['live-openai', 'live-gemini'].includes(state.agent.mode) || row.locked ? 'disabled' : ''}>Send synthetic source to AI for field suggestions ↗</button>` : ''}`;
   if ($('#ai-extract')) $('#ai-extract').onclick = () => agentAction(async () => {
     const p = await api(`/api/agent/extract/${id}`, 'POST', {}); activePlanId = p.id;
     $('#bill-dialog').close(); notify('AI suggestions are below the bill table. Review them before applying to the draft.');

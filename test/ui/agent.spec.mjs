@@ -3,7 +3,7 @@ import { startLocalChain } from '../../scripts/local-chain.mjs';
 import { OwnerService } from '../../app/service.mjs';
 import { Store } from '../../app/store.mjs';
 import { AgentService } from '../../app/agent.mjs';
-import { OpenAIModel } from '../../app/model.mjs';
+import { OpenAIModel, GeminiModel } from '../../app/model.mjs';
 import { startServer } from '../../app/server.mjs';
 import { sampleRows } from '../../app/samples.mjs';
 import { id, parseUnits } from 'ethers';
@@ -57,6 +57,26 @@ test('read-only and clarification show no run button; a follow-up can produce an
   output = proposal('pay', { scope: 'selected', billIds: [store.drafts()[1].id] }); await ask(page, 'The Artline invoice.');
   await expect(page.locator('#agent-result')).toContainText('150 MDT total'); await expect(page.locator('#run-agent')).toBeDisabled();
   expect(service.agent.executor.payments()).toHaveLength(0);
+});
+test('Gemini labels, read-only output and quota fallback work without sending payments', async ({ page }) => {
+  let limited = false;
+  service.agent.model = new GeminiModel({ apiKey: 'synthetic-browser-token', fetcher: async () => limited
+    ? new Response('sensitive-provider-body', { status: 429 })
+    : new Response(JSON.stringify({ status: 'completed', model: 'gemini-3.8-flash',
+      steps: [{ type: 'model_output', content: [{ type: 'text', text: JSON.stringify(proposal('status')) }] }] })) });
+  await page.locator('#refresh').click();
+  await expect(page.locator('#agent-mode')).toContainText('Live Gemini configured');
+  await expect(page.locator('#agent-mode')).toContainText('gemini-3.8-flash');
+  await ask(page, 'Show the approved invoices. Do not pay.');
+  await expect(page.locator('#agent-result')).toContainText('LIVE AI PROPOSAL');
+  await expect(page.locator('#run-agent')).toHaveCount(0);
+  limited = true; await ask(page, 'Show the approved invoices again.');
+  await expect(page.locator('#notice')).toContainText('Gemini quota');
+  await expect(page.locator('body')).not.toContainText('sensitive-provider-body');
+  await expect(page.locator('body')).not.toContainText('synthetic-browser-token');
+  expect(service.agent.executor.payments()).toHaveLength(0);
+  await expect(page.locator('#vault-balance')).toHaveText('1000');
+  await expect(page.locator('#manual-preview')).toBeEnabled();
 });
 test('AI correction requires applying and source review, while the signed amount remains active', async ({ page }) => {
   const row = store.drafts()[0]; output = proposal('correct', { correction: { draftId: row.id, field: 'amount', value: '180' } });

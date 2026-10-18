@@ -36,6 +36,7 @@ These instructions apply to this workspace. Follow the user's latest instruction
 - Label scripted mode, local-chain evidence and public-testnet evidence correctly. Never invent payments, test results, users, savings or finalist-selection claims.
 - Use exact integer token amounts. The model does not calculate balances or decide whether contract rules pass.
 - Keep dependencies and files minimal. Verify current official documentation before relying on a library or API; record the versions actually chosen during implementation.
+- The user chose Gemini's free API for Step 4. Keep credentials in ignored local configuration, use the documented free-tier model and never silently change providers/models or enable billing. Rate limits must leave manual review available.
 - Keep the GitHub repository private. Use the configured Git author and meaningful, plain-language commit messages; do not add AI co-author trailers, invent an earlier development history or backdate commits. Push coherent changes separately when requested. Never stage keys, local invoices/databases or completed registration/identity material.
 
 ## Finish each session

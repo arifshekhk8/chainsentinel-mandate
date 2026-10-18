@@ -8,7 +8,7 @@ Mandate helps a small business pay approved supplier bills. The owner reviews ea
 
 The prototype uses fictional **Orbit Studio**, synthetic invoices and **MDT test tokens with no cash value**. Its normal batch pays 200 + 150 MDT from 1,000, leaves 650, and explains why a 75 MDT bill must wait when only 50 of the daily budget remains.
 
-**Current status:** the local contract, owner workspace and restricted executor are implemented and tested. OpenAI support is prepared, but live-model verification, the fixed 40-case evaluation and public-testnet evidence are pending. This is a private development repository, not a claim that the final competition entry is complete. See the [submission checklist](SUBMISSION.md#remaining-submission-checklist) and [working progress](PROGRESS.md).
+**Current status:** the local contract, owner workspace and restricted executor are implemented and tested. Gemini is connected; live development checks and limitations are in the [Gemini results](evidence/STEP4_GEMINI_RESULTS.md). The fixed 40-case evaluation and public-testnet evidence remain pending. This is a private development repository, not a claim that the final competition entry is complete. See the [submission checklist](SUBMISSION.md#remaining-submission-checklist) and [working progress](PROGRESS.md).
 
 For a quick visual review, open the [desktop payment workflow](evidence/step4-agent-desktop.png), [source/field review](evidence/step3-review.png) and [mobile workspace](evidence/step4-agent-mobile.png). All screenshots show local synthetic tests; no actual user wallet extension was operated.
 
@@ -42,9 +42,17 @@ The local setup script temporarily impersonates the optional public owner addres
 
 For the three sample bills, approve all three: the normal plan pays 200 + 150 MDT, leaves 650 MDT and defers 75 MDT because only 50 of the daily budget remains. This assumes the default rules and an active unpaused session.
 
-To enable AI **later**, copy [.env.example](.env.example) to a local `.env` and configure `OPENAI_API_KEY` plus `OPENAI_MODEL` yourself. Never share the key in chat. Choose an API-project model supporting [Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses). Restart the app; **Ask AI** then sends your short message and bill summaries to OpenAI. Questions and unclear requests cannot execute. A draft correction needs **Apply to draft, then review**, with fresh owner approval if details change. For one synthetic invoice per file, the bill-review screen also offers explicit AI field assistance; manual review remains available.
+To enable AI, copy [.env.example](.env.example) to `.env` **only if no local `.env` exists**, then configure privately:
 
-The [Responses API](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses) uses strict JSON proposals, no model tools, a 20-second timeout and `store: false`; this is not a zero-retention guarantee. Use synthetic data only. Keys remain on the backend. Optional `npm run test:live` makes three small billed development calls and no transactions; it has **not** been run. It is separate from the 40-case evaluation.
+```dotenv
+AI_PROVIDER=gemini
+GEMINI_MODEL=gemini-3.8-flash
+GEMINI_API_KEY=
+```
+
+Put your key only in that ignored local file; never share it in chat. Keep the project on the Free tier in [Google AI Studio](https://aistudio.google.com/). The adapter pins `gemini-3.8-flash`, which has documented [free quota](https://ai.google.dev/gemini-api/docs/pricing); the server cannot inspect your project's billing tier. There is no provider/model fallback or automatic retry. A quota/access error leaves manual review available. The original optional OpenAI adapter remains available by explicitly setting `AI_PROVIDER=openai`, `OPENAI_API_KEY` and `OPENAI_MODEL`.
+
+Restart the app; **Ask AI** sends your short message and bill summaries to the displayed provider. Questions and unclear requests cannot execute. A draft correction needs **Apply to draft, then review**, with fresh owner approval if details change. For one synthetic invoice per file, the bill-review screen also offers explicit AI field assistance; manual review remains available. `npm run test:live` explicitly makes up to seven synthetic development calls and sends no transactions; see the [actual results](evidence/STEP4_GEMINI_RESULTS.md).
 
 Drafts and extracted source text are stored in ignored `local-data/mandate.sqlite` with restricted file permissions. Original PDF/CSV bytes are not retained after parsing. Removing a source removes all its drafts; opaque receipt/approval references and on-chain records remain. Restarting `npm run dev` starts a **new local chain session**: drafts persist, but old local approvals and prepared actions are not treated as current. Fresh review/signing is required. The app is for local synthetic test data only.
 
@@ -135,7 +143,7 @@ Event rules and original files stay in [competition/](competition/): [checklist 
 
 SQLite uses [Node's built-in API](https://nodejs.org/download/release/v25.1.0/docs/api/sqlite.html); it is not a separate npm dependency. The frontend uses plain ES modules/HTML/CSS to keep this prototype small; no React framework or remote scripts/fonts are required.
 
-AI uses OpenAI's REST API through Node fetch with no additional SDK dependency. API usage has separate provider terms/costs; [data controls](https://developers.openai.com/api/docs/guides/your-data) describe retention boundaries. Transaction preparation/signing follows [ethers Signer](https://docs.ethers.org/v6/api/providers/#Signer) and [Wallet](https://docs.ethers.org/v6/api/wallet/) APIs.
+AI uses Gemini Interactions REST (`v1beta`, `gemini-3.8-flash`) or the optional OpenAI Responses adapter through Node fetch, with no additional SDK dependency. Both request `store: false`; this does not erase provider privacy/abuse-processing obligations. Gemini's free-tier content may be used to improve Google's products, so use only synthetic data. See [Gemini structured output](https://ai.google.dev/gemini-api/docs/structured-output), [retention](https://ai.google.dev/gemini-api/docs/interactions-overview#data-storage-and-retention), [pricing/data use](https://ai.google.dev/gemini-api/docs/pricing) and [OpenAI data controls](https://developers.openai.com/api/docs/guides/your-data). Transaction preparation/signing follows [ethers Signer](https://docs.ethers.org/v6/api/providers/#Signer) and [Wallet](https://docs.ethers.org/v6/api/wallet/) APIs.
 
 Exact npm versions and integrity hashes are in [package-lock.json](package-lock.json). Foundry's native packages are installed inside node_modules; no shell configuration was changed. Compiler binaries use Foundry's normal user cache. Dependency licenses remain with their installed packages. All invoices and test businesses are synthetic; no external dataset is included.
 

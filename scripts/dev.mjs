@@ -4,7 +4,7 @@ import { startLocalChain } from './local-chain.mjs';
 import { OwnerService } from '../app/service.mjs';
 import { Store } from '../app/store.mjs';
 import { startServer } from '../app/server.mjs';
-import { OpenAIModel } from '../app/model.mjs';
+import { createModel } from '../app/model.mjs';
 import { AgentService } from '../app/agent.mjs';
 import { existsSync } from 'node:fs';
 
@@ -19,7 +19,7 @@ process.umask(0o077);
 const chain = await startLocalChain({ port: 8545, ownerAddress: args[1] });
 const store = new Store(new URL('../local-data/mandate.sqlite', import.meta.url).pathname);
 const service = new OwnerService(chain.config, store, chain.vaultAbi, chain.tokenAbi);
-service.agent = new AgentService(service, new OpenAIModel(), chain.agent);
+service.agent = new AgentService(service, createModel(), chain.agent);
 let app;
 try {
   app = await startServer(service);

@@ -10,7 +10,7 @@ export class AgentService {
   }
   plans() { return this.store.plans(this.service.config.instanceId); }
   plan(id) { const p = this.plans().find((p) => p.id === id); check(p, 'Agent review not found for this chain session.', 404); return p; }
-  async state() { return { mode: this.model.mode, model: this.model.mode === 'live-openai' ? this.model.model : null,
+  async state() { return { mode: this.model.mode, model: ['live-openai', 'live-gemini'].includes(this.model.mode) ? this.model.model : null,
     executorAddress: await this.executor.address(), plans: this.plans().slice(0, 20), payments: this.executor.payments() }; }
   async request(body) {
     check(!this.requesting, 'Another AI request is active. Please wait.', 409);

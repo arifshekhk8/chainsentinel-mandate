@@ -1,6 +1,6 @@
 # Mandate testing and demonstration
 
-These checks cover [REQUIREMENTS.md](REQUIREMENTS.md). Steps 2–4 have local contract, intake, review, restricted-agent and browser checks. The user deferred live AI testing; the 40-case agent evaluation remains unexecuted. Commands, limitations and current status are recorded in [PROGRESS.md](PROGRESS.md).
+These checks cover [REQUIREMENTS.md](REQUIREMENTS.md). Steps 2–4 have local contract, intake, review, restricted-agent and browser checks. The user authorized Gemini live development checks on 18 October; [actual results](evidence/STEP4_GEMINI_RESULTS.md) are separate from the still-unexecuted 40-case agent evaluation. Commands, limitations and current status are recorded in [PROGRESS.md](PROGRESS.md).
 
 **17 October handoff:** test results below are the recorded implementation results. This closing session checks documents, protected-file hashes and shutdown only; it does not rerun application tests or replace their evidence. On return, follow the [resume checklist](PROGRESS.md#resume-on-18-october-2026). Run new checks when changes/failures or the pending live integration require them.
 
@@ -8,7 +8,7 @@ These checks cover [REQUIREMENTS.md](REQUIREMENTS.md). Steps 2–4 have local co
 
 The private source repository was prepared on 18 October. Run `npm run check:repo` after staging: it inspects tracked/indexed paths for local/private data and common credential patterns, verifies local Markdown file links and code fences, and checks that the blank organizer templates are unchanged. An isolated staged `.env` fixture was correctly rejected without printing its value. This is a guard plus human review, not a complete secret-detection guarantee.
 
-[GitHub Actions](.github/workflows/checks.yml) runs the repository check, contract build/format/tests, identity, intake/owner, agent/recovery, browser bundle and 12 browser checks using Node 25.2.1/Ubuntu 24.04. It installs isolated Chromium with `CI=true`; local tests default to installed Chrome. Actions are pinned to immutable commits with read-only permissions and no persisted checkout credentials. No live API/wallet secret, model call or public-chain transaction is part of CI. Actual run status belongs to the [workflow record](https://github.com/arifshekhk8/chainsentinel-mandate/actions), not an assumed pass.
+[GitHub Actions](.github/workflows/checks.yml) runs the repository check, contract build/format/tests, identity, intake/owner, agent/recovery, browser bundle and 13 browser checks using Node 25.2.1/Ubuntu 24.04. It installs isolated Chromium with `CI=true`; local tests default to installed Chrome. Actions are pinned to immutable commits with read-only permissions and no persisted checkout credentials. No live API/wallet secret, model call or public-chain transaction is part of CI. Actual run status belongs to the [workflow record](https://github.com/arifshekhk8/chainsentinel-mandate/actions), not an assumed pass.
 
 CI reruns overwrite only that temporary checkout's local test artifacts; the original committed evidence is not changed by a workflow run. These regressions are separate from the unexecuted 40-case live-agent evaluation. The reviewer path and remaining delivery items are in [SUBMISSION.md](SUBMISSION.md).
 
@@ -21,7 +21,8 @@ The first Linux browser run exposed a shutdown hang after a successful correctio
 | Step 2 | [Contract results](evidence/STEP2_RESULTS.md), [payment receipts](evidence/step2-local-demo.json) | 58 contract checks, four identity checks and a separate scripted local payment demo |
 | Step 3 | [Owner results](evidence/STEP3_RESULTS.md), [approval receipt](evidence/step3-owner-approval.json), [desktop](evidence/step3-desktop.png), [review](evidence/step3-review.png), [mobile](evidence/step3-mobile.png) | 33 intake/owner checks and seven browser checks; approval itself pays no tokens |
 | Step 4 | [Agent results](evidence/STEP4_RESULTS.md), [payment receipts](evidence/step4-local-agent.json), [desktop](evidence/step4-agent-desktop.png), [mobile](evidence/step4-agent-mobile.png) | 38 agent checks and 12 total browser checks; the 12 include the seven owner checks. No live model used |
-| Later | No live-evaluation or Sepolia artifact yet | Keep pending; do not create empty reports or claim results |
+| Step 4 Gemini | [Integration results](evidence/STEP4_GEMINI_RESULTS.md), [safe live metadata](evidence/step4-gemini-live-check.json) | Seven live development tasks passed across attempts; 46 agent and 13 browser regressions. Provider failures disclosed; not fixed evaluation |
+| Later | No fixed live-evaluation or Sepolia artifact yet | Keep pending; do not create empty reports or claim results |
 
 All saved chain receipts are ephemeral local-chain evidence. Reports are historical by step; [PROGRESS.md](PROGRESS.md) gives the current status. Do not sum repeated regressions or fuzz trials as independent evaluation cases.
 
@@ -38,7 +39,7 @@ See [Step 3 results](evidence/STEP3_RESULTS.md), [approval receipt](evidence/ste
 
 ## Step 4 verification
 
-Run `npm run test:agent` for 38 agent/transport/queue checks and `npm run build:app` then `npm run test:ui` for 12 browser checks (seven owner-flow plus five agent checks). The new development examples are separate from the fixed 40 cases; expected evaluation labels are never sent to the model. Test adapters and mocked API transport are explicitly model-free.
+Run `npm run test:agent` for 46 agent/transport/queue checks (the original 38 plus eight Gemini checks) and `npm run build:app` then `npm run test:ui` for 13 browser checks (seven owner-flow plus six agent checks). The new development examples are separate from the fixed 40 cases; expected evaluation labels are never sent to the model. Test adapters and mocked API transport are explicitly model-free.
 
 - F04/F05: exact integer projections and fixed ordering; 200 + 150 MDT batch with verified receipts, 650 balance and 50 daily budget left; daily/reserve/per-bill, vendor, pause, cancellation and expiry reasons/actions.
 - F06: simultaneous requests and executor objects, used-plan replay, stale drafts/policies, revocation between sends, pending locks, hash persistence before broadcast, accepted-but-unacknowledged sends, no-broadcast uncertainty, mined revert, wrong events/RPC outage and actual same-chain payment reconciliation after backend/store reopen. Recovery never sends again.
@@ -46,7 +47,7 @@ Run `npm run test:agent` for 38 agent/transport/queue checks and `npm run build:
 - F09 development traces: ordinary wording, one focused clarification plus answer/context, read-only request even with a misclassified model output, explicit draft correction preserving signed permission, unsupported action and recoverable tool failure. These validate application handling of controlled proposals, **not** a live model's understanding.
 - Browser traces: AI-off label/manual preview and exact batch, read-only/clarification, correction/review, stale owner stop, mobile layout and inert hostile text. Actual user extensions remain untested.
 
-`npm run test:live` is prepared for the later user-approved live check: it makes three small synthetic development calls (extraction, read-only, clarification), records safe model/timing/token metadata to stdout and sends no transactions. **Not run:** the user explicitly selected live testing later. It is not the 40-case evaluation and has API costs when invoked. Full live extraction/conversation checks and evaluation remain pending. See [Step 4 results](evidence/STEP4_RESULTS.md).
+`npm run test:live` explicitly makes up to seven synthetic development calls: extraction, read-only, clarification, clarification answer, draft correction, unsupported authority and hostile-source extraction. Gemini requests are paced 12 seconds apart to reduce quota bursts; a failure stops without retry/fallback. Safe model/timing/token metadata goes to stdout; no transactions are sent. On 18 October all seven tasks passed across bounded attempts, with an intervening HTTP 503 and HTTP 429 disclosed in [Gemini results](evidence/STEP4_GEMINI_RESULTS.md). This is not one uninterrupted successful run, the 40-case evaluation or proof of full live-app/payment behavior. Free-tier availability depends on project settings/quota; the optional OpenAI provider is billed separately. The original [Step 4 results](evidence/STEP4_RESULTS.md) remain historical local evidence.
 
 ## Functional checks
 

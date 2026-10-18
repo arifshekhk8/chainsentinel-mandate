@@ -30,5 +30,6 @@ keystore/
 
 # Editor and operating-system metadata
 .DS_Store
+.~lock.*#
 .idea/
 .vscode/
