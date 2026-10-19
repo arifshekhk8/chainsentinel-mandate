@@ -11,6 +11,8 @@
 | [Full project review](maintenance/2026-10-19/full-review/results.json) | Fresh isolated local build/format, contract, identity, app, agent, evaluator, local Sepolia and browser checks |
 | [Testing guide](../TESTING.md) | Requirement-to-test map and original suite scopes |
 
+[Private repository handoff audit](maintenance/2026-10-19/repository-review.json) records pushed source/organization revisions, preserved hashes, privacy checks and local validation. GitHub Actions provides the actual latest-commit CI status.
+
 ## Artifact folders
 
 | Folder | Contents |

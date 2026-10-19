@@ -1,0 +1,83 @@
+{
+  "recordedAt": "2026-10-19T16:18:31.019Z",
+  "purpose": "Full project maintenance review and authorized private repository handoff before Step 6.",
+  "reviewedSourceCommit": "2be37c4c20a0ca0ff342e3e0136d5d7bed7ab21c",
+  "matchingRemoteCommit": "2be37c4c20a0ca0ff342e3e0136d5d7bed7ab21c",
+  "repository": {
+    "isPrivate": true,
+    "url": "https://github.com/arifshekhk8/chainsentinel-mandate",
+    "privacyVerified": true
+  },
+  "pushedCommits": [
+    {
+      "author": "arif-shekh",
+      "email": "arifshekh.k8@gmail.com",
+      "message": "Organize evidence and explain the completed Mandate prototype",
+      "sha": "2be37c4c20a0ca0ff342e3e0136d5d7bed7ab21c"
+    },
+    {
+      "author": "arif-shekh",
+      "email": "arifshekh.k8@gmail.com",
+      "message": "Add Groq evaluation and capped Sepolia wallet workflow",
+      "sha": "dc5d63171394afab66daba17f748fe560669d625"
+    }
+  ],
+  "aiCoAuthorTrailers": false,
+  "sourceHashCount": 47,
+  "sourceHashesUnchanged": true,
+  "movedRawArtifacts": 111,
+  "movedRawHashesPreserved": true,
+  "originalCompetitionTemplatesAndPrivateConfigurationPreserved": true,
+  "privateValuesExcludedFromStagedFiles": true,
+  "localReview": "evidence/maintenance/2026-10-19/full-review/results.json",
+  "allLocalCommandsPassed": true,
+  "commands": [
+    "build",
+    "format:check",
+    "test",
+    "test:identity",
+    "test:app",
+    "test:agent",
+    "test:evaluation",
+    "test:sepolia",
+    "build:app",
+    "test:ui"
+  ],
+  "documentAudit": {
+    "markdownFiles": 23,
+    "localLinksAndAnchors": 453,
+    "allValidAtReviewedSourceCommit": true,
+    "historicalProgressPreserved": true,
+    "readmeExplainsFullWorkflow": true
+  },
+  "cleanup": {
+    "deleted": [
+      ".DS_Store",
+      "test-results/"
+    ],
+    "preserved": [
+      "original evidence and failures",
+      "source/cases/freezes",
+      "installed dependencies",
+      "active build output",
+      "local credentials/agent key/database",
+      "private completed registration and identity files"
+    ]
+  },
+  "ci": {
+    "workflow": "Checks",
+    "statusSource": "https://github.com/arifshekhk8/chainsentinel-mandate/actions",
+    "policy": "Read the actual latest commit run. A pending CI result is not inferred from local passes."
+  },
+  "maintenanceTriggeredLiveModelCalls": 0,
+  "maintenanceSentPublicTransactions": 0,
+  "step6Started": false,
+  "limitationsKept": [
+    "Public approved-total answer is incomplete (350 eligible versus 425 approved).",
+    "Safe local N13 clarification miss retained.",
+    "Repaired fixed-case results are not untouched held-out accuracy.",
+    "Public stopped-agent call overlaps daily-limit excess; clean eligible case is local.",
+    "Two specific wallet wrappers required manual audits.",
+    "Organizer acknowledgment/testnet acceptance/final submission channel unresolved."
+  ]
+}

@@ -1,7 +1,7 @@
 # Mandate progress
 
 **Updated 19 October 2026, Asia/Dhaka. Latest completed project step: Step 5.**
-**Current task:** user-requested full review, folder/document cleanup, private GitHub handoff and project explanation. **Step 6 is deferred by the user.**
+**Current task:** user-requested full review, folder/document cleanup and private GitHub handoff completed; explain the project before any Step 6 work. **Step 6 is deferred by the user.**
 
 ## Current handoff — 19 October 2026
 
@@ -40,7 +40,7 @@ Moved 111 saved artifacts into local-test, evaluation, Sepolia and maintenance g
 
 The old progress journal is preserved verbatim in [the dated history](evidence/history/progress-through-step5-2026-10-19.txt). This file is now the concise current handoff. Removed only root `.DS_Store` and disposable `test-results/` metadata. Kept dependencies, active build output, original sources, every saved success/failure, `.env`, agent key, drafts/database and registration material.
 
-Repository/document validation and the private push are the final maintenance actions. Read the actual [GitHub Actions status](https://github.com/arifshekhk8/chainsentinel-mandate/actions) for its commit; do not infer a CI pass from a local pass.
+[Repository handoff audit](evidence/maintenance/2026-10-19/repository-review.json) verifies the two pushed source/organization commits, matching private remote, configured human author, absent AI co-author tags, unchanged 47 source hashes, preserved 111 moved artifacts and all passing local suites. A final documentation handoff commit records this audit. Read the actual [GitHub Actions status](https://github.com/arifshekhk8/chainsentinel-mandate/actions) for the latest commit; no local pass is presented as a CI result.
 
 ## Known limits and open items
 
@@ -53,7 +53,7 @@ Repository/document validation and the private push are the final maintenance ac
 
 ## Next step
 
-Finish this authorized maintenance/GitHub handoff, then explain Mandate to the user. The user wants to understand the project before starting Step 6. Do not create reports, slides, a video or the final package until asked to continue. The preserved submission deadline is **20 October 2026, 21:59 Bangladesh**; current organizer notes are in [competition/requirements.md](competition/requirements.md).
+The authorized maintenance/GitHub handoff is complete. Explain Mandate to the user. The user wants to understand the project before starting Step 6. Do not create reports, slides, a video or the final package until asked to continue. The preserved submission deadline is **20 October 2026, 21:59 Bangladesh**; current organizer notes are in [competition/requirements.md](competition/requirements.md).
 
 ## Resume on 18 October 2026
 
