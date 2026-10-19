@@ -27,6 +27,9 @@ export async function startServer(service, { port = 4173, publicDir = new URL('.
       const url = new URL(req.url, origin);
       check(url.origin === origin, 'Unexpected origin.', 403);
       const route = url.pathname;
+      if (service.setupOnly) check(req.method === 'GET' && ['/', '/app.js', '/app.css', '/api/state'].includes(route)
+        || req.method === 'POST' && (route === '/api/prepare' || /^\/api\/intents\/[\w-]+\/(validate|submitted|reconcile|cancel)$/.test(route)),
+      'This setup screen only supports the reviewed deployment actions.', 404);
       if (!['GET', 'HEAD'].includes(req.method)) {
         const token = Buffer.from(String(req.headers['x-mandate-csrf'] ?? ''));
         check(req.headers.origin === origin && token.length === csrf.length && timingSafeEqual(token, Buffer.from(csrf)), 'Refresh the page before changing local data.', 403);
@@ -95,12 +98,12 @@ export async function startServer(service, { port = 4173, publicDir = new URL('.
         if (action === 'validate') return json(200, await service.validateIntent(id));
         if (action === 'submitted') return json(200, await service.submitted(id, body.hash));
         if (action === 'reconcile') return json(200, await service.reconcile(id));
-        return json(200, service.cancelIntent(id));
+        return json(200, service.cancelIntent(id, body));
       }
       throw new AppError('Not found.', 404);
     } catch (error) {
       if (!res.headersSent) json(error instanceof AppError ? error.status : 500,
-        { error: error instanceof AppError ? error.message : 'Could not complete this request. Refresh and check the local chain.' });
+        { error: error instanceof AppError ? error.message : 'Could not complete this request. Refresh and check the configured network.' });
       else res.end();
     }
   });

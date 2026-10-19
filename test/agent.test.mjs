@@ -96,6 +96,48 @@ test('development conversation: ordinary wording, focused clarification and answ
   assert.equal(c.payload.plan.total, '150000000');
   assert.equal(agent.executor.payments().length, 0);
 });
+
+test('read-only clarification context cannot become a payment on a vendor-only answer', async () => {
+  const rows = await setup({ count: 2 });
+  const first = await ask('How much do I owe that vendor?', proposal('clarify', [], { scope: 'selected', question: 'Which vendor do you mean?' }));
+  const answer = await ask('Artline.', proposal('pay', [rows[1].id], { scope: 'selected' }), first.id);
+  assert.equal(answer.payload.intent, 'plan'); assert.equal(answer.payload.readOnlyContext, true);
+  assert.equal(requests.at(-1).input.previous.readOnly, true);
+  await assert.rejects(agent.execute(answer.id, { confirmed: true }), /read-only/);
+  assert.equal(await balance(), parseUnits('1000', 6));
+  const explicit = await ask('Pay the Artline invoice.', proposal('pay', [rows[1].id], { scope: 'selected' }), answer.id);
+  assert.equal(explicit.payload.intent, 'pay'); assert.equal(explicit.payload.readOnlyContext, false);
+});
+
+test('a new ordinary payment instruction can follow a read-only totals question', async () => {
+  await setup({ count: 2 });
+  const first = await ask('Show the total for our supplier bills.', proposal('status'));
+  for (const message of ['Take care of our approved supplier invoices.', 'Handle the approved supplier invoices.']) {
+    const p = await ask(message, proposal('pay'), first.id);
+    assert.equal(p.payload.intent, 'pay'); assert.equal(p.payload.readOnlyContext, false);
+    assert.equal(p.payload.plan.total, '350000000');
+    await assert.rejects(agent.execute(p.id, { confirmed: false }), /confirm/i);
+  }
+  assert.equal(await balance(), parseUnits('1000', 6));
+});
+
+test('explicit no-payment wording stays read-only even when the model proposes pay', async () => {
+  await setup({ count: 1 });
+  const p = await ask('Do not pay this bill.', proposal('pay'));
+  assert.equal(p.payload.intent, 'plan');
+  await assert.rejects(agent.execute(p.id, { confirmed: true }), /read-only/);
+  assert.equal(await balance(), parseUnits('1000', 6));
+});
+
+test('an unresolved fresh pronoun cannot silently select every bill', async () => {
+  await setup({ count: 2 });
+  const p = await ask('How much do I owe them?', proposal('status'));
+  assert.equal(p.payload.intent, 'clarify'); assert.equal(p.payload.question, 'Which vendor do you mean?');
+  assert.equal(p.payload.plan.entries.length, 0); assert.equal(p.payload.unresolvedReference, true);
+  assert.equal(model.output.scope, 'all'); assert.equal(model.output.question, '');
+  await assert.rejects(agent.execute(p.id, { confirmed: true }), /read-only/);
+  assert.equal(await balance(), parseUnits('1000', 6));
+});
 test('development correction only changes a draft after explicit apply; signed amount stays unchanged', async () => {
   const [row] = await setup();
   const p = await ask('Correct the hosting draft to 180 MDT.', proposal('correct', [], { correction: { draftId: row.id, field: 'amount', value: '180' } }));

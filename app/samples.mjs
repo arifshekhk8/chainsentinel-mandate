@@ -12,7 +12,7 @@ export function sampleRows(snapshot) {
     vendor_reference, invoice_number, amount, currency: 'MDT', invoice_date: date, due_date,
     recipient: snapshot.vendors.find((row) => row.reference === vendor_reference).recipient,
     owner_priority: String(owner_priority), not_before: new Date((now - 300) * 1000).toISOString(),
-    expires_at: new Date((now + 86400) * 1000).toISOString(), note: 'Synthetic bill for local test-token demonstration.',
+    expires_at: new Date((now + 86400) * 1000).toISOString(), note: 'Synthetic bill for test-token demonstration.',
   }));
 }
 export function sampleCsv(snapshot) {

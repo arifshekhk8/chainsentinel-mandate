@@ -1,0 +1,82 @@
+{
+  "version": "mandate-evaluation-groq-v1",
+  "sourceCaseVersion": "step1-candidate-v1",
+  "frozenAt": "2026-10-19T06:31:04.139Z",
+  "sourceFiles": {
+    "demo/cases.json": "55c9adfb923653ba851a13652fb885b55afd6120345a65597d90dc6c9ccc505b",
+    "app/model.mjs": "18a66a0cc4cbe511f8f222292c42d45228a66c030e721074e02b52f973bc371c",
+    "app/agent.mjs": "87b432fb828a09e3ccac70fe39773c9fc90218e11a92d2c8de379267a9b1ce50",
+    "app/planner.mjs": "1761e1d04e4baa4bcc12997c76f4ea9da203fc976e85e418df99199f7d5e2347",
+    "app/executor.mjs": "b49bf47364a5adcf45562b3b50bec7fc694ab147e990ec81c4576c71eba2829f",
+    "app/service.mjs": "150e05979679e208e966dce6634a792fef73fce2e83b966921641f362c0c9978",
+    "app/store.mjs": "9ddb8c4fb2af393c4be15eb65d28e51be98a3e201f729b94d0368d453c4c7cd7",
+    "app/intake.mjs": "6dcb80ad8345ef524a0045da5c77b8d579b85af50872b783244ac80399bdfbf1",
+    "scripts/bill-identity.mjs": "a51a219b8f1e615dd16cf824ae5c42c559d8481d87e8323fbcf170b5a3cbe9e8",
+    "scripts/local-chain.mjs": "2585f2466537c104be8979fb78869e0e94d3e640618ba352af3b104b05030fbb",
+    "scripts/evaluation-fixtures.mjs": "018b1059e8a28ea2067d76847a398295137d31a721428a2e14be239ca0f08a8a",
+    "scripts/evaluate.mjs": "81ccf5d0c3102140e78ad21b3b6deec27c655740308971086e5545404e33829b",
+    "contracts/MandateVault.sol": "69c130677e4690e05a9dce0ee294b63e11ac2499407e95e406f547c9c28af1b4",
+    "contracts/MandateDemoToken.sol": "e89ffe793d3d7534c6ba3e6b56b509aaa92384092bee0ae0e564c5feb3ee10e3",
+    "contracts/TestNetworks.sol": "3c393cad7e9d7a8a50b11fe82f3f2e0d681bf6eb23a237c1ecfc71de5f72d9cc",
+    "package-lock.json": "99f8557e3c9e8e4c0f802733ff8a4f0df477185654d0ac79fd4eb293c82c32b0",
+    "app/client.mjs": "4084a9583e96ed11b7784a9698dd34443767c180692ee017bd8c110704a99f10",
+    "scripts/check-repo.mjs": "a4addab8c0a0d69f1e0bba85d24036917e5ba935ad598a3e447b9b63472731e9",
+    "evidence/step5-evaluation-v1-runner.mjs": "7aebd014e3b3223d29d301e57c59cf16b646f3c8726f67ae50c9756f146b6c29",
+    "evidence/step5-evaluation-v2-runner.mjs": "80f7a159d5571c0d579dbe6dae90eb518ce18f169d275661d054d1c4de61d952",
+    "evidence/step5-gemini-model-v2.mjs": "ff37bcb9083d953b26acf9b6a9a2d870eabf8d98fdb70563e9af045272948e34",
+    "evidence/step5-gemini-agent-v2.mjs": "63a0b1d29fb2a4a236504b41967ab2684e6d68e086628772adc1ad484411f580"
+  },
+  "model": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "promptVersion": "mandate-step4-v1",
+    "temperature": 0.2,
+    "thinking": "low",
+    "includeReasoning": false,
+    "storage": "stateless Chat Completions; unsupported store field omitted; provider retention policy still applies",
+    "maxOutputTokens": 2000,
+    "timeoutMs": 20000,
+    "minimumCallSpacingMs": 30000,
+    "automaticRetries": 0,
+    "fallback": false,
+    "billingChanges": false
+  },
+  "method": {
+    "chainId": 31337,
+    "syntheticOnly": true,
+    "separateFixturePerCase": true,
+    "controlledClock": true,
+    "sourceFormat": "one explicit synthetic CSV invoice per file; not general PDF/OCR accuracy",
+    "extraction": "Raw model proposals for every ordinary invoice plus hostile-source X14; owner-approved case truth remains the permission boundary.",
+    "historicalState": "Seed real local historical payments and replenish starting funds; no contract storage overrides.",
+    "policyVersions": "Fixture 1/2 are relative versions; actual monotonically increasing on-chain versions are used.",
+    "recipientMismatch": "Seed the owner registry recipient, then change the current draft to the invoice recipient without new review.",
+    "faultRecovery": "One injected pre-send read outage requires a fresh request and confirmation; unknown broadcast outcome reconciles the original hash without resending.",
+    "comparisons": "Manual per-bill transfer sequence of the same ordinary task, excluding fixture funding; timings are automation timings, not measured human labor. Matched off-chain plans replay the same live proposal with contract enforcement disabled only in an in-memory simulation.",
+    "limits": "No public deployment, mainnet, real tokens, wallet extension or human usability-study claim."
+  },
+  "officialReferences": [
+    "https://console.groq.com/docs/quickstart",
+    "https://console.groq.com/docs/structured-outputs",
+    "https://console.groq.com/docs/rate-limits",
+    "https://console.groq.com/docs/reasoning",
+    "https://console.groq.com/docs/your-data",
+    "https://console.groq.com/docs/api-reference",
+    "https://getfoundry.sh/anvil/reference/"
+  ],
+  "continuation": null,
+  "providerChange": {
+    "authorizedByUser": true,
+    "parentFreeze": "demo/evaluation-freeze-v2.json",
+    "parentFreezeSha256": "3dc0203b7eb04559566843f02fb661d1dec4544408e7902409538535fa30a35d",
+    "reason": "User explicitly requested Groq Free alongside Gemini after daily quota blocked the Gemini run.",
+    "originalSourceArchives": {
+      "app/model.mjs": "evidence/step5-gemini-model-v2.mjs",
+      "app/agent.mjs": "evidence/step5-gemini-agent-v2.mjs",
+      "scripts/evaluate.mjs": "evidence/step5-evaluation-v2-runner.mjs"
+    },
+    "independentFullRun": true,
+    "inheritGeminiResults": false,
+    "promptsOrCasesTuned": false
+  }
+}

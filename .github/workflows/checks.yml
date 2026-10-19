@@ -46,6 +46,10 @@ jobs:
         run: npm run test:app
       - name: Test restricted agent and recovery
         run: npm run test:agent
+      - name: Test evaluation grading and comparison boundaries
+        run: npm run test:evaluation
+      - name: Rehearse Sepolia setup on a disposable local chain
+        run: npm run test:sepolia
       - name: Build browser application
         run: npm run build:app
       - name: Install isolated Chromium

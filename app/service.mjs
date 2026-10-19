@@ -3,6 +3,7 @@ import { Contract, JsonRpcProvider, getAddress, id, keccak256, parseUnits, ZeroA
 import { billKeyFor, invoiceIdHash, normalizeInvoiceNumber } from '../scripts/bill-identity.mjs';
 import { AppError, check } from './errors.mjs';
 import { FIELD_NAMES } from './intake.mjs';
+import { SEPOLIA, REQUIRED_CONFIRMATIONS, addBudgetedIntent, feeReview, matchesFeeReview } from './sepolia-policy.mjs';
 
 export const VENDOR_LABELS = { 'V-HOST': 'Hostline Demo', 'V-DESIGN': 'Artline Demo' };
 const clone = (value) => JSON.parse(JSON.stringify(value, (_, v) => typeof v === 'bigint' ? v.toString() : v));
@@ -36,11 +37,12 @@ function recipientAddress(value, vaultAddress) {
 }
 
 export class OwnerService {
-  constructor(config, store, vaultAbi, tokenAbi) {
+  constructor(config, store, vaultAbi, tokenAbi, provider = null) {
     check([31337, 11155111].includes(config.chainId), 'Unsupported chain configuration.');
     this.config = config; this.store = store;
-    this.provider = new JsonRpcProvider(config.rpcUrl, undefined, { cacheTimeout: -1 });
-    this.provider.pollingInterval = 100;
+    this.provider = provider ?? new JsonRpcProvider(config.rpcUrl, undefined, { cacheTimeout: -1 });
+    this.provider.pollingInterval = config.chainId === SEPOLIA ? 4000 : 100;
+    this.confirmationsRequired = config.chainId === SEPOLIA ? REQUIRED_CONFIRMATIONS : 1;
     this.vault = new Contract(config.vaultAddress, vaultAbi, this.provider);
     this.token = new Contract(config.tokenAddress, tokenAbi, this.provider);
   }
@@ -118,7 +120,7 @@ export class OwnerService {
       const reviewValid = draft.review?.version === draft.version && draft.review?.vendorRevision === vendor?.revision
         && draft.review?.billCancelled === Boolean(chainBill?.cancelled)
         && (!recipientMismatch || draft.review?.recipientChecked === true) && (!similar || draft.review?.similarityChecked === true);
-      const locked = intents.some((row) => ['submitted', 'outcome_unknown'].includes(row.status)
+      const locked = intents.some((row) => ['wallet_requested', 'submitted', 'outcome_unknown'].includes(row.status)
         && row.payload.drafts?.some((ref) => ref.id === draft.id)) || this.store.payments(this.config.instanceId)
         .some((row) => ['submitting', 'submitted', 'outcome_unknown', 'invalid'].includes(row.status) && row.payload.draftId === draft.id);
       const verifiedApproval = approval && chainBill && equalBill(chainBill, approval, vendor.revision)
@@ -133,7 +135,8 @@ export class OwnerService {
   async state() {
     const snapshot = await this.snapshot();
     return { mode: this.agent ? 'owner-and-agent' : 'owner-review-no-model', config: { chainId: this.config.chainId, vaultAddress: this.config.vaultAddress,
-      tokenAddress: this.config.tokenAddress, ownerAddress: this.config.ownerAddress, instanceId: this.config.instanceId },
+      tokenAddress: this.config.tokenAddress, ownerAddress: this.config.ownerAddress, instanceId: this.config.instanceId,
+      confirmationsRequired: this.confirmationsRequired },
     snapshot, drafts: await this.assessAll(snapshot), intents: this.store.intents()
       .filter((row) => row.payload.instanceId === this.config.instanceId),
     agent: this.agent ? await this.agent.state() : null };
@@ -163,6 +166,9 @@ export class OwnerService {
       recipientChecked: body.recipientChecked === true, similarityChecked: body.similarityChecked === true });
   }
   async prepare(action, body) {
+    if (this.config.chainId === SEPOLIA) check(!this.store.intents().some((r) => r.payload.chainId === SEPOLIA
+      && ['wallet_requested', 'submitted', 'outcome_unknown', 'invalid'].includes(r.status)),
+    'Check the original pending owner transaction before opening another wallet request.', 409);
     const snapshot = await this.snapshot();
     let method, args, expectedEvents, title, drafts = [];
     if (action === 'bills') {
@@ -209,9 +215,15 @@ export class OwnerService {
     const data = this.vault.interface.encodeFunctionData(method, args);
     try { await this.provider.call({ from: this.config.ownerAddress, to: this.config.vaultAddress, data }); }
     catch { throw new AppError('The contract rejected this action. Refresh the chain state and review its fields.', 409); }
-    return this.store.addIntent({ instanceId: this.config.instanceId, title, method, args, expectedEvents, drafts,
+    const payload = { instanceId: this.config.instanceId, title, method, args, expectedEvents, drafts,
       expectedPolicyVersion: snapshot.policyVersion, to: this.config.vaultAddress, data,
-      chainId: this.config.chainId, owner: this.config.ownerAddress, value: '0x0', createdAt: new Date().toISOString() });
+      chainId: this.config.chainId, owner: this.config.ownerAddress, value: '0x0', createdAt: new Date().toISOString() };
+    if (this.config.chainId === SEPOLIA) {
+      try { payload.fees = await feeReview(this.provider, { from: payload.owner, to: payload.to, data, value: 0n }); }
+      catch (error) { if (error instanceof AppError) throw error; throw new AppError('Sepolia fees could not be verified. Nothing was sent.', 503); }
+      return addBudgetedIntent(this.store, payload);
+    }
+    return this.store.addIntent(payload);
   }
   intent(id) {
     const intent = this.store.intent(id);
@@ -229,13 +241,21 @@ export class OwnerService {
         && row.vendor.revision === ref.vendorRevision && row.status === 'ready' && row.reviewValid)), 'A bill or recipient changed. Review and prepare it again.', 409);
     }
     await this.provider.call({ from: intent.payload.owner, to: intent.payload.to, data: intent.payload.data });
+    if (this.config.chainId === SEPOLIA) {
+      const block = await this.provider.getBlock('latest');
+      check(block.baseFeePerGas + BigInt(intent.payload.fees.maxPriorityFeePerGas) <= BigInt(intent.payload.fees.maxFeePerGas),
+        'The reviewed fee is too low now. Cancel this unsent review and prepare a fresh one.', 409);
+      check(this.store.db.prepare("UPDATE intents SET status='wallet_requested' WHERE id=? AND status='prepared'").run(id).changes === 1,
+        'This wallet request is already active. Reconcile it instead.', 409);
+      return this.intent(id);
+    }
     return intent;
   }
   async submitted(id, hash) {
     const intent = this.intent(id);
     check(/^0x[0-9a-f]{64}$/i.test(hash ?? ''), 'Enter a valid transaction hash.');
     check(!intent.hash || same(intent.hash, hash), 'A different hash is already recorded. Reconcile the original.', 409);
-    check(['prepared', 'submitted', 'outcome_unknown', 'confirmed', 'reverted'].includes(intent.status), 'This transaction review is no longer active.', 409);
+    check(['prepared', 'wallet_requested', 'submitted', 'outcome_unknown', 'confirmed', 'reverted'].includes(intent.status), 'This transaction review is no longer active.', 409);
     check(!this.store.intents().some((row) => row.id !== id && same(row.hash, hash)), 'This hash belongs to another transaction review.', 409);
     if (['confirmed', 'reverted'].includes(intent.status)) return intent;
     this.store.setIntent(id, 'submitted', hash); // Persist before RPC reconciliation.
@@ -251,6 +271,9 @@ export class OwnerService {
       check(Number(tx.chainId) === this.config.chainId && same(tx.from, intent.payload.owner)
         && same(tx.to, intent.payload.to) && same(tx.data, intent.payload.data) && tx.value === 0n,
       'Transaction does not match the reviewed owner action.');
+      if (this.config.chainId === SEPOLIA) check(matchesFeeReview(tx, intent.payload.fees), 'The wallet transaction exceeded its reviewed fee cap. Stop and inspect it.');
+      if (this.confirmationsRequired > 1 && await receipt.confirmations() < this.confirmationsRequired)
+        return this.store.setIntent(id, 'submitted', intent.hash, null, 'Waiting for two Sepolia confirmations. Do not resend.');
       const proof = { hash: receipt.hash, chainId: Number(tx.chainId), blockNumber: receipt.blockNumber,
         blockHash: receipt.blockHash, status: receipt.status, gasUsed: receipt.gasUsed.toString() };
       if (receipt.status !== 1) return this.store.setIntent(id, 'reverted', intent.hash, proof, 'Transaction reverted; no approval was confirmed.');
@@ -264,9 +287,10 @@ export class OwnerService {
       return this.store.setIntent(id, 'outcome_unknown', intent.hash, null, 'RPC could not verify the outcome. Recheck the original hash; do not send another transaction.');
     }
   }
-  cancelIntent(id) {
+  cancelIntent(id, body = {}) {
     const intent = this.intent(id);
-    check(!intent.hash && intent.status === 'prepared', 'A submitted transaction cannot be cancelled here. Reconcile its hash.', 409);
+    check(!intent.hash && (intent.status === 'prepared' || intent.status === 'wallet_requested' && body.walletRejected === true),
+      'An opened wallet request needs its original hash unless the wallet explicitly rejected it.', 409);
     return this.store.setIntent(id, 'cancelled', null);
   }
   close() { this.provider.destroy(); }

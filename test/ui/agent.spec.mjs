@@ -3,7 +3,7 @@ import { startLocalChain } from '../../scripts/local-chain.mjs';
 import { OwnerService } from '../../app/service.mjs';
 import { Store } from '../../app/store.mjs';
 import { AgentService } from '../../app/agent.mjs';
-import { OpenAIModel, GeminiModel } from '../../app/model.mjs';
+import { OpenAIModel, GeminiModel, GroqModel } from '../../app/model.mjs';
 import { startServer } from '../../app/server.mjs';
 import { sampleRows } from '../../app/samples.mjs';
 import { id, parseUnits } from 'ethers';
@@ -51,12 +51,25 @@ test('AI-off manual preview pays one exact batch with real local receipts and no
 test('read-only and clarification show no run button; a follow-up can produce an explicit plan', async ({ page }) => {
   output = proposal('pay'); await ask(page, 'Which invoices can be paid?');
   await expect(page.locator('#agent-result')).toContainText('Read-only preview'); await expect(page.locator('#run-agent')).toHaveCount(0);
+  await ask(page, 'Take care of our approved supplier bills.');
+  await expect(page.locator('#agent-result')).toContainText('Payment request prepared');
+  await expect(page.locator('#run-agent')).toBeDisabled();
   output = proposal('clarify', { scope: 'selected', question: 'Do you mean Hostline or Artline?' });
-  await ask(page, 'Handle that one.'); await expect(page.locator('#agent-result')).toContainText('Do you mean Hostline or Artline?');
+  await ask(page, 'Pay that invoice.'); await expect(page.locator('#agent-result')).toContainText('Do you mean Hostline or Artline?');
   await expect(page.locator('#run-agent')).toHaveCount(0);
   output = proposal('pay', { scope: 'selected', billIds: [store.drafts()[1].id] }); await ask(page, 'The Artline invoice.');
   await expect(page.locator('#agent-result')).toContainText('150 MDT total'); await expect(page.locator('#run-agent')).toBeDisabled();
   expect(service.agent.executor.payments()).toHaveLength(0);
+});
+test('a read-only vendor answer cannot expose an executable payment proposal', async ({ page }) => {
+  output = proposal('clarify', { scope: 'selected', question: 'Which vendor do you mean?' });
+  await ask(page, 'How much do I owe that vendor?');
+  output = proposal('pay', { scope: 'selected', billIds: [store.drafts()[1].id] });
+  await ask(page, 'Artline.');
+  await expect(page.locator('#agent-result')).toContainText('Read-only preview');
+  await expect(page.locator('#run-agent')).toHaveCount(0);
+  expect(service.agent.executor.payments()).toHaveLength(0);
+  await expect(page.locator('#vault-balance')).toHaveText('1000');
 });
 test('Gemini labels, read-only output and quota fallback work without sending payments', async ({ page }) => {
   let limited = false;
@@ -77,6 +90,26 @@ test('Gemini labels, read-only output and quota fallback work without sending pa
   expect(service.agent.executor.payments()).toHaveLength(0);
   await expect(page.locator('#vault-balance')).toHaveText('1000');
   await expect(page.locator('#manual-preview')).toBeEnabled();
+});
+test('Groq labels and read-only proposals preserve manual review on quota failure', async ({ page }) => {
+  let limited = false;
+  service.agent.model = new GroqModel({ apiKey: 'synthetic-browser-token', fetcher: async () => limited
+    ? new Response('sensitive-provider-body', { status: 429 })
+    : new Response(JSON.stringify({ model: 'openai/gpt-oss-120b', choices: [{ finish_reason: 'stop',
+      message: { role: 'assistant', content: JSON.stringify(proposal('status')) } }] })) });
+  await page.locator('#refresh').click();
+  await expect(page.locator('#agent-mode')).toContainText('Live Groq configured');
+  await expect(page.locator('#agent-mode')).toContainText('openai/gpt-oss-120b');
+  await ask(page, 'Show our bills. Do not pay.');
+  await expect(page.locator('#agent-result')).toContainText('LIVE AI PROPOSAL');
+  await expect(page.locator('#run-agent')).toHaveCount(0);
+  limited = true; await ask(page, 'Show the bills again.');
+  await expect(page.locator('#notice')).toContainText('Groq is rate-limited');
+  await expect(page.locator('body')).not.toContainText('sensitive-provider-body');
+  await expect(page.locator('body')).not.toContainText('synthetic-browser-token');
+  await expect(page.locator('#manual-preview')).toBeEnabled();
+  await expect(page.locator('#vault-balance')).toHaveText('1000');
+  expect(service.agent.executor.payments()).toHaveLength(0);
 });
 test('AI correction requires applying and source review, while the signed amount remains active', async ({ page }) => {
   const row = store.drafts()[0]; output = proposal('correct', { correction: { draftId: row.id, field: 'amount', value: '180' } });

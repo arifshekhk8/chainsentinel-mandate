@@ -14,13 +14,13 @@ const result = (status, extra = {}) => ({ status, liveModelUsed: calls.length > 
 async function run(name, kind, input, verify) {
   task = name;
   // Pace free-tier development traffic; failures stop immediately, without retry/fallback.
-  if (model.mode === 'live-gemini' && calls.length) await pause(12000);
+  if (calls.length && ['live-gemini', 'live-groq'].includes(model.mode)) await pause(model.mode === 'live-groq' ? 15000 : 12000);
   const value = await model.propose(kind, input);
   calls.push({ task: name, ...model.lastCall });
   verify(value);
   return value;
 }
-if (!['live-openai', 'live-gemini'].includes(model.mode)) {
+if (!['live-openai', 'live-gemini', 'live-groq'].includes(model.mode)) {
   console.error('Configure the chosen AI provider and key in your local .env first. Never paste a key in chat.');
   process.exitCode = 1;
 } else {

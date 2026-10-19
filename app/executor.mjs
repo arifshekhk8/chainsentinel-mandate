@@ -1,6 +1,7 @@
 import { keccak256 } from 'ethers';
 import { check, AppError } from './errors.mjs';
 import { planBills } from './planner.mjs';
+import { SEPOLIA, feeReview } from './sepolia-policy.mjs';
 
 const same = (a, b) => String(a).toLowerCase() === String(b).toLowerCase();
 const unresolved = new Set(['submitting', 'submitted', 'outcome_unknown', 'invalid']);
@@ -24,7 +25,8 @@ export class Executor {
       } else {
         check(Number(tx.chainId) === s.config.chainId && same(tx.from, p.agent) && same(tx.to, s.config.vaultAddress)
           && tx.value === 0n && same(tx.data, p.data) && tx.nonce === p.nonce, 'Transaction does not match this restricted payment.');
-        if (!receipt) this.store.setPayment(id, 'submitted', null, 'Awaiting a receipt for the original hash. Do not resend.');
+        if (!receipt || s.confirmationsRequired > 1 && await receipt.confirmations() < s.confirmationsRequired)
+          this.store.setPayment(id, 'submitted', null, 'Awaiting the required confirmations for the original hash. Do not resend.');
         else {
           const proof = { hash: payment.hash, chainId: s.config.chainId, vault: s.config.vaultAddress,
             blockNumber: receipt.blockNumber, blockHash: receipt.blockHash, status: receipt.status, gasUsed: receipt.gasUsed.toString() };
@@ -82,7 +84,10 @@ export class Executor {
           ? 'Contract simulation rejected this bill. Refresh the plan; no new payment was sent.'
           : 'Simulation could not be verified because the RPC failed. Refresh the plan; no new payment was sent.', 409); }
         // Populate/sign only this fixed call. Persist its hash BEFORE any network broadcast.
-        const tx = await this.#signer.populateTransaction({ to: s.config.vaultAddress, data, value: 0n });
+        const publicFees = s.config.chainId === SEPOLIA ? await feeReview(s.provider, call) : null;
+        const tx = await this.#signer.populateTransaction({ to: s.config.vaultAddress, data, value: 0n,
+          ...(publicFees ? { gasLimit: BigInt(publicFees.gasLimit), maxFeePerGas: BigInt(publicFees.maxFeePerGas),
+            maxPriorityFeePerGas: BigInt(publicFees.maxPriorityFeePerGas) } : {}) });
         check(Number(tx.chainId) === s.config.chainId && same(tx.to, s.config.vaultAddress)
           && same(tx.data, data) && BigInt(tx.value ?? 0) === 0n, 'Signing boundary rejected an unexpected transaction.');
         const raw = await this.#signer.signTransaction(tx);
@@ -98,6 +103,10 @@ export class Executor {
         } catch {
           this.store.setPayment(id, 'outcome_unknown', null, 'Broadcast outcome is unknown. Recheck the original hash; never resend blindly.');
           outcome = 'interrupted'; break;
+        }
+        if (s.config.chainId === SEPOLIA) {
+          try { await s.provider.waitForTransaction(hash, s.confirmationsRequired, 90000); }
+          catch { /* Reconcile the original hash; never rebroadcast on timeout. */ }
         }
         const result = await this.reconcile(id);
         if (result.status !== 'confirmed') { outcome = 'interrupted'; break; }

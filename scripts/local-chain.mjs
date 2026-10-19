@@ -6,7 +6,8 @@ import { ContractFactory, JsonRpcProvider, Wallet, getAddress, id, keccak256, pa
 import { foundryBinary } from './foundry.mjs';
 import { newInstanceId } from '../app/service.mjs';
 
-export async function startLocalChain({ port = 0, ownerAddress = null } = {}) {
+export async function startLocalChain({ port = 0, ownerAddress = null, timestamp = null } = {}) {
+  if (timestamp !== null && (!Number.isSafeInteger(timestamp) || timestamp < 0)) throw new Error('Invalid local-chain timestamp.');
   const root = new URL('../', import.meta.url);
   const build = spawnSync(foundryBinary('forge'), ['build', '--quiet'], { cwd: root, encoding: 'utf8' });
   if (build.status !== 0) throw new Error('Contract build failed; run npm run build for details.');
@@ -15,7 +16,8 @@ export async function startLocalChain({ port = 0, ownerAddress = null } = {}) {
   port = reservation.address().port;
   await new Promise((resolve) => reservation.close(resolve));
   const child = spawn(foundryBinary('anvil'), ['--host', '127.0.0.1', '--port', String(port), '--chain-id', '31337',
-    '--accounts', '5', '--hardfork', 'cancun', '--quiet', '--allow-origin', 'http://127.0.0.1:4173'], { stdio: 'ignore' });
+    '--accounts', '5', '--hardfork', 'cancun', '--quiet', '--allow-origin', 'http://127.0.0.1:4173',
+    ...(timestamp === null ? [] : ['--timestamp', String(timestamp)])], { stdio: 'ignore' });
   let spawnError;
   child.on('error', (error) => { spawnError = error; });
   const provider = new JsonRpcProvider(`http://127.0.0.1:${port}`, undefined, { cacheTimeout: -1 });

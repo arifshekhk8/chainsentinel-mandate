@@ -56,7 +56,7 @@
         </div><div class="stop-card"><div><h3>Stay in control.</h3><p>Pause payments or revoke the agent. A stop takes effect after the transaction is confirmed.</p></div><div><button id="pause" class="button button-outline">Review pause</button><button id="revoke" class="button button-danger">Review revocation</button></div></div>
       </section>
       <section id="activity-panel" class="tab-panel" hidden><div class="panel-heading"><div><h2>Approval activity</h2><p>Real transaction status, checked against the reviewed action.</p></div></div><div id="activity-list" class="activity-list"></div></section>
-      <footer><span>ChainSentinel <b>·</b> Mandate prototype</span><span>Local test tokens only. No cash value. <span id="block-number"></span></span></footer>
+      <footer><span>ChainSentinel <b>·</b> Mandate prototype</span><span>Test tokens only. No cash value. <span id="block-number"></span></span></footer>
     </main>
   </div>
   <dialog id="bill-dialog" class="review-dialog" aria-labelledby="review-title"><div class="dialog-top"><div><p class="eyebrow">BILL REVIEW</p><h2 id="review-title">Review invoice</h2></div><button class="icon-button close-dialog" aria-label="Close bill review">✕</button></div><div class="review-layout"><section class="source-pane"><div class="source-heading"><strong>Original source text</strong><span id="source-name"></span></div><pre id="source-text"></pre><p class="form-note">Text is shown as data. Invoice instructions cannot change wallet permissions.</p><button id="delete-source" class="text-danger">Remove this source and its drafts</button></section><section class="fields-pane"><div id="review-issues"></div><form id="bill-form"></form></section></div></dialog>

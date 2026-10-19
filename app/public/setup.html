@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mandate · Deployment review</title><link rel="stylesheet" href="/app.css"></head>
+<body><main><header><div><p class="eyebrow">CHAINSENTINEL / MANDATE</p><h1>Review the testnet setup.</h1><p id="network">Loading the configured network…</p></div><button id="connect">Connect owner wallet</button></header>
+<p id="mode" class="banner">Loading setup mode…</p><p id="notice" role="status" aria-live="polite">No transaction has been requested.</p>
+<section><h2>Accounts and budget</h2><dl><dt>Owner</dt><dd id="owner"></dd><dt>Separate agent</dt><dd id="agent"></dd><dt>Hostline test recipient</dt><dd id="host"></dd><dt>Artline test recipient</dt><dd id="design"></dd><dt>Owner test ETH balance</dt><dd id="balance"></dd><dt>Budget</dt><dd id="budget"></dd></dl>
+<p>Only MDT test tokens are used. The vault starts paused. The owner must review and approve actual bill details before any agent payment. Never enter an owner private key or seed phrase.</p><p>Recipient addresses represent fictional suppliers and receive test tokens only. Agent gas funding is limited to 0.00005 test ETH. Fees above 0.05 gwei or reviews above the total 0.001 test ETH budget stop the workflow.</p></section>
+<section><h2>Setup actions</h2><ol id="steps"></ol><p id="ready" hidden>Setup is verified. Stop this setup server and run <code>npm run sepolia</code> to open the owner review app. It will not send anything automatically.</p></section>
+<section><h2>Original transaction history</h2><p>Missing responses require checking the original hash. No automatic resend or fee increase occurs.</p><button id="refresh">Refresh state</button><div id="history"></div></section>
+<footer>Test network only · MDT has no cash value · Owner approvals remain the authority.</footer></main>
+<dialog id="review"><h2 id="review-title"></h2><dl id="details"></dl><details><summary>Exact transaction data</summary><pre id="calldata"></pre></details><label class="check"><input id="reviewed" type="checkbox">I checked the exact action, addresses, amount and maximum fee.</label><div class="actions"><button id="close">Close review</button><button id="send" disabled>Confirm in wallet</button></div></dialog>
+<script type="module" src="/app.js"></script></body></html>

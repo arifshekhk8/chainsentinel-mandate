@@ -3,6 +3,9 @@ import { validateProposal, rejectSecrets } from './model.mjs';
 import { planBills, money } from './planner.mjs';
 import { Executor } from './executor.mjs';
 
+const readOnlyText = (text = '') => /\?|\b(?:show|explain|preview|plan|which|why|what|how|could|would|can)\b|\b(?:do not|don't|never)\s+(?:pay|send|process|settle)\b/i.test(text);
+const explicitPayment = (text) => /\b(?:pay|process|settle|send|handle)\b|\btake care of\b/i.test(text) && !readOnlyText(text);
+
 export class AgentService {
   constructor(service, model, signer = null) {
     this.service = service; this.store = service.store; this.model = model;
@@ -10,7 +13,7 @@ export class AgentService {
   }
   plans() { return this.store.plans(this.service.config.instanceId); }
   plan(id) { const p = this.plans().find((p) => p.id === id); check(p, 'Agent review not found for this chain session.', 404); return p; }
-  async state() { return { mode: this.model.mode, model: ['live-openai', 'live-gemini'].includes(this.model.mode) ? this.model.model : null,
+  async state() { return { mode: this.model.mode, model: ['live-openai', 'live-gemini', 'live-groq'].includes(this.model.mode) ? this.model.model : null,
     executorAddress: await this.executor.address(), plans: this.plans().slice(0, 20), payments: this.executor.payments() }; }
   async request(body) {
     check(!this.requesting, 'Another AI request is active. Please wait.', 409);
@@ -21,17 +24,28 @@ export class AgentService {
       const snapshot = await this.service.snapshot(), rows = await this.service.assessAll(snapshot);
       const previous = body.previousPlanId ? this.plan(body.previousPlanId) : null;
       const businessDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Dhaka', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(snapshot.now * 1000));
-      const proposal = validateProposal('interpret', await this.model.propose('interpret', {
+      const proposal = structuredClone(validateProposal('interpret', await this.model.propose('interpret', {
         message: body.message, businessDate, timeZone: 'Asia/Dhaka',
-        previous: previous ? { request: previous.payload.request, question: previous.payload.question } : null,
+        previous: previous ? { request: previous.payload.request, question: previous.payload.question,
+          readOnly: previous.payload.readOnlyContext === true || readOnlyText(previous.payload.request) } : null,
         bills: rows.map((r) => ({ id: r.id, invoice: r.fields.invoice_number, vendor: r.vendor?.label ?? r.fields.vendor_reference,
           vendorReference: r.fields.vendor_reference, amount: r.fields.amount, currency: r.fields.currency,
           dueDate: r.fields.due_date, status: r.status })),
-      }));
+      })));
       check(proposal.billIds.every((id) => rows.some((r) => r.id === id)), 'AI referenced an unknown bill. Please rephrase.', 502);
       let intent = proposal.intent;
+      const readOnlyContext = readOnlyText(body.message) || Boolean(previous
+        && (previous.payload.readOnlyContext === true || readOnlyText(previous.payload.request)) && !explicitPayment(body.message));
       // Questions/previews cannot acquire send authority even if a model misclassifies them.
-      if (intent === 'pay' && /\?|\b(?:show|explain|preview|plan|which|why|what|could|would|can)\b/i.test(body.message)) intent = 'plan';
+      if (intent === 'pay' && readOnlyContext) intent = 'plan';
+      const text = body.message.toLowerCase();
+      const knownReference = rows.some((r) => [r.id, r.fields.invoice_number, r.fields.vendor_reference, r.vendor?.label]
+        .filter(Boolean).some((reference) => text.includes(reference.toLowerCase())));
+      const unresolvedReference = !previous && rows.length > 1 && !knownReference && /\b(?:them|that (?:vendor|bill|invoice|one))\b/i.test(body.message);
+      if (unresolvedReference) {
+        intent = 'clarify'; proposal.scope = 'selected'; proposal.billIds = [];
+        proposal.question ||= /\b(?:vendor|them)\b/i.test(body.message) ? 'Which vendor do you mean?' : 'Which invoice do you mean?';
+      }
       const selected = proposal.scope === 'all' ? rows : rows.filter((r) => proposal.billIds.includes(r.id));
       if (['plan', 'pay'].includes(intent) && !selected.length) {
         intent = 'clarify'; proposal.question = 'Which invoice or vendor should I plan for?';
@@ -40,7 +54,7 @@ export class AgentService {
         const row = rows.find((r) => r.id === proposal.correction.draftId);
         check(row, 'AI correction referenced an unknown draft.', 502);
         return this.store.addPlan(this.service.config.instanceId, { kind: 'correction', intent, mode: this.model.mode,
-          request: body.message, correction: proposal.correction, version: row.version, modelInfo: this.model.lastCall ?? null,
+          request: body.message, readOnlyContext, correction: proposal.correction, version: row.version, modelInfo: this.model.lastCall ?? null,
           message: 'This only proposes a draft change. Apply it, check the source and sign a new approval if needed. Existing on-chain permission stays active until cancelled or replaced.' });
       }
       const plan = planBills(snapshot, selected, this.executor.payments(), await this.executor.address());
@@ -48,7 +62,7 @@ export class AgentService {
         : intent === 'unsupported' ? 'I can help with approved MDT bills. Use the owner review screens for approvals, recipients and rule changes. Trading and arbitrary transactions are not supported.'
           : `${intent === 'pay' ? 'Payment request prepared' : 'Read-only preview'}. ${plan.entries.filter((e) => e.code === 'ready').length} eligible; ${money(plan.total)} MDT total. Projected balance ${money(plan.projectedBalance)} MDT. No payment has been sent by this request.`;
       return this.store.addPlan(this.service.config.instanceId, { kind: 'payment', intent, mode: this.model.mode,
-        request: body.message, question: intent === 'clarify' ? message : null, message, plan, modelInfo: this.model.lastCall ?? null });
+        request: body.message, readOnlyContext, unresolvedReference, question: intent === 'clarify' ? message : null, message, plan, modelInfo: this.model.lastCall ?? null });
     } finally { this.requesting = false; }
   }
   async preview() {

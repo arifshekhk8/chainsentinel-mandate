@@ -1,4 +1,4 @@
-import { BrowserProvider, Interface, formatUnits } from 'ethers';
+import { BrowserProvider, Interface, formatEther, formatUnits } from 'ethers';
 import vaultArtifact from '../out/MandateVault.sol/MandateVault.json';
 
 const $ = (selector) => document.querySelector(selector);
@@ -13,7 +13,8 @@ const localTime = (iso) => {
 const isoTime = (value) => value ? new Date(value).toISOString() : '';
 const labels = { needs_review: 'Needs review', draft: 'Draft', ready: 'Ready to approve', approved: 'Approved',
   submitted: 'Awaiting confirmation', outcome_unknown: 'Outcome unknown', recorded_paid: 'Contract marks paid',
-  confirmed: 'Confirmed', invalid: 'Not verified', reverted: 'Reverted', prepared: 'Not submitted', cancelled: 'Cancelled' };
+  confirmed: 'Confirmed', invalid: 'Not verified', reverted: 'Reverted', prepared: 'Not submitted',
+  wallet_requested: 'Wallet opened — check original transaction', cancelled: 'Cancelled' };
 const iface = new Interface(vaultArtifact.abi);
 let state, csrf, account = null, provider = null, wallet = null, intent = null, signing = false;
 let currentDraft = null;
@@ -26,7 +27,7 @@ function notify(message, error = false) {
   $('#notice').hidden = false; $('#notice').textContent = message;
   $('#notice').className = error ? 'error' : '';
 }
-function report(error) { notify(error.message ?? 'Something went wrong. Refresh and check the local chain.', true); }
+function report(error) { notify(error.message ?? 'Something went wrong. Refresh and check the configured network.', true); }
 async function api(path, method = 'GET', body = null) {
   const options = { method, headers: {} };
   if (method !== 'GET') options.headers['x-mandate-csrf'] = csrf;
@@ -38,6 +39,10 @@ async function api(path, method = 'GET', body = null) {
   return value;
 }
 function badge(status) { return `<span class="pill ${esc(status)}">${esc(labels[status] ?? status)}</span>`; }
+function transactionLink(hash) {
+  return state.config.chainId === 11155111 && /^0x[0-9a-f]{64}$/i.test(hash ?? '')
+    ? `<a href="https://sepolia.etherscan.io/tx/${hash}" target="_blank" rel="noopener noreferrer">${esc(hash)} ↗</a>` : esc(hash);
+}
 function setWalletLabel() {
   $('#wallet').textContent = account ? `Owner ${short(account)} ↗` : 'Connect wallet ↗';
   if (account && state && account.toLowerCase() !== state.config.ownerAddress.toLowerCase()) $('#wallet').textContent = `Wrong owner ${short(account)}`;
@@ -74,10 +79,10 @@ function renderAgent() {
   const agent = state.agent;
   $('#agent-workspace').hidden = !agent;
   if (!agent) return;
-  const live = ['live-openai', 'live-gemini'].includes(agent.mode);
+  const live = ['live-openai', 'live-gemini', 'live-groq'].includes(agent.mode);
   const testAdapter = agent.mode === 'scripted-test';
   $('#model-badge').textContent = live ? 'LIVE AI CONFIGURED' : testAdapter ? 'TEST ADAPTER · NO LIVE AI' : 'AI OFF · MANUAL PREVIEW AVAILABLE';
-  $('#agent-mode').textContent = live ? `Live ${agent.mode === 'live-gemini' ? 'Gemini' : 'OpenAI'} configured · ${agent.model}. Execution still needs your confirmation.` : testAdapter ? 'Scripted test adapter. No live model is used.' : 'AI is off. You can use a scripted manual preview and the restricted local test agent.';
+  $('#agent-mode').textContent = live ? `Live ${{ 'live-gemini': 'Gemini', 'live-groq': 'Groq', 'live-openai': 'OpenAI' }[agent.mode]} configured · ${agent.model}. Execution still needs your confirmation.` : testAdapter ? 'Scripted test adapter. No live model is used.' : 'AI is off. You can use a scripted manual preview and the restricted test agent.';
   $('#ask-agent').disabled = agentBusy || !(live || testAdapter);
   $('#manual-preview').disabled = agentBusy;
   const plan = agent.plans.find((p) => p.id === activePlanId) ?? agent.plans[0];
@@ -85,7 +90,7 @@ function renderAgent() {
   const result = $('#agent-result');
   if (!plan) { result.innerHTML = ''; } else {
     const p = plan.payload;
-    let html = `<article class="agent-response"><span class="eyebrow">${esc(['live-openai', 'live-gemini'].includes(p.mode) ? 'LIVE AI PROPOSAL' : p.mode === 'scripted-manual' ? 'SCRIPTED MANUAL PREVIEW · NO AI' : 'TEST ADAPTER · NO LIVE AI')}</span><p>${esc(p.message)}</p>`;
+    let html = `<article class="agent-response"><span class="eyebrow">${esc(['live-openai', 'live-gemini', 'live-groq'].includes(p.mode) ? 'LIVE AI PROPOSAL' : p.mode === 'scripted-manual' ? 'SCRIPTED MANUAL PREVIEW · NO AI' : 'TEST ADAPTER · NO LIVE AI')}</span><p>${esc(p.message)}</p>`;
     if (p.plan && !['clarify', 'unsupported'].includes(p.intent)) {
       html += `<p class="form-note">Plan snapshot at block ${esc(p.plan.blockNumber)} · ${esc(plan.status)}. Entries below describe that preview; confirmed outcomes are listed separately.</p>`;
       html += `<p class="plan-totals">Eligible total <strong>${esc(units(p.plan.total))} MDT</strong> · Projected balance ${esc(units(p.plan.projectedBalance))} · Projected daily budget left ${esc(units(p.plan.projectedDailyLeft))} MDT</p>`;
@@ -107,7 +112,7 @@ function renderAgent() {
       notify('Draft changed. Check it against the source; existing signed permission was not changed.');
     });
   }
-  $('#payment-results').innerHTML = agent.payments.map((p) => `<article class="plan-entry"><div><strong>${esc(p.payload.invoice)} · ${esc(units(p.payload.amount))} MDT</strong>${badge(p.status)}</div><p class="mono">${esc(p.hash)}</p><p>${esc(p.error ?? (p.status === 'confirmed' ? `Verified payment event in block ${p.receipt.blockNumber}.` : 'No confirmed payment is claimed.'))}</p>${['submitting', 'submitted', 'outcome_unknown'].includes(p.status) ? `<button class="button button-outline" data-payment-reconcile="${esc(p.id)}">Recheck original payment hash ↻</button>` : ''}</article>`).join('');
+  $('#payment-results').innerHTML = agent.payments.map((p) => `<article class="plan-entry"><div><strong>${esc(p.payload.invoice)} · ${esc(units(p.payload.amount))} MDT</strong>${badge(p.status)}</div><p class="mono">${transactionLink(p.hash)}</p><p>${esc(p.error ?? (p.status === 'confirmed' ? `Verified payment event in block ${p.receipt.blockNumber}.` : 'No confirmed payment is claimed.'))}</p>${['submitting', 'submitted', 'outcome_unknown'].includes(p.status) ? `<button class="button button-outline" data-payment-reconcile="${esc(p.id)}">Recheck original payment hash ↻</button>` : ''}</article>`).join('');
   for (const b of document.querySelectorAll('[data-payment-reconcile]')) b.onclick = () => agentAction(async () => { await api(`/api/agent/payments/${b.dataset.paymentReconcile}/reconcile`, 'POST', {}); });
 }
 async function agentAction(work) {
@@ -147,10 +152,10 @@ function renderActivity() {
   $('#activity-list').innerHTML = state.intents.length ? state.intents.map((row) => `<article class="activity-item">
     <div><strong>${esc(row.payload.title)}</strong>${badge(row.status)}</div>
     <p>${esc(row.payload.createdAt)} · ${state.config.chainId === 11155111 ? 'SEPOLIA TESTNET' : 'LOCAL CHAIN'} ${state.config.chainId}</p>
-    ${row.hash ? `<p class="mono">${esc(row.hash)}</p>` : '<p>No transaction hash recorded. No confirmation is claimed.</p>'}
+    ${row.hash ? `<p class="mono">${transactionLink(row.hash)}</p>` : '<p>No transaction hash recorded. No confirmation is claimed.</p>'}
     ${row.error ? `<p>${esc(row.error)}</p>` : ''}
     ${row.hash && !['confirmed', 'invalid', 'reverted'].includes(row.status) ? `<button class="button button-outline" data-reconcile="${esc(row.id)}">Recheck original hash ↻</button>` : ''}
-    ${!row.hash && row.status === 'prepared' ? `<button class="button button-quiet" data-record="${esc(row.id)}">Record a hash from your wallet</button>` : ''}</article>`).join('')
+    ${!row.hash && ['prepared', 'wallet_requested'].includes(row.status) ? `<button class="button button-quiet" data-record="${esc(row.id)}">Record the original hash from your wallet</button>` : ''}</article>`).join('')
     : '<div class="empty"><span>◷</span><h3>Every approval leaves a record.</h3><p>Confirmed, pending and rejected actions will appear here.</p></div>';
   for (const button of document.querySelectorAll('[data-reconcile]')) button.onclick = async () => {
     try { const result = await api(`/api/intents/${button.dataset.reconcile}/reconcile`, 'POST', {}); notify(`Transaction: ${labels[result.status] ?? result.status}.`); await refresh(); } catch (error) { report(error); }
@@ -202,7 +207,7 @@ function showBill(id) {
     <div class="review-actions"><button type="button" id="save-draft" class="button button-outline" ${row.locked ? 'disabled' : ''}>Save changes</button><button type="button" id="mark-reviewed" class="button button-primary" disabled>Mark reviewed ✓</button></div>
     ${activeApproval ? '<button type="button" id="cancel-bill" class="button button-danger">Review cancellation</button>' : ''}
     <p class="form-note">Saving a change clears the earlier review. New or changed details need a fresh owner signature before they can be used.</p>
-    ${state.agent ? `<button type="button" id="ai-extract" class="button button-outline" ${!['live-openai', 'live-gemini'].includes(state.agent.mode) || row.locked ? 'disabled' : ''}>Send synthetic source to AI for field suggestions ↗</button>` : ''}`;
+    ${state.agent ? `<button type="button" id="ai-extract" class="button button-outline" ${!['live-openai', 'live-gemini', 'live-groq'].includes(state.agent.mode) || row.locked ? 'disabled' : ''}>Send synthetic source to AI for field suggestions ↗</button>` : ''}`;
   if ($('#ai-extract')) $('#ai-extract').onclick = () => agentAction(async () => {
     const p = await api(`/api/agent/extract/${id}`, 'POST', {}); activePlanId = p.id;
     $('#bill-dialog').close(); notify('AI suggestions are below the bill table. Review them before applying to the draft.');
@@ -264,8 +269,8 @@ async function checkWallet() {
   if (!wallet || !account) throw new Error('Connect the owner wallet before signing.');
   const accounts = await wallet.request({ method: 'eth_accounts' });
   const chain = Number(BigInt(await wallet.request({ method: 'eth_chainId' })));
-  if (chain !== state.config.chainId) throw new Error(`Wrong network. Select local test chain ${state.config.chainId} in your wallet.`);
-  if (accounts[0]?.toLowerCase() !== state.config.ownerAddress.toLowerCase()) throw new Error(`Wrong owner account. This vault belongs to ${state.config.ownerAddress}. For local testing, restart npm run dev -- --owner YOUR_PUBLIC_ADDRESS. Never enter a private key here.`);
+  if (chain !== state.config.chainId) throw new Error(`Wrong network. Select ${state.config.chainId === 11155111 ? 'Sepolia' : 'local test chain'} ${state.config.chainId} in your wallet.`);
+  if (accounts[0]?.toLowerCase() !== state.config.ownerAddress.toLowerCase()) throw new Error(`Wrong owner account. This vault belongs to ${state.config.ownerAddress}. Select that account in your wallet. Never enter a private key here.`);
   account = accounts[0];
 }
 async function prepare(action, values) {
@@ -284,6 +289,7 @@ async function prepare(action, values) {
     }).join('');
   } else if (p.method === 'setLimits') details += `<div class="tx-bill">Per bill: <strong>${esc(units(decoded.args[0]))} MDT</strong><br>Per UTC day: ${esc(units(decoded.args[1]))} MDT<br>Minimum reserve: ${esc(units(decoded.args[2]))} MDT</div>`;
   else details += `<div class="tx-bill">${p.expectedEvents.map((event) => Object.entries(event.values).map(([key, value]) => `<div>${esc(key)}: <span class="mono">${esc(value)}</span></div>`).join('')).join('')}</div>`;
+  if (p.fees) details += `<p class="form-note">Maximum reviewed gas cost: ${esc(formatEther(p.fees.maximumOutflowWei))} Sepolia ETH. Fee ceiling 0.05 gwei; total demo budget 0.001 Sepolia ETH. Two confirmations are required.</p>`;
   details += '<label class="check-label"><input id="tx-reviewed" type="checkbox">I checked this exact action and its details.</label>';
   $('#transaction-details').innerHTML = details;
   $('#transaction-status').textContent = account ? 'Your wallet will show the transaction before you sign. Gas is separate test ETH.' : 'Connect the owner wallet first. Uploading and reviewing bills does not need a wallet.';
@@ -305,16 +311,21 @@ async function sendTransaction() {
     await checkWallet();
     const checked = await api(`/api/intents/${intent.id}/validate`, 'POST', {});
     if (checked.payload.data !== intent.payload.data) throw new Error('The reviewed transaction changed. Start a fresh review.');
+    intent = checked;
     $('#transaction-status').textContent = 'Waiting for your wallet. No approval is confirmed yet.';
     const signer = await provider.getSigner(account);
-    const tx = await signer.sendTransaction({ to: intent.payload.to, data: intent.payload.data, value: 0n });
+    const p = intent.payload;
+    if (state.config.chainId === 11155111 && (!p.fees || BigInt(p.fees.maxFeePerGas) > 50000000n)) throw new Error('The reviewed Sepolia fee cap is missing or invalid.');
+    const tx = await signer.sendTransaction({ to: p.to, data: p.data, value: 0n,
+      ...(p.fees ? { gasLimit: BigInt(p.fees.gasLimit), maxFeePerGas: BigInt(p.fees.maxFeePerGas),
+        maxPriorityFeePerGas: BigInt(p.fees.maxPriorityFeePerGas) } : {}) });
     hash = tx.hash;
     intent = { ...intent, hash };
     localStorage.setItem('mandate.pending', JSON.stringify({ id: intent.id, hash, instanceId: state.config.instanceId }));
     $('#transaction-status').textContent = 'Submitted. Waiting for a matching receipt. Do not send another transaction.';
     intent = await api(`/api/intents/${intent.id}/submitted`, 'POST', { hash });
-    for (let i = 0; i < 8 && intent.status === 'submitted'; i++) {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+    for (let i = 0; i < (state.config.chainId === 11155111 ? 20 : 8) && intent.status === 'submitted'; i++) {
+      await new Promise((resolve) => setTimeout(resolve, state.config.chainId === 11155111 ? 4000 : 500));
       intent = await api(`/api/intents/${intent.id}/reconcile`, 'POST', {});
     }
     localStorage.removeItem('mandate.pending');
@@ -324,7 +335,7 @@ async function sendTransaction() {
   } catch (error) {
     const rejected = error.code === 'ACTION_REJECTED' || error.code === 4001 || error.info?.error?.code === 4001;
     if (!hash && rejected) {
-      intent = await api(`/api/intents/${intent.id}/cancel`, 'POST', {}).catch(() => intent);
+      intent = await api(`/api/intents/${intent.id}/cancel`, 'POST', { walletRejected: true }).catch(() => intent);
       $('#transaction-status').textContent = 'Signature rejected. No transaction was submitted by this request.';
       notify('You rejected the wallet request. No approval was confirmed.');
     } else {

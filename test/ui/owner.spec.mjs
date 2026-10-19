@@ -7,13 +7,13 @@ import { Store } from '../../app/store.mjs';
 import { startServer } from '../../app/server.mjs';
 import { sampleCsv } from '../../app/samples.mjs';
 
-let chain, snapshotId, store, service, app, mode, walletSends;
+let chain, snapshotId, store, service, app, mode, walletSends, lastWalletHash;
 test.beforeAll(async () => { chain = await startLocalChain(); snapshotId = await chain.provider.send('evm_snapshot', []); });
 test.afterAll(async () => { await chain.close(); });
 test.beforeEach(async ({ context, page }) => {
   await chain.provider.send('evm_revert', [snapshotId]); snapshotId = await chain.provider.send('evm_snapshot', []);
   store = new Store(); service = new OwnerService(chain.config, store, chain.vaultAbi, chain.tokenAbi);
-  app = await startServer(service, { port: 0 }); mode = 'owner'; walletSends = 0;
+  app = await startServer(service, { port: 0 }); mode = 'owner'; walletSends = 0; lastWalletHash = null;
   await context.exposeBinding('__mandateTestWallet', async (_, { method, params }) => {
     if (method === 'eth_accounts' || method === 'eth_requestAccounts') return { value: [mode === 'stranger' ? await chain.stranger.getAddress() : chain.config.ownerAddress] };
     if (method === 'eth_chainId' && mode === 'wrongChain') return { value: '0x1' };
@@ -21,7 +21,14 @@ test.beforeEach(async ({ context, page }) => {
       if (mode === 'reject') return { error: { code: 4001, message: 'User rejected the request.' } };
       walletSends++;
     }
-    try { return { value: await chain.provider.send(method, params ?? []) }; }
+    try {
+      const value = await chain.provider.send(method, params ?? []);
+      if (method === 'eth_sendTransaction') {
+        lastWalletHash = value;
+        if (mode === 'lost-response') return { error: { code: -32000, message: 'Simulated lost wallet response. Inspect the original hash.' } };
+      }
+      return { value };
+    }
     catch (error) { return { error: { code: error.info?.error?.code ?? -32000, message: error.shortMessage ?? 'Local test RPC rejected the call.' } }; }
   });
   await context.addInitScript(() => {
@@ -125,7 +132,7 @@ test('PDF review, correction and hostile HTML stay safe without any wallet use',
   await page.locator('#save-draft').click();
   await expect(page.locator('#bill-form [name="amount"]')).toHaveValue('80');
   await page.locator('.close-dialog').click();
-  const hostile = sampleCsv(await service.snapshot()).replaceAll('Synthetic bill for local test-token demonstration.', '<img src=x onerror=window.INVOICE_EXECUTED=1>');
+  const hostile = sampleCsv(await service.snapshot()).replaceAll('Synthetic bill for test-token demonstration.', '<img src=x onerror=window.INVOICE_EXECUTED=1>');
   await page.locator('#upload').setInputFiles({ name: 'hostile.csv', mimeType: 'text/csv', buffer: Buffer.from(hostile) });
   await expect(page.locator('#bills-body tr')).toHaveCount(4);
   await page.locator('#bills-body tr').filter({ hasText: 'ART-2001' }).getByRole('button', { name: 'Review ↗', exact: true }).click();
@@ -168,4 +175,22 @@ test('mobile workspace and review drawer fit a narrow screen', async ({ page }) 
   await page.locator('#bill-form [name="amount"]').fill('199.999999');
   await page.locator('#save-draft').click();
   await expect(page.locator('#bill-form [name="amount"]')).toHaveValue('199.999999');
+});
+
+test('an opened wallet request with a lost response can close and recover only its original hash', async ({ page }) => {
+  // Exercise the durable public-wallet lifecycle on disposable chain 31337.
+  const validate = service.validateIntent.bind(service);
+  service.validateIntent = async (id) => { await validate(id); return store.setIntent(id, 'wallet_requested', null); };
+  await page.locator('#wallet').click(); await expect(page.locator('#notice')).toContainText('Owner wallet connected');
+  await samples(page); await review(page, 'HOST-1001'); await previewSelected(page, 'HOST-1001');
+  mode = 'lost-response'; await page.locator('#tx-reviewed').check(); await page.locator('#send-transaction').click();
+  await expect(page.locator('#send-transaction')).toBeDisabled();
+  await expect.poll(() => store.intents()[0].status).toBe('wallet_requested');
+  await expect(page.locator('#cancel-transaction')).toBeEnabled(); await page.locator('#cancel-transaction').click();
+  await expect(page.locator('#transaction-dialog')).not.toBeVisible(); expect(walletSends).toBe(1);
+  await page.locator('[data-tab="activity"]').click();
+  page.once('dialog', (dialog) => dialog.accept(lastWalletHash));
+  await page.locator('[data-record]').click();
+  await expect(page.locator('#activity-list')).toContainText('Confirmed');
+  expect(walletSends).toBe(1); expect(store.intents()[0].hash).toBe(lastWalletHash);
 });
