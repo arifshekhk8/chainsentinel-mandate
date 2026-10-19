@@ -1,0 +1,25 @@
+
+> chainsentinel-mandate@0.1.0 test:sepolia
+> node --test test/sepolia.test.mjs
+
+(node:41981) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ public setup rejects wrong networks before preparing or enabling wallet actions (569.483375ms)
+✔ review-only mode cannot open the wallet and steps cannot be reordered (57.529708ms)
+✔ fee ceiling and total reserved owner outflow stop preparation without sending (65.082958ms)
+✔ parallel setup preparation creates only one durable review (52.748209ms)
+✔ lost wallet responses remain locked across restart and allow original-hash recovery only (58.130416ms)
+✔ an unrelated mined transaction cannot become deployment evidence (122.403375ms)
+✔ setup waits for the configured confirmations and rechecks the same hash without resending (145.958083ms)
+✔ a durable public setup uses a separate protected agent key and preserves existing files (65.924625ms)
+✔ full local deployment rehearsal funds the paused vault, then explicit approvals permit one exact batch (2562.963625ms)
+✔ public owner approval waits for two confirmations and rejects a fee outside the review (59.961417ms)
+✔ public agent reconciliation does not mark a one-confirmation receipt paid (51.26625ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4039.208834

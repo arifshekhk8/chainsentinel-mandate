@@ -1,0 +1,15 @@
+{
+  "stoppedAt": "2026-10-19T08:36:00.784Z",
+  "path": "evidence/step5-evaluation-runs/2026-10-19T08-34-52-616Z-groq-live.json",
+  "sourceFreeze": "demo/evaluation-freeze-groq-v4.json",
+  "sourceFreezeSha256": "0692b4fe3589a2050a1a5e3e8d77005a6fa6b26a0d12b07628639881144cd3de",
+  "reason": "Static review found that the new read-only-context guard would wrongly block an explicit take-care-of payment request after a read-only question. Stopped before N18, preserving all calls/cases rather than running a known defective version to completion.",
+  "modelCallsAtStop": 5,
+  "completedCases": [
+    "N01",
+    "N02"
+  ],
+  "ownedRunnerStopped": 17329,
+  "ownedChainStopped": 17375,
+  "targetsClaimed": false
+}

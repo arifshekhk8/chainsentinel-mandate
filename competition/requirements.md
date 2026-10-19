@@ -1,8 +1,8 @@
 # Competition requirements
 
-Checked 17 October 2026. This note preserves the essential details from the removed research pack.
+Rules checked 17 October 2026; registration announcements, official participation instructions and current form rechecked 19 October. This note preserves the essential details from the removed research pack.
 
-**Closing handoff, 17 October:** event details below retain the earlier source checks; this housekeeping pass did not recheck the websites. ChainSentinel remains unregistered and testnet acceptance is unresolved. Resume registration preparation on 18 October using the [drafts](REGISTRATION_DRAFT.md) and [project handoff](../PROGRESS.md#resume-on-18-october-2026); nothing is sent automatically.
+**Registration update, 19 October:** the reviewed seven-file package is verified in Gmail Sent at 11:55 Bangladesh time, addressed to the official mailbox with the required subject. It was already sent when checked after the user authorized sending; no duplicate was sent. The completed form and six passport/enrollment images were reviewed and remain private. Organizer acknowledgment and acceptance of testnet evidence remain pending. The current official blank workbook still matches the preserved template's SHA-256. See the [registration record](REGISTRATION_DRAFT.md) and [project handoff](../PROGRESS.md#resume-on-18-october-2026). The judging/submission details below retain the 17 October rules check.
 
 ## Eligibility and registration
 
@@ -11,11 +11,11 @@ Checked 17 October 2026. This note preserves the essential details from the remo
 - At least 60% non-Chinese nationals, rounded up. One team per participant across both tracks.
 - English submissions, demonstration and presentation.
 - Registration and submission deadline: 20 October 2026, 23:59 Beijing = **21:59 Bangladesh**. The current website says 24:00; use the earlier printed time.
-- Team name: ChainSentinel, selected by the user. You reported four full-time Bangladeshi members: two at IUBAT, one at BRAC and one at Jagannath University. The leader and individual form details remain pending. You have a funded Sepolia wallet and can configure an LLM API key. Registration has not been submitted.
+- Team name: ChainSentinel, selected by the user. Final team: three reported full-time Bangladeshi members, two at IUBAT and one at Jagannath University. The user is leader. Complete form details, signature/date and six reviewed supporting images were included in the sent registration; acknowledgment is pending. The user subsequently approved the 0.001 ETH Sepolia setup/payment demo and confirmed all seven setup actions in MetaMask; [public setup receipts](../evidence/STEP5_SEPOLIA_RESULTS.md) are verified. Exact 200/150 MDT public payments, the 650 MDT balance and confirmed agent revocation are now verified in that report. Step 6 submission documents/media have not started.
 
-Copy the blank `registration.xlsx` to ignored `competition/private/registration.xlsx`, complete that copy, replace the example member row, and prepare student-enrollment evidence and the passport bio-page images requested by the current form. Keep filled forms and identity documents out of Git. The form contains conflicting older wording about ID scans; its specific passport-image field and the coordinator's invitation request images.
+The final signed Excel form and supporting images are retained under ignored `competition/private/`. The example member is removed and unused rows are blank; the tracked original is unchanged. Keep completed forms, identity documents and sent-message metadata out of Git. The form contains conflicting older wording about ID scans; the sent package follows its specific passport-image field.
 
-Current organizer mailbox: **fintechathon@ican-x.com**. IEEE gives the subject format `International Track Registration – [Lead Country] – [Team Name] – [Team Leader’s Full Name]`. The poster's coordinator is **WANG Yiran, wangyr@pbcsf.tsinghua.edu.cn**; the invitation says this coordinator can lodge a team's registration. Nothing has been sent on your behalf.
+Current organizer mailbox: **fintechathon@ican-x.com**. IEEE gives the subject format `International Track Registration – [Lead Country] – [Team Name] – [Team Leader’s Full Name]`; the sent registration follows it. The poster's coordinator is **WANG Yiran, wangyr@pbcsf.tsinghua.edu.cn**; the invitation says this coordinator can lodge a team's registration. No separate clarification message has been sent.
 
 ## What matters for Topic F
 
@@ -34,7 +34,7 @@ No mandatory International Track dataset or prescribed blockchain was found in t
 ## Submission checklist
 
 - [ ] Eligible team and registration acknowledgment.
-- [ ] Working Topic F project with verifiable execution evidence.
+- [x] Working Topic F prototype with verifiable execution evidence and disclosed limits.
 - [ ] Technical report covering architecture, agent design, security, deployment and evaluation.
 - [ ] Presentation supporting a talk of no more than 10 minutes.
 - [ ] Demonstration video of no more than 5 minutes.

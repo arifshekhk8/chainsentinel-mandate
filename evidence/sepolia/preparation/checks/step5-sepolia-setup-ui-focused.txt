@@ -1,0 +1,13 @@
+(node:25083) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:25086) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25086) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+  ✓  1 test/ui/setup.spec.mjs:46:1 › deployment review stays read-only and excludes unsupported routes and cross-origin writes (779ms)
+  ✓  2 test/ui/setup.spec.mjs:56:1 › wrong network, wrong owner and wallet rejection cause no setup transaction (876ms)
+  ✓  3 test/ui/setup.spec.mjs:67:1 › lost wallet response locks the action across reload and verifies the original transaction once (765ms)
+
+  3 passed (4.3s)

@@ -1,0 +1,54 @@
+
+> chainsentinel-mandate@0.1.0 build
+> node scripts/foundry.mjs forge build
+
+Compiling 20 files with Solc 0.8.37
+Solc 0.8.37 finished in 647.16ms
+Compiler run successful!
+warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+   ╭▸ test/TestBase.sol:46:9
+   │
+46 │         token.transfer(address(vault), 1000 * UNIT);
+   │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   │
+   ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/MandateVault.sol:211:13
+    │
+211 │         if (block.timestamp < agentNotBefore) revert SessionNotStarted();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/MandateVault.sol:212:13
+    │
+212 │         if (block.timestamp >= agentExpiresAt) revert SessionExpired();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/MandateVault.sol:218:13
+    │
+218 │         if (block.timestamp < bill.notBefore) revert BillNotDue();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/MandateVault.sol:219:13
+    │
+219 │         if (block.timestamp >= bill.expiresAt) revert BillExpired();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ contracts/MandateVault.sol:315:39
+    │
+315 │         if (expiresAt <= notBefore || expiresAt <= block.timestamp) revert InvalidWindow();
+    │                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp

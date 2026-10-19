@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-10-19T14:43:41.640Z",
+  "evidenceType": "prepared-unsent-public-agent-funding-review",
+  "intent": {
+    "id": "cad67bbc-bdcc-46af-9e41-2204f75ad74b",
+    "payload": {
+      "instanceId": "42a08e9a-931e-436d-8e93-ac47587d0341",
+      "setupAction": "gas",
+      "title": "Fund the agent with 0.00005 Sepolia ETH",
+      "method": "fundAgentGas",
+      "args": [],
+      "expectedEvents": [],
+      "drafts": [],
+      "chainId": 11155111,
+      "owner": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+      "to": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4",
+      "data": "0x",
+      "dataHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+      "value": "50000000000000",
+      "fees": {
+        "gasLimit": "248870",
+        "maxFeePerGas": "33",
+        "maxPriorityFeePerGas": "1",
+        "maximumOutflowWei": "50000008212710",
+        "maximumOutflowETH": "0.00005000000821271",
+        "feeCapGwei": "0.05",
+        "totalDemoBudgetETH": "0.001"
+      },
+      "createdAt": "2026-10-19T14:43:40.888Z"
+    },
+    "status": "prepared",
+    "hash": null,
+    "receipt": null,
+    "error": null
+  },
+  "reservedMaximumETH": "0.00005000065700361",
+  "approvedTotalCapETH": "0.001",
+  "publicTransactionSent": false
+}

@@ -1,0 +1,290 @@
+{
+  "runs": [
+    {
+      "startedAt": "2026-10-19T06:29:49.376Z",
+      "evidenceType": "Groq-synthetic-development-no-transactions",
+      "fixedEvaluation": false,
+      "transactionsSent": 0,
+      "calls": [
+        {
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 1045,
+          "promptVersion": "mandate-step4-v1",
+          "inputTokens": 376,
+          "outputTokens": 208,
+          "thoughtTokens": 91,
+          "quotaHeaders": {
+            "httpStatus": 200,
+            "x-ratelimit-limit-requests": 1000,
+            "x-ratelimit-limit-tokens": 8000,
+            "x-ratelimit-remaining-requests": 999,
+            "x-ratelimit-remaining-tokens": 7258
+          }
+        }
+      ],
+      "status": "passed",
+      "finishedAt": "2026-10-19T06:29:50.421Z",
+      "requestsAttempted": 1
+    },
+    {
+      "startedAt": "2026-10-19T06:52:02.429Z",
+      "evidenceType": "Groq-independent-development-intent-and-confirmation-check",
+      "promptVersion": "mandate-step5-v2",
+      "fixedEvaluation": false,
+      "transactionsSent": 0,
+      "calls": [
+        {
+          "task": "explicit-payment",
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 772,
+          "promptVersion": "mandate-step5-v2",
+          "inputTokens": 642,
+          "outputTokens": 79,
+          "thoughtTokens": 27,
+          "intent": "pay"
+        }
+      ],
+      "status": "failed",
+      "error": "Groq request failed (HTTP 400). Check API access and model settings. Nothing was executed. Manual review still works.",
+      "finishedAt": "2026-10-19T06:52:34.004Z",
+      "requestsAttempted": 2
+    },
+    {
+      "startedAt": "2026-10-19T06:53:17.241Z",
+      "evidenceType": "bounded-Groq-development-error-diagnosis",
+      "fixedEvaluation": false,
+      "transactionsSent": 0,
+      "status": "failed",
+      "error": "Groq request failed (HTTP 400). Check API access and model settings. Nothing was executed. Manual review still works.",
+      "providerDiagnostic": {
+        "httpStatus": 400,
+        "errorCode": "json_validate_failed",
+        "errorType": "invalid_request_error"
+      },
+      "finishedAt": "2026-10-19T06:53:18.149Z",
+      "requestsAttempted": 1
+    },
+    {
+      "startedAt": "2026-10-19T06:54:03.962Z",
+      "fixedEvaluation": false,
+      "transactionsSent": 0,
+      "httpStatus": 400,
+      "code": "json_validate_failed",
+      "questionType": "null",
+      "billIdsType": "array",
+      "passesLocalValidation": false,
+      "localValidationMessage": "AI returned an invalid request proposal. Please rephrase.",
+      "success": false,
+      "requestsAttempted": 1
+    },
+    {
+      "startedAt": "2026-10-19T06:54:55.188Z",
+      "evidenceType": "independent-development-after-schema-prompt-fix",
+      "promptVersion": "mandate-step5-v2",
+      "fixedEvaluation": false,
+      "transactionsSent": 0,
+      "calls": [
+        {
+          "task": "explicit-payment",
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 685,
+          "promptVersion": "mandate-step5-v2",
+          "inputTokens": 673,
+          "outputTokens": 83,
+          "thoughtTokens": 27,
+          "intent": "pay"
+        },
+        {
+          "task": "read-only",
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 796,
+          "promptVersion": "mandate-step5-v2",
+          "inputTokens": 675,
+          "outputTokens": 105,
+          "thoughtTokens": 56,
+          "intent": "status"
+        },
+        {
+          "task": "ambiguous",
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 1000,
+          "promptVersion": "mandate-step5-v2",
+          "inputTokens": 670,
+          "outputTokens": 144,
+          "thoughtTokens": 70,
+          "intent": "clarify"
+        },
+        {
+          "task": "correction",
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 740,
+          "promptVersion": "mandate-step5-v2",
+          "inputTokens": 683,
+          "outputTokens": 116,
+          "thoughtTokens": 38,
+          "intent": "correct"
+        }
+      ],
+      "status": "passed",
+      "finishedAt": "2026-10-19T06:55:43.422Z",
+      "requestsAttempted": 4
+    },
+    {
+      "recordedOn": "2026-10-19",
+      "evidenceType": "bounded-failed-generation-shape-diagnosis-console-observation",
+      "requestsAttempted": 1,
+      "fixedEvaluation": false,
+      "transactionsSent": 0,
+      "httpStatus": 400,
+      "errorCode": "json_validate_failed",
+      "finalStructuredFieldsObserved": {
+        "intent": "status",
+        "scope": "all",
+        "billIdCount": 0,
+        "correctionType": "null"
+      },
+      "rawProviderBodyOrReasoningSaved": false
+    },
+    {
+      "startedAt": "2026-10-19T07:16:24.774Z",
+      "evidenceType": "independent-read-only-context-development",
+      "promptVersion": "mandate-step5-v3",
+      "fixedEvaluation": false,
+      "transactionsSent": 0,
+      "calls": [
+        {
+          "task": "total-question",
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 737,
+          "promptVersion": "mandate-step5-v3",
+          "inputTokens": 813,
+          "outputTokens": 82,
+          "thoughtTokens": 26,
+          "intent": "status"
+        },
+        {
+          "task": "ambiguous-read-only",
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 745,
+          "promptVersion": "mandate-step5-v3",
+          "inputTokens": 811,
+          "outputTokens": 87,
+          "thoughtTokens": 31,
+          "intent": "status"
+        }
+      ],
+      "requestsAttempted": 2,
+      "status": "failed",
+      "error": "Independent development behavior mismatch.",
+      "finishedAt": "2026-10-19T07:16:41.264Z"
+    },
+    {
+      "startedAt": "2026-10-19T07:19:30.105Z",
+      "evidenceType": "independent-live-read-only-application-check",
+      "promptVersion": "mandate-step5-v3",
+      "fixedEvaluation": false,
+      "publicTransactions": 0,
+      "localFixtureSetup": true,
+      "modelTriggeredPayments": 0,
+      "calls": [
+        {
+          "task": "total-question",
+          "proposal": {
+            "intent": "status",
+            "scope": "selected",
+            "billIds": [
+              "0d60a9ec-f9fb-4c61-900e-2f4065f67d66",
+              "beb863c7-322e-4efc-a544-fea925e8df93"
+            ],
+            "question": "",
+            "correction": null
+          },
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 667,
+          "promptVersion": "mandate-step5-v3",
+          "inputTokens": 859,
+          "outputTokens": 132,
+          "thoughtTokens": 30
+        },
+        {
+          "task": "ambiguous-read-only",
+          "proposal": {
+            "intent": "clarify",
+            "scope": "selected",
+            "billIds": [],
+            "question": "Which vendor's amount would you like to know?",
+            "correction": null
+          },
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 731,
+          "promptVersion": "mandate-step5-v3",
+          "inputTokens": 857,
+          "outputTokens": 84,
+          "thoughtTokens": 24
+        },
+        {
+          "task": "vendor-answer",
+          "proposal": {
+            "intent": "status",
+            "scope": "selected",
+            "billIds": [
+              "beb863c7-322e-4efc-a544-fea925e8df93"
+            ],
+            "question": "",
+            "correction": null
+          },
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 983,
+          "promptVersion": "mandate-step5-v3",
+          "inputTokens": 879,
+          "outputTokens": 124,
+          "thoughtTokens": 54
+        },
+        {
+          "task": "empty-unpaid-classification",
+          "proposal": {
+            "intent": "clarify",
+            "scope": "selected",
+            "billIds": [],
+            "question": "Which unpaid bills would you like to process? Please provide their bill IDs.",
+            "correction": null
+          },
+          "provider": "groq",
+          "requestedModel": "openai/gpt-oss-120b",
+          "returnedModel": "openai/gpt-oss-120b",
+          "elapsedMs": 830,
+          "promptVersion": "mandate-step5-v3",
+          "inputTokens": 754,
+          "outputTokens": 125,
+          "thoughtTokens": 60
+        }
+      ],
+      "applicationReferenceGuardUsed": true,
+      "status": "failed",
+      "error": "The expression evaluated to a falsy value:\n\n  assert(['status','plan'].includes(v.intent))\n",
+      "finishedAt": "2026-10-19T07:20:19.988Z"
+    }
+  ]
+}

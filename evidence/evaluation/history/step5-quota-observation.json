@@ -1,0 +1,22 @@
+{
+  "observedAt": "2026-10-19T06:16:00Z",
+  "source": "Read-only Google AI Studio Rate Limit page in the user's Chrome session",
+  "model": "gemini-3.8-flash",
+  "tierDisplayed": "Free tier",
+  "displayPeriod": "1 Day",
+  "rpmPeakDisplayed": 4,
+  "rpmLimitDisplayed": 5,
+  "inputTokensPerMinutePeakDisplayed": 1730,
+  "inputTokensPerMinuteLimitDisplayed": 250000,
+  "requestsPerDayPeakDisplayed": 21,
+  "requestsPerDayLimitDisplayed": 20,
+  "pageWarning": "Rate limit reached",
+  "limitations": "The page reports peak usage in the selected period, may lag by up to 15 minutes, and is not a live remaining-quota counter. The actual evaluator received a quota/rate-limit error at N02.",
+  "billingOrProjectSettingsChanged": false,
+  "furtherApiCallsAfterQuotaDiagnosis": 0,
+  "officialResetSource": "https://ai.google.dev/gemini-api/docs/rate-limits",
+  "documentedDailyReset": "midnight Pacific time",
+  "nextExpectedResetLocal": "2026-10-19T13:00:00+06:00",
+  "resetVerifiedBySuccessfulRequest": false,
+  "automaticResumptionScheduled": false
+}

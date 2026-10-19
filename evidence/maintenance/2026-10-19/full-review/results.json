@@ -1,0 +1,102 @@
+{
+  "recordedAt": "2026-10-19",
+  "scope": "User-requested full local review before repository handoff; Step 6 not started.",
+  "isolation": "Public source copied to a temporary checkout; no .env, private databases, identity files or current wallet profile. Existing dependencies reused through a symlink. All AI credentials empty in child processes.",
+  "commands": [
+    {
+      "script": "build",
+      "exitCode": 0,
+      "elapsedMs": 986,
+      "log": "build.txt"
+    },
+    {
+      "script": "format:check",
+      "exitCode": 0,
+      "elapsedMs": 160,
+      "log": "format-check.txt"
+    },
+    {
+      "script": "test",
+      "exitCode": 0,
+      "elapsedMs": 302,
+      "log": "test.txt"
+    },
+    {
+      "script": "test:identity",
+      "exitCode": 0,
+      "elapsedMs": 283,
+      "log": "test-identity.txt"
+    },
+    {
+      "script": "test:app",
+      "exitCode": 0,
+      "elapsedMs": 16014,
+      "log": "test-app.txt"
+    },
+    {
+      "script": "test:agent",
+      "exitCode": 0,
+      "elapsedMs": 38689,
+      "log": "test-agent.txt"
+    },
+    {
+      "script": "test:evaluation",
+      "exitCode": 0,
+      "elapsedMs": 287,
+      "log": "test-evaluation.txt"
+    },
+    {
+      "script": "test:sepolia",
+      "exitCode": 0,
+      "elapsedMs": 4174,
+      "log": "test-sepolia.txt"
+    },
+    {
+      "script": "build:app",
+      "exitCode": 0,
+      "elapsedMs": 228,
+      "log": "build-app.txt"
+    },
+    {
+      "script": "test:ui",
+      "exitCode": 0,
+      "elapsedMs": 46565,
+      "log": "test-ui.txt"
+    }
+  ],
+  "counts": {
+    "test:identity": [
+      "tests 4",
+      "pass 4",
+      "fail 0"
+    ],
+    "test:app": [
+      "tests 35",
+      "pass 35",
+      "fail 0"
+    ],
+    "test:agent": [
+      "tests 59",
+      "pass 59",
+      "fail 0"
+    ],
+    "test:evaluation": [
+      "tests 9",
+      "pass 9",
+      "fail 0"
+    ],
+    "test:sepolia": [
+      "tests 11",
+      "pass 11",
+      "fail 0"
+    ]
+  },
+  "contractTests": 58,
+  "browserTests": 19,
+  "allCommandsPassed": true,
+  "liveModelRequests": 0,
+  "publicTransactionsSent": 0,
+  "sourceFilesChangedForReview": false,
+  "originalEvidenceOverwritten": false,
+  "logFormatting": "Only trailing terminal blank lines normalized for repository whitespace checks; test result/failure content retained."
+}

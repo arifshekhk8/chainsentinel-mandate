@@ -1,0 +1,25 @@
+{
+  "evidenceType": "independent-synthetic-gemini-availability-check",
+  "startedAt": "2026-10-19T08:34:12.096Z",
+  "promptVersion": "mandate-step5-v3",
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "requestsAttempted": 1,
+  "transactionsSent": 0,
+  "fixedEvaluation": false,
+  "configuredProviderUnchanged": "groq",
+  "automaticRetry": false,
+  "status": "passed",
+  "call": {
+    "provider": "gemini",
+    "requestedModel": "gemini-3.8-flash",
+    "returnedModel": "gemini-3.8-flash",
+    "elapsedMs": 12717,
+    "promptVersion": "mandate-step5-v3",
+    "inputTokens": 164,
+    "outputTokens": 138,
+    "thoughtTokens": 0
+  },
+  "assessment": "One valid response proves availability at this time only; remaining daily quota is not measured.",
+  "finishedAt": "2026-10-19T08:34:24.814Z"
+}

@@ -42,7 +42,7 @@ Direct contract calls bypass the planner entirely. Rejections assert specific er
 
 ## Local demonstration evidence
 
-See [step2-local-demo.json](step2-local-demo.json) for actual local transaction hashes, block references, receipt statuses, raw event logs, gas usage and verified outcomes. Amounts there use six-decimal integer base units.
+See [step2-local-demo.json](local/step2/step2-local-demo.json) for actual local transaction hashes, block references, receipt statuses, raw event logs, gas usage and verified outcomes. Amounts there use six-decimal integer base units.
 
 | Action | Outcome |
 | --- | --- |

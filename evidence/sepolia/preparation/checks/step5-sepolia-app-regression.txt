@@ -1,0 +1,49 @@
+
+> chainsentinel-mandate@0.1.0 test:app
+> node --test test/intake.test.mjs test/owner-workflow.test.mjs test/server-shutdown.test.mjs
+
+✔ CSV preserves exact six-decimal amounts, original text and document fingerprint (8.464333ms)
+✔ CSV supports quoted commas without treating note text as instructions (0.957875ms)
+✔ missing critical values stay empty for owner correction (0.498209ms)
+✔ reject unsupported, empty and oversized files before parsing (0.721041ms)
+✔ reject malformed, duplicate-header and binary CSV inputs (1.058167ms)
+✔ reject inconsistent CSV rows and more than 50 bills without discarding data (3.062667ms)
+✔ text PDF extracts labeled fields and retains original extracted source (623.983291ms)
+✔ repeated PDF labels are ambiguous and never silently choose an amount (155.328125ms)
+✔ reject malformed and image-only PDFs with useful fallback (267.482916ms)
+✔ PDF page count is bounded (135.168916ms)
+✔ token conversion uses exact integers and rejects ambiguous numeric formats (0.559667ms)
+(node:23595) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ intake makes editable drafts, never on-chain approvals or payments (893.864792ms)
+✔ unsigned and unreviewed drafts cannot execute or prepare approval (458.515625ms)
+✔ two reviewed bills receive exact receipt-verified owner approvals without paying (978.234666ms)
+✔ editing a reviewed draft invalidates its review and prepared transaction (716.908959ms)
+✔ editing after confirmation does not relabel new fields as approved or alter old permission (818.041167ms)
+✔ wrong currency, missing amount and invalid dates stop review (570.047125ms)
+✔ invoice recipient cannot update registry and mismatch requires independent owner acknowledgment (840.911792ms)
+✔ normalized duplicate with a renamed file cannot enter a second approval batch (644.862708ms)
+✔ similar invoice identifiers demand explicit duplicate review (921.974584ms)
+✔ vendor change invalidates review and stale transaction without resetting fields (756.404125ms)
+✔ unrelated receipt and a different sender never become an approved bill (1013.55975ms)
+✔ pending approval stays pending and locks editing until its matching receipt arrives (978.999083ms)
+✔ RPC uncertainty preserves the original hash and reconciles without a second send (747.545834ms)
+✔ mined reverted owner transaction never becomes an approval (704.093417ms)
+✔ wallet rejection/cancel leaves permission absent (526.604667ms)
+✔ vendor/rules/agent/pause/revoke actions have exact receipt evidence (1220.22975ms)
+✔ source removal deletes original text and drafts but retains opaque chain evidence (819.42875ms)
+✔ confirmed bill cancellation needs a fresh review before explicit replacement approval (1424.662292ms)
+✔ mainnet configuration and a mismatched RPC network disable the workflow (86.747708ms)
+✔ cross-origin and missing-CSRF requests cannot read or mutate app data (85.7895ms)
+✔ SQLite retains drafts over a backend store restart (91.574542ms)
+✔ local setup supports a public owner address without importing its private key (843.816375ms)
+✔ shutdown closes a browser preconnection that has not sent an HTTP request (20.054125ms)
+✔ shutdown lets an active HTTP request finish and can be called twice (3028.52375ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16676.101291

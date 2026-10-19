@@ -1,0 +1,37 @@
+(node:23490) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ public setup rejects wrong networks before preparing or enabling wallet actions (657.875458ms)
+✔ review-only mode cannot open the wallet and steps cannot be reordered (60.065958ms)
+✔ fee ceiling and total reserved owner outflow stop preparation without sending (62.170167ms)
+✔ parallel setup preparation creates only one durable review (58.557333ms)
+✔ lost wallet responses remain locked across restart and allow original-hash recovery only (64.699625ms)
+✔ an unrelated mined transaction cannot become deployment evidence (141.167583ms)
+✔ setup waits for the configured confirmations and rechecks the same hash without resending (159.331625ms)
+✔ a durable public setup uses a separate protected agent key and preserves existing files (72.317167ms)
+✖ full local deployment rehearsal funds the paused vault, then explicit approvals permit one exact batch (2729.687209ms)
+✔ public owner approval waits for two confirmations and rejects a fee outside the review (61.835416ms)
+✔ public agent reconciliation does not mark a one-confirmation receipt paid (58.303041ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 10
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4585.015833
+
+✖ failing tests:
+
+test at test/sepolia.test.mjs:101:1
+✖ full local deployment rehearsal funds the paused vault, then explicit approvals permit one exact batch (2729.687209ms)
+  Error: An earlier public action has no budget record. Inspect it before continuing.
+      at check (file:///Users/arif/Documents/chaina/app/errors.mjs:5:25)
+      at file:///Users/arif/Documents/chaina/app/sepolia-policy.mjs:16:7
+      at Array.reduce (<anonymous>)
+      at reservedBudget (file:///Users/arif/Documents/chaina/app/sepolia-policy.mjs:15:6)
+      at TestContext.<anonymous> (file:///Users/arif/Documents/chaina/test/sepolia.test.mjs:132:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    status: 409
+  }

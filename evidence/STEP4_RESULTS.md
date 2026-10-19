@@ -28,11 +28,11 @@ Recorded 17 October 2026. Team **ChainSentinel**; product **Mandate**. This is l
 
 Commands: `npm run test:agent`, `npm run test:ui`, `npm run test:app`, `npm test`, `npm run test:identity`, `npm run build:app`. Initial fault-injection testing intercepted snapshot reads as well as payment simulation; the fixture now targets the payment selector. The application also distinguishes an RPC simulation outage from a contract rejection. Final checks pass.
 
-[Receipt evidence](step4-local-agent.json) records real local transactions driven by a **scripted development model adapter**. It is not a live AI result. The normal batch pays 200 + 150 from 1,000 MDT, ending at 650 with daily spend 350 and daily allowance 50. The approved 75 MDT bill is deferred. Reserve, stale-policy, expiry and revocation checks use independent fixtures.
+[Receipt evidence](local/step4/step4-local-agent.json) records real local transactions driven by a **scripted development model adapter**. It is not a live AI result. The normal batch pays 200 + 150 from 1,000 MDT, ending at 650 with daily spend 350 and daily allowance 50. The approved 75 MDT bill is deferred. Reserve, stale-policy, expiry and revocation checks use independent fixtures.
 
 Development traces cover ordinary wording, clarification plus answer, read-only requests, corrections preserving existing signed permission, unsupported requests and tool failures. Controlled proposals test the application's handling, not a live model's accuracy. Separate checks cover concurrent executor objects, pending locks, accepted-but-lost broadcast replies, absent hashes, mined reverts, mismatched events, backend/store reopen, between-send revocation, linked-source removal and API timeout without retry. Lowering a daily cap below already-spent tokens shows zero remaining and allows no new payment. No held-out evaluation case was executed or included in prompt input.
 
-Browser evidence: [desktop](step4-agent-desktop.png), [mobile](step4-agent-mobile.png). QA uses isolated headless Chrome and disposable local accounts; it does not access a user's browser profile or wallet extension.
+Browser evidence: [desktop](local/step4/step4-agent-desktop.png), [mobile](local/step4/step4-agent-mobile.png). QA uses isolated headless Chrome and disposable local accounts; it does not access a user's browser profile or wallet extension.
 
 ## What still needs proof
 

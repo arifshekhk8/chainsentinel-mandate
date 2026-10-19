@@ -30,7 +30,7 @@ Limits: 5 MiB/file, 50 CSV bill rows, 200,000 source-text characters, 20 PDF pag
 - `npm run test:app`: **33 passed**, zero failures/skips — 11 intake/amount tests and 22 owner/API/storage checks.
 - `npm run test:ui`: **7 passed** in isolated headless Chrome with an EIP-1193 test wallet and real local-chain transactions. The actual MetaMask extension was not used.
 - Local preview returned HTTP 200. The in-app browser surface was unavailable; browser behavior and visuals were instead checked in the isolated local Chrome test profile. No existing browser profile/wallet was accessed.
-- Visually inspected [desktop](step3-desktop.png), [bill review](step3-review.png) and [mobile](step3-mobile.png) screenshots.
+- Visually inspected [desktop](local/step3/step3-desktop.png), [bill review](local/step3/step3-review.png) and [mobile](local/step3/step3-mobile.png) screenshots.
 
 An initial browser test found a save/close race: a completed save reopened a bill panel after the owner had closed it. The save now respects the current panel/review generation. A deliberately delayed-save regression checks that the panel remains closed. All final required Step 3 checks passed before Step 4 began.
 
@@ -38,7 +38,7 @@ Contract source and its Step 2 acceptance set were not changed. The earlier 58 c
 
 ## Approval evidence
 
-[step3-owner-approval.json](step3-owner-approval.json) records the actual local two-bill `approveBills` transaction, matching successful receipt/logs and exact approved fields. The amounts are **200 and 150 MDT**. The vault retains **1,000 MDT** and this workflow pays **zero tokens**. Screenshots show this approval state; they do not depict AI operation or a payment outcome.
+[step3-owner-approval.json](local/step3/step3-owner-approval.json) records the actual local two-bill `approveBills` transaction, matching successful receipt/logs and exact approved fields. The amounts are **200 and 150 MDT**. The vault retains **1,000 MDT** and this workflow pays **zero tokens**. Screenshots show this approval state; they do not depict AI operation or a payment outcome.
 
 The browser provider is a **test double** backed by disposable Anvil RPC signers. Hashes are from ephemeral local chain 31337, not Sepolia, and cannot be checked on a public explorer. Re-running browser tests replaces these local artifacts. No actual user wallet, private/API key, real invoice or real funds were used. The optional public-address setup was independently tested to seed a disposable local vault and stop impersonation afterward.
 

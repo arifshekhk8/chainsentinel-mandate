@@ -1,0 +1,146 @@
+{
+  "evidenceType": "scripted-development-adapter-with-real-local-transactions",
+  "liveModelUsed": false,
+  "publicTestnetEvidence": false,
+  "chainId": 31337,
+  "promptVersion": "mandate-step5-v3",
+  "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "agent": "0x4F8a64D61865498eA2A35B825ecF09904c68f368",
+  "plan": {
+    "policyVersion": "6",
+    "utcDay": 20745,
+    "blockNumber": 8,
+    "entries": [
+      {
+        "id": "263e6cc3-8d6c-4fcf-af8f-24fb9adfde28",
+        "version": 1,
+        "key": "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+        "invoice": "HOST-1001",
+        "vendor": "Hostline Demo",
+        "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "200000000",
+        "documentHash": "0xf47b0b680b1230d24be9fdb67a4e7ab4ea6b18e271c80cfa6a4cd7f37ab49e77",
+        "approvalVersion": "5",
+        "code": "ready",
+        "reason": "Ready within the current rules.",
+        "nextAction": "Review this exact plan, then run the agent."
+      },
+      {
+        "id": "74cc81be-4f68-44db-aa5d-8e22d7224429",
+        "version": 1,
+        "key": "0xac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d2",
+        "invoice": "ART-2001",
+        "vendor": "Artline Demo",
+        "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "amount": "150000000",
+        "documentHash": "0xf47b0b680b1230d24be9fdb67a4e7ab4ea6b18e271c80cfa6a4cd7f37ab49e77",
+        "approvalVersion": "5",
+        "code": "ready",
+        "reason": "Ready within the current rules.",
+        "nextAction": "Review this exact plan, then run the agent."
+      },
+      {
+        "id": "b8940858-f892-4a05-b03b-0ee9abe4c72d",
+        "version": 1,
+        "key": "0xfb58ea79c2880e5d6dee33e3c4030ae34889884208438ecc616a44da4e188fd9",
+        "invoice": "HOST-1002",
+        "vendor": "Hostline Demo",
+        "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "75000000",
+        "documentHash": "0xf47b0b680b1230d24be9fdb67a4e7ab4ea6b18e271c80cfa6a4cd7f37ab49e77",
+        "approvalVersion": "5",
+        "code": "daily",
+        "reason": "The remaining UTC daily budget is too small.",
+        "nextAction": "Wait for the next UTC day or ask the owner to review the limit."
+      }
+    ],
+    "total": "350000000",
+    "projectedBalance": "650000000",
+    "projectedDailyLeft": "50000000"
+  },
+  "payments": [
+    {
+      "id": "5bbc521d-2db1-456e-a0d4-d85137e97c87",
+      "instance_id": "02bd427d-51be-4e3c-b8ef-760fdcfa6658",
+      "payload": {
+        "planId": "72697466-e762-4a6c-afa1-4f82c2e248ea",
+        "draftId": "263e6cc3-8d6c-4fcf-af8f-24fb9adfde28",
+        "billKey": "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+        "invoice": "HOST-1001",
+        "agent": "0x4F8a64D61865498eA2A35B825ecF09904c68f368",
+        "nonce": 0,
+        "data": "0x116f4b20e0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda001420000000000000000000000000000000000000000000000000000000000000006",
+        "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "amount": "200000000",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "policyVersion": "6",
+        "utcDay": "20745",
+        "createdAt": "2026-10-19T08:37:04.134Z"
+      },
+      "status": "confirmed",
+      "hash": "0x33db591cc93027721bbf389e8644a5161e90f528822b597d6cb848fdd3cb81e6",
+      "receipt": {
+        "hash": "0x33db591cc93027721bbf389e8644a5161e90f528822b597d6cb848fdd3cb81e6",
+        "chainId": 31337,
+        "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "blockNumber": 9,
+        "blockHash": "0x1b61e91cb93d05958f6099ef9ec2954f72ddbd24e505ff3cc23c567c44333122",
+        "status": 1,
+        "gasUsed": "138704",
+        "payment": {
+          "billKey": "0xe0b7c3f3ed423a2a4960e3dc9859940c0897dfea93058b41df55ec2acda00142",
+          "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+          "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+          "amount": "200000000",
+          "policyVersion": "6",
+          "utcDay": "20745",
+          "dailySpent": "200000000"
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "0b01263b-55e6-498b-98e1-0bac8944dcdb",
+      "instance_id": "02bd427d-51be-4e3c-b8ef-760fdcfa6658",
+      "payload": {
+        "planId": "72697466-e762-4a6c-afa1-4f82c2e248ea",
+        "draftId": "74cc81be-4f68-44db-aa5d-8e22d7224429",
+        "billKey": "0xac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d2",
+        "invoice": "ART-2001",
+        "agent": "0x4F8a64D61865498eA2A35B825ecF09904c68f368",
+        "nonce": 1,
+        "data": "0x116f4b20ac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d20000000000000000000000000000000000000000000000000000000000000006",
+        "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "amount": "150000000",
+        "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        "policyVersion": "6",
+        "utcDay": "20745",
+        "createdAt": "2026-10-19T08:37:04.407Z"
+      },
+      "status": "confirmed",
+      "hash": "0x25b665ce2317840c99cc44749de9c87c767015c9efcbc17ba155462015175794",
+      "receipt": {
+        "hash": "0x25b665ce2317840c99cc44749de9c87c767015c9efcbc17ba155462015175794",
+        "chainId": 31337,
+        "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+        "blockNumber": 10,
+        "blockHash": "0x3e84e8d2b6f3a3726e1a929bc8a8e2fa11fb1b0afb5c8e60eb50270f30aa3bd3",
+        "status": 1,
+        "gasUsed": "121604",
+        "payment": {
+          "billKey": "0xac5d9e34a65d3c62e26439549fd2c6c543ede376c2f91eb7ddff3cdc07cc64d2",
+          "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+          "amount": "150000000",
+          "policyVersion": "6",
+          "utcDay": "20745",
+          "dailySpent": "350000000"
+        }
+      },
+      "error": null
+    }
+  ],
+  "finalVaultBalanceBaseUnits": "650000000",
+  "finalDailySpentBaseUnits": "350000000"
+}

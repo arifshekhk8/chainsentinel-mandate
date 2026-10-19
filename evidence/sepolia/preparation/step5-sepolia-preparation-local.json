@@ -1,0 +1,159 @@
+{
+  "evidenceType": "local-sepolia-workflow-rehearsal",
+  "publicTestnetEvidence": false,
+  "chainId": 31337,
+  "walletType": "Disposable local RPC signer; no actual wallet extension",
+  "liveModelUsed": false,
+  "recordedAt": "2026-10-19T11:29:27.536Z",
+  "setupSteps": [
+    {
+      "action": "token",
+      "hash": "0x559c5335f0a0a495f7ea058303b3f8d7cf596b2af5faff1e7be27a640963a2ab",
+      "receipt": {
+        "hash": "0x559c5335f0a0a495f7ea058303b3f8d7cf596b2af5faff1e7be27a640963a2ab",
+        "chainId": 31337,
+        "blockNumber": 8,
+        "blockHash": "0x7cf77c7aea726c9dcc6db788aaa625b1cfc90838fe19607eef8f4af7595d7a0f",
+        "status": 1,
+        "gasUsed": "543222",
+        "gasPrice": "1",
+        "confirmations": 1,
+        "contractAddress": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+        "codeHash": "0x09b2f3945e6c1e90030781a24f7081b885101ab4ecdd7b5b4338f43b6e42e34c"
+      }
+    },
+    {
+      "action": "vault",
+      "hash": "0x46ae1ed6a5877da215c7edb79ff33a2c0acc97f5b5595cd9bd8442d2055915de",
+      "receipt": {
+        "hash": "0x46ae1ed6a5877da215c7edb79ff33a2c0acc97f5b5595cd9bd8442d2055915de",
+        "chainId": 31337,
+        "blockNumber": 9,
+        "blockHash": "0xe389b4ac8ffbffceacd2624fdced6cec481625a302a4b80815b064642c7cb578",
+        "status": 1,
+        "gasUsed": "1825541",
+        "gasPrice": "1",
+        "confirmations": 1,
+        "contractAddress": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+        "codeHash": "0x60399fff0b1f3a800e0c8bf749066eb4e49b3809d36afe46523311f5cf038441"
+      }
+    },
+    {
+      "action": "deposit",
+      "hash": "0xadcf5e7e1a39aa878f3e440dd51025de0cdceb4f1fdb636698537aeff8739dd9",
+      "receipt": {
+        "hash": "0xadcf5e7e1a39aa878f3e440dd51025de0cdceb4f1fdb636698537aeff8739dd9",
+        "chainId": 31337,
+        "blockNumber": 10,
+        "blockHash": "0xab2c546689cf6295a26408019abed01d9a7c3b9531cd98046f430868bf64a582",
+        "status": 1,
+        "gasUsed": "46777",
+        "gasPrice": "1",
+        "confirmations": 1,
+        "contractAddress": null
+      }
+    },
+    {
+      "action": "host",
+      "hash": "0xc06d8b5c02ec15e01621e4b091d48e8d79fdb69ceecb525bc4624339d0b200dd",
+      "receipt": {
+        "hash": "0xc06d8b5c02ec15e01621e4b091d48e8d79fdb69ceecb525bc4624339d0b200dd",
+        "chainId": 31337,
+        "blockNumber": 11,
+        "blockHash": "0xda2a1e3e748ca65ccd4e39e064614432ef77f6e50864cd8c649ae40a1bc4488e",
+        "status": 1,
+        "gasUsed": "75883",
+        "gasPrice": "1",
+        "confirmations": 1,
+        "contractAddress": null
+      }
+    },
+    {
+      "action": "design",
+      "hash": "0x114d46a22474cfd35355eb5f23ffcff2885c8de7b09632ce47fd6706d5bd7fe2",
+      "receipt": {
+        "hash": "0x114d46a22474cfd35355eb5f23ffcff2885c8de7b09632ce47fd6706d5bd7fe2",
+        "chainId": 31337,
+        "blockNumber": 12,
+        "blockHash": "0x2f9ff18eab4979746c74616a3f2ee4504aa3c643d80b0270a6dad3c2b6885105",
+        "status": 1,
+        "gasUsed": "75895",
+        "gasPrice": "1",
+        "confirmations": 1,
+        "contractAddress": null
+      }
+    },
+    {
+      "action": "agent",
+      "hash": "0xefc8b27ba67a3d44ec6a70fd626e8335bf0c801b9eb3c024b83f97f8b6b2053d",
+      "receipt": {
+        "hash": "0xefc8b27ba67a3d44ec6a70fd626e8335bf0c801b9eb3c024b83f97f8b6b2053d",
+        "chainId": 31337,
+        "blockNumber": 13,
+        "blockHash": "0xd0aa00c4d7f7390c3d9058792334869ef05bc22f14dfb5b48f6eb3fafecd5bd9",
+        "status": 1,
+        "gasUsed": "58225",
+        "gasPrice": "1",
+        "confirmations": 1,
+        "contractAddress": null
+      }
+    },
+    {
+      "action": "gas",
+      "hash": "0x50ba157479e9a2ab9d019a34f1a865b767860af7624936455ae73aeb404e4903",
+      "receipt": {
+        "hash": "0x50ba157479e9a2ab9d019a34f1a865b767860af7624936455ae73aeb404e4903",
+        "chainId": 31337,
+        "blockNumber": 14,
+        "blockHash": "0xbb1114b0e7ca152bc1d449942830545f986270ee8a07f7ed5759ee948ec2a198",
+        "status": 1,
+        "gasUsed": "21000",
+        "gasPrice": "1",
+        "confirmations": 1,
+        "contractAddress": null
+      }
+    }
+  ],
+  "reviewedSetupBudgetMaximumWei": "81816140000000",
+  "paymentReceipts": [
+    {
+      "hash": "0x7d57cd167a54e155570a49d72d084b5d4730b684dc9db59d2e9db28820b85a5b",
+      "chainId": 31337,
+      "vault": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+      "blockNumber": 17,
+      "blockHash": "0x4659817ab4b58528e705a0271a5992688d2f1e056eeb61c604af4f7fff498fe6",
+      "status": 1,
+      "gasUsed": "138704",
+      "payment": {
+        "billKey": "0x314d6fe64ac387527168c6b415e88fa4ae60646643555d57c3e04f0aac908129",
+        "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "token": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+        "amount": "200000000",
+        "policyVersion": "6",
+        "utcDay": "20745",
+        "dailySpent": "200000000"
+      }
+    },
+    {
+      "hash": "0x8f39ba2e0674ab3599d1a2fbe1c5466749ec87cc675420950d15600ccf32327e",
+      "chainId": 31337,
+      "vault": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+      "blockNumber": 18,
+      "blockHash": "0x82f16cecb89ecce5832c56695d13d059e207ca6c0715595a4f6a8c2012b72f9b",
+      "status": 1,
+      "gasUsed": "121604",
+      "payment": {
+        "billKey": "0x879f3ff0707062872294baaeb4c2e9f79498d87bffa6d4bcd77866fb624a9cf4",
+        "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "token": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+        "amount": "150000000",
+        "policyVersion": "6",
+        "utcDay": "20745",
+        "dailySpent": "350000000"
+      }
+    }
+  ],
+  "endingBalance": "650000000",
+  "replayRejected": true,
+  "revokedAgentHasNoEligiblePayments": true
+}

@@ -1,0 +1,73 @@
+
+> chainsentinel-mandate@0.1.0 test:agent
+> node --test test/agent.test.mjs test/gemini-model.test.mjs test/groq-model.test.mjs
+
+(node:23597) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ exact ordered plan and one confirmation pay 200 + 150; 75 is deferred by daily budget (2311.861958ms)
+✔ planner uses owner priority then due date then stable bill key, without floating point (1072.983708ms)
+✔ unsigned draft and missing agent never become executable (469.450542ms)
+✔ read-only question cannot execute even when model incorrectly proposes pay (1025.053084ms)
+✔ development conversation: ordinary wording, focused clarification and answer preserve context (1290.14475ms)
+✔ read-only clarification context cannot become a payment on a vendor-only answer (1082.534333ms)
+✔ a new ordinary payment instruction can follow a read-only totals question (1091.506625ms)
+✔ explicit no-payment wording stays read-only even when the model proposes pay (718.832917ms)
+✔ an unresolved fresh pronoun cannot silently select every bill (911.135208ms)
+✔ development correction only changes a draft after explicit apply; signed amount stays unchanged (1310.185875ms)
+✔ stale correction cannot overwrite a newer owner edit (592.620291ms)
+✔ development unsupported request and AI tool failure have safe recovery with zero sends (1180.533375ms)
+✔ model cannot reference unknown bills, arbitrary calls, rule changes or extra keys (1309.9825ms)
+✔ model input has no signer, calldata, source instructions, keys or expected evaluation labels (1163.022833ms)
+✔ AI extraction proposes copied fields; nulls preserve manual values and apply never approves (400.118916ms)
+✔ multi-invoice AI extraction falls back to separate manual records (359.513583ms)
+✔ no payment without a second explicit confirmation (1096.877041ms)
+✔ used plan and simultaneous execute requests cannot duplicate transfers (1033.457916ms)
+✔ separate executor objects share the durable queue claim (1083.833916ms)
+✔ owner revocation after planning stops the batch without sending (1219.209958ms)
+✔ editing a signed draft after planning stops sending until fresh owner review (1341.779875ms)
+✔ independent reserve boundary defers a bill with a useful next action (766.743875ms)
+✔ per-bill boundary, pause and revoked session have distinct checked reasons (1187.619209ms)
+✔ vendor change and cancellation identify the owner action required (1347.967708ms)
+✔ bill and agent expiry are checked using chain time (1071.390208ms)
+✔ simulation failure sends no transaction and keeps the real cause reviewable (822.983542ms)
+✔ pending original hash stops remaining queue and blocks edit, deletion and another batch (1775.940417ms)
+✔ hash is durable before broadcast; uncertain accepted broadcast recovers without resending (1030.018625ms)
+✔ unknown hash never gets retried or called paid when broadcast never happened (1073.102291ms)
+✔ mined revert is distinct from successful payment and does not consume the bill (1097.451417ms)
+✔ receipt mismatch and RPC verification outage never claim payment (1068.672875ms)
+✔ SQLite reopen preserves plan claim, original payment hash and receipt evidence (38.760917ms)
+✔ HTTP agent routes require CSRF, accept only fixed operations and never return credentials (1118.793292ms)
+✔ missing model configuration fails clearly while manual preview still works (1099.723458ms)
+✔ OpenAI transport uses strict schema, store false, no tools and backend-only authorization (28.8175ms)
+✔ provider refusal, incomplete output, malformed JSON and outage are safe explicit failures (30.98525ms)
+✔ secret-shaped input and invalid extraction are rejected before use (27.801292ms)
+✔ confirmed revocation between two sends stops the second bill (1574.682917ms)
+✔ real local payment reconciles after backend/store reopen; abandoned queue never auto-resends (1121.505ms)
+✔ source removal removes linked AI proposals and invoice labels while retaining opaque receipts (1013.792083ms)
+✔ live-adapter timeout aborts once and never starts an automatic retry (34.8205ms)
+✔ lowering the daily limit below already-spent tokens shows zero remaining and no new payment (1604.411875ms)
+✔ Gemini sends bounded structured data, private header, store false, low thinking and no tools (5.3895ms)
+✔ Gemini extraction uses all invoice fields and preserves exact decimal strings (0.552958ms)
+✔ Gemini thought signatures are ignored while the single final output is validated (0.292084ms)
+✔ Gemini auth, quota and provider failures disclose no raw provider message and do not retry (1.095958ms)
+✔ Gemini rejects blocked, incomplete, tool-call, mixed, invalid-schema and oversized responses (1.711167ms)
+✔ Gemini rejects missing key, unsupported paid model, oversized and secret-shaped inputs before fetch (0.562084ms)
+✔ Gemini timeout aborts once without retries (11.804291ms)
+✔ provider selection is explicit, Gemini stays unconfigured without key and no fallback occurs (0.234291ms)
+✔ Groq sends pinned strict stateless proposals with a private header and no tools/reasoning output (5.982417ms)
+✔ Groq extraction uses every field and retains exact money strings (0.584ms)
+✔ Groq auth/quota/outage errors hide provider content and never retry or fall back (1.204334ms)
+✔ Groq rejects alternate models, truncation, tools, refusals, malformed JSON and invalid fields (2.489291ms)
+✔ provider JSON validation failures are safe proposal misses without echoing failed generation (0.250709ms)
+✔ Groq ignores unrequested reasoning text and records only safe usage metadata (0.176375ms)
+✔ missing key, unpinned model, secrets and oversized input stop before network (0.48575ms)
+✔ Groq timeout aborts one request and leaves manual review available (9.937708ms)
+✔ Groq is explicitly selected and never borrows another provider key (0.267208ms)
+ℹ tests 59
+ℹ suites 0
+ℹ pass 59
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41528.957167

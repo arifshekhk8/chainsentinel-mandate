@@ -1,0 +1,40 @@
+(node:23425) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ public setup rejects wrong networks before preparing or enabling wallet actions (663.092917ms)
+✔ review-only mode cannot open the wallet and steps cannot be reordered (59.110875ms)
+✔ fee ceiling and total reserved owner outflow stop preparation without sending (63.958625ms)
+✔ parallel setup preparation creates only one durable review (58.451167ms)
+✔ lost wallet responses remain locked across restart and allow original-hash recovery only (64.850125ms)
+✔ an unrelated mined transaction cannot become deployment evidence (143.745625ms)
+✔ setup waits for the configured confirmations and rechecks the same hash without resending (150.063333ms)
+✔ a durable public setup uses a separate protected agent key and preserves existing files (72.485459ms)
+✖ full local deployment rehearsal funds the paused vault, then explicit approvals permit one exact batch (1332.063417ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3096.595542
+
+✖ failing tests:
+
+test at test/sepolia.test.mjs:100:1
+✖ full local deployment rehearsal funds the paused vault, then explicit approvals permit one exact batch (1332.063417ms)
+  TypeError: invalid BytesLike value (argument="value", value="synthetic-independent-local-rehearsal", code=INVALID_ARGUMENT, version=6.17.0)
+      at makeError (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/utils/errors.js:125:21)
+      at assert (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/utils/errors.js:151:15)
+      at assertArgument (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/utils/errors.js:162:5)
+      at _getBytes (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/utils/data.js:25:5)
+      at getBytesCopy (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/utils/data.js:45:12)
+      at FixedBytesCoder.encode (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/abi/coders/fixed-bytes.js:18:20)
+      at file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/abi/coders/array.js:44:19
+      at Array.forEach (<anonymous>)
+      at pack (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/abi/coders/array.js:30:12)
+      at TupleCoder.encode (file:///Users/arif/Documents/chaina/node_modules/ethers/lib.esm/abi/coders/tuple.js:57:16) {
+    code: 'INVALID_ARGUMENT',
+    argument: 'value',
+    value: 'synthetic-independent-local-rehearsal',
+    shortMessage: 'invalid BytesLike value'
+  }

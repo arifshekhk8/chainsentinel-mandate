@@ -1,6 +1,8 @@
 # Step 1 — Mandate demonstration
 
-**Business selected by the user:** a fictional online design agency. **State at the 17 October handoff:** baseline for the local contract, owner-review app and Step 4 restricted payment workflow. Real local transactions driven by scripted tests exist; live AI testing and public deployment remain pending. Automated demonstrations do not use the user's actual wallet or real funds. Resume with [PROGRESS.md](../PROGRESS.md#resume-on-18-october-2026) after the user returns on 18 October.
+**Business selected by the user:** a fictional online design agency. **Current state, 19 October:** local contract/owner/agent workflows and the repaired [40-case live Groq evaluation](../evidence/STEP5_GROQ_RESULTS.md) are complete. All seven [Sepolia setup actions](../evidence/STEP5_SEPOLIA_RESULTS.md) were confirmed by the user in MetaMask and verified; three synthetic sample drafts are loaded and source/recipient checks match. All three owner source reviews, exact public batch approvals and separate [Resume](../evidence/sepolia/public/step5-sepolia-resume-verification.json) are verified; [Exact public payments](../evidence/sepolia/public/step5-sepolia-payment-verification.json) are verified: 200 + 150 MDT, 650 remaining, 50 daily allowance and 75 unpaid; read-only duplicate/daily-limit rejections also passed. Owner revocation/stop and final export are now verified in the public report. The [first public-workspace live question](../evidence/sepolia/public/step5-sepolia-read-only-observation.json) stayed read-only but showed 350 MDT eligible instead of the requested 425 MDT approved total; this answer-quality miss remains disclosed. [Ambiguous-invoice clarification](../evidence/sepolia/public/step5-sepolia-clarification-verification.json) is now verified with a focused question and zero selected bills/payments. The [explicit payment plan](../evidence/sepolia/public/step5-sepolia-payment-plan-verification.json) is verified against the exact approvals/current rules; the user has since executed it and both exact receipts/balances are verified; owner revocation/stop and final export are now verified. The scenario below remains the accepted baseline. Automated local checks use disposable wallets; public setup used the actual owner wallet with test assets. See [current progress](../PROGRESS.md).
+
+Public evidence scope: the [revoked-agent call](../evidence/sepolia/public/step5-sepolia-revocation-verification.json) returns OnlyAgent, but its remaining 75 MDT bill also exceeds the current 50 MDT daily allowance. It proves the decoded authority rejection and does not replace the otherwise-eligible clean local fixture required in demo step 8.
 
 ## The business problem
 
@@ -76,15 +78,15 @@ Thus ` host-1001 ` and `HOST-1001` for the same vendor represent one bill. `HOST
 
 Each case is an independent fixture with explicit starting state and expected outflow. Some hostile-input cases still permit the legitimate approved payment; the requirement is zero unauthorized transfers, not blanket refusal.
 
-This is candidate version `step1-candidate-v1`. After user review, freeze it before evaluation. Use different examples for prompt development; do not feed expected answers to the evaluated model. No evaluation has run.
+The unchanged casebook is version `step1-candidate-v1`, frozen before the first live evaluation. [Groq v5](../evidence/STEP5_GROQ_RESULTS.md) measured all 40 cases; observed failures were used for repairs, so the final result is a repaired fixed-case regression, not untouched held-out performance. Original cases, freezes and failed attempts remain preserved.
 
 The comparisons remain: manual per-bill processing of the same ordinary inputs, and a matched off-chain-only AI wallet in an isolated simulation for hostile cases. Count actions/time and unauthorized outcomes honestly; unsafe comparisons never receive funds.
 
 ## Step 1 review and remaining actions
 
 - Business choice: accepted by the user.
-- Detailed settings, bill identity, expected results and comparisons: accepted as the baseline when the user started Step 2. The 40 agent cases remain unexecuted.
-- Team: four full-time Bangladeshi students, reported by the user; two at IUBAT, one at BRAC (confirm official spelling in the form), one at Jagannath University.
-- Team name: ChainSentinel, selected by the user. The project remains Mandate. Registration has not been submitted.
-- [Registration drafts](../competition/REGISTRATION_DRAFT.md) include the project summary and the testnet-evidence question. Names/IDs and attachments must be completed privately in the actual form.
-- The user started Steps 2–4. Contract/owner workflow and Step 4 local implementation/checks are ready; live-model verification is deferred by user choice. The user paused work for the night on 17 October. Organizer clarification and registration remain pending, and no testnet acceptance is claimed.
+- Detailed settings, bill identity, expected results and comparisons: accepted as the Step 2 baseline. All 40 agent cases and comparisons are now measured with their limitations recorded in the Groq report.
+- Final team: three reported full-time Bangladeshi students, confirmed by the user on 19 October; two at IUBAT and one at Jagannath University.
+- Team name: ChainSentinel, selected by the user. The project remains Mandate. Registration was verified sent on 19 October at 11:55 Bangladesh time; organizer acknowledgment remains pending.
+- [Registration drafts](../competition/REGISTRATION_DRAFT.md) include the project summary and the testnet-evidence question. The completed form, signature, identity attachments and sent-message metadata remain private; the tracked template stays blank.
+- Steps 2–4 and Step 5 local evaluation are complete. Seven public setup actions are verified; public bill approvals and Resume are also verified; exact payments and unmined replay/daily-limit rejection are verified; owner revocation/stop and final export are now verified, completing Step 5 within the documented scope. Step 6 has not started. Organizer acknowledgment, testnet acceptance and final delivery instructions remain unconfirmed.

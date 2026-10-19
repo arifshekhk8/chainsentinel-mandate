@@ -1,0 +1,23 @@
+
+> chainsentinel-mandate@0.1.0 test:evaluation
+> node --test test/evaluation.test.mjs
+
+(node:25660) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ extraction preserves exact integer money while accepting equivalent decimal presentation (1.505917ms)
+✔ missing and changed critical fields are extraction misses (0.159791ms)
+✔ money grading requires exact totals, order and matching confirmed payments (1.717041ms)
+✔ off-chain comparison makes virtual transfers only for current exact approved payment plans (0.479167ms)
+✔ comparison preserves stop and reserve checks without contract calls (0.149833ms)
+✔ partial evaluation or fixture-only validation cannot pass the live target (0.326416ms)
+✔ target requires all planned extraction fields, six interactions and no wrong payment (0.427167ms)
+✔ continuation skips finished cases and retains safe measured misses without rerunning them (2.766542ms)
+✔ continuation rejects fixture evidence, duplicate cases and unreviewed security failures (0.365333ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 252.781917

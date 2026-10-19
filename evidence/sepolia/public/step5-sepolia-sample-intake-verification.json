@@ -1,0 +1,83 @@
+{
+  "recordedAt": "2026-10-19T14:55:49.072Z",
+  "evidenceType": "synthetic-draft-intake-in-public-sepolia-workspace",
+  "notAnOnchainApproval": true,
+  "chainId": 11155111,
+  "vault": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+  "drafts": [
+    {
+      "id": "412ceb3d-42a5-4626-adad-6f92c263832c",
+      "fields": {
+        "vendor_reference": "V-HOST",
+        "invoice_number": "HOST-1001",
+        "amount": "200.000000",
+        "currency": "MDT",
+        "invoice_date": "2026-10-19",
+        "due_date": "2026-10-19",
+        "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+        "owner_priority": "1",
+        "not_before": "2026-10-19T14:45:48.000Z",
+        "expires_at": "2026-10-20T14:50:48.000Z",
+        "note": "Synthetic bill for test-token demonstration."
+      },
+      "status": "draft",
+      "errors": [],
+      "warnings": [],
+      "recipientMatchesOwnerRegistry": true,
+      "fieldsMatchParsedSyntheticSource": true,
+      "sourceHash": "602982f93c5d1ee13529940f21621d750d76aff3c573089a1d296467bb4ab1a0",
+      "ownerReviewPending": true
+    },
+    {
+      "id": "c31d1426-2e03-40af-b9c0-fee187c69ad5",
+      "fields": {
+        "vendor_reference": "V-DESIGN",
+        "invoice_number": "ART-2001",
+        "amount": "150.000000",
+        "currency": "MDT",
+        "invoice_date": "2026-10-19",
+        "due_date": "2026-10-20",
+        "recipient": "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+        "owner_priority": "2",
+        "not_before": "2026-10-19T14:45:48.000Z",
+        "expires_at": "2026-10-20T14:50:48.000Z",
+        "note": "Synthetic bill for test-token demonstration."
+      },
+      "status": "draft",
+      "errors": [],
+      "warnings": [],
+      "recipientMatchesOwnerRegistry": true,
+      "fieldsMatchParsedSyntheticSource": true,
+      "sourceHash": "602982f93c5d1ee13529940f21621d750d76aff3c573089a1d296467bb4ab1a0",
+      "ownerReviewPending": true
+    },
+    {
+      "id": "65dc3964-b36a-4a3b-873b-1ba9b115d693",
+      "fields": {
+        "vendor_reference": "V-HOST",
+        "invoice_number": "HOST-1002",
+        "amount": "75.000000",
+        "currency": "MDT",
+        "invoice_date": "2026-10-19",
+        "due_date": "2026-10-19",
+        "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+        "owner_priority": "3",
+        "not_before": "2026-10-19T14:45:48.000Z",
+        "expires_at": "2026-10-20T14:50:48.000Z",
+        "note": "Synthetic bill for test-token demonstration."
+      },
+      "status": "draft",
+      "errors": [],
+      "warnings": [],
+      "recipientMatchesOwnerRegistry": true,
+      "fieldsMatchParsedSyntheticSource": true,
+      "sourceHash": "602982f93c5d1ee13529940f21621d750d76aff3c573089a1d296467bb4ab1a0",
+      "ownerReviewPending": true
+    }
+  ],
+  "vaultPaused": true,
+  "planCount": 0,
+  "paymentCount": 0,
+  "modelCallMadeByThisCheck": false,
+  "publicTransactionSentByThisCheck": false
+}

@@ -1,0 +1,157 @@
+{
+  "recordedAt": "2026-10-19T15:37:21.549Z",
+  "evidenceType": "verified-public-sepolia-live-groq-payment-plan",
+  "userTriggered": true,
+  "plan": {
+    "id": "2ff02e4e-521d-4cb0-acd6-1cceea3ae902",
+    "instance_id": "public-11155111-0x1e2bc947b455de5825cade9d44e7ec04b8b76f89",
+    "payload": {
+      "kind": "payment",
+      "intent": "pay",
+      "mode": "live-groq",
+      "request": "Pay all approved bills within my rules.",
+      "readOnlyContext": false,
+      "unresolvedReference": false,
+      "question": null,
+      "message": "Payment request prepared. 2 eligible; 350 MDT total. Projected balance 650 MDT. No payment has been sent by this request.",
+      "plan": {
+        "policyVersion": "6",
+        "utcDay": 20745,
+        "blockNumber": 11949102,
+        "entries": [
+          {
+            "id": "412ceb3d-42a5-4626-adad-6f92c263832c",
+            "version": 1,
+            "key": "0xfe6186d372a90b599be992390a4f2d5f264592197739724f01a20e9df3f26029",
+            "invoice": "HOST-1001",
+            "vendor": "Hostline Demo",
+            "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+            "amount": "200000000",
+            "documentHash": "0x3272e8350ef17da40099575cf371c22929147598eb8896d4295a22f51439485f",
+            "approvalVersion": "5",
+            "code": "ready",
+            "reason": "Ready within the current rules.",
+            "nextAction": "Review this exact plan, then run the agent."
+          },
+          {
+            "id": "c31d1426-2e03-40af-b9c0-fee187c69ad5",
+            "version": 1,
+            "key": "0xc16064a320634dd3cb0dee56e35a5b67133f719f021cf6e2e24d4a19de61da14",
+            "invoice": "ART-2001",
+            "vendor": "Artline Demo",
+            "recipient": "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+            "amount": "150000000",
+            "documentHash": "0x3272e8350ef17da40099575cf371c22929147598eb8896d4295a22f51439485f",
+            "approvalVersion": "5",
+            "code": "ready",
+            "reason": "Ready within the current rules.",
+            "nextAction": "Review this exact plan, then run the agent."
+          },
+          {
+            "id": "65dc3964-b36a-4a3b-873b-1ba9b115d693",
+            "version": 1,
+            "key": "0x7d2ea43ea41a579e40889948a40dfb9502d848e12fa3b677eb7a94f69da6f619",
+            "invoice": "HOST-1002",
+            "vendor": "Hostline Demo",
+            "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+            "amount": "75000000",
+            "documentHash": "0x3272e8350ef17da40099575cf371c22929147598eb8896d4295a22f51439485f",
+            "approvalVersion": "5",
+            "code": "daily",
+            "reason": "The remaining UTC daily budget is too small.",
+            "nextAction": "Wait for the next UTC day or ask the owner to review the limit."
+          }
+        ],
+        "total": "350000000",
+        "projectedBalance": "650000000",
+        "projectedDailyLeft": "50000000"
+      },
+      "modelInfo": {
+        "provider": "groq",
+        "requestedModel": "openai/gpt-oss-120b",
+        "returnedModel": "openai/gpt-oss-120b",
+        "elapsedMs": 1018,
+        "promptVersion": "mandate-step5-v3",
+        "inputTokens": 956,
+        "outputTokens": 85,
+        "thoughtTokens": 36
+      }
+    },
+    "status": "prepared"
+  },
+  "chainVerification": {
+    "chainId": 11155111,
+    "blockNumber": 11949106,
+    "blockHash": "0x2087c266d75a0a69c4f9ec068767dc3b058c17e325b0a0d389d36b30c83d6bb3",
+    "pinnedCode": {
+      "vault": {
+        "address": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+        "codeHash": "0x5a3db00f3a2d4f633fda36c49146dbd9f6b05e61eb1ec5ac9d6727316801acee",
+        "matches": true
+      },
+      "token": {
+        "address": "0x61E52ad4912FA0f829d0f1B0571aBc3bc157Ba88",
+        "codeHash": "0x09b2f3945e6c1e90030781a24f7081b885101ab4ecdd7b5b4338f43b6e42e34c",
+        "matches": true
+      }
+    },
+    "vaultMDTUnits": "1000000000",
+    "spentMDTUnits": "0",
+    "agentBalanceETH": "0.00005",
+    "paused": false,
+    "policyVersion": "6",
+    "agent": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4",
+    "agentNotBefore": "1792419744",
+    "agentExpiresAt": "1792506204",
+    "limits": {
+      "maxPerBill": "250000000",
+      "daily": "400000000",
+      "reserve": "300000000"
+    },
+    "verifiedBills": [
+      {
+        "invoice": "HOST-1001",
+        "billKey": "0xfe6186d372a90b599be992390a4f2d5f264592197739724f01a20e9df3f26029",
+        "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+        "amount": "200000000",
+        "paid": false,
+        "cancelled": false,
+        "plannedOutcome": "ready"
+      },
+      {
+        "invoice": "ART-2001",
+        "billKey": "0xc16064a320634dd3cb0dee56e35a5b67133f719f021cf6e2e24d4a19de61da14",
+        "recipient": "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+        "amount": "150000000",
+        "paid": false,
+        "cancelled": false,
+        "plannedOutcome": "ready"
+      },
+      {
+        "invoice": "HOST-1002",
+        "billKey": "0x7d2ea43ea41a579e40889948a40dfb9502d848e12fa3b677eb7a94f69da6f619",
+        "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+        "amount": "75000000",
+        "paid": false,
+        "cancelled": false,
+        "plannedOutcome": "daily"
+      }
+    ]
+  },
+  "reservedMaximumETH": "0.000050000759716101",
+  "approvedCapETH": "0.001",
+  "assessment": {
+    "exactPlanMatchesApprovals": true,
+    "eligibleTotalMDT": "350",
+    "projectedBalanceMDT": "650",
+    "projectedDailyLeftMDT": "50",
+    "dailyDeferredMDT": "75",
+    "executionConfirmed": false,
+    "paymentAttempts": 0,
+    "priorApprovedTotalAnswerMissStillDisclosed": true,
+    "newModelRequestsDuringVerification": 0,
+    "newTransactionsDuringVerification": 0,
+    "assistantBrowserControl": false,
+    "applicationChanged": false
+  }
+}

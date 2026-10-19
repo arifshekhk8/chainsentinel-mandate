@@ -1,0 +1,68 @@
+{
+  "recordedAt": "2026-10-19T15:10:14.981Z",
+  "evidenceType": "verified-owner-source-review-before-public-approval",
+  "chainId": 11155111,
+  "vault": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+  "reviewedBills": [
+    {
+      "id": "412ceb3d-42a5-4626-adad-6f92c263832c",
+      "invoice": "HOST-1001",
+      "amountMDT": "200.000000",
+      "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+      "version": 1,
+      "review": {
+        "version": 1,
+        "vendorRevision": "1",
+        "billCancelled": false,
+        "recipientChecked": false,
+        "similarityChecked": false
+      },
+      "reviewValid": true,
+      "status": "ready",
+      "onchainApproved": false,
+      "fieldsUnchangedSinceIntake": true
+    },
+    {
+      "id": "c31d1426-2e03-40af-b9c0-fee187c69ad5",
+      "invoice": "ART-2001",
+      "amountMDT": "150.000000",
+      "recipient": "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+      "version": 1,
+      "review": {
+        "version": 1,
+        "vendorRevision": "1",
+        "billCancelled": false,
+        "recipientChecked": false,
+        "similarityChecked": false
+      },
+      "reviewValid": true,
+      "status": "ready",
+      "onchainApproved": false,
+      "fieldsUnchangedSinceIntake": true
+    },
+    {
+      "id": "65dc3964-b36a-4a3b-873b-1ba9b115d693",
+      "invoice": "HOST-1002",
+      "amountMDT": "75.000000",
+      "recipient": "0x1BA06f96305366D517E21F5D5aD871Ba154FFA0a",
+      "version": 1,
+      "review": {
+        "version": 1,
+        "vendorRevision": "1",
+        "billCancelled": false,
+        "recipientChecked": false,
+        "similarityChecked": false
+      },
+      "reviewValid": true,
+      "status": "ready",
+      "onchainApproved": false,
+      "fieldsUnchangedSinceIntake": true
+    }
+  ],
+  "vaultPaused": true,
+  "ownerTransactionIntents": 0,
+  "planCount": 0,
+  "paymentCount": 0,
+  "publicTransactionSentByThisCheck": false,
+  "modelCalledByThisCheck": false
+}

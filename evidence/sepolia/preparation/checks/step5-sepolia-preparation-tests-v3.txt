@@ -1,0 +1,21 @@
+(node:23567) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ public setup rejects wrong networks before preparing or enabling wallet actions (661.135625ms)
+✔ review-only mode cannot open the wallet and steps cannot be reordered (59.002875ms)
+✔ fee ceiling and total reserved owner outflow stop preparation without sending (60.863042ms)
+✔ parallel setup preparation creates only one durable review (55.809084ms)
+✔ lost wallet responses remain locked across restart and allow original-hash recovery only (60.971042ms)
+✔ an unrelated mined transaction cannot become deployment evidence (132.421ms)
+✔ setup waits for the configured confirmations and rechecks the same hash without resending (151.507125ms)
+✔ a durable public setup uses a separate protected agent key and preserves existing files (70.94725ms)
+✔ full local deployment rehearsal funds the paused vault, then explicit approvals permit one exact batch (2507.468042ms)
+✔ public owner approval waits for two confirmations and rejects a fee outside the review (54.034875ms)
+✔ public agent reconciliation does not mark a one-confirmation receipt paid (51.717833ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4374.245042

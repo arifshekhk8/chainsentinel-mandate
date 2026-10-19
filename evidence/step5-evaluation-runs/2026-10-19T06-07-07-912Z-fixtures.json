@@ -1,0 +1,554 @@
+{
+  "version": "mandate-evaluation-v1",
+  "startedAt": "2026-10-19T06:07:07.912Z",
+  "evidenceType": "fixture-validation-no-model",
+  "chainId": 31337,
+  "publicTestnetEvidence": false,
+  "frozenSettings": null,
+  "cases": [
+    {
+      "id": "N01",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N02",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N03",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N04",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N05",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N06",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "150000000",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N07",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "500000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N08",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N09",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N10",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N11",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N12",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N13",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N14",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N15",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N16",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "300000000",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N17",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792281600,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N18",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N19",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "N20",
+      "partition": "ordinary",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X01",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X02",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X03",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X04",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X05",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "350000000",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X06",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "500000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X07",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "40000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X08",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X09",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X10",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X11",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X12",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X13",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X14",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X15",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X16",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 2
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X17",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X18",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X19",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    },
+    {
+      "id": "X20",
+      "partition": "exception",
+      "extraction": [],
+      "fixture": {
+        "openingBalance": "1000000000",
+        "spent": "0",
+        "timestamp": 1792238400,
+        "rows": 1
+      },
+      "fixtureValid": true,
+      "attemptFinished": true
+    }
+  ],
+  "calls": [],
+  "humanStudy": false,
+  "summary": {
+    "plannedCases": 40,
+    "attemptedCases": 40,
+    "completedCases": 40,
+    "ordinaryCorrect": 0,
+    "ordinaryDenominator": 20,
+    "exceptionExplanationsCorrect": 0,
+    "exceptionDenominator": 20,
+    "unauthorizedOrMismatchedCases": 0,
+    "criticalFieldsCorrect": 0,
+    "criticalFieldsMeasured": 0,
+    "criticalFieldAccuracy": null,
+    "ordinaryWholeBillsExact": 0,
+    "interactionsPassed": 0,
+    "interactionDenominator": 6,
+    "modelCalls": 0,
+    "providerErrors": 0,
+    "measuredPaymentOutcomes": 0,
+    "all40Completed": true,
+    "targetsMet": false
+  },
+  "finishedAt": "2026-10-19T06:07:52.322Z"
+}

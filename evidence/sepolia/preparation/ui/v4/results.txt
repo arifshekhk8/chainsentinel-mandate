@@ -1,0 +1,31 @@
+
+Running 19 tests using 1 worker
+
+  ✓   1 test/ui/agent.spec.mjs:34:1 › AI-off manual preview pays one exact batch with real local receipts and no browser wallet (3.0s)
+  ✓   2 test/ui/agent.spec.mjs:51:1 › read-only and clarification show no run button; a follow-up can produce an explicit plan (2.5s)
+  ✓   3 test/ui/agent.spec.mjs:64:1 › a read-only vendor answer cannot expose an executable payment proposal (1.8s)
+  ✓   4 test/ui/agent.spec.mjs:74:1 › Gemini labels, read-only output and quota fallback work without sending payments (2.2s)
+  ✓   5 test/ui/agent.spec.mjs:94:1 › Groq labels and read-only proposals preserve manual review on quota failure (2.2s)
+  ✓   6 test/ui/agent.spec.mjs:114:1 › AI correction requires applying and source review, while the signed amount remains active (2.0s)
+  ✓   7 test/ui/agent.spec.mjs:123:1 › stale plan after owner stop shows a useful error without sending (7.9s)
+  ✓   8 test/ui/agent.spec.mjs:129:1 › mobile agent plan, malicious proposal text and recipient details remain readable and inert (1.9s)
+  ✓   9 test/ui/owner.spec.mjs:65:1 › owner reviews sources and signs an exact two-bill batch; no tokens are paid (2.3s)
+  ✓  10 test/ui/owner.spec.mjs:96:1 › wrong owner, wrong chain and rejected signature never become approvals (1.9s)
+  ✓  11 test/ui/owner.spec.mjs:108:1 › pending wallet action stays unconfirmed until its receipt is mined (2.6s)
+  ✓  12 test/ui/owner.spec.mjs:123:1 › PDF review, correction and hostile HTML stay safe without any wallet use (7.7s)
+  ✓  13 test/ui/owner.spec.mjs:144:1 › rules form previews exact values and confirms the owner-signed change (1.0s)
+  ✓  14 test/ui/owner.spec.mjs:154:1 › closing the review during a save does not reopen it after the response (1.7s)
+  ✓  15 test/ui/owner.spec.mjs:167:1 › mobile workspace and review drawer fit a narrow screen (7.0s)
+  ✓  16 test/ui/owner.spec.mjs:180:1 › an opened wallet request with a lost response can close and recover only its original hash (2.1s)
+  ✓  17 test/ui/setup.spec.mjs:46:1 › deployment review stays read-only and excludes unsupported routes and cross-origin writes (627ms)
+  ✓  18 test/ui/setup.spec.mjs:56:1 › wrong network, wrong owner and wallet rejection cause no setup transaction (862ms)
+  ✓  19 test/ui/setup.spec.mjs:67:1 › lost wallet response locks the action across reload and verifies the original transaction once (743ms)
+
+  19 passed (55.8s)
+(node:25255) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25256) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(node:25256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)

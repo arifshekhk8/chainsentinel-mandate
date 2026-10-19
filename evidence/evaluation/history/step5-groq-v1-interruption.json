@@ -1,0 +1,14 @@
+{
+  "stoppedAt": "2026-10-19T06:33:40.602Z",
+  "reason": "Fixture reference mismatch: requests name casebook bill IDs, while app data exposed generated UUIDs and different invoice IDs. Safe clarifications are legitimate. Stop before further calls and correct only synthetic draft identity.",
+  "originalReport": "evidence/step5-evaluation-runs/2026-10-19T06-31-04-329Z-groq-live.json",
+  "reportSha256": "8b5b196dedfbfa0dac9075f1b85cf2cd1311a9dc33e7ea78d31810f4f1758066",
+  "savedCalls": 6,
+  "savedFinishedCases": [
+    "N01",
+    "N02"
+  ],
+  "ownedEvaluatorAndChainStopped": true,
+  "providerOrModelFailure": false,
+  "applicationPromptsChanged": false
+}

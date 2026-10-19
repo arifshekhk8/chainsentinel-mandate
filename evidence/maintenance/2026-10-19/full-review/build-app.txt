@@ -1,0 +1,5 @@
+
+> chainsentinel-mandate@0.1.0 build:app
+> node scripts/build-app.mjs
+
+Built the owner and deployment review apps.

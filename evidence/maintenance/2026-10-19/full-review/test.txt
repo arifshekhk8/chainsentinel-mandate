@@ -1,0 +1,77 @@
+
+> chainsentinel-mandate@0.1.0 test
+> node scripts/foundry.mjs forge test -vv
+
+No files changed, compilation skipped
+
+Ran 14 tests for test/RolesAndApprovals.t.sol:RolesAndApprovalsTest
+[PASS] testAgentCannotUseAnyOwnerMethod() (gas: 219248)
+[PASS] testApprovalBatchBounds() (gas: 40087)
+[PASS] testApprovalRejectsWrongRecipientAndDisabledVendor() (gas: 46980)
+[PASS] testBillKeySeparatesVaultChainAndVendor() (gas: 3371033)
+[PASS] testConstructorAndConfigurationValidation() (gas: 327400)
+[PASS] testDuplicateWithinApprovalBatchIsAtomic() (gas: 209736)
+[PASS] testExtraCalldataCannotReplaceStoredTransferFields() (gas: 294160)
+[PASS] testInvalidApprovalFieldsRejectedWithoutPartialBatch() (gas: 233341)
+[PASS] testNewVaultStartsPausedAndHasFixedSixDecimalToken() (gas: 1668163)
+[PASS] testNoArbitraryCallOrTokenApprovalPath() (gas: 26075)
+[PASS] testOwnerAndStrangerCannotExecuteAgentPayment() (gas: 212975)
+[PASS] testTwoBillsApprovedInOneOwnerCall() (gas: 525216)
+[PASS] testUnapprovedBillCannotPay() (gas: 62200)
+[PASS] testUnsupportedNetworksAndChangedChainRejected() (gas: 399897)
+Suite result: ok. 14 passed; 0 failed; 0 skipped; finished in 11.25ms (2.09ms CPU time)
+
+Ran 8 tests for test/TransferIntegrity.t.sol:TransferIntegrityTest
+[PASS] testFalseReturnRollsBackPaidAndSpending() (gas: 417871)
+[PASS] testFeeTransferIsRejectedAndTokenEffectsRollback() (gas: 369212)
+[PASS] testNonSixDecimalTokenRejected() (gas: 536081)
+[PASS] testPaymentEventMatchesActualTokenTransfer() (gas: 302420)
+[PASS] testRecoveryRevertLeavesStateUnchanged() (gas: 68712)
+[PASS] testReentrancyCannotPayAnotherEligibleBill() (gas: 557322)
+[PASS] testTokenRevertRollsBackPaidAndSpending() (gas: 330486)
+[PASS] testTrueReturnWithoutTransferIsRejected() (gas: 331802)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 11.56ms (2.56ms CPU time)
+
+Ran 19 tests for test/StopAndReplay.t.sol:StopAndReplayTest
+[PASS] testBillAtExpiryAndAfterExpiry() (gas: 252570)
+[PASS] testBillBeforeStartAndAtStart() (gas: 317428)
+[PASS] testBillJustBeforeExpiry() (gas: 287957)
+[PASS] testCancellationAndExplicitOwnerReapproval() (gas: 334429)
+[PASS] testChangedUnpaidApprovalNeedsNewVersionAndUsesNewExactFields() (gas: 319428)
+[PASS] testConfirmedPauseStopsOtherwiseEligibleBill() (gas: 319650)
+[PASS] testConfirmedRevocationStopsOtherwiseEligibleBill() (gas: 224329)
+[PASS] testDuplicateRetryAndConcurrentPlansPayAtMostOnce() (gas: 312537)
+[PASS] testEveryOwnerPermissionChangeIncreasesVersion() (gas: 300008)
+[PASS] testFuzzRepeatedAndUnauthorizedAttempts(uint256) (runs: 512, μ: 2009060, ~: 2019979)
+[PASS] testInvalidBillAndSessionWindows() (gas: 33795)
+[PASS] testOwnerRecoveryOnlyWhilePausedAndDoesNotResetPaidOrSpent() (gas: 338126)
+[PASS] testPaidKeyCannotBeReapprovedOrCancelled() (gas: 303095)
+[PASS] testRotationStopsOldKeyAndAllowsNewKey() (gas: 320938)
+[PASS] testSessionAtExpiryAndAfterExpiry() (gas: 251026)
+[PASS] testSessionBeforeStartAndAtStart() (gas: 324255)
+[PASS] testSessionJustBeforeExpiry() (gas: 287967)
+[PASS] testStalePolicyFailsAfterPermissionChange() (gas: 313842)
+[PASS] testVendorChangesAndReenableRequireFreshBillApproval() (gas: 410695)
+Suite result: ok. 19 passed; 0 failed; 0 skipped; finished in 85.52ms (80.63ms CPU time)
+
+Ran 17 tests for test/MoneyBoundaries.t.sol:MoneyBoundariesTest
+[PASS] testAgentRotationDoesNotResetDailySpending() (gas: 483312)
+[PASS] testDailyExactlyAtLimit() (gas: 505077)
+[PASS] testDailyOneUnitAbove() (gas: 491011)
+[PASS] testDailyOneUnitBelow() (gas: 505168)
+[PASS] testFuzzLimitsAndReserve(uint96,uint96,uint96,uint96) (runs: 512, μ: 264556, ~: 246199)
+[PASS] testInsufficientBalanceIndependentlyOfReserve() (gas: 278405)
+[PASS] testNormalBatchLeavesOnlyFiftyOfDailyBudget() (gas: 694134)
+[PASS] testPerBillExactlyAtLimit() (gas: 290492)
+[PASS] testPerBillOneUnitAbove() (gas: 227195)
+[PASS] testPerBillOneUnitBelow() (gas: 290670)
+[PASS] testPolicyChangesKeepSpentHistoryEvenWhenNewCapIsBelowSpent() (gas: 491509)
+[PASS] testReserveDemoUsesIndependentStartingState() (gas: 275086)
+[PASS] testReserveExactlyAtMinimum() (gas: 330014)
+[PASS] testReserveOneUnitAboveMinimum() (gas: 330212)
+[PASS] testReserveOneUnitBelowMinimum() (gas: 275205)
+[PASS] testSmallestUnitAndExactSixDecimals() (gas: 499418)
+[PASS] testUtcMidnightStartsNewDayWithoutErasingPreviousDay() (gas: 521385)
+Suite result: ok. 17 passed; 0 failed; 0 skipped; finished in 85.56ms (82.19ms CPU time)
+
+Ran 4 test suites in 96.23ms (193.90ms CPU time): 58 tests passed, 0 failed, 0 skipped (58 total tests)

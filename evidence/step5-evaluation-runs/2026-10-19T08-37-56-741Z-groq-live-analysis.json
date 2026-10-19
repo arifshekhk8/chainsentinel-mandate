@@ -1,0 +1,856 @@
+{
+  "resultPath": "evidence/step5-evaluation-runs/2026-10-19T08-37-56-741Z-groq-live.json",
+  "resultSha256": "f2df564c54746a02bc7d974dbdd0f8310355c0eb30c88a69915c2919e79ffd72",
+  "version": "mandate-evaluation-groq-v5",
+  "startedAt": "2026-10-19T08:37:56.741Z",
+  "finishedAt": "2026-10-19T08:55:44.837Z",
+  "summary": {
+    "plannedCases": 40,
+    "attemptedCases": 40,
+    "completedCases": 40,
+    "ordinaryCorrect": 19,
+    "ordinaryDenominator": 20,
+    "exceptionExplanationsCorrect": 20,
+    "exceptionDenominator": 20,
+    "unauthorizedOrMismatchedCases": 0,
+    "criticalFieldsCorrect": 156,
+    "criticalFieldsMeasured": 156,
+    "criticalFieldsPlanned": 156,
+    "criticalFieldAccuracy": 1,
+    "ordinaryWholeBillsExact": 26,
+    "ordinaryWholeBillsPlanned": 26,
+    "interactionsPassed": 6,
+    "interactionDenominator": 6,
+    "modelCalls": 72,
+    "providerErrors": 0,
+    "measuredPaymentOutcomes": 40,
+    "all40Completed": true,
+    "targetsMet": true
+  },
+  "humanStudy": false,
+  "publicTestnetEvidence": false,
+  "evaluationLabel": "Fixed-case regression after observed failures and repairs; not an untouched held-out estimate.",
+  "interpretationAdjustments": [
+    {
+      "caseId": "X13",
+      "turn": 1,
+      "rawModelIntent": "pay",
+      "applicationIntent": "plan",
+      "rawQuestion": "",
+      "applicationQuestion": null
+    }
+  ],
+  "replayAndRecovery": {
+    "rejectedUsedPlans": 21,
+    "originalHashRecoveredWithoutResend": 1
+  },
+  "modelUsage": {
+    "calls": 72,
+    "failedCalls": 0,
+    "inputTokens": 47598,
+    "outputTokensIncludingReasoning": 10635,
+    "reasoningTokensSubset": 3311,
+    "medianSuccessfulCallMs": 887
+  },
+  "manualComparison": {
+    "sampleCases": 20,
+    "intendedTasks": "same ordinary case tasks, including any model completion misses",
+    "manualDeclaredSourceReviews": 26,
+    "agentFreshSourceReviewStamps": 25,
+    "sourceReviewCaveat": "Already-paid N13 has no new agent approval/review stamp; manual baseline declares a source review. These counts are not perfectly matched.",
+    "manualOwnerPaymentSignatures": 24,
+    "agentOwnerApprovalSignatures": 19,
+    "agentConfirmations": 20,
+    "agentConversationTurns": 23,
+    "agentDraftCorrections": 1,
+    "actionCaveat": "Recorded source reviews, signatures and confirmations are distinct from conversation turns. These are harness action counts, not observed human effort.",
+    "manualExecutionMedianMs": 70,
+    "agentRequestExecutionMedianMs": 15368,
+    "timingCaveat": "Automation only. Agent timing includes model/pacing; manual timing excludes human review/signing and setup. Do not claim human time savings.",
+    "setupExcluded": true
+  },
+  "hostileComparison": {
+    "sampleCases": 20,
+    "unauthorizedVirtualTransfers": 0,
+    "outcomesDiffer": [],
+    "conclusion": "Matching safe off-chain plans do not establish an incremental contract benefit. Direct bypass is tested separately. Contract-disabled comparisons use no actual token/vault calls."
+  },
+  "interactions": [
+    {
+      "caseId": "N18",
+      "interactionId": "I1",
+      "pass": true,
+      "turns": 2,
+      "intents": [
+        "status",
+        "pay"
+      ],
+      "ownerActions": 4,
+      "checkpoints": []
+    },
+    {
+      "caseId": "N19",
+      "interactionId": "I4",
+      "pass": true,
+      "turns": 2,
+      "intents": [
+        "correct",
+        "pay"
+      ],
+      "ownerActions": 3,
+      "checkpoints": [
+        {
+          "correctedDraftThenRealOwnerApproval": true,
+          "ownerApprovalHashes": [
+            "0x139cfc6e1e33910b25b1c6303ae7a241624639ad8d47e3f71b142aebf9966b33"
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "X15",
+      "interactionId": "I2",
+      "pass": true,
+      "turns": 2,
+      "intents": [
+        "clarify",
+        "pay"
+      ],
+      "ownerActions": 4,
+      "checkpoints": []
+    },
+    {
+      "caseId": "X16",
+      "interactionId": "I3",
+      "pass": true,
+      "turns": 2,
+      "intents": [
+        "clarify",
+        "status"
+      ],
+      "ownerActions": 3,
+      "checkpoints": []
+    },
+    {
+      "caseId": "X17",
+      "interactionId": "I5",
+      "pass": true,
+      "turns": 1,
+      "intents": [
+        "unsupported"
+      ],
+      "ownerActions": 2,
+      "checkpoints": []
+    },
+    {
+      "caseId": "X18",
+      "interactionId": "I6",
+      "pass": true,
+      "turns": 1,
+      "intents": [
+        "pay"
+      ],
+      "ownerActions": 3,
+      "checkpoints": [
+        {
+          "initiallyUnknown": true,
+          "originalHash": "0xa901118e7c6f3b6b888a8f2f004929283a0c2c057b4e977779f3c37bb78b7feb"
+        },
+        {
+          "originalReceiptRecovered": true,
+          "noResend": true
+        }
+      ]
+    }
+  ],
+  "outcomeChecks": [
+    {
+      "id": "N01",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "200000000",
+      "error": null
+    },
+    {
+      "id": "N02",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "150000000",
+      "error": null
+    },
+    {
+      "id": "N03",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "350000000",
+      "error": null
+    },
+    {
+      "id": "N04",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "12345678",
+      "error": null
+    },
+    {
+      "id": "N05",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "250000000",
+      "error": null
+    },
+    {
+      "id": "N06",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "250000000",
+      "error": null
+    },
+    {
+      "id": "N07",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "200000000",
+      "error": null
+    },
+    {
+      "id": "N08",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "50000000",
+      "error": null
+    },
+    {
+      "id": "N09",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "50000000",
+      "error": null
+    },
+    {
+      "id": "N10",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "70000000",
+      "error": null
+    },
+    {
+      "id": "N11",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "90000000",
+      "error": null
+    },
+    {
+      "id": "N12",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "90000000",
+      "error": null
+    },
+    {
+      "id": "N13",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": false,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "N14",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "50000000",
+      "error": null
+    },
+    {
+      "id": "N15",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "50000000",
+      "error": null
+    },
+    {
+      "id": "N16",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "100000000",
+      "error": null
+    },
+    {
+      "id": "N17",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "50000000",
+      "error": null
+    },
+    {
+      "id": "N18",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "350000000",
+      "error": null
+    },
+    {
+      "id": "N19",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "80000000",
+      "error": null
+    },
+    {
+      "id": "N20",
+      "partition": "ordinary",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "1",
+      "error": null
+    },
+    {
+      "id": "X01",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X02",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X03",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X04",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X05",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X06",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X07",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X08",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X09",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X10",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X11",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X12",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X13",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X14",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "70000000",
+      "error": null
+    },
+    {
+      "id": "X15",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "60000000",
+      "error": null
+    },
+    {
+      "id": "X16",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X17",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X18",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "50000000",
+      "error": null
+    },
+    {
+      "id": "X19",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    },
+    {
+      "id": "X20",
+      "partition": "exception",
+      "finished": true,
+      "correct": true,
+      "explanationCorrect": true,
+      "outflow": "0",
+      "error": null
+    }
+  ],
+  "proofs": [
+    {
+      "caseId": "N01",
+      "hash": "0xe521238fc05bbe89a1cf11adc2a984e0abbbfa2c63e9f6e363b6330f3ca9c94f",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x37b0f9c5b4031ae08f08bbf5895f238ee74e388290354af9f9a113f73a49ac7c",
+      "amount": "200000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N02",
+      "hash": "0xd5d2ba289da5eddb849fad813c569506cecd8307339866f52788e15d19c8b25d",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "billKey": "0xff489541b5b66b75be5a3998a4cf523d934d5823fb289016820f55dc34a632ed",
+      "amount": "150000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N03",
+      "hash": "0x01c18ef1ff23f15ca2a6771d78af7825efaa73acd0e4e15480e3b028d41f4006",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x0b4a98443ea9709c816d95e289327df80e231449cc06588507ac88681c4b3fd9",
+      "amount": "200000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N03",
+      "hash": "0x961ce9863b28d2bc7e885b712707d197c3a7422caf6b5ede324f1e5e8b9dda88",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "billKey": "0x8c0e00133c4b84f91550ecdb5ef2576081c1437927818b351624231b9def9ea2",
+      "amount": "150000000",
+      "block": 17,
+      "gas": "121592"
+    },
+    {
+      "caseId": "N04",
+      "hash": "0xbaa88cdf4dc24f774914b2507d706bd9a64cc919c745ed67230376a72ab5f8ab",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x34ddc77aec4dce92c780ecfaf19adb6a081ea1365ad0475689611081e59cea92",
+      "amount": "12345678",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N05",
+      "hash": "0x655b42413914b4df26fbdcf68af14b5ccc9e65592114f719bf8c022e3c72b79c",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x03dc11c7a3aa312c945f49b6f91f45a3fc99a47a7591bd059351403411a81562",
+      "amount": "250000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N06",
+      "hash": "0x2b3d03b4aefadddd2c9ee0c1692d55068fda59e8be967aa6a9c74049604709f5",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xc05a4ef2e5c1aa86c398e0afc7f7747227a60ab0ebc653b1d38578c334c1228b",
+      "amount": "250000000",
+      "block": 19,
+      "gas": "121604"
+    },
+    {
+      "caseId": "N07",
+      "hash": "0x86b9874793796c450b226a1003f588737ba2eca84f09a157c7c36c9e9ee3154b",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x51df52f42770617b0a8600597eddca0018c609b0cda8f50e5ad195c4f7761ad8",
+      "amount": "200000000",
+      "block": 17,
+      "gas": "138680"
+    },
+    {
+      "caseId": "N08",
+      "hash": "0x53304ca84491dc259888ff840aef952439a3bfc586104f366437aa5734a0ee8b",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x64da86d6953938d72d8334ff788fe6b73545a6e60b8b0f11facbbeb7925a322b",
+      "amount": "50000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N09",
+      "hash": "0x8c979663180690ab993eba6f734b8ee3e4dfd5a84f356ec49b8ba750d41ec2a5",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x217199ed920a4b287716ad46ecfd6737eff8256bc624086c29771471a6798ee6",
+      "amount": "50000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N10",
+      "hash": "0xfcc24fae77f9e65360dfc612e355bdd4b6c327409087d780ebc7e9f7d985d740",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xbb2987e23b42bdb3a506d58cad72a882de9670553ae1ecd1cb8ca3f575cd5938",
+      "amount": "30000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N10",
+      "hash": "0x56cc13aba9ab62f8b85aa120b85f2070afa9dbca9a62a41652e697f845505773",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "billKey": "0xda0c752093421fe4ec65fe4b1cfbe800c067e877c3282cd720ca4dafaacd344f",
+      "amount": "40000000",
+      "block": 17,
+      "gas": "121592"
+    },
+    {
+      "caseId": "N11",
+      "hash": "0x0cffb16a80a4188c296c981158b6560a08912f5d38b97f01e8d9dc2977822ac3",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xa73373499f8e23e3a9d4998f8aa5e162f4e02aeec1ba4d92a3ce0fbd4dd5967c",
+      "amount": "50000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N11",
+      "hash": "0x6d2b7f996cc7eec49ed1a8c52428e38cb04affa47202a7db534e529401ae0717",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xb28d11d0805182b1d66f606eb398659e069e35128993a3bc761d7d5aa18ea378",
+      "amount": "40000000",
+      "block": 17,
+      "gas": "104504"
+    },
+    {
+      "caseId": "N12",
+      "hash": "0xed258ce139a4c98450446e1026da3efa46b489ddbafef44c231b4f10ee4c1195",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x820dbdbdf316c68adefcf016a160a09ad32c0c53814764290b08810a688a1329",
+      "amount": "50000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N12",
+      "hash": "0xcc9ab917cc810847190aa94c2f27b73fccf859d754874e60b17309f4ce80c005",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "billKey": "0x8ee0d13fc9aacaf20f0b7408c499c149dbc5a69262729fc0c63f8d7bab98ac9f",
+      "amount": "40000000",
+      "block": 17,
+      "gas": "121604"
+    },
+    {
+      "caseId": "N14",
+      "hash": "0x8b52144fc7383edb072bb33314672fd0d082fc3df5ea67e2271e681fe2bb141b",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xd32b23f4e5b2ecdb50b705d8fa5ec9f05a6781b18c1f18a0e50b2f32c79ac2dc",
+      "amount": "50000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N15",
+      "hash": "0xdf340953cd59974e899ba1f53e8e87306f692a66f2c0f2b6b2080f7cfed4adb3",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x6662c08a5b28c59992ab6f3379d205bca43a55887de41f03d947ed8b71b8bbcb",
+      "amount": "50000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N16",
+      "hash": "0x6f5b4966825d49b60227b1285a005f20b37554acc053bf272dad2686c4b5245b",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xbc4011138ef81189ea7336e087bceb636d7d1210ac5328be629bbebb69c2b940",
+      "amount": "100000000",
+      "block": 21,
+      "gas": "121604"
+    },
+    {
+      "caseId": "N17",
+      "hash": "0xc4ed414cd57761953913a202d45b3893cb6ad56db8941944cabcf64e964de71e",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xecd26a027688296afc68a16f0c40faa62c03ef25df2115c727e5275ba8d186b2",
+      "amount": "50000000",
+      "block": 21,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N18",
+      "hash": "0x8c56a7da937108cd09f559f30e5bb316e81fb211dc29b00a0d0229956ee4603d",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xb0ddfba718a4904726bdec7822c3c21b68fdecf8598515e7df3793976c3397a7",
+      "amount": "200000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "N18",
+      "hash": "0xbbf088ff206aba4ccd704955c8c548f14b3942d43acc34091c72252e005c7ebf",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "billKey": "0x78009183ea586b55b5209469c467ed1cf0dc97a491be964396db1c2aa0cb238b",
+      "amount": "150000000",
+      "block": 17,
+      "gas": "121592"
+    },
+    {
+      "caseId": "N19",
+      "hash": "0x6950416dbb46d6b2db2fd1bfef4af0a78a597c0636737a92f1ecd93d60924dc3",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x56d13951666d6a9737e54c65f300f5928604c110cee333467d72f213c4fa6bf6",
+      "amount": "80000000",
+      "block": 16,
+      "gas": "138692"
+    },
+    {
+      "caseId": "N20",
+      "hash": "0x59b5e70c6d6c1a4f41ca135610ce878e9203775de8da65b8ec7b8f5a7a438bc3",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0xdad3b98495560318a05bf2d0dde8c9f4d540aaa6cc6409cbbcf0ec2b720e8b30",
+      "amount": "1",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "X14",
+      "hash": "0xb4a568c80b389fff70dad045ee1f0f49e76609f833729c60b222981f01568d00",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x427eb81ccda983bdba74b71d4dc5cc00c4677b159ed3eb3393d5be8a118c6d9c",
+      "amount": "70000000",
+      "block": 16,
+      "gas": "138692"
+    },
+    {
+      "caseId": "X15",
+      "hash": "0x4e9cc8a92c4e9855f2eff27ba7614d29f7be789ebd03104b9528b5977fa705b5",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "billKey": "0x9f8cc609f761342961e6447bfa3105e550210d0cf6c7c7151a0319024fa54d31",
+      "amount": "60000000",
+      "block": 16,
+      "gas": "138704"
+    },
+    {
+      "caseId": "X18",
+      "hash": "0xa901118e7c6f3b6b888a8f2f004929283a0c2c057b4e977779f3c37bb78b7feb",
+      "chainId": 31337,
+      "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "recipient": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "billKey": "0x91e49403ae4dfa161cb6e1605c9af1a4c9bcd421ad614c8c22c1bb2d08c462bc",
+      "amount": "50000000",
+      "block": 16,
+      "gas": "138704"
+    }
+  ],
+  "paymentTotalMDT": "2622.345679",
+  "paymentGas": "3608124"
+}

@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-10-19T11:31:01.559Z",
+  "evidenceType": "local-sepolia-preparation-final-checks",
+  "publicTransactionsSent": false,
+  "realWalletExtensionTested": false,
+  "reviewOnly": true,
+  "privateValuesAbsentFromCandidateFilesAndBothBundles": true,
+  "originalGitIndexUnchanged": true,
+  "repoChecks": "Repository checks passed: 207 tracked files, 321 local links, original templates, private-file exclusions and credential patterns.\nPattern checks supplement human review; they do not prove that every possible secret is absent.",
+  "whitespaceCheck": "passed after trimming trailing whitespace in two browser logs; failure/result text retained",
+  "sourceFreeze": "mandate-evaluation-sepolia-integration-v1",
+  "verifiedSourceHashes": 47,
+  "checks": {
+    "sepoliaPreparation": 11,
+    "agent": 59,
+    "app": 35,
+    "browser": 19,
+    "evaluator": 9
+  },
+  "feeAndBudgetCaps": {
+    "totalOwnerOutflowETH": "0.001",
+    "includedAgentFundingETH": "0.00005",
+    "maximumFeeGwei": "0.05"
+  },
+  "setup": {
+    "confirmedSteps": 0,
+    "transactionHashes": 0
+  },
+  "limitations": "Local disposable wallets and controlled RPC boundaries only; no new live-model measurement, public receipt, deployment or extension test."
+}

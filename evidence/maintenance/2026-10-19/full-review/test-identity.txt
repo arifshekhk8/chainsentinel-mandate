@@ -1,0 +1,16 @@
+
+> chainsentinel-mandate@0.1.0 test:identity
+> node --test test/bill-identity.test.mjs
+
+✔ renaming/reformatting the same invoice cannot create a different payment identity (2.397208ms)
+✔ preserve internal spaces/punctuation rather than silently merging different IDs (0.090208ms)
+✔ non-ASCII, confusables, empty and control-filled invoice numbers require review (0.211333ms)
+✔ same invoice number stays separate across vendors, vaults and chains (0.60975ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 148.381292

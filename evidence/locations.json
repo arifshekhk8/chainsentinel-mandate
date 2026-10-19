@@ -1,0 +1,616 @@
+{
+  "version": "mandate-evidence-layout-v1",
+  "recordedDate": "2026-10-19",
+  "purpose": "Move saved artifacts into readable groups without rewriting measured JSON, logs or screenshots. Historical embedded paths retain their original spelling; resolve them with this map.",
+  "moves": [
+    {
+      "from": "evidence/step5-sepolia-artline-inspection.json",
+      "to": "evidence/sepolia/public/step5-sepolia-artline-inspection.json",
+      "sha256": "876d6f63f4ead70ebaa8e89b7daab7b9b19ece197091a7fcc8fb55c69abc6867"
+    },
+    {
+      "from": "evidence/step5-sepolia-payment-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-payment-verification.json",
+      "sha256": "b6a359975c11d70d9ba8ace726eb2c3ba045008be04c45ab88933612df7d52b6"
+    },
+    {
+      "from": "evidence/step5-sepolia-2026-10-19T15-52-14-777Z.json",
+      "to": "evidence/sepolia/public/step5-sepolia-2026-10-19T15-52-14-777Z.json",
+      "sha256": "fb8ee64852392ce7c99255ba1520427ed7fc0899c692baec8779c8ed358331b7"
+    },
+    {
+      "from": "evidence/step5-agent-v5-regression.txt",
+      "to": "evidence/evaluation/checks/step5-agent-v5-regression.txt",
+      "sha256": "c467949d6bd3f65a238d39efe9e6b330fa7c7553d3670c7354d2f70b55e97df8"
+    },
+    {
+      "from": "evidence/step5-scripted-agent-context-regression.json",
+      "to": "evidence/evaluation/scripted/step5-scripted-agent-context-regression.json",
+      "sha256": "b29a25734c71467abac15767121291613fd601c86bb6f44a51b553b69cdd3bf6"
+    },
+    {
+      "from": "evidence/step5-sepolia-setup-review-local.png",
+      "to": "evidence/sepolia/preparation/step5-sepolia-setup-review-local.png",
+      "sha256": "d31aef7d5b10334c12c4300787b9db53987f678e7bde56475355032da069e7ae"
+    },
+    {
+      "from": "evidence/step5-sepolia-final-checks.json",
+      "to": "evidence/sepolia/public/step5-sepolia-final-checks.json",
+      "sha256": "9cea63b013d3bb9db280a935f1350b63a10fa9056e1b00d15fc1f48d32c32b7f"
+    },
+    {
+      "from": "evidence/step5-sepolia-owner-review-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-owner-review-verification.json",
+      "sha256": "81e182eb8b10b48284ca162c111656e6b94a590ae499eefd254e1c10e131e194"
+    },
+    {
+      "from": "evidence/step5-sepolia-owner-recovery-focused.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-owner-recovery-focused.txt",
+      "sha256": "8f1c8dae9a94f8159b3470807a244c785f4a7b5fe1d62ae02d4cfd50a23c01aa"
+    },
+    {
+      "from": "evidence/step4-live-workflow.json",
+      "to": "evidence/local/step4/step4-live-workflow.json",
+      "sha256": "d3b6ba7966154fcdef961299d0a956c4fb7e66e895c98380040a62c07a092ad8"
+    },
+    {
+      "from": "evidence/step5-sepolia-hostline-inspection.json",
+      "to": "evidence/sepolia/public/step5-sepolia-hostline-inspection.json",
+      "sha256": "365d4dd5d5696390c47ca81229238e6bfe3d160fe748d50c454f2688203b638e"
+    },
+    {
+      "from": "evidence/step5-sepolia-deposit-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-deposit-verification.json",
+      "sha256": "00c0411463ac19cbf5c56d39cd3e02926c0da4ee930575f289782a3cfe7d339a"
+    },
+    {
+      "from": "evidence/step5-sepolia-read-only-observation.json",
+      "to": "evidence/sepolia/public/step5-sepolia-read-only-observation.json",
+      "sha256": "5436673e5bb202c1f8f0b8906fd3f604c2a5018617c373a9877c02e415a9603a"
+    },
+    {
+      "from": "evidence/step5-sepolia-revocation-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-revocation-verification.json",
+      "sha256": "406f21db94def9d83ed1b7b9c5162298789859eef20fa54c8544ad76a5e1b8b2"
+    },
+    {
+      "from": "evidence/step3-mobile.png",
+      "to": "evidence/local/step3/step3-mobile.png",
+      "sha256": "43391457b8f2a67186dcac8f441e028ebed44c8d0ff228dcda12ac5493c92552"
+    },
+    {
+      "from": "evidence/step5-sepolia-hostline-reconciliation.json",
+      "to": "evidence/sepolia/public/step5-sepolia-hostline-reconciliation.json",
+      "sha256": "7703ed1ed7d7939844c439e7d30b1a01edffe719dff80ec7802b282c1b6dca19"
+    },
+    {
+      "from": "evidence/step5-agent-v4-regression.txt",
+      "to": "evidence/evaluation/checks/step5-agent-v4-regression.txt",
+      "sha256": "9df4b2719f239508a73e08230ecbac2d31ba3eeb8a376943e0efebec89dedbe0"
+    },
+    {
+      "from": "evidence/step4-local-agent.json",
+      "to": "evidence/local/step4/step4-local-agent.json",
+      "sha256": "184f5b78bd8cf784f2745cafc18967fa98b1aa76da5caea27e2a1231f0a67b32"
+    },
+    {
+      "from": "evidence/step5-sepolia-wallet-wrapper-recovery.json",
+      "to": "evidence/sepolia/public/step5-sepolia-wallet-wrapper-recovery.json",
+      "sha256": "9abf19a8d0c8c5224a36a7042f9bfd3dc0bb6d5b9a8a7490c0872b8f3fdbbbfb"
+    },
+    {
+      "from": "evidence/step5-scripted-agent-regression.json",
+      "to": "evidence/evaluation/scripted/step5-scripted-agent-regression.json",
+      "sha256": "77c10c1f2e33a7a2e616e1710777978aa398b62ffcba7178bc9447649ad475bd"
+    },
+    {
+      "from": "evidence/step5-sepolia-preparation-final-checks.json",
+      "to": "evidence/sepolia/preparation/step5-sepolia-preparation-final-checks.json",
+      "sha256": "1ed1ea34602eb7aef947947940620179feb32f20101e8e1f3c06919663cffeb8"
+    },
+    {
+      "from": "evidence/step5-sepolia-bill-approval-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-bill-approval-verification.json",
+      "sha256": "338e6b7214597939b70707c84518ceecd8732e0ca6749648dbdd797389b3f2d7"
+    },
+    {
+      "from": "evidence/step5-sepolia-preparation-tests-v4.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v4.txt",
+      "sha256": "bf6956fa0b4fd2730d05f6e5a1be130cf317e3d80d59ac3b9e64c1ea7056b5bd"
+    },
+    {
+      "from": "evidence/step5-sepolia-preparation-tests-final.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-final.txt",
+      "sha256": "3379b455494113873de32c7bf765182c5cf362f188a3f4b7a9884d5bf1e7a847"
+    },
+    {
+      "from": "evidence/step5-sepolia-token-wallet-review.png",
+      "to": "evidence/sepolia/public/step5-sepolia-token-wallet-review.png",
+      "sha256": "84e2c15a1aad04376b2486c3ba65fdc3ba14db8d5f5dd8cb8ee6ceedfebdaecc"
+    },
+    {
+      "from": "evidence/step5-sepolia-preparation-tests-v1.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v1.txt",
+      "sha256": "1cc427b57acd7882a101eca3e9ba20791be6049bf65a585b75d2e602d136e6f5"
+    },
+    {
+      "from": "evidence/step5-sepolia-payment-plan-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-payment-plan-verification.json",
+      "sha256": "c478b11788dd6393534081eba2c47f6702edbcd8ccb814238d4000394c5b8fed"
+    },
+    {
+      "from": "evidence/step5-sepolia-app-regression.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-app-regression.txt",
+      "sha256": "c9f086471567ebefcec8f1cb5be8629d3e34c67e5ffcaede9f313ee5efc137b7"
+    },
+    {
+      "from": "evidence/step5-sepolia-agent-funding-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-agent-funding-verification.json",
+      "sha256": "94ef10d3253fa59cfff143e2a3b54a284fa53b56bea502bb1896251d8e9fc2bf"
+    },
+    {
+      "from": "evidence/step5-sepolia-preparation-tests-v2.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v2.txt",
+      "sha256": "f0264547696ffb5049bcca9b32f1ea5c07dc2812361f9c678e6cb304b4558f3d"
+    },
+    {
+      "from": "evidence/step5-sepolia-preparation-tests-v3.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v3.txt",
+      "sha256": "a9d6f5606750a5c8349e240779c1d160187b0223c683c02697a301ca4f2e3dff"
+    },
+    {
+      "from": "evidence/step5-sepolia-resume-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-resume-verification.json",
+      "sha256": "93fbe2cb9648fd5d3ee3eb151a77a1eef62308bf04c25a6f70a7f5fd4d47e052"
+    },
+    {
+      "from": "evidence/step3-desktop.png",
+      "to": "evidence/local/step3/step3-desktop.png",
+      "sha256": "acd07516e55c97df94d92bc7d5bb8df58f2b6c19a7cada4fa654bc50b026dc32"
+    },
+    {
+      "from": "evidence/step5-sepolia-scripted-agent-regression.json",
+      "to": "evidence/sepolia/preparation/step5-sepolia-scripted-agent-regression.json",
+      "sha256": "b3b7af7b09a2dc92ab0062e77c1cffe907c215f2dccdde2aed3e528e61fccd03"
+    },
+    {
+      "from": "evidence/step5-quota-observation.json",
+      "to": "evidence/evaluation/history/step5-quota-observation.json",
+      "sha256": "fd0f9acad27d7ced4d32b52825d38b4c66dcfb62753b21d65873557b5a533b26"
+    },
+    {
+      "from": "evidence/step4-live-workflow-desktop.png",
+      "to": "evidence/local/step4/step4-live-workflow-desktop.png",
+      "sha256": "78b5ac9d2dd4e7d934c1394adb3216268fb245fddf694817c98bb7e374937bab"
+    },
+    {
+      "from": "evidence/step4-agent-desktop.png",
+      "to": "evidence/local/step4/step4-agent-desktop.png",
+      "sha256": "900f190b416e4b2b871cde8a72f99f00ad6e3ea3a8508037393053bc8b39f6dd"
+    },
+    {
+      "from": "evidence/step4-gemini-live-check.json",
+      "to": "evidence/local/step4/step4-gemini-live-check.json",
+      "sha256": "617ba1f76b35bb19bce45f85102579f3b955516f21bef62a84f2027151772b91"
+    },
+    {
+      "from": "evidence/step5-sepolia-agent-funding-review.json",
+      "to": "evidence/sepolia/public/step5-sepolia-agent-funding-review.json",
+      "sha256": "f8013da47d69a64fae84d2215df03798b14dd32f8e1c865543e95deec1b5853a"
+    },
+    {
+      "from": "evidence/step2-local-demo.json",
+      "to": "evidence/local/step2/step2-local-demo.json",
+      "sha256": "c04d558015fc50a8bf3ed2189e2a7e2dee1c35ebd51d5af7dfd8cf6c75f61114"
+    },
+    {
+      "from": "evidence/step5-sepolia-setup-ui-focused.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-setup-ui-focused.txt",
+      "sha256": "b26f007b03d26d0801da1ceeac296e31cdcbb2c7309c848254324b4348883a68"
+    },
+    {
+      "from": "evidence/step4-agent-mobile.png",
+      "to": "evidence/local/step4/step4-agent-mobile.png",
+      "sha256": "6ce3336480598a5af0ab474db1a25baea9a6c063222dfc5c74152f463ed9159f"
+    },
+    {
+      "from": "evidence/step5-groq-development.json",
+      "to": "evidence/evaluation/history/step5-groq-development.json",
+      "sha256": "701a42166426f5dafc872a7398b7ed95e341aa99d7996bd9470fc54b5a8ec98e"
+    },
+    {
+      "from": "evidence/step5-sepolia-evaluator-regression.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-evaluator-regression.txt",
+      "sha256": "7dc449ddcc88a24ffd76428f97e7709aa4763e3ddf3029de9bb73cca20da7cbe"
+    },
+    {
+      "from": "evidence/step5-sepolia-sample-intake-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-sample-intake-verification.json",
+      "sha256": "d58230fc7470e8f61c2d54a33f677adfb50b5f512ee95204fb51b323c68de4df"
+    },
+    {
+      "from": "evidence/step5-sepolia-agent-regression.txt",
+      "to": "evidence/sepolia/preparation/checks/step5-sepolia-agent-regression.txt",
+      "sha256": "b62ac61e76eff707285057ec1ad50fae202c19ee5ee7c0381baa8e8fc0e5422e"
+    },
+    {
+      "from": "evidence/step5-scripted-agent-v5-regression.json",
+      "to": "evidence/evaluation/scripted/step5-scripted-agent-v5-regression.json",
+      "sha256": "d46f12e8bc498cc4e9ab63695d26bf0de52abe33421caba5fd27df5deb1d26f8"
+    },
+    {
+      "from": "evidence/step5-sepolia-agent-access-inspection.json",
+      "to": "evidence/sepolia/public/step5-sepolia-agent-access-inspection.json",
+      "sha256": "899632e441dc9b3cde04f672781bc379ac0672ba399f55e8f76908569f513939"
+    },
+    {
+      "from": "evidence/step5-sepolia-clarification-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-clarification-verification.json",
+      "sha256": "fd4df49961406df16b62404eb508af68d2f2533ae34d88c53ca6a724b9ee8791"
+    },
+    {
+      "from": "evidence/step5-agent-regression.txt",
+      "to": "evidence/evaluation/checks/step5-agent-regression.txt",
+      "sha256": "f40092412adf1761b5457861cdddd30c57024476e9f65b9f3e5e472cfe7be5c0"
+    },
+    {
+      "from": "evidence/step5-sepolia-session.json",
+      "to": "evidence/sepolia/preparation/step5-sepolia-session.json",
+      "sha256": "1858bfba87aec46e56fc01ab0538fec34826396f351ace8b3da0882650e032b8"
+    },
+    {
+      "from": "evidence/step5-sepolia-preparation-local.json",
+      "to": "evidence/sepolia/preparation/step5-sepolia-preparation-local.json",
+      "sha256": "11355c5e254194568bc86a625752bc4bae304d9583e3c5fa968096c124798fd2"
+    },
+    {
+      "from": "evidence/step5-sepolia-export-verification.json",
+      "to": "evidence/sepolia/public/step5-sepolia-export-verification.json",
+      "sha256": "d12e07d1d878e6c6f65171304816cad4c8ef61c05b04f4fae326ab354f0c1cf6"
+    },
+    {
+      "from": "evidence/step5-gemini-reset-check.json",
+      "to": "evidence/evaluation/history/step5-gemini-reset-check.json",
+      "sha256": "c6aed0945f7e3062000dd2e6663d603ff55f190bf860651f27a9c69bd7697623"
+    },
+    {
+      "from": "evidence/step3-owner-approval.json",
+      "to": "evidence/local/step3/step3-owner-approval.json",
+      "sha256": "b19f50f8b36ca838e334c9fdf2f4c0d870c153e435d29f13247787a92820cd33"
+    },
+    {
+      "from": "evidence/step5-agent-context-regression.txt",
+      "to": "evidence/evaluation/checks/step5-agent-context-regression.txt",
+      "sha256": "458f6ba4962924a998ce7f287c6d472c3cda32ce5033e4078a87fc83f9f297f6"
+    },
+    {
+      "from": "evidence/step3-review.png",
+      "to": "evidence/local/step3/step3-review.png",
+      "sha256": "d8503c94897ed371b89bb00cc9643e9195ef13d5d33ecce4d3edca556e0eddad"
+    },
+    {
+      "from": "evidence/step5-scripted-agent-v4-regression.json",
+      "to": "evidence/evaluation/scripted/step5-scripted-agent-v4-regression.json",
+      "sha256": "13e36b1c0190632be1105bdc0d3045ffad9a77a41adbc9b13132faf0e81b56eb"
+    },
+    {
+      "from": "evidence/step5-documentation-sync-checks.json",
+      "to": "evidence/maintenance/2026-10-19/step5-documentation-sync-checks.json",
+      "sha256": "61a5d1e503e250e27bffa1d0ee400d5adbf22500a1f6e1e1632cd9f184621bf1"
+    },
+    {
+      "from": "evidence/step5-groq-v4-interruption.json",
+      "to": "evidence/evaluation/history/step5-groq-v4-interruption.json",
+      "sha256": "1bb45894d245e26328aceb6a6ebd6842b760e1fbe03b6cc3a9529c4c0b8b9c47"
+    },
+    {
+      "from": "evidence/step5-groq-v1-interruption.json",
+      "to": "evidence/evaluation/history/step5-groq-v1-interruption.json",
+      "sha256": "8af7ecd1d8ee642919370605fe04b5625e09488e5260c17d0e2594614a5ac12f"
+    },
+    {
+      "from": "evidence/step5-sepolia-agent-access-reconciliation.json",
+      "to": "evidence/sepolia/public/step5-sepolia-agent-access-reconciliation.json",
+      "sha256": "401d3a0729762272423111b295b3d476223bd5c54b5bb294761b118effab929b"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression/step3-mobile.png",
+      "to": "evidence/evaluation/ui/v5/step3-mobile.png",
+      "sha256": "8b8d625c7a130662a473c65aff503d3e5f199b5938b13962bb7de9da552cca5d"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression/results.txt",
+      "to": "evidence/evaluation/ui/v5/results.txt",
+      "sha256": "9567dbe695895aaea8b3f84760e51b270f5aae7bd79301daacd48a4b8912cc6b"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression/step3-desktop.png",
+      "to": "evidence/evaluation/ui/v5/step3-desktop.png",
+      "sha256": "1f3f911b9274f7aed1eaaf832cb577a339c44860f5d0139d04ae2a238e933501"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression/step4-agent-desktop.png",
+      "to": "evidence/evaluation/ui/v5/step4-agent-desktop.png",
+      "sha256": "bc8a5575427153694760f99da62b47d6c2fbbc4ec31ddae8c14056af2d01e5b9"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression/step4-agent-mobile.png",
+      "to": "evidence/evaluation/ui/v5/step4-agent-mobile.png",
+      "sha256": "0d67f54d27b9654c9ba9bd32fecd5a7266f1f5407b59a9a2673e701151202153"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression/step3-owner-approval.json",
+      "to": "evidence/evaluation/ui/v5/step3-owner-approval.json",
+      "sha256": "5c1d0d6084f7ed726f2aa2818d7d6338a7ba00ff5f40727d2b2460e2ca89ba74"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression/step3-review.png",
+      "to": "evidence/evaluation/ui/v5/step3-review.png",
+      "sha256": "822df729922e10cc13ba9e80476c51bd591c1e001709820d623d7bed8344e50d"
+    },
+    {
+      "from": "evidence/step5-ui-regression/step3-mobile.png",
+      "to": "evidence/evaluation/ui/initial/step3-mobile.png",
+      "sha256": "8b8d625c7a130662a473c65aff503d3e5f199b5938b13962bb7de9da552cca5d"
+    },
+    {
+      "from": "evidence/step5-ui-regression/results.txt",
+      "to": "evidence/evaluation/ui/initial/results.txt",
+      "sha256": "c35d75292cf78a81a81b1b3d1751ccc68fba462082851db04a121f8f0a702309"
+    },
+    {
+      "from": "evidence/step5-ui-regression/step3-desktop.png",
+      "to": "evidence/evaluation/ui/initial/step3-desktop.png",
+      "sha256": "1f3f911b9274f7aed1eaaf832cb577a339c44860f5d0139d04ae2a238e933501"
+    },
+    {
+      "from": "evidence/step5-ui-regression/step4-agent-desktop.png",
+      "to": "evidence/evaluation/ui/initial/step4-agent-desktop.png",
+      "sha256": "24ebcdf2573a890a37221b22403310ef777e8e1de03f35e2f7f40ab58ff2e9b0"
+    },
+    {
+      "from": "evidence/step5-ui-regression/step4-agent-mobile.png",
+      "to": "evidence/evaluation/ui/initial/step4-agent-mobile.png",
+      "sha256": "ac744d423a7eb801f0d2c177a007a0724c3b8550abda8c8ad979a80093abe504"
+    },
+    {
+      "from": "evidence/step5-ui-regression/step3-owner-approval.json",
+      "to": "evidence/evaluation/ui/initial/step3-owner-approval.json",
+      "sha256": "b3640794d65f3e76930fc1c23d202bc843906488d55e82b0ad367108625d96f3"
+    },
+    {
+      "from": "evidence/step5-ui-regression/step3-review.png",
+      "to": "evidence/evaluation/ui/initial/step3-review.png",
+      "sha256": "cca85173c08b4b33bc032f869268241adc3f085cf6c4841cbba628010e5d0bde"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1/step3-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v1/step3-mobile.png",
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1/results.txt",
+      "to": "evidence/sepolia/preparation/ui/v1/results.txt",
+      "sha256": "d388f61d3863b6594d053a0f5b196005bd4c723c01c589273b0c62519c651d59"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1/step3-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v1/step3-desktop.png",
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1/step4-agent-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v1/step4-agent-desktop.png",
+      "sha256": "99607e9285abeb8cb721c9c815f2cdffb3175c4ae5510247b5dbcd7a98e0ecee"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1/step4-agent-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v1/step4-agent-mobile.png",
+      "sha256": "9095a02c51b22ab647d9d19bcace4f2cb5a6ab14d20b85666b90e2ac113486ab"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1/step3-owner-approval.json",
+      "to": "evidence/sepolia/preparation/ui/v1/step3-owner-approval.json",
+      "sha256": "ce85db72a333807e0d868fb897dc4e7a1a98d2e70ce39f2ab65ab814b0cc60a5"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1/step3-review.png",
+      "to": "evidence/sepolia/preparation/ui/v1/step3-review.png",
+      "sha256": "ab0e69676ee03996d8e1eeeb1c2d784bfc8add4b0bc87002d257619cd103c645"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression/step3-mobile.png",
+      "to": "evidence/evaluation/ui/v4/step3-mobile.png",
+      "sha256": "8b8d625c7a130662a473c65aff503d3e5f199b5938b13962bb7de9da552cca5d"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression/results.txt",
+      "to": "evidence/evaluation/ui/v4/results.txt",
+      "sha256": "1f4b5a04284da02bf6c209199d618579265753622ded59a2347c6a68941821c2"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression/step3-desktop.png",
+      "to": "evidence/evaluation/ui/v4/step3-desktop.png",
+      "sha256": "1f3f911b9274f7aed1eaaf832cb577a339c44860f5d0139d04ae2a238e933501"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression/step4-agent-desktop.png",
+      "to": "evidence/evaluation/ui/v4/step4-agent-desktop.png",
+      "sha256": "1a93e9ab54e6bba4bf43b8455474557fe39cccc647cd5081ab377152310a9a4e"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression/step4-agent-mobile.png",
+      "to": "evidence/evaluation/ui/v4/step4-agent-mobile.png",
+      "sha256": "ac744d423a7eb801f0d2c177a007a0724c3b8550abda8c8ad979a80093abe504"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression/step3-owner-approval.json",
+      "to": "evidence/evaluation/ui/v4/step3-owner-approval.json",
+      "sha256": "d4981c2934d4bca44106d37c07f0ae0701b97d92940f4d05d0410c3a5ce8e0ce"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression/step3-review.png",
+      "to": "evidence/evaluation/ui/v4/step3-review.png",
+      "sha256": "0e71e67eef70c3ba1d0d51c5e4f64a682936b9141a07a9172f49b857ad7809de"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4/step3-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v4/step3-mobile.png",
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4/results.txt",
+      "to": "evidence/sepolia/preparation/ui/v4/results.txt",
+      "sha256": "1219c439a3017c4f000635f5df1916e9e67b4f1827089a96868110a52339e330"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4/step3-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v4/step3-desktop.png",
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4/step4-agent-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v4/step4-agent-desktop.png",
+      "sha256": "5b2faa98c598062a317207688728b3f9a09ac4f162ed748f38125fda013fdbb0"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4/step4-agent-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v4/step4-agent-mobile.png",
+      "sha256": "9095a02c51b22ab647d9d19bcace4f2cb5a6ab14d20b85666b90e2ac113486ab"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4/step3-owner-approval.json",
+      "to": "evidence/sepolia/preparation/ui/v4/step3-owner-approval.json",
+      "sha256": "362a3e7e07ddc7bc33024dd36d35a720c22e10b07002a9acd804380854f9a72f"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4/step3-review.png",
+      "to": "evidence/sepolia/preparation/ui/v4/step3-review.png",
+      "sha256": "0efdcfa94decf28bb4f1bb0c4564c0124f9ae8c591efdbd1fac46a751fa75d75"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3/step3-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v3/step3-mobile.png",
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3/results.txt",
+      "to": "evidence/sepolia/preparation/ui/v3/results.txt",
+      "sha256": "d1ea8a7b09d0b4a5f2095147c9c91cdfb87123452e9f4ab53f487ef98178e370"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3/step3-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v3/step3-desktop.png",
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3/step4-agent-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v3/step4-agent-desktop.png",
+      "sha256": "fe16813b1ddbf7542eacdaf2ed864003454c41d5de1ae0cbd5b1c45971569481"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3/step4-agent-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v3/step4-agent-mobile.png",
+      "sha256": "9095a02c51b22ab647d9d19bcace4f2cb5a6ab14d20b85666b90e2ac113486ab"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3/step3-owner-approval.json",
+      "to": "evidence/sepolia/preparation/ui/v3/step3-owner-approval.json",
+      "sha256": "14f6e3b55581a0db59b32e243ab2398cc46bd71c25a78539b3516639e4b75319"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3/step3-review.png",
+      "to": "evidence/sepolia/preparation/ui/v3/step3-review.png",
+      "sha256": "250a96de6cd77c13197a53abc7359068da72c31d80d05df6b9664f931704710e"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2/step3-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v2/step3-mobile.png",
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2/results.txt",
+      "to": "evidence/sepolia/preparation/ui/v2/results.txt",
+      "sha256": "3ba6f046d912b538c6fe02d1e0084aa20c978621669d5c1d5c9e7a86815e822e"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2/step3-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v2/step3-desktop.png",
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2/step4-agent-desktop.png",
+      "to": "evidence/sepolia/preparation/ui/v2/step4-agent-desktop.png",
+      "sha256": "b132df05e1ca89582b3ba5d02f82038369b009905c4a52020a1b76962ce8f0ee"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2/step4-agent-mobile.png",
+      "to": "evidence/sepolia/preparation/ui/v2/step4-agent-mobile.png",
+      "sha256": "8c78cbe38526c120f5713cfcba0387dbf7282e4cf740c79db97d32e8679d909b"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2/step3-owner-approval.json",
+      "to": "evidence/sepolia/preparation/ui/v2/step3-owner-approval.json",
+      "sha256": "d6d61f179eb5e7c12ce0afcf3d5bbf57a18ed16e3005d361ae55ac0163d9d1a7"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2/step3-review.png",
+      "to": "evidence/sepolia/preparation/ui/v2/step3-review.png",
+      "sha256": "69619acce7a4f7ccf290411e607c52439b3d55130b27a6f1daf02904c1476c68"
+    }
+  ],
+  "pinnedSourceSnapshotsKeptAtOriginalPaths": [
+    "evidence/step5-evaluation-v1-runner.mjs",
+    "evidence/step5-evaluation-v2-runner.mjs",
+    "evidence/step5-gemini-model-v2.mjs",
+    "evidence/step5-gemini-agent-v2.mjs",
+    "evidence/step5-groq-v1-fixtures.mjs",
+    "evidence/step5-groq-v1-runner.mjs",
+    "evidence/step5-groq-v2-model.mjs",
+    "evidence/step5-groq-v2-runner.mjs",
+    "evidence/step5-groq-v3-model.mjs",
+    "evidence/step5-groq-v3-agent.mjs",
+    "evidence/step5-groq-v3-runner.mjs",
+    "evidence/step5-groq-v4-agent.mjs",
+    "evidence/step5-groq-v4-runner.mjs",
+    "evidence/step5-groq-v5-service.mjs",
+    "evidence/step5-groq-v5-executor.mjs",
+    "evidence/step5-groq-v5-client.mjs",
+    "evidence/step5-groq-v5-runner.mjs"
+  ],
+  "generatedOutputPolicy": "Frozen test/demo commands can emit fresh files at their original evidence paths. Saved historical artifacts here are curated snapshots. Do not overwrite them with a later run.",
+  "progressHistory": {
+    "path": "evidence/history/progress-through-step5-2026-10-19.txt",
+    "sha256": "a5b72b07991a304abe1d516b094e6bdd62c59865bc29bc85282c26dc4e4dacd8"
+  },
+  "directoryMoves": [
+    {
+      "from": "evidence/step5-ui-regression",
+      "to": "evidence/evaluation/ui/initial"
+    },
+    {
+      "from": "evidence/step5-ui-v4-regression",
+      "to": "evidence/evaluation/ui/v4"
+    },
+    {
+      "from": "evidence/step5-ui-v5-regression",
+      "to": "evidence/evaluation/ui/v5"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v1",
+      "to": "evidence/sepolia/preparation/ui/v1"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v2",
+      "to": "evidence/sepolia/preparation/ui/v2"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v3",
+      "to": "evidence/sepolia/preparation/ui/v3"
+    },
+    {
+      "from": "evidence/step5-sepolia-ui-regression-v4",
+      "to": "evidence/sepolia/preparation/ui/v4"
+    }
+  ]
+}

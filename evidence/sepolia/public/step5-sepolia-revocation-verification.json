@@ -1,0 +1,327 @@
+{
+  "recordedAt": "2026-10-19T15:51:50.619Z",
+  "evidenceType": "verified-public-sepolia-owner-revocation-and-agent-stop",
+  "intent": {
+    "id": "68e1a41a-c164-4fd5-a043-70d4e58c4fdf",
+    "payload": {
+      "instanceId": "public-11155111-0x1e2bc947b455de5825cade9d44e7ec04b8b76f89",
+      "title": "Revoke agent access",
+      "method": "revokeAgent",
+      "args": [],
+      "expectedEvents": [
+        {
+          "name": "AgentRevoked",
+          "values": {
+            "previousAgent": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4"
+          }
+        }
+      ],
+      "drafts": [],
+      "expectedPolicyVersion": "6",
+      "to": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+      "data": "0x7961803e",
+      "chainId": 11155111,
+      "owner": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+      "value": "0x0",
+      "createdAt": "2026-10-19T15:47:10.100Z",
+      "fees": {
+        "gasLimit": "65786",
+        "maxFeePerGas": "31",
+        "maxPriorityFeePerGas": "1",
+        "maximumOutflowWei": "2039366",
+        "maximumOutflowETH": "0.000000000002039366",
+        "feeCapGwei": "0.05",
+        "totalDemoBudgetETH": "0.001"
+      }
+    },
+    "status": "confirmed",
+    "hash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+    "receipt": {
+      "hash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+      "chainId": 11155111,
+      "blockNumber": 11949169,
+      "blockHash": "0xe1254362aa9346cd727488eda50dbea4f57465abf9faf0ba38ed431f9f018fd0",
+      "status": 1,
+      "gasUsed": "43770"
+    },
+    "error": null
+  },
+  "transaction": {
+    "_type": "TransactionResponse",
+    "accessList": [],
+    "blockNumber": 11949169,
+    "blockHash": "0xe1254362aa9346cd727488eda50dbea4f57465abf9faf0ba38ed431f9f018fd0",
+    "blobVersionedHashes": null,
+    "chainId": "11155111",
+    "data": "0x7961803e",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasLimit": "54821",
+    "gasPrice": "17",
+    "hash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+    "maxFeePerGas": "31",
+    "maxPriorityFeePerGas": "1",
+    "maxFeePerBlobGas": null,
+    "nonce": 232,
+    "signature": {
+      "_type": "signature",
+      "networkV": null,
+      "r": "0x5aab9b9f87a4c59a48683858295ba0076eae2ed28531d722b36855e799fc7bca",
+      "s": "0x47278647aaf1df48eb273c834f67933f3598a62284d35088e38a89fd25f083fd",
+      "v": 27
+    },
+    "to": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+    "index": 118,
+    "type": 2,
+    "value": "0"
+  },
+  "receipt": {
+    "_type": "TransactionReceipt",
+    "blockHash": "0xe1254362aa9346cd727488eda50dbea4f57465abf9faf0ba38ed431f9f018fd0",
+    "blockNumber": 11949169,
+    "contractAddress": null,
+    "cumulativeGasUsed": "75293439",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasPrice": "17",
+    "blobGasUsed": null,
+    "blobGasPrice": null,
+    "gasUsed": "43770",
+    "hash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+    "index": 118,
+    "logs": [
+      {
+        "_type": "log",
+        "address": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+        "blockHash": "0xe1254362aa9346cd727488eda50dbea4f57465abf9faf0ba38ed431f9f018fd0",
+        "blockNumber": 11949169,
+        "data": "0x",
+        "index": 232,
+        "topics": [
+          "0xc21f3525d7b7c17a17539b981322b821b7cb2ed1d6a569badf78c55fa7665a96",
+          "0x0000000000000000000000000000000000000000000000000000000000000007"
+        ],
+        "transactionHash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+        "transactionIndex": 118
+      },
+      {
+        "_type": "log",
+        "address": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+        "blockHash": "0xe1254362aa9346cd727488eda50dbea4f57465abf9faf0ba38ed431f9f018fd0",
+        "blockNumber": 11949169,
+        "data": "0x",
+        "index": 233,
+        "topics": [
+          "0x1d2ac3af5c639e57ee8f25bc162ea13a1ef8a663c92a4f3e33f126dd2d4feba4",
+          "0x000000000000000000000000e9987a361f8286c396b0519aec3ab5d29f4553a4"
+        ],
+        "transactionHash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+        "transactionIndex": 118
+      }
+    ],
+    "logsBloom": "0x00000000000008800100000000800000001000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000800000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100020000110000000000000000000000000000040000000000000000000000000000000000",
+    "status": 1,
+    "to": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89"
+  },
+  "confirmations": 9,
+  "directReviewMatch": true,
+  "events": [
+    {
+      "name": "PolicyChanged",
+      "values": {
+        "policyVersion": "7"
+      }
+    },
+    {
+      "name": "AgentRevoked",
+      "values": {
+        "previousAgent": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4"
+      }
+    }
+  ],
+  "currentState": {
+    "chainId": 11155111,
+    "blockNumber": 11949177,
+    "blockHash": "0xd67d508c80cb0f0e7cd878048059689523466cb4de23f658f7d493d02740346d",
+    "agent": "0x0000000000000000000000000000000000000000",
+    "agentNotBefore": "0",
+    "agentExpiresAt": "0",
+    "policyVersion": "7",
+    "paused": false,
+    "vaultMDTUnits": "650000000",
+    "spentMDTUnits": "350000000",
+    "dailyRemainingMDTUnits": "50000000",
+    "agentRemainingETH": "0.000049999988627072",
+    "agentNonce": 2,
+    "bills": [
+      {
+        "invoice": "HOST-1001",
+        "billKey": "0xfe6186d372a90b599be992390a4f2d5f264592197739724f01a20e9df3f26029",
+        "amount": "200000000",
+        "paid": true,
+        "cancelled": false
+      },
+      {
+        "invoice": "ART-2001",
+        "billKey": "0xc16064a320634dd3cb0dee56e35a5b67133f719f021cf6e2e24d4a19de61da14",
+        "amount": "150000000",
+        "paid": true,
+        "cancelled": false
+      },
+      {
+        "invoice": "HOST-1002",
+        "billKey": "0x7d2ea43ea41a579e40889948a40dfb9502d848e12fa3b677eb7a94f69da6f619",
+        "amount": "75000000",
+        "paid": false,
+        "cancelled": false
+      }
+    ]
+  },
+  "pinnedCode": {
+    "vault": {
+      "address": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+      "codeHash": "0x5a3db00f3a2d4f633fda36c49146dbd9f6b05e61eb1ec5ac9d6727316801acee",
+      "matches": true
+    },
+    "token": {
+      "address": "0x61E52ad4912FA0f829d0f1B0571aBc3bc157Ba88",
+      "codeHash": "0x09b2f3945e6c1e90030781a24f7081b885101ab4ecdd7b5b4338f43b6e42e34c",
+      "matches": true
+    }
+  },
+  "revokedAgentRejection": {
+    "method": "eth_call",
+    "from": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4",
+    "to": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+    "billKey": "0x7d2ea43ea41a579e40889948a40dfb9502d848e12fa3b677eb7a94f69da6f619",
+    "policyVersion": "7",
+    "error": "OnlyAgent",
+    "revertData": "0x73620441",
+    "transactionSent": false,
+    "gasSpentWei": "0",
+    "independentOfPauseOrDailyLimit": false,
+    "authorityErrorDecodedBeforeOtherGuards": true,
+    "scope": "The vault is unpaused, but this unpaid 75 MDT bill also exceeds the remaining 50 MDT daily allowance. OnlyAgent is the actual decoded rejection. This public call does not isolate an otherwise-eligible bill; clean eligible revocation is established by separate local tests."
+  },
+  "costs": {
+    "revocationGasETH": "0.00000000000074409",
+    "ownerGasETH": "0.00000000032971641",
+    "agentPaymentGasETH": "0.000000000011372928",
+    "totalOwnerAndAgentGasETH": "0.000000000341089338",
+    "actualOwnerOutflowIncludingAgentFundingETH": "0.00005000032971641",
+    "reservedMaximumOwnerOutflowETH": "0.000050000761755467",
+    "approvedCapETH": "0.001",
+    "agentGasAlreadyIncludedInFunding": true,
+    "ownerTransactions": [
+      {
+        "hash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+        "action": "revokeAgent",
+        "status": 1,
+        "blockNumber": 11949169,
+        "blockHash": "0xe1254362aa9346cd727488eda50dbea4f57465abf9faf0ba38ed431f9f018fd0",
+        "gasFeeWei": "744090",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0xfc7bd570cc2bcb407283eff73c99444124491126a92975021e966d23d724a63c",
+        "action": "setPaused",
+        "status": 1,
+        "blockNumber": 11949011,
+        "blockHash": "0x4d3058b6aa4ba71c3c7880bbdbf163664e7dc4180ef148799932a77cfa831662",
+        "gasFeeWei": "723588",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0x9cdbddee454d4b5b48de87ccec7177490406fd471e363d6738b5a35b8b97f5a3",
+        "action": "approveBills",
+        "status": 1,
+        "blockNumber": 11948984,
+        "blockHash": "0xbe716b0547dad8c0b6b00555b6e070ddf67a58b393a87a324150b30d7599fbee",
+        "gasFeeWei": "40544235",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+        "action": "gas",
+        "status": 1,
+        "blockNumber": 11948852,
+        "blockHash": "0x969a76e831ae283ce5a7115ce7bfde46580f236502b1b5067c53f6b351a2c691",
+        "gasFeeWei": "3478200",
+        "valueOutflowWei": "50000000000000"
+      },
+      {
+        "hash": "0x2c53a2312596cfe2a378b7d53f18291be343fa3839712a6651eaf7c6ea45d82f",
+        "action": "agent",
+        "status": 1,
+        "blockNumber": 11948749,
+        "blockHash": "0xba9aff4bb893ca2894304cb807e5e45d324f1033998dcc8fdf0d6dfe8de6ed45",
+        "gasFeeWei": "7348242",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+        "action": "design",
+        "status": 1,
+        "blockNumber": 11948737,
+        "blockHash": "0x7070af99fe21ab5c12a48b14e9500f9f083f68cbe71cf5400623d8ec99a8e682",
+        "gasFeeWei": "5062700",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0x5ee96ac9a18b63d8f605947746c2bb5180f9273c6af433df73381cd533f5fb60",
+        "action": "host",
+        "status": 1,
+        "blockNumber": 11948695,
+        "blockHash": "0x4d3002c44cdbb46157aeb9b4694f58f5c0866693ff543e1fb1a218025f1c248e",
+        "gasFeeWei": "9947523",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0xac511b822fc144485938651b88365b0216ae5deb03241c5de318f7c32078ee14",
+        "action": "deposit",
+        "status": 1,
+        "blockNumber": 11948673,
+        "blockHash": "0xb4051666438c3f693a52ef5cb56e6c1b6f49f6a1df37d832151e9fea6e0e6a25",
+        "gasFeeWei": "2841982",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0x715e2f6bf7da5e87946c0f27bdc5bc786339259c7686d438b74fe2017f657bf1",
+        "action": "deposit",
+        "status": 0,
+        "blockNumber": 11948616,
+        "blockHash": "0x5da1a689ed1b807fe7d1db7ad8a27f233bd7caa3b1062f28d71cbca70651d834",
+        "gasFeeWei": "4418538",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0x2b53c38d45a186ef647ead9ac6f361839ad9f860150e6fa451370de20b2081e3",
+        "action": "vault",
+        "status": 1,
+        "blockNumber": 11948602,
+        "blockHash": "0x98f88348856326b347814f4eb651e581d5fb6e1360d20c5700a0ad9430e0f621",
+        "gasFeeWei": "200265568",
+        "valueOutflowWei": "0"
+      },
+      {
+        "hash": "0xd79c6a0fc89ec8440e71350f84145f51addb3b00a8d923070b23c06592b73d39",
+        "action": "token",
+        "status": 1,
+        "blockNumber": 11948582,
+        "blockHash": "0xb04dfe4e4fd016276638f4fa40548250604ef0c6c9eb1ce355cb887f5bbd9cd8",
+        "gasFeeWei": "54341744",
+        "valueOutflowWei": "0"
+      }
+    ]
+  },
+  "assessment": {
+    "revocationPassed": true,
+    "stoppedAgentPassed": true,
+    "paidBillsUnchanged": true,
+    "verificationSentTransactions": 0,
+    "verificationModelRequests": 0,
+    "browserControlledByAssistant": false,
+    "sourceChanged": false,
+    "priorApprovedTotalAnswerMissStillDisclosed": true,
+    "finalExportPending": true,
+    "otherwiseEligiblePublicBillTested": false
+  }
+}

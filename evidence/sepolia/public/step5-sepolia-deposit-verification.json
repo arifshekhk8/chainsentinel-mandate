@@ -1,0 +1,90 @@
+{
+  "recordedAt": "2026-10-19T14:10:42.986Z",
+  "evidenceType": "public-sepolia-direct-deposit-verification",
+  "verified": true,
+  "chainId": 11155111,
+  "owner": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+  "token": "0x61E52ad4912FA0f829d0f1B0571aBc3bc157Ba88",
+  "vault": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+  "originalIntentId": "88373bab-9ab4-4e24-9f93-61a561742b81",
+  "status": "confirmed",
+  "hash": "0xac511b822fc144485938651b88365b0216ae5deb03241c5de318f7c32078ee14",
+  "receipt": {
+    "_type": "TransactionReceipt",
+    "blockHash": "0xb4051666438c3f693a52ef5cb56e6c1b6f49f6a1df37d832151e9fea6e0e6a25",
+    "blockNumber": 11948673,
+    "contractAddress": null,
+    "cumulativeGasUsed": "30110768",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasPrice": "22",
+    "blobGasUsed": null,
+    "blobGasPrice": null,
+    "gasUsed": "129181",
+    "hash": "0xac511b822fc144485938651b88365b0216ae5deb03241c5de318f7c32078ee14",
+    "index": 49,
+    "logs": [
+      {
+        "_type": "log",
+        "address": "0x61E52ad4912FA0f829d0f1B0571aBc3bc157Ba88",
+        "blockHash": "0xb4051666438c3f693a52ef5cb56e6c1b6f49f6a1df37d832151e9fea6e0e6a25",
+        "blockNumber": 11948673,
+        "data": "0x000000000000000000000000000000000000000000000000000000003b9aca00",
+        "index": 90,
+        "topics": [
+          "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+          "0x000000000000000000000000dc2341ae41c44400128965ab0770567922f8d6ee",
+          "0x0000000000000000000000001e2bc947b455de5825cade9d44e7ec04b8b76f89"
+        ],
+        "transactionHash": "0xac511b822fc144485938651b88365b0216ae5deb03241c5de318f7c32078ee14",
+        "transactionIndex": 49
+      }
+    ],
+    "logsBloom": "0x01000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000002000000000000000000000000000000008000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000010000000000000000000000000000400000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000800000002000000000000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000",
+    "status": 1,
+    "to": "0x61E52ad4912FA0f829d0f1B0571aBc3bc157Ba88"
+  },
+  "confirmations": 5,
+  "transaction": {
+    "_type": "TransactionResponse",
+    "accessList": [],
+    "blockNumber": 11948673,
+    "blockHash": "0xb4051666438c3f693a52ef5cb56e6c1b6f49f6a1df37d832151e9fea6e0e6a25",
+    "blobVersionedHashes": null,
+    "chainId": "11155111",
+    "data": "0xa9059cbb0000000000000000000000001e2bc947b455de5825cade9d44e7ec04b8b76f89000000000000000000000000000000000000000000000000000000003b9aca00",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasLimit": "141321",
+    "gasPrice": "22",
+    "hash": "0xac511b822fc144485938651b88365b0216ae5deb03241c5de318f7c32078ee14",
+    "maxFeePerGas": "39",
+    "maxPriorityFeePerGas": "1",
+    "maxFeePerBlobGas": null,
+    "nonce": 225,
+    "signature": {
+      "_type": "signature",
+      "networkV": null,
+      "r": "0x3736cc929dc5537d4b3bf68bb79d22ea512b507903d2c83f66b701808eb9ad41",
+      "s": "0x6ef99c9fea63042988aade686a4c0c9e3fe25f1f5c682293fbdd5b765bafd7b6",
+      "v": 28
+    },
+    "to": "0x61E52ad4912FA0f829d0f1B0571aBc3bc157Ba88",
+    "index": 49,
+    "type": 2,
+    "value": "0"
+  },
+  "balances": {
+    "ownerMDT": "0.0",
+    "vaultMDT": "1000.0"
+  },
+  "vaultPaused": true,
+  "actualGasFeeETH": "0.000000000002841982",
+  "protectionChoice": "User explicitly approved and manually performed the single direct deposit after opting out of MetaMask Added protection for this transaction. No global setting change authorized.",
+  "previousFailedWrapper": "evidence/step5-sepolia-wallet-wrapper-recovery.json",
+  "setupComplete": false,
+  "remainingActions": [
+    "host",
+    "design",
+    "agent",
+    "gas"
+  ]
+}

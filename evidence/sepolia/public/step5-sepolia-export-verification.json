@@ -1,0 +1,125 @@
+{
+  "recordedAt": "2026-10-19T15:53:34.155Z",
+  "exportPath": "evidence/step5-sepolia-2026-10-19T15-52-14-777Z.json",
+  "exportSHA256": "fb8ee64852392ce7c99255ba1520427ed7fc0899c692baec8779c8ed358331b7",
+  "verifiedOriginalHashes": [
+    {
+      "hash": "0xa6a4665cdfe4e0e44e8e08103ef8e943d8ac05fcbe432fef225e940c1dcb60e0",
+      "blockNumber": 11949169,
+      "blockHash": "0xe1254362aa9346cd727488eda50dbea4f57465abf9faf0ba38ed431f9f018fd0",
+      "status": 1,
+      "confirmations": 17
+    },
+    {
+      "hash": "0xfc7bd570cc2bcb407283eff73c99444124491126a92975021e966d23d724a63c",
+      "blockNumber": 11949011,
+      "blockHash": "0x4d3058b6aa4ba71c3c7880bbdbf163664e7dc4180ef148799932a77cfa831662",
+      "status": 1,
+      "confirmations": 175
+    },
+    {
+      "hash": "0x9cdbddee454d4b5b48de87ccec7177490406fd471e363d6738b5a35b8b97f5a3",
+      "blockNumber": 11948984,
+      "blockHash": "0xbe716b0547dad8c0b6b00555b6e070ddf67a58b393a87a324150b30d7599fbee",
+      "status": 1,
+      "confirmations": 202
+    },
+    {
+      "hash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+      "blockNumber": 11948852,
+      "blockHash": "0x969a76e831ae283ce5a7115ce7bfde46580f236502b1b5067c53f6b351a2c691",
+      "status": 1,
+      "confirmations": 334
+    },
+    {
+      "hash": "0x2c53a2312596cfe2a378b7d53f18291be343fa3839712a6651eaf7c6ea45d82f",
+      "blockNumber": 11948749,
+      "blockHash": "0xba9aff4bb893ca2894304cb807e5e45d324f1033998dcc8fdf0d6dfe8de6ed45",
+      "status": 1,
+      "confirmations": 437
+    },
+    {
+      "hash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+      "blockNumber": 11948737,
+      "blockHash": "0x7070af99fe21ab5c12a48b14e9500f9f083f68cbe71cf5400623d8ec99a8e682",
+      "status": 1,
+      "confirmations": 449
+    },
+    {
+      "hash": "0x5ee96ac9a18b63d8f605947746c2bb5180f9273c6af433df73381cd533f5fb60",
+      "blockNumber": 11948695,
+      "blockHash": "0x4d3002c44cdbb46157aeb9b4694f58f5c0866693ff543e1fb1a218025f1c248e",
+      "status": 1,
+      "confirmations": 491
+    },
+    {
+      "hash": "0xac511b822fc144485938651b88365b0216ae5deb03241c5de318f7c32078ee14",
+      "blockNumber": 11948673,
+      "blockHash": "0xb4051666438c3f693a52ef5cb56e6c1b6f49f6a1df37d832151e9fea6e0e6a25",
+      "status": 1,
+      "confirmations": 513
+    },
+    {
+      "hash": "0x715e2f6bf7da5e87946c0f27bdc5bc786339259c7686d438b74fe2017f657bf1",
+      "blockNumber": 11948616,
+      "blockHash": "0x5da1a689ed1b807fe7d1db7ad8a27f233bd7caa3b1062f28d71cbca70651d834",
+      "status": 0,
+      "confirmations": 570
+    },
+    {
+      "hash": "0x2b53c38d45a186ef647ead9ac6f361839ad9f860150e6fa451370de20b2081e3",
+      "blockNumber": 11948602,
+      "blockHash": "0x98f88348856326b347814f4eb651e581d5fb6e1360d20c5700a0ad9430e0f621",
+      "status": 1,
+      "confirmations": 584
+    },
+    {
+      "hash": "0xd79c6a0fc89ec8440e71350f84145f51addb3b00a8d923070b23c06592b73d39",
+      "blockNumber": 11948582,
+      "blockHash": "0xb04dfe4e4fd016276638f4fa40548250604ef0c6c9eb1ce355cb887f5bbd9cd8",
+      "status": 1,
+      "confirmations": 604
+    },
+    {
+      "hash": "0xa35b0bd2785c1b9272e571d2a5197eb5530089151c6b8e751935b02941931ba4",
+      "blockNumber": 11949115,
+      "blockHash": "0xfba60fbfd92661b5d8acc371c5cb80fd3e2da35537f64bbca0896d11032043c5",
+      "status": 1,
+      "confirmations": 71
+    },
+    {
+      "hash": "0x37ba350085b7cf15423745251aa71c8530c7c5915493534663f7eb0a46029ac9",
+      "blockNumber": 11949117,
+      "blockHash": "0xe5025edab0d7e82f0c16997a5da2f1652560eb72d6f3b899b559ba5b5e9f35c6",
+      "status": 1,
+      "confirmations": 69
+    }
+  ],
+  "ownerTransactions": 11,
+  "agentPayments": 2,
+  "revertedOwnerTransactions": 1,
+  "liveRequests": 3,
+  "modelMeasurementNotRerun": true,
+  "extensionFlagScope": "CLI export defaults false; actual user MetaMask owner operation is separately documented in the public report and original receipts. No automated extension suite is claimed.",
+  "credentialValuesExcluded": true,
+  "privateFilesOwnerOnly": true,
+  "appRestart": {
+    "url": "http://127.0.0.1:4173",
+    "pid": 35462,
+    "policyVersion": "7",
+    "agentRevoked": true,
+    "vaultMDT": "650",
+    "spentMDT": "350",
+    "paymentAttempts": 2,
+    "planCount": 3,
+    "newTransactionOnRestart": false,
+    "newModelRequestOnRestart": false
+  },
+  "limitations": [
+    "Two confirmations are not absolute finality.",
+    "Protected wallet wrappers required specific manual audits; automatic guards were unchanged.",
+    "Public stopped-agent eth_call uses the remaining 75 MDT bill, which also exceeds today’s remaining budget; decoded OnlyAgent proves authority rejection occurs first. A clean otherwise-eligible revocation scenario is established separately by local tests, not claimed by this public call.",
+    "The read-only approved-total answer showed eligible 350 MDT instead of requested 425 MDT; miss remains disclosed.",
+    "Organizer acknowledgment, testnet evidence acceptance and final submission channel remain unresolved."
+  ]
+}

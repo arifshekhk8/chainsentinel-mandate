@@ -13,7 +13,7 @@ The user selected Google's free API and authorized connection/live synthetic che
 
 ## Live development results
 
-All seven tasks passed **across attempts**, using only separate synthetic development examples. This was not one uninterrupted successful smoke run. [Safe metadata](step4-gemini-live-check.json) records the actual requested/returned model, prompt version (`mandate-step4-v1`), latency, token counts and failures. No signer or blockchain module is imported by the live check.
+All seven tasks passed **across attempts**, using only separate synthetic development examples. This was not one uninterrupted successful smoke run. [Safe metadata](local/step4/step4-gemini-live-check.json) records the actual requested/returned model, prompt version (`mandate-step4-v1`), latency, token counts and failures. No signer or blockchain module is imported by the live check.
 
 | Task | Checked result |
 | --- | --- |

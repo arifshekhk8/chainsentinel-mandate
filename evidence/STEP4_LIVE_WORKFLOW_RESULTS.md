@@ -2,7 +2,7 @@
 
 **18 October 2026. Result: passed.** The app, Gemini and the restricted executor were tested together through an isolated Chrome browser and a fresh Anvil chain, ID **31337**. Step 4 is complete for this local prototype. The fixed 40-case evaluation, real wallet-extension testing and public receipts remain separate work.
 
-See the [run history and receipts](step4-live-workflow.json), [actual browser screenshot](step4-live-workflow-desktop.png) and [repeatable check](../scripts/live-workflow.mjs). The successful run completed **10 workflow checks with seven real Gemini calls**. The RPC outage and provider-quota error below were deliberately injected and are labeled separately; they are not additional live model calls.
+See the [run history and receipts](local/step4/step4-live-workflow.json), [actual browser screenshot](local/step4/step4-live-workflow-desktop.png) and [repeatable check](../scripts/live-workflow.mjs). The successful run completed **10 workflow checks with seven real Gemini calls**. The RPC outage and provider-quota error below were deliberately injected and are labeled separately; they are not additional live model calls.
 
 | Check | Observed result |
 | --- | --- |

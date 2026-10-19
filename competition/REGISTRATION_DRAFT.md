@@ -1,8 +1,8 @@
 # Step 1 — Registration drafts
 
-**Drafts only. Nothing has been sent.** The original [registration form](registration.xlsx) is unchanged and unfilled. Copy it to ignored `competition/private/registration.xlsx` and complete that private copy. Never commit completed forms, identity/enrollment documents or a draft containing personal details. Never send a draft containing placeholders.
+**Registration sent, 19 October 2026 at 11:55 Asia/Dhaka; organizer acknowledgment pending.** Verified the reviewed message in Gmail Sent with all seven attachments. It was already sent when checked after the user authorized sending, so no duplicate was sent. The original [registration form](registration.xlsx) is unchanged and blank. The completed workbook, six identity/enrollment images and sent-message metadata stay under ignored `competition/private/`. Never commit that material.
 
-**Handoff:** user stopped for the night on 17 October. Review these drafts after returning on 18 October; the leader, private form fields and attachments remain pending. No email, registration or organizer query is scheduled. See [current progress](../PROGRESS.md#resume-on-18-october-2026).
+**Updated 19 October:** the final three-member package was reviewed, including all required personal fields, all three student numbers, six attachment references and the leader's own signature/date. Six named JPEGs and the actual attached Excel workbook were checked. Unused member rows are blank. The separate evidence-clarification message below is still an unsent draft. See [current progress](../PROGRESS.md#resume-on-18-october-2026).
 
 ## Reported team information
 
@@ -11,42 +11,44 @@
 | Project | Mandate |
 | Track / topic | International Track / F — Agent Wallet |
 | Team name | ChainSentinel, selected by the user |
-| Members | Four |
+| Members | Three, confirmed by the user on 19 October |
 | Nationality / enrollment | All Bangladeshi and full-time students, as reported by the user |
-| Institutions | IUBAT: two members; BRAC: one member, verify official spelling; Jagannath University: one member |
-| Team leader and individual names/details | Not supplied; complete privately in the official form |
-| Registration status | Not submitted; user originally intended to register on 19 October |
+| Institutions | IUBAT: two members; Jagannath University: one member |
+| Team leader and individual names/details | User is leader; complete reviewed details saved privately |
+| Registration status | Sent 19 October at 11:55 Bangladesh time; acknowledgment pending |
 
 On the reported facts, the team meets the size and non-Chinese-national proportion requirements. Enrollment and identity evidence still need organizer verification. Confirm each person is on only one competition team.
 
 ## Timing
 
-At the 17 October handoff, plan to review and complete registration on **18 October 2026**, once the leader, roster and attachments are ready. The user's earlier intended date was 19 October. The [IEEE announcement](https://www.ieee-cis-singapore.org/2026-fintechathon) says registration may close early and confirmation is normally within 48 hours. Preparation is not permission to send; a registration sent on 19 October could still be awaiting confirmation near the 20 October deadline.
+Registration preparation resumed on **18 October 2026**. The user's earlier intended date was 19 October. The [IEEE announcement](https://www.ieee-cis-singapore.org/2026-fintechathon), rechecked on 18 October, says registration may close early and confirmation is normally within 48 hours. Preparation is not permission to send; a registration sent on 19 October could still be awaiting confirmation near the 20 October deadline.
 
-The organizer's public notice does not establish whether slots remain available right now. Registration acceptance is confirmed only by the organizer. The project submission target remains **20 October, 21:59 Bangladesh time / 23:59 Beijing time**; do not assume registration acknowledgment extends that deadline.
+On 19 October the live [official website](https://fintechathon.g-ican.com/#/en) still displayed participation instructions and the registration download, with no closure notice observed; the current form still matches the preserved original. The IEEE announcement still lists 20 October and reserves early closure. Registration therefore appears available, but public notices do not establish whether slots remain right now. Registration acceptance is confirmed only by the organizer. The project submission target remains **20 October, 21:59 Bangladesh time / 23:59 Beijing time**; do not assume registration acknowledgment extends that deadline.
 
-## Project summary for the form
+## Submitted project summary — historical wording
 
 **Proposed entry title:** Mandate — An AI Wallet for Owner-Approved Business Bills
 
-Mandate is an AI wallet agent designed to help a small business pay approved supplier bills while keeping the owner in control. The owner reviews invoice details, approves payment recipients and exact amounts, sets spending limits and a minimum token reserve, and grants time-limited permission to a separate agent key. The agent reads supported invoices, identifies unclear or changed details, plans eligible payments by priority and due date, and explains why other bills must wait or be reviewed. A smart contract independently enforces approved payment details, spending boundaries, expiry, revocation and duplicate-payment prevention. The prototype will use synthetic invoices and a demo token, with public-testnet transaction evidence subject to organizer acceptance. Evaluation will measure successful task completion, unauthorized-payment attempts, explanation quality and owner effort compared with manual processing. The demonstration will show valid batch payments, altered recipients, duplicate bills, reserve protection and confirmed owner revocation.
+Mandate is an AI wallet agent for small businesses that pay supplier invoices. The owner reviews invoice details, approves exact recipients and amounts, and sets spending limits, a minimum reserve and permission expiry. The AI reads supported invoices, asks questions about unclear requests, proposes draft corrections and prepares payments in the approved order. A separate restricted key executes eligible payments only after confirmation. A smart contract independently checks approved details, spending limits, expiry, revocation and duplicate protection. The local prototype connects Gemini to invoice review and payment execution using synthetic invoices and a demo token. It has demonstrated a two-payment batch with verified receipts and safe handling of changed drafts, repeated plans and simulated connection failures. We will evaluate task completion, unsafe-payment attempts, explanation quality and owner effort against manual processing. Public-testnet evidence is planned, subject to organizer acceptance.
 
-This summary describes intended work. It does not claim completed implementation or evaluation results.
+This 139-word summary preserves the wording prepared for the submitted form. Since then, the [Groq local evaluation](../evidence/STEP5_GROQ_RESULTS.md) and [seven-action Sepolia setup](../evidence/STEP5_SEPOLIA_RESULTS.md) were completed; public bill execution remains pending. Do not alter the sent registration or send another copy to update this historical paragraph.
 
-## Registration email draft
+## Historical registration email template
+
+The actual reviewed message has been sent. This generic template is retained for context; do not send another registration copy.
 
 **To:** fintechathon@ican-x.com  
 **Subject:** International Track Registration – Bangladesh – ChainSentinel – [TEAM LEADER FULL NAME]
 
 Dear Organising Committee,
 
-We would like to register a four-member team for the 2026 Shenzhen International FinTech Competition, International Track, Topic F — Agent Wallet.
+We would like to register a three-member team for the 2026 Shenzhen International FinTech Competition, International Track, Topic F — Agent Wallet.
 
 Team name: ChainSentinel  
 Team leader: [FULL NAME]  
 Project: Mandate — An AI Wallet for Owner-Approved Business Bills
 
-All four members are Bangladeshi full-time students. Two members study at IUBAT, one at [CONFIRMED OFFICIAL BRAC INSTITUTION NAME], and one at Jagannath University.
+All three members are Bangladeshi full-time students. Two members study at IUBAT and one at Jagannath University.
 
 [AFTER ATTACHING: Please find our completed registration form and the required supporting documents attached.]
 
@@ -73,10 +75,10 @@ Kind regards,
 [TEAM LEADER FULL NAME]  
 ChainSentinel
 
-## Before sending
+## Completed registration review
 
-- Use team name ChainSentinel, choose the leader and complete every required member field in the private copy of the official workbook under `competition/private/`.
-- Fill ID/passport and student details locally. Do not paste ID numbers, scans, private keys or API keys into chat.
-- Attach the enrollment evidence and passport bio-page images requested by the current form. If relevant, include the form's required consent for a minor.
-- Remove every placeholder and verify all four members' details and declarations.
-- Send only after an explicit user instruction; retain the sent copy and organizer response privately. No form or email has been submitted by the assistant.
+- Verified required member fields, all three correct student numbers and matching document names in the actual attached workbook.
+- Reviewed three passport bio-pages and three enrollment images; all six prepared JPEGs are attached.
+- Verified the leader's own signature drawing and date survive Excel export. The assistant did not sign for the leader.
+- Confirmed the official mailbox and subject, reviewed message and seven completed attachments in Gmail Sent. No duplicate was sent.
+- Retain the sent copy and any organizer acknowledgment privately. Registration acceptance and testnet-evidence eligibility remain unconfirmed.

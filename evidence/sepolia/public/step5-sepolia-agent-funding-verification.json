@@ -1,0 +1,179 @@
+{
+  "recordedAt": "2026-10-19T14:47:00.026Z",
+  "evidenceType": "verified-public-sepolia-agent-funding",
+  "intent": {
+    "id": "cad67bbc-bdcc-46af-9e41-2204f75ad74b",
+    "payload": {
+      "instanceId": "42a08e9a-931e-436d-8e93-ac47587d0341",
+      "setupAction": "gas",
+      "title": "Fund the agent with 0.00005 Sepolia ETH",
+      "method": "fundAgentGas",
+      "args": [],
+      "expectedEvents": [],
+      "drafts": [],
+      "chainId": 11155111,
+      "owner": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+      "to": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4",
+      "data": "0x",
+      "dataHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+      "value": "50000000000000",
+      "fees": {
+        "gasLimit": "248870",
+        "maxFeePerGas": "33",
+        "maxPriorityFeePerGas": "1",
+        "maximumOutflowWei": "50000008212710",
+        "maximumOutflowETH": "0.00005000000821271",
+        "feeCapGwei": "0.05",
+        "totalDemoBudgetETH": "0.001"
+      },
+      "createdAt": "2026-10-19T14:43:40.888Z"
+    },
+    "status": "confirmed",
+    "hash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+    "receipt": {
+      "hash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+      "chainId": 11155111,
+      "blockNumber": 11948852,
+      "blockHash": "0x969a76e831ae283ce5a7115ce7bfde46580f236502b1b5067c53f6b351a2c691",
+      "status": 1,
+      "gasUsed": "204600",
+      "gasPrice": "17",
+      "confirmations": 2,
+      "contractAddress": null
+    },
+    "error": null
+  },
+  "transaction": {
+    "_type": "TransactionResponse",
+    "accessList": [],
+    "blockNumber": 11948852,
+    "blockHash": "0x969a76e831ae283ce5a7115ce7bfde46580f236502b1b5067c53f6b351a2c691",
+    "blobVersionedHashes": null,
+    "chainId": "11155111",
+    "data": "0x",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasLimit": "248870",
+    "gasPrice": "17",
+    "hash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+    "maxFeePerGas": "33",
+    "maxPriorityFeePerGas": "1",
+    "maxFeePerBlobGas": null,
+    "nonce": 229,
+    "signature": {
+      "_type": "signature",
+      "networkV": null,
+      "r": "0x4ad556c393204f87433da79dd5a30be8edc0178b1a3a862225bf3fd7352266ff",
+      "s": "0x11e4d27cc352b3e991560d5db91b13a1565258d381af5432811fcd33e224b225",
+      "v": 27
+    },
+    "to": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4",
+    "index": 109,
+    "type": 2,
+    "value": "50000000000000"
+  },
+  "receipt": {
+    "_type": "TransactionReceipt",
+    "blockHash": "0x969a76e831ae283ce5a7115ce7bfde46580f236502b1b5067c53f6b351a2c691",
+    "blockNumber": 11948852,
+    "contractAddress": null,
+    "cumulativeGasUsed": "98407466",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasPrice": "17",
+    "blobGasUsed": null,
+    "blobGasPrice": null,
+    "gasUsed": "204600",
+    "hash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+    "index": 109,
+    "logs": [
+      {
+        "_type": "log",
+        "address": "0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE",
+        "blockHash": "0x969a76e831ae283ce5a7115ce7bfde46580f236502b1b5067c53f6b351a2c691",
+        "blockNumber": 11948852,
+        "data": "0x00000000000000000000000000000000000000000000000000002d79883d2000",
+        "index": 301,
+        "topics": [
+          "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+          "0x000000000000000000000000dc2341ae41c44400128965ab0770567922f8d6ee",
+          "0x000000000000000000000000e9987a361f8286c396b0519aec3ab5d29f4553a4"
+        ],
+        "transactionHash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+        "transactionIndex": 109
+      }
+    ],
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000002002000000000000000000000000000000000000010000000000200000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000008000000000000000000000000000000000000000000510000000000000000000000000000000000000000000000000000000000000000",
+    "status": 1,
+    "to": "0xE9987a361f8286C396B0519aeC3AB5D29F4553A4"
+  },
+  "confirmations": 5,
+  "directTransactionMatchesReview": true,
+  "agentBalanceETH": "0.00005",
+  "vaultPaused": true,
+  "vaultMDT": "1000",
+  "allSevenSetupActionsVerified": true,
+  "setupCost": {
+    "actualOwnerGasETH": "0.000000000287704497",
+    "actualOwnerOutflowIncludingAgentFundingETH": "0.000050000287704497",
+    "reservedMaximumETH": "0.00005000065700361",
+    "approvedCapETH": "0.001",
+    "receipts": [
+      {
+        "hash": "0xf4d18e790a061f97025fd07e7d087118d9fa2d70f751d653d885d60a927e85e3",
+        "action": "gas",
+        "status": 1,
+        "gasFeeWei": "3478200",
+        "ownerValueOutflowWei": "50000000000000"
+      },
+      {
+        "hash": "0x2c53a2312596cfe2a378b7d53f18291be343fa3839712a6651eaf7c6ea45d82f",
+        "action": "agent",
+        "status": 1,
+        "gasFeeWei": "7348242",
+        "ownerValueOutflowWei": "0"
+      },
+      {
+        "hash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+        "action": "design",
+        "status": 1,
+        "gasFeeWei": "5062700",
+        "ownerValueOutflowWei": "0"
+      },
+      {
+        "hash": "0x5ee96ac9a18b63d8f605947746c2bb5180f9273c6af433df73381cd533f5fb60",
+        "action": "host",
+        "status": 1,
+        "gasFeeWei": "9947523",
+        "ownerValueOutflowWei": "0"
+      },
+      {
+        "hash": "0xac511b822fc144485938651b88365b0216ae5deb03241c5de318f7c32078ee14",
+        "action": "deposit",
+        "status": 1,
+        "gasFeeWei": "2841982",
+        "ownerValueOutflowWei": "0"
+      },
+      {
+        "hash": "0x715e2f6bf7da5e87946c0f27bdc5bc786339259c7686d438b74fe2017f657bf1",
+        "action": "deposit",
+        "status": 0,
+        "gasFeeWei": "4418538",
+        "ownerValueOutflowWei": "0"
+      },
+      {
+        "hash": "0x2b53c38d45a186ef647ead9ac6f361839ad9f860150e6fa451370de20b2081e3",
+        "action": "vault",
+        "status": 1,
+        "gasFeeWei": "200265568",
+        "ownerValueOutflowWei": "0"
+      },
+      {
+        "hash": "0xd79c6a0fc89ec8440e71350f84145f51addb3b00a8d923070b23c06592b73d39",
+        "action": "token",
+        "status": 1,
+        "gasFeeWei": "54341744",
+        "ownerValueOutflowWei": "0"
+      }
+    ]
+  },
+  "publicPaymentsNotStarted": true
+}

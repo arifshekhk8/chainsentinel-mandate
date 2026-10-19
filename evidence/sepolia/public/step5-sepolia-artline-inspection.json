@@ -1,0 +1,146 @@
+{
+  "recordedAt": "2026-10-19T14:23:42.322Z",
+  "evidenceType": "public-sepolia-artline-inspection",
+  "intent": {
+    "id": "e8357c64-6515-46af-8fe5-98cc88acbab1",
+    "payload": {
+      "instanceId": "42a08e9a-931e-436d-8e93-ac47587d0341",
+      "setupAction": "design",
+      "title": "Set Artline’s test recipient",
+      "method": "setVendor",
+      "args": [
+        "0x880a6c8323562fe018855c18467d83816c3f1dab785ecbaf113185aace2f9b35",
+        "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+        true
+      ],
+      "expectedEvents": [
+        {
+          "emitter": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+          "name": "VendorSet",
+          "values": {
+            "vendorId": "0x880a6c8323562fe018855c18467d83816c3f1dab785ecbaf113185aace2f9b35",
+            "recipient": "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+            "enabled": true
+          }
+        }
+      ],
+      "drafts": [],
+      "chainId": 11155111,
+      "owner": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+      "to": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+      "data": "0x62b32016880a6c8323562fe018855c18467d83816c3f1dab785ecbaf113185aace2f9b35000000000000000000000000fdc4d1bb2319d04848fafaee5c8cf5a0172e02030000000000000000000000000000000000000000000000000000000000000001",
+      "dataHash": "0x0056d73f6ab070868326e2c0a2c16ec8eba13c5459071e86ddd0e7213aeebb24",
+      "value": "0",
+      "fees": {
+        "gasLimit": "307574",
+        "maxFeePerGas": "37",
+        "maxPriorityFeePerGas": "1",
+        "maximumOutflowWei": "11380238",
+        "maximumOutflowETH": "0.000000000011380238",
+        "feeCapGwei": "0.05",
+        "totalDemoBudgetETH": "0.001"
+      },
+      "createdAt": "2026-10-19T14:21:48.240Z"
+    },
+    "status": "confirmed",
+    "hash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+    "receipt": {
+      "hash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+      "chainId": 11155111,
+      "blockNumber": 11948737,
+      "blockHash": "0x7070af99fe21ab5c12a48b14e9500f9f083f68cbe71cf5400623d8ec99a8e682",
+      "status": 1,
+      "gasUsed": "253135",
+      "gasPrice": "20",
+      "confirmations": 2,
+      "contractAddress": null
+    },
+    "error": null
+  },
+  "transaction": {
+    "_type": "TransactionResponse",
+    "accessList": [],
+    "blockNumber": 11948737,
+    "blockHash": "0x7070af99fe21ab5c12a48b14e9500f9f083f68cbe71cf5400623d8ec99a8e682",
+    "blobVersionedHashes": null,
+    "chainId": "11155111",
+    "data": "0x62b32016880a6c8323562fe018855c18467d83816c3f1dab785ecbaf113185aace2f9b35000000000000000000000000fdc4d1bb2319d04848fafaee5c8cf5a0172e02030000000000000000000000000000000000000000000000000000000000000001",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasLimit": "256311",
+    "gasPrice": "20",
+    "hash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+    "maxFeePerGas": "37",
+    "maxPriorityFeePerGas": "1",
+    "maxFeePerBlobGas": null,
+    "nonce": 227,
+    "signature": {
+      "_type": "signature",
+      "networkV": null,
+      "r": "0x928d4f228b5b5745d821d2f88b548f23ba6a960b910561f43303b7db59fe7bd8",
+      "s": "0x1fbcf33bb02bf6c25f197ce5433a19b073963050b0f717caa64cfb22c664eb7c",
+      "v": 27
+    },
+    "to": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+    "index": 130,
+    "type": 2,
+    "value": "0"
+  },
+  "receipt": {
+    "_type": "TransactionReceipt",
+    "blockHash": "0x7070af99fe21ab5c12a48b14e9500f9f083f68cbe71cf5400623d8ec99a8e682",
+    "blockNumber": 11948737,
+    "contractAddress": null,
+    "cumulativeGasUsed": "79285957",
+    "from": "0xDc2341ae41c44400128965aB0770567922F8d6ee",
+    "gasPrice": "20",
+    "blobGasUsed": null,
+    "blobGasPrice": null,
+    "gasUsed": "253135",
+    "hash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+    "index": 130,
+    "logs": [
+      {
+        "_type": "log",
+        "address": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+        "blockHash": "0x7070af99fe21ab5c12a48b14e9500f9f083f68cbe71cf5400623d8ec99a8e682",
+        "blockNumber": 11948737,
+        "data": "0x",
+        "index": 322,
+        "topics": [
+          "0xc21f3525d7b7c17a17539b981322b821b7cb2ed1d6a569badf78c55fa7665a96",
+          "0x0000000000000000000000000000000000000000000000000000000000000003"
+        ],
+        "transactionHash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+        "transactionIndex": 130
+      },
+      {
+        "_type": "log",
+        "address": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89",
+        "blockHash": "0x7070af99fe21ab5c12a48b14e9500f9f083f68cbe71cf5400623d8ec99a8e682",
+        "blockNumber": 11948737,
+        "data": "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001",
+        "index": 323,
+        "topics": [
+          "0xc65184fa18cacc55712b2170d8d61b3d529d30e8f54f8a2a2eb32c9e78e61035",
+          "0x880a6c8323562fe018855c18467d83816c3f1dab785ecbaf113185aace2f9b35",
+          "0x000000000000000000000000fdc4d1bb2319d04848fafaee5c8cf5a0172e0203"
+        ],
+        "transactionHash": "0x1a46a18cfe200fdc8416ce38ae5ee461159a4317da183afe62a9dd9f30145110",
+        "transactionIndex": 130
+      }
+    ],
+    "logsBloom": "0x00000000000008000100000000800000400000000000000040000000000000000000000000000000000000000000000000000000020080000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000100000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000400000000800000000000000000400000000000000000000000000000000000000000200000000800000000020000000000000000000000000000000000040000000000000000000000000000000000",
+    "status": 1,
+    "to": "0x1E2bC947b455DE5825caDE9D44e7Ec04B8B76f89"
+  },
+  "confirmations": 4,
+  "actualGasFeeETH": "0.0000000000050627",
+  "directMatch": true,
+  "vendor": {
+    "recipient": "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+    "enabled": true,
+    "revision": "1"
+  },
+  "expectedRecipient": "0xFDC4D1bb2319D04848faFaee5c8CF5A0172E0203",
+  "independentlyVerified": true
+}
