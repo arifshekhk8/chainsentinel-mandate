@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: chainsentinel-mandate
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci --include=dev && npm --prefix scripts/hosting ci --omit=dev && npm run build && npm run build:app
+    startCommand: node scripts/hosting/start.mjs
+    healthCheckPath: /healthz
+    autoDeployTrigger: 'off'
+    envVars:
+      - key: NODE_VERSION
+        value: 25.2.1
+      - key: DATABASE_URL
+        sync: false
+      - key: MANDATE_OWNER_PASSWORD
+        sync: false
+      - key: MANDATE_SESSION_SECRET
+        sync: false
+      - key: MANDATE_STORAGE_SECRET
+        sync: false
+      - key: MANDATE_AGENT_PRIVATE_KEY
+        sync: false
+      - key: AI_PROVIDER
+        value: groq
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-120b
+      - key: GROQ_API_KEY
+        sync: false

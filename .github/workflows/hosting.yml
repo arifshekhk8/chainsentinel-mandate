@@ -1,0 +1,39 @@
+name: Hosting checks
+
+on:
+  push:
+    branches: [main, deploy/render-owner-workspace]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      CI: 'true'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '25.2.1'
+          cache: npm
+      - name: Install pinned source and hosting dependencies
+        run: |
+          npm ci --include=dev --no-fund
+          npm --prefix scripts/hosting ci --ignore-scripts --no-fund
+      - name: Build contracts and browser app
+        run: |
+          npm run build
+          npm run build:app
+      - name: Check hosted access, persistence and migration
+        run: node --test test/hosting.test.mjs test/hosting-migration.test.mjs
+      - name: Check source privacy and documentation
+        run: npm run check:repo
