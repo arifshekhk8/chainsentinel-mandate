@@ -35,7 +35,8 @@ export async function startGateway({ upstream, publicOrigin, password, sessionSe
     };
     res.setHeader('cache-control', 'no-store');
     res.setHeader('x-content-type-options', 'nosniff');
-    res.setHeader('referrer-policy', 'no-referrer');
+    // Browser navigation forms need their same-origin Origin header for the login/logout checks.
+    res.setHeader('referrer-policy', 'same-origin');
     res.setHeader('content-security-policy', "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'");
     if (!localTest) res.setHeader('strict-transport-security', 'max-age=31536000');
     try {

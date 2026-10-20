@@ -35,5 +35,9 @@ jobs:
           npm run build:app
       - name: Check hosted access, persistence and migration
         run: node --test test/hosting.test.mjs test/hosting-migration.test.mjs
+      - name: Install isolated Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Check browser sign-in and sign-out
+        run: node --test test/hosting-browser.test.mjs
       - name: Check source privacy and documentation
         run: npm run check:repo

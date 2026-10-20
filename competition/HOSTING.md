@@ -20,7 +20,7 @@ Use the owner password from private runtime configuration to sign in. Sign-out i
 
 ## Checks and current scope
 
-Run `node --test test/hosting.test.mjs test/hosting-migration.test.mjs` after installing both dependency sets and building contracts. These 15 local checks cover authentication, source-preserving migration, encrypted recovery, conflicting saves, storage failure before broadcast and exact disposable-chain payments. The hosting CI workflow repeats them on Ubuntu without cloud/model/wallet credentials.
+Run `node --test test/hosting.test.mjs test/hosting-migration.test.mjs test/hosting-browser.test.mjs` after installing both dependency sets and building contracts. These 16 local checks cover authentication, source-preserving migration, encrypted recovery, conflicting saves, storage failure before broadcast and exact disposable-chain payments. Browser checks use an isolated Chrome profile locally and Chromium in CI; install Chromium with `npx playwright install --with-deps chromium` in a new CI environment. The hosting CI workflow repeats them on Ubuntu without cloud/model/wallet credentials.
 
 Before claiming deployment complete, verify the actual Render build, unauthenticated API rejection, sign-in, retained three-bill/two-payment history, expected Sepolia balance/revoked agent and persistence after a cloud restart. A successful create request or build alone is insufficient. Check [PROGRESS.md](../PROGRESS.md) for the latest actual status.
 
