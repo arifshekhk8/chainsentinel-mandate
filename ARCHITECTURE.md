@@ -1,5 +1,7 @@
 # Mandate architecture
 
+**Current hosting status, 20 October 2026:** [Mandate](https://chainsentinel-mandate.onrender.com) is live on Render Free with encrypted Neon Free persistence. Protected browser access, three reviewed bills/two original receipts and identical history after an actual restart are verified; 16 hosting checks and matching Linux CI pass. No new model call or public transaction occurred. Login details remain private. [Hosting verification](evidence/HOSTING_RESULTS.md) takes precedence over older hosting/next-action notes below. The competition submission is still pending.
+
 **Document review, 19 October 2026:** current behavior and Step 5 evidence were checked against the source. [Full isolated local review](evidence/maintenance/2026-10-19/full-review/results.json) passed; [the evidence index](evidence/README.md) and [relocation map](evidence/locations.json) describe the organized folders. Raw measured records and all 47 frozen source files remain unchanged. Step 6 is deferred.
 
 This describes the implemented local core, owner workflow and AI/payment workflow in [PROJECT_PLAN.md](PROJECT_PLAN.md). On 18 October the user chose Gemini and authorized live checks; the [full browser/local-payment review](evidence/STEP4_LIVE_WORKFLOW_RESULTS.md) now passes. Earlier [Gemini results](evidence/STEP4_GEMINI_RESULTS.md) retain development failures and limits. A smart contract checks payment rules even if the AI makes a mistake.

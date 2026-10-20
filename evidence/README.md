@@ -1,5 +1,7 @@
 # Evidence index
 
+**Current hosting status, 20 October 2026:** [Mandate](https://chainsentinel-mandate.onrender.com) is live on Render Free with encrypted Neon Free persistence. Protected browser access, three reviewed bills/two original receipts and identical history after an actual restart are verified; 16 hosting checks and matching Linux CI pass. No new model call or public transaction occurred. Login details remain private. [Hosting verification](../evidence/HOSTING_RESULTS.md) takes precedence over older hosting/next-action notes below. The competition submission is still pending.
+
 **Updated 19 October 2026.** Start with the current reports below. Step 5 is complete within its documented scope; Step 6 has not started. Local/scripted tests, live model measurements and public Sepolia receipts are separate evidence.
 
 ## Read first

@@ -1,5 +1,7 @@
 # Competition requirements
 
+**Current hosting status, 20 October 2026:** [Mandate](https://chainsentinel-mandate.onrender.com) is live on Render Free with encrypted Neon Free persistence. Protected browser access, three reviewed bills/two original receipts and identical history after an actual restart are verified; 16 hosting checks and matching Linux CI pass. No new model call or public transaction occurred. Login details remain private. [Hosting verification](../evidence/HOSTING_RESULTS.md) takes precedence over older hosting/next-action notes below. The competition submission is still pending.
+
 Rules checked 17 October 2026; registration announcements, official participation instructions and current form rechecked 19 October. This note preserves the essential details from the removed research pack.
 
 **Registration update, 19 October:** the reviewed seven-file package is verified in Gmail Sent at 11:55 Bangladesh time, addressed to the official mailbox with the required subject. It was already sent when checked after the user authorized sending; no duplicate was sent. The completed form and six passport/enrollment images were reviewed and remain private. Organizer acknowledgment and acceptance of testnet evidence remain pending. The current official blank workbook still matches the preserved template's SHA-256. See the [registration record](REGISTRATION_DRAFT.md) and [project handoff](../PROGRESS.md#resume-on-18-october-2026). The judging/submission details below retain the 17 October rules check.

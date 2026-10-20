@@ -1,0 +1,566 @@
+verify	Set up job	﻿2026-10-20T08:06:49.9131103Z Current runner version: '2.337.0'
+verify	Set up job	2026-10-20T08:06:49.9194808Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-10-20T08:06:49.9196180Z Hosted Compute Agent
+verify	Set up job	2026-10-20T08:06:49.9197043Z Version: 20261012.601
+verify	Set up job	2026-10-20T08:06:49.9198365Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+verify	Set up job	2026-10-20T08:06:49.9199602Z Build Date: 2026-10-12T17:48:21Z
+verify	Set up job	2026-10-20T08:06:49.9200603Z Worker ID: {9d50bb6f-2974-4d74-b1cc-8e9c08c4bd1a}
+verify	Set up job	2026-10-20T08:06:49.9201839Z Region: westus3
+verify	Set up job	2026-10-20T08:06:49.9202666Z Cloud: Azure
+verify	Set up job	2026-10-20T08:06:49.9203544Z ##[endgroup]
+verify	Set up job	2026-10-20T08:06:49.9205686Z ##[group]Operating System
+verify	Set up job	2026-10-20T08:06:49.9206625Z Ubuntu
+verify	Set up job	2026-10-20T08:06:49.9207502Z 24.04.5
+verify	Set up job	2026-10-20T08:06:49.9228673Z LTS
+verify	Set up job	2026-10-20T08:06:49.9229610Z ##[endgroup]
+verify	Set up job	2026-10-20T08:06:49.9230611Z ##[group]Runner Image
+verify	Set up job	2026-10-20T08:06:49.9231568Z Image: ubuntu-24.04
+verify	Set up job	2026-10-20T08:06:49.9232506Z Version: 20261012.334.1
+verify	Set up job	2026-10-20T08:06:49.9234115Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+verify	Set up job	2026-10-20T08:06:49.9236912Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+verify	Set up job	2026-10-20T08:06:49.9238863Z ##[endgroup]
+verify	Set up job	2026-10-20T08:06:49.9241063Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-10-20T08:06:49.9243948Z Contents: read
+verify	Set up job	2026-10-20T08:06:49.9244961Z Metadata: read
+verify	Set up job	2026-10-20T08:06:49.9245855Z ##[endgroup]
+verify	Set up job	2026-10-20T08:06:49.9249020Z Secret source: Actions
+verify	Set up job	2026-10-20T08:06:49.9250571Z Cache mode: write
+verify	Set up job	2026-10-20T08:06:49.9251881Z Prepare workflow directory
+verify	Set up job	2026-10-20T08:06:49.9894379Z Prepare all required actions
+verify	Set up job	2026-10-20T08:06:49.9968807Z Getting action download info
+verify	Set up job	2026-10-20T08:06:50.3496456Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+verify	Set up job	2026-10-20T08:06:50.4265602Z Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+verify	Set up job	2026-10-20T08:06:51.3046417Z Complete job name: verify
+verify	Check out source	﻿2026-10-20T08:06:51.3783579Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+verify	Check out source	2026-10-20T08:06:51.3784972Z with:
+verify	Check out source	2026-10-20T08:06:51.3785578Z   persist-credentials: false
+verify	Check out source	2026-10-20T08:06:51.3786281Z   repository: arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T08:06:51.3791051Z   token: ***
+verify	Check out source	2026-10-20T08:06:51.3791626Z   ssh-strict: true
+verify	Check out source	2026-10-20T08:06:51.3792263Z   ssh-user: git
+verify	Check out source	2026-10-20T08:06:51.3792818Z   clean: true
+verify	Check out source	2026-10-20T08:06:51.3793395Z   sparse-checkout-cone-mode: true
+verify	Check out source	2026-10-20T08:06:51.3794095Z   fetch-depth: 1
+verify	Check out source	2026-10-20T08:06:51.3794657Z   fetch-tags: false
+verify	Check out source	2026-10-20T08:06:51.3795302Z   show-progress: true
+verify	Check out source	2026-10-20T08:06:51.3795886Z   lfs: false
+verify	Check out source	2026-10-20T08:06:51.3796417Z   submodules: false
+verify	Check out source	2026-10-20T08:06:51.3797056Z   set-safe-directory: true
+verify	Check out source	2026-10-20T08:06:51.3797709Z   allow-unsafe-pr-checkout: false
+verify	Check out source	2026-10-20T08:06:51.3798835Z env:
+verify	Check out source	2026-10-20T08:06:51.3799390Z   CI: true
+verify	Check out source	2026-10-20T08:06:51.3799925Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:51.4977164Z Syncing repository: arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T08:06:51.4981173Z ##[group]Getting Git version info
+verify	Check out source	2026-10-20T08:06:51.4983333Z Working directory is '/home/runner/work/chainsentinel-mandate/chainsentinel-mandate'
+verify	Check out source	2026-10-20T08:06:51.4985751Z [command]/usr/bin/git version
+verify	Check out source	2026-10-20T08:06:51.5121873Z git version 2.55.0
+verify	Check out source	2026-10-20T08:06:51.5210651Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:51.5226972Z Temporarily overriding HOME='/home/runner/work/_temp/cec64f35-8ac6-49bd-bdc6-bf6e41c8a184' before making global git config changes
+verify	Check out source	2026-10-20T08:06:51.5229684Z Adding repository directory to the temporary git global config as a safe directory
+verify	Check out source	2026-10-20T08:06:51.5231127Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/chainsentinel-mandate/chainsentinel-mandate
+verify	Check out source	2026-10-20T08:06:51.5272264Z Deleting the contents of '/home/runner/work/chainsentinel-mandate/chainsentinel-mandate'
+verify	Check out source	2026-10-20T08:06:51.5280031Z ##[group]Determining repository object format
+verify	Check out source	2026-10-20T08:06:51.5293578Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:51.5310009Z ##[group]Initializing the repository
+verify	Check out source	2026-10-20T08:06:51.5312394Z [command]/usr/bin/git init /home/runner/work/chainsentinel-mandate/chainsentinel-mandate
+verify	Check out source	2026-10-20T08:06:51.5394620Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Check out source	2026-10-20T08:06:51.5412159Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Check out source	2026-10-20T08:06:51.5419227Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Check out source	2026-10-20T08:06:51.5439694Z hint: call:
+verify	Check out source	2026-10-20T08:06:51.5442299Z hint:
+verify	Check out source	2026-10-20T08:06:51.5443669Z hint: 	git config --global init.defaultBranch <name>
+verify	Check out source	2026-10-20T08:06:51.5445551Z hint:
+verify	Check out source	2026-10-20T08:06:51.5446970Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Check out source	2026-10-20T08:06:51.5450699Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Check out source	2026-10-20T08:06:51.5455282Z hint:
+verify	Check out source	2026-10-20T08:06:51.5472023Z hint: 	git branch -m <name>
+verify	Check out source	2026-10-20T08:06:51.5481060Z hint:
+verify	Check out source	2026-10-20T08:06:51.5483298Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Check out source	2026-10-20T08:06:51.5485715Z Initialized empty Git repository in /home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/
+verify	Check out source	2026-10-20T08:06:51.5490825Z [command]/usr/bin/git remote add origin https://github.com/arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T08:06:51.5494956Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:51.5496724Z ##[group]Disabling automatic garbage collection
+verify	Check out source	2026-10-20T08:06:51.5498537Z [command]/usr/bin/git config --local gc.auto 0
+verify	Check out source	2026-10-20T08:06:51.5569956Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:51.5585561Z ##[group]Setting up auth
+verify	Check out source	2026-10-20T08:06:51.5587236Z Removing SSH command configuration
+verify	Check out source	2026-10-20T08:06:51.5589285Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Check out source	2026-10-20T08:06:51.5642092Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Check out source	2026-10-20T08:06:51.6083039Z Removing HTTP extra header
+verify	Check out source	2026-10-20T08:06:51.6085637Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Check out source	2026-10-20T08:06:51.6190994Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Check out source	2026-10-20T08:06:51.6384827Z Removing includeIf entries pointing to credentials config files
+verify	Check out source	2026-10-20T08:06:51.6386727Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Check out source	2026-10-20T08:06:51.6414255Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Check out source	2026-10-20T08:06:51.6630031Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Check out source	2026-10-20T08:06:51.6667517Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path /home/runner/work/_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:51.6696784Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:51.6730751Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:51.6763002Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:51.6789717Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:51.6791806Z ##[group]Fetching the repository
+verify	Check out source	2026-10-20T08:06:51.6797217Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8495f599ea635e5e68a5643df43225da7164d60a:refs/remotes/origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T08:06:53.0922933Z From https://github.com/arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T08:06:53.0925712Z  * [new ref]         8495f599ea635e5e68a5643df43225da7164d60a -> origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T08:06:53.0936005Z [command]/usr/bin/git branch --list --remote origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T08:06:53.0939461Z   origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T08:06:53.0944692Z [command]/usr/bin/git rev-parse refs/remotes/origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T08:06:53.0947427Z 8495f599ea635e5e68a5643df43225da7164d60a
+verify	Check out source	2026-10-20T08:06:53.0952668Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:53.0955061Z ##[group]Determining the checkout info
+verify	Check out source	2026-10-20T08:06:53.0957838Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:53.0960910Z [command]/usr/bin/git sparse-checkout disable
+verify	Check out source	2026-10-20T08:06:53.0966684Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Check out source	2026-10-20T08:06:53.0982358Z ##[group]Checking out the ref
+verify	Check out source	2026-10-20T08:06:53.0987097Z [command]/usr/bin/git checkout --progress --force -B deploy/render-owner-workspace refs/remotes/origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T08:06:53.1489301Z Switched to a new branch 'deploy/render-owner-workspace'
+verify	Check out source	2026-10-20T08:06:53.1497858Z branch 'deploy/render-owner-workspace' set up to track 'origin/deploy/render-owner-workspace'.
+verify	Check out source	2026-10-20T08:06:53.1520171Z ##[endgroup]
+verify	Check out source	2026-10-20T08:06:53.1557525Z [command]/usr/bin/git log -1 --format=%H
+verify	Check out source	2026-10-20T08:06:53.1575105Z 8495f599ea635e5e68a5643df43225da7164d60a
+verify	Check out source	2026-10-20T08:06:53.1612789Z ##[group]Removing auth
+verify	Check out source	2026-10-20T08:06:53.1615228Z Removing SSH command configuration
+verify	Check out source	2026-10-20T08:06:53.1640035Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Check out source	2026-10-20T08:06:53.1676125Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Check out source	2026-10-20T08:06:53.1999641Z Removing HTTP extra header
+verify	Check out source	2026-10-20T08:06:53.2011253Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Check out source	2026-10-20T08:06:53.2028562Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Check out source	2026-10-20T08:06:53.2359973Z Removing includeIf entries pointing to credentials config files
+verify	Check out source	2026-10-20T08:06:53.2383652Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Check out source	2026-10-20T08:06:53.2410781Z includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path
+verify	Check out source	2026-10-20T08:06:53.2430845Z includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path
+verify	Check out source	2026-10-20T08:06:53.2459683Z includeif.gitdir:/github/workspace/.git.path
+verify	Check out source	2026-10-20T08:06:53.2462788Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+verify	Check out source	2026-10-20T08:06:53.2476477Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path
+verify	Check out source	2026-10-20T08:06:53.2482528Z /home/runner/work/_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:53.2493675Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-75c34d28\-1b7f\-4ec3\-aa40\-2bb0dfa5d91a\.config
+verify	Check out source	2026-10-20T08:06:53.2505694Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path
+verify	Check out source	2026-10-20T08:06:53.2520231Z /home/runner/work/_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:53.2559798Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-75c34d28\-1b7f\-4ec3\-aa40\-2bb0dfa5d91a\.config
+verify	Check out source	2026-10-20T08:06:53.2577671Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+verify	Check out source	2026-10-20T08:06:53.2608009Z /github/runner_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:53.2617204Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-75c34d28\-1b7f\-4ec3\-aa40\-2bb0dfa5d91a\.config
+verify	Check out source	2026-10-20T08:06:53.2647610Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+verify	Check out source	2026-10-20T08:06:53.2668908Z /github/runner_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config
+verify	Check out source	2026-10-20T08:06:53.2690408Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-75c34d28\-1b7f\-4ec3\-aa40\-2bb0dfa5d91a\.config
+verify	Check out source	2026-10-20T08:06:53.2718887Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Check out source	2026-10-20T08:06:53.2891310Z Removing credentials config '/home/runner/work/_temp/git-credentials-75c34d28-1b7f-4ec3-aa40-2bb0dfa5d91a.config'
+verify	Check out source	2026-10-20T08:06:53.2901320Z ##[endgroup]
+verify	Set up Node	﻿2026-10-20T08:06:53.3233378Z ##[group]Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+verify	Set up Node	2026-10-20T08:06:53.3234937Z with:
+verify	Set up Node	2026-10-20T08:06:53.3235801Z   node-version: 25.2.1
+verify	Set up Node	2026-10-20T08:06:53.3236744Z   cache: npm
+verify	Set up Node	2026-10-20T08:06:53.3237620Z   check-latest: false
+verify	Set up Node	2026-10-20T08:06:53.3247036Z   token: ***
+verify	Set up Node	2026-10-20T08:06:53.3247978Z   package-manager-cache: true
+verify	Set up Node	2026-10-20T08:06:53.3249191Z env:
+verify	Set up Node	2026-10-20T08:06:53.3249998Z   CI: true
+verify	Set up Node	2026-10-20T08:06:53.3250828Z ##[endgroup]
+verify	Set up Node	2026-10-20T08:06:53.4555457Z Attempting to download 25.2.1...
+verify	Set up Node	2026-10-20T08:06:54.5458323Z Not found in manifest. Falling back to download directly from Node
+verify	Set up Node	2026-10-20T08:06:54.6268744Z Acquiring 25.2.1 - x64 from https://nodejs.org/dist/v25.2.1/node-v25.2.1-linux-x64.tar.gz
+verify	Set up Node	2026-10-20T08:06:55.0598485Z Extracting ...
+verify	Set up Node	2026-10-20T08:06:55.0726097Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/09654588-8a27-4358-b101-211059cb54aa -f /home/runner/work/_temp/8a034dd8-21af-44eb-865a-3a8209c21977
+verify	Set up Node	2026-10-20T08:06:56.2784026Z Adding to the cache ...
+verify	Set up Node	2026-10-20T08:06:58.2884097Z Done
+verify	Set up Node	2026-10-20T08:06:58.2966260Z ##[group]Environment details
+verify	Set up Node	2026-10-20T08:06:58.5579434Z node: v25.2.1
+verify	Set up Node	2026-10-20T08:06:58.5580136Z npm: 11.6.2
+verify	Set up Node	2026-10-20T08:06:58.5580454Z yarn: 1.22.22
+verify	Set up Node	2026-10-20T08:06:58.5581128Z ##[endgroup]
+verify	Set up Node	2026-10-20T08:06:58.5592582Z [command]/opt/hostedtoolcache/node/25.2.1/x64/bin/npm config get cache
+verify	Set up Node	2026-10-20T08:06:58.6545621Z /home/runner/.npm
+verify	Set up Node	2026-10-20T08:06:58.8749102Z Cache hit for: node-cache-Linux-x64-npm-80061c9adb6f52ae5c39fa124807633bf991bc6a4372dd393049476de1900406
+verify	Set up Node	2026-10-20T08:07:00.1115619Z Received 16777216 of 105954151 (15.8%), 16.0 MBs/sec
+verify	Set up Node	2026-10-20T08:07:00.7247715Z Received 105954151 of 105954151 (100.0%), 62.6 MBs/sec
+verify	Set up Node	2026-10-20T08:07:00.7262521Z Cache Size: ~101 MB (105954151 B)
+verify	Set up Node	2026-10-20T08:07:00.7372266Z [command]/usr/bin/tar -xf /home/runner/work/_temp/69c61a81-b394-4f1e-b8c3-8739c9fdb143/cache.tzst -P -C /home/runner/work/chainsentinel-mandate/chainsentinel-mandate --use-compress-program unzstd
+verify	Set up Node	2026-10-20T08:07:00.9668961Z Cache restored successfully
+verify	Set up Node	2026-10-20T08:07:00.9709399Z Cache restored from key: node-cache-Linux-x64-npm-80061c9adb6f52ae5c39fa124807633bf991bc6a4372dd393049476de1900406
+verify	Install pinned source and hosting dependencies	﻿2026-10-20T08:07:01.0724318Z ##[group]Run npm ci --include=dev --no-fund
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:01.0724994Z ^[[36;1mnpm ci --include=dev --no-fund^[[0m
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:01.0725696Z ^[[36;1mnpm --prefix scripts/hosting ci --ignore-scripts --no-fund^[[0m
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:01.6710825Z shell: /usr/bin/bash -e {0}
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:01.6711350Z env:
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:01.6711560Z   CI: true
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:01.6711758Z ##[endgroup]
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:04.9811685Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:04.9818508Z added 29 packages, and audited 30 packages in 3s
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:04.9829987Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:04.9830713Z found 0 vulnerabilities
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:05.3777972Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:05.3779178Z added 1 package, and audited 2 packages in 317ms
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:05.3787260Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T08:07:05.3787911Z found 0 vulnerabilities
+verify	Build contracts and browser app	﻿2026-10-20T08:07:05.3869355Z ##[group]Run npm run build
+verify	Build contracts and browser app	2026-10-20T08:07:05.3869662Z ^[[36;1mnpm run build^[[0m
+verify	Build contracts and browser app	2026-10-20T08:07:05.3869898Z ^[[36;1mnpm run build:app^[[0m
+verify	Build contracts and browser app	2026-10-20T08:07:05.3907062Z shell: /usr/bin/bash -e {0}
+verify	Build contracts and browser app	2026-10-20T08:07:05.3907332Z env:
+verify	Build contracts and browser app	2026-10-20T08:07:05.3907528Z   CI: true
+verify	Build contracts and browser app	2026-10-20T08:07:05.3907723Z ##[endgroup]
+verify	Build contracts and browser app	2026-10-20T08:07:05.4878929Z 
+verify	Build contracts and browser app	2026-10-20T08:07:05.4879854Z > chainsentinel-mandate@0.1.0 build
+verify	Build contracts and browser app	2026-10-20T08:07:05.4880772Z > node scripts/foundry.mjs forge build
+verify	Build contracts and browser app	2026-10-20T08:07:05.4881352Z 
+verify	Build contracts and browser app	2026-10-20T08:07:05.9135327Z Compiling 20 files with Solc 0.8.37
+verify	Build contracts and browser app	2026-10-20T08:07:07.0507590Z Solc 0.8.37 finished in 1.14s
+verify	Build contracts and browser app	2026-10-20T08:07:07.0536674Z Compiler run successful!
+verify	Build contracts and browser app	2026-10-20T08:07:07.0571298Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T08:07:07.0572726Z     ╭▸ contracts/MandateVault.sol:211:13
+verify	Build contracts and browser app	2026-10-20T08:07:07.0575183Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0585071Z 211 │         if (block.timestamp < agentNotBefore) revert SessionNotStarted();
+verify	Build contracts and browser app	2026-10-20T08:07:07.0586725Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T08:07:07.0599099Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0600242Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T08:07:07.0600857Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.0601605Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T08:07:07.0602627Z     ╭▸ contracts/MandateVault.sol:212:13
+verify	Build contracts and browser app	2026-10-20T08:07:07.0603207Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0604065Z 212 │         if (block.timestamp >= agentExpiresAt) revert SessionExpired();
+verify	Build contracts and browser app	2026-10-20T08:07:07.0604989Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T08:07:07.0605551Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0606346Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T08:07:07.0606934Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.0607619Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T08:07:07.0608966Z     ╭▸ contracts/MandateVault.sol:218:13
+verify	Build contracts and browser app	2026-10-20T08:07:07.0609690Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0610690Z 218 │         if (block.timestamp < bill.notBefore) revert BillNotDue();
+verify	Build contracts and browser app	2026-10-20T08:07:07.0611782Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T08:07:07.0612498Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0613498Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T08:07:07.0614282Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.0615133Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T08:07:07.0616425Z     ╭▸ contracts/MandateVault.sol:219:13
+verify	Build contracts and browser app	2026-10-20T08:07:07.0617027Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0617866Z 219 │         if (block.timestamp >= bill.expiresAt) revert BillExpired();
+verify	Build contracts and browser app	2026-10-20T08:07:07.0621030Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T08:07:07.0621719Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0622627Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T08:07:07.0623307Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.0624126Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T08:07:07.0625206Z     ╭▸ contracts/MandateVault.sol:315:39
+verify	Build contracts and browser app	2026-10-20T08:07:07.0625784Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0626806Z 315 │         if (expiresAt <= notBefore || expiresAt <= block.timestamp) revert InvalidWindow();
+verify	Build contracts and browser app	2026-10-20T08:07:07.0627953Z     │                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T08:07:07.0630101Z     │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0630994Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T08:07:07.0631681Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.0632542Z warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+verify	Build contracts and browser app	2026-10-20T08:07:07.0633624Z    ╭▸ test/TestBase.sol:46:9
+verify	Build contracts and browser app	2026-10-20T08:07:07.0634203Z    │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0634967Z 46 │         token.transfer(address(vault), 1000 * UNIT);
+verify	Build contracts and browser app	2026-10-20T08:07:07.0635869Z    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T08:07:07.0636883Z    │
+verify	Build contracts and browser app	2026-10-20T08:07:07.0637861Z    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+verify	Build contracts and browser app	2026-10-20T08:07:07.0639063Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.1606867Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.1607621Z > chainsentinel-mandate@0.1.0 build:app
+verify	Build contracts and browser app	2026-10-20T08:07:07.1608739Z > node scripts/build-app.mjs
+verify	Build contracts and browser app	2026-10-20T08:07:07.1609206Z 
+verify	Build contracts and browser app	2026-10-20T08:07:07.4209181Z Built the owner and deployment review apps.
+verify	Check hosted access, persistence and migration	﻿2026-10-20T08:07:07.7136093Z ##[group]Run node --test test/hosting.test.mjs test/hosting-migration.test.mjs
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.7136673Z ^[[36;1mnode --test test/hosting.test.mjs test/hosting-migration.test.mjs^[[0m
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.7172423Z shell: /usr/bin/bash -e {0}
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.7172718Z env:
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.7172924Z   CI: true
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.7173125Z ##[endgroup]
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.8026814Z (node:2367) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.8028610Z (Use `node --trace-warnings ...` to show where the warning was created)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:07.8362694Z ✔ initial cloud migration preserves a live SQLite source, reviews and pending hashes and refuses an overwrite (21.574693ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.0751412Z (node:2378) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.0753013Z (Use `node --trace-warnings ...` to show where the warning was created)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.2339925Z ✔ encrypted cloud state restores bills, reviews and original pending hashes after loss of the local file (38.00622ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.2451610Z ✔ cloud compare-and-set rejects an overlapping stale process without replacing newer records (11.306356ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.2589596Z ✔ a stale read-only process fails its revision check before serving the owner (12.696981ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.2725162Z ✔ restart fencing stops the older hosted instance even when the restored database bytes are identical (13.059814ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.2815760Z ✔ storage failure prevents the first broadcast and leaves the process locked (10.313504ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.2941339Z ✔ a lost storage acknowledgment never broadcasts and restart recovers the committed original hash (12.507773ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.3049338Z ✔ original owner hashes are durable before receipt RPC, and unchanged reads do not upload again (10.820548ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.3215232Z ✔ cloud restore rejects a wrong encryption key and never overwrites an existing local file (6.883871ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.3710685Z ✔ login and all app/API routes are protected; the health check exposes no workspace data (55.010434ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.3909598Z ✔ authenticated writes still need both the public origin and the original application CSRF token (17.592687ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.4099414Z ✔ sessions use secure cookies, expire, reject tampering, and sign out invalidates the token (20.570078ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.4550099Z ✔ wrong passwords cannot reach the app, and repeated failures receive rate-limit responses (43.978911ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:08.5597517Z ✔ a failed durability check blocks the app response and further work (13.22739ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8307173Z ✔ the existing local executor pays exact bills through the durable provider and restored receipts prevent replay (2365.196888ms)
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8409202Z ℹ tests 15
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8428853Z ℹ suites 0
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8506174Z ℹ pass 15
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8521947Z ℹ fail 0
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8522913Z ℹ cancelled 0
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8523877Z ℹ skipped 0
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8524347Z ℹ todo 0
+verify	Check hosted access, persistence and migration	2026-10-20T08:07:10.8525006Z ℹ duration_ms 3092.375881
+verify	Install isolated Chromium	﻿2026-10-20T08:07:10.8554007Z ##[group]Run npx playwright install --with-deps chromium
+verify	Install isolated Chromium	2026-10-20T08:07:10.8554444Z ^[[36;1mnpx playwright install --with-deps chromium^[[0m
+verify	Install isolated Chromium	2026-10-20T08:07:10.8589988Z shell: /usr/bin/bash -e {0}
+verify	Install isolated Chromium	2026-10-20T08:07:10.8590266Z env:
+verify	Install isolated Chromium	2026-10-20T08:07:10.8590479Z   CI: true
+verify	Install isolated Chromium	2026-10-20T08:07:10.8590684Z ##[endgroup]
+verify	Install isolated Chromium	2026-10-20T08:07:11.5732831Z Installing dependencies...
+verify	Install isolated Chromium	2026-10-20T08:07:11.5810569Z Switching to root user to install dependencies...
+verify	Install isolated Chromium	2026-10-20T08:07:11.7100707Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+verify	Install isolated Chromium	2026-10-20T08:07:11.7970280Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+verify	Install isolated Chromium	2026-10-20T08:07:11.7971558Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+verify	Install isolated Chromium	2026-10-20T08:07:11.7999443Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:11.8072229Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:11.8164776Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:11.9592163Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:11.9713994Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [557 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:11.9831576Z Get:9 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [618 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.0251308Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1397 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.0379086Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [308 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.0439346Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1704 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.0627774Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [342 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.0651290Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1805 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.0819946Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [411 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.1489941Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1145 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.1529519Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.1547877Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.1613420Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.2043494Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1713 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:12.2132795Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [392 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:15.0878995Z Fetched 12.5 MB in 1s (8374 kB/s)
+verify	Install isolated Chromium	2026-10-20T08:07:16.0009170Z Reading package lists...
+verify	Install isolated Chromium	2026-10-20T08:07:16.0262511Z Reading package lists...
+verify	Install isolated Chromium	2026-10-20T08:07:16.2015238Z Building dependency tree...
+verify	Install isolated Chromium	2026-10-20T08:07:16.2022995Z Reading state information...
+verify	Install isolated Chromium	2026-10-20T08:07:16.3488447Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3489856Z libasound2t64 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3490911Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3492029Z libatk-bridge2.0-0t64 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3493095Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3493971Z libatk1.0-0t64 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3494899Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3495742Z libatspi2.0-0t64 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3496557Z libcairo2 is already the newest version (1.18.0-3build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3497825Z libcairo2 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3498905Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3499837Z libcups2t64 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3500420Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3500978Z libdbus-1-3 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3501555Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3502096Z libdrm2 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3502621Z libgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.4).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3503179Z libgbm1 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3503899Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.9).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3504624Z libglib2.0-0t64 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3505344Z libnspr4 is already the newest version (2:4.35-1.1build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3505993Z libnspr4 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3506620Z libnss3 is already the newest version (2:3.98-1ubuntu0.2).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3507013Z libnss3 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3507432Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3507844Z libpango-1.0-0 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3508497Z libx11-6 is already the newest version (2:1.8.7-1ubuntu0.1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3508876Z libx11-6 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3509231Z libxcb1 is already the newest version (1.15-1ubuntu2).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3509590Z libxcb1 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3509990Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3510388Z libxcomposite1 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3510798Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3511173Z libxdamage1 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3511550Z libxext6 is already the newest version (2:1.3.4-1build2).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3511909Z libxext6 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3512300Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3512678Z libxfixes3 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3513065Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3513456Z libxkbcommon0 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3513852Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3514227Z libxrandr2 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3514700Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3515236Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3515635Z libfontconfig1 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3516070Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.2).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3516478Z libfreetype6 set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3516872Z fonts-liberation is already the newest version (1:2.1.5-3).
+verify	Install isolated Chromium	2026-10-20T08:07:16.3517277Z fonts-liberation set to manually installed.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3517667Z The following additional packages will be installed:
+verify	Install isolated Chromium	2026-10-20T08:07:16.3518440Z   xfonts-encodings xfonts-utils xserver-common
+verify	Install isolated Chromium	2026-10-20T08:07:16.3518785Z Recommended packages:
+verify	Install isolated Chromium	2026-10-20T08:07:16.3519094Z   fonts-ipafont-mincho fonts-tlwg-loma xfonts-base
+verify	Install isolated Chromium	2026-10-20T08:07:16.3682429Z The following NEW packages will be installed:
+verify	Install isolated Chromium	2026-10-20T08:07:16.3684563Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+verify	Install isolated Chromium	2026-10-20T08:07:16.3692786Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+verify	Install isolated Chromium	2026-10-20T08:07:16.3693705Z   xfonts-utils
+verify	Install isolated Chromium	2026-10-20T08:07:16.3705165Z The following packages will be upgraded:
+verify	Install isolated Chromium	2026-10-20T08:07:16.3718776Z   xserver-common xvfb
+verify	Install isolated Chromium	2026-10-20T08:07:16.3865597Z 2 upgraded, 9 newly installed, 0 to remove and 79 not upgraded.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3866570Z Need to get 22.0 MB of archives.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3867846Z After this operation, 79.5 MB of additional disk space will be used.
+verify	Install isolated Chromium	2026-10-20T08:07:16.3869879Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+verify	Install isolated Chromium	2026-10-20T08:07:16.4749713Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:16.6192635Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:16.7764794Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:16.8456537Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:16.9373628Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:17.1489151Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:17.2293208Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:17.2987380Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:17.3742437Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:17.4487008Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 xserver-common all 2:21.1.12-1ubuntu1.9 [35.0 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:17.5179455Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 xvfb amd64 2:21.1.12-1ubuntu1.9 [877 kB]
+verify	Install isolated Chromium	2026-10-20T08:07:17.7739329Z Fetched 22.0 MB in 1s (19.1 MB/s)
+verify	Install isolated Chromium	2026-10-20T08:07:17.8012305Z Selecting previously unselected package fonts-ipafont-gothic.
+verify	Install isolated Chromium	2026-10-20T08:07:17.8201264Z (Reading database ... 
+verify	Install isolated Chromium	2026-10-20T08:07:17.8201763Z (Reading database ... 5%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8202270Z (Reading database ... 10%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8202770Z (Reading database ... 15%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8203283Z (Reading database ... 20%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8204552Z (Reading database ... 25%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8205068Z (Reading database ... 30%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8205525Z (Reading database ... 35%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8205982Z (Reading database ... 40%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8207172Z (Reading database ... 45%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8207692Z (Reading database ... 50%
+verify	Install isolated Chromium	2026-10-20T08:07:17.8232033Z (Reading database ... 55%
+verify	Install isolated Chromium	2026-10-20T08:07:17.9201153Z (Reading database ... 60%
+verify	Install isolated Chromium	2026-10-20T08:07:18.1117016Z (Reading database ... 65%
+verify	Install isolated Chromium	2026-10-20T08:07:18.3192720Z (Reading database ... 70%
+verify	Install isolated Chromium	2026-10-20T08:07:18.5155052Z (Reading database ... 75%
+verify	Install isolated Chromium	2026-10-20T08:07:18.6051567Z (Reading database ... 80%
+verify	Install isolated Chromium	2026-10-20T08:07:18.6705696Z (Reading database ... 85%
+verify	Install isolated Chromium	2026-10-20T08:07:18.7910516Z (Reading database ... 90%
+verify	Install isolated Chromium	2026-10-20T08:07:18.8866411Z (Reading database ... 95%
+verify	Install isolated Chromium	2026-10-20T08:07:18.8867316Z (Reading database ... 100%
+verify	Install isolated Chromium	2026-10-20T08:07:18.8868621Z (Reading database ... 203540 files and directories currently installed.)
+verify	Install isolated Chromium	2026-10-20T08:07:18.8913645Z Preparing to unpack .../00-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:18.8992953Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.1365361Z Selecting previously unselected package fonts-freefont-ttf.
+verify	Install isolated Chromium	2026-10-20T08:07:19.1483837Z Preparing to unpack .../01-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.1497418Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.2289488Z Selecting previously unselected package fonts-tlwg-loma-otf.
+verify	Install isolated Chromium	2026-10-20T08:07:19.2403765Z Preparing to unpack .../02-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.2419125Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.2568859Z Selecting previously unselected package fonts-unifont.
+verify	Install isolated Chromium	2026-10-20T08:07:19.2680985Z Preparing to unpack .../03-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.2688306Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.3699575Z Selecting previously unselected package fonts-wqy-zenhei.
+verify	Install isolated Chromium	2026-10-20T08:07:19.3806269Z Preparing to unpack .../04-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.3890259Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.8713443Z Selecting previously unselected package xfonts-encodings.
+verify	Install isolated Chromium	2026-10-20T08:07:19.8827503Z Preparing to unpack .../05-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.8834282Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.9059823Z Selecting previously unselected package xfonts-utils.
+verify	Install isolated Chromium	2026-10-20T08:07:19.9163798Z Preparing to unpack .../06-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.9169478Z Unpacking xfonts-utils (1:7.7+6build3) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.9435978Z Selecting previously unselected package xfonts-cyrillic.
+verify	Install isolated Chromium	2026-10-20T08:07:19.9550860Z Preparing to unpack .../07-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.9565001Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:19.9988754Z Selecting previously unselected package xfonts-scalable.
+verify	Install isolated Chromium	2026-10-20T08:07:20.0108857Z Preparing to unpack .../08-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.0124082Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.0421666Z Preparing to unpack .../09-xserver-common_2%3a21.1.12-1ubuntu1.9_all.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.0444726Z Unpacking xserver-common (2:21.1.12-1ubuntu1.9) over (2:21.1.12-1ubuntu1.8) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.0731727Z Preparing to unpack .../10-xvfb_2%3a21.1.12-1ubuntu1.9_amd64.deb ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.0747872Z Unpacking xvfb (2:21.1.12-1ubuntu1.9) over (2:21.1.12-1ubuntu1.8) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1211998Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1313457Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1331556Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1346146Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1359966Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1410784Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+verify	Install isolated Chromium	2026-10-20T08:07:20.1423606Z Setting up xserver-common (2:21.1.12-1ubuntu1.9) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1435943Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1450177Z Setting up xvfb (2:21.1.12-1ubuntu1.9) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1464826Z Setting up xfonts-utils (1:7.7+6build3) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1497380Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1747291Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1969633Z Processing triggers for man-db (2.12.0-4build2) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.1987070Z Not building database; man-db/auto-update is not 'true'.
+verify	Install isolated Chromium	2026-10-20T08:07:20.1999740Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+verify	Install isolated Chromium	2026-10-20T08:07:20.8305717Z 
+verify	Install isolated Chromium	2026-10-20T08:07:20.8306695Z Running kernel seems to be up-to-date.
+verify	Install isolated Chromium	2026-10-20T08:07:20.8307489Z 
+verify	Install isolated Chromium	2026-10-20T08:07:20.8307909Z No services need to be restarted.
+verify	Install isolated Chromium	2026-10-20T08:07:20.8308684Z 
+verify	Install isolated Chromium	2026-10-20T08:07:20.8309057Z No containers need to be restarted.
+verify	Install isolated Chromium	2026-10-20T08:07:20.8309481Z 
+verify	Install isolated Chromium	2026-10-20T08:07:20.8309887Z No user sessions are running outdated binaries.
+verify	Install isolated Chromium	2026-10-20T08:07:20.8310356Z 
+verify	Install isolated Chromium	2026-10-20T08:07:20.8310942Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+verify	Install isolated Chromium	2026-10-20T08:07:21.7139095Z Downloading Chrome for Testing 156.0.8078.4 (playwright chromium v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux64/chrome-linux64.zip
+verify	Install isolated Chromium	2026-10-20T08:07:22.1177463Z |                                                                                |   0% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.3273738Z |■■■■■■■■                                                                        |  10% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.4161287Z |■■■■■■■■■■■■■■■■                                                                |  20% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.5197863Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.5950238Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.6981617Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.7904444Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.8906268Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:22.9525139Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:23.0700801Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:23.1535120Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 191.1 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.5387606Z Chrome for Testing 156.0.8078.4 (playwright chromium v1248) downloaded to /home/runner/.cache/ms-playwright/chromium-1248
+verify	Install isolated Chromium	2026-10-20T08:07:26.5410151Z Downloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-linux.zip
+verify	Install isolated Chromium	2026-10-20T08:07:26.9584265Z |                                                                                |   0% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9619771Z |■■■■■■■■                                                                        |  10% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9640515Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9658367Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9686431Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9704997Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9717020Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9731089Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9761704Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9774381Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:26.9784661Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.2 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.0361457Z FFmpeg (playwright ffmpeg v1013) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1013
+verify	Install isolated Chromium	2026-10-20T08:07:27.0365519Z Downloading Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux64/chrome-headless-shell-linux64.zip
+verify	Install isolated Chromium	2026-10-20T08:07:27.4339486Z |                                                                                |   0% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.6262527Z |■■■■■■■■                                                                        |  10% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.6757122Z |■■■■■■■■■■■■■■■■                                                                |  20% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.7345382Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.8180712Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.8620791Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.9107203Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:27.9847187Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:28.0316799Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:28.0696715Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:28.1510065Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 120 MiB
+verify	Install isolated Chromium	2026-10-20T08:07:30.6557233Z Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1248
+verify	Check browser sign-in and sign-out	﻿2026-10-20T08:07:30.6786650Z ##[group]Run node --test test/hosting-browser.test.mjs
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:30.6787350Z ^[[36;1mnode --test test/hosting-browser.test.mjs^[[0m
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:30.6843838Z shell: /usr/bin/bash -e {0}
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:30.6844296Z env:
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:30.6844603Z   CI: true
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:30.6844925Z ##[endgroup]
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8673605Z ✔ browser form sign-in and sign-out preserve Origin while anonymous API access stays blocked (792.642491ms)
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8807467Z ℹ tests 1
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8808368Z ℹ suites 0
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8808902Z ℹ pass 1
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8809366Z ℹ fail 0
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8809839Z ℹ cancelled 0
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8810336Z ℹ skipped 0
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8810821Z ℹ todo 0
+verify	Check browser sign-in and sign-out	2026-10-20T08:07:31.8811355Z ℹ duration_ms 1160.724952
+verify	Check source privacy and documentation	﻿2026-10-20T08:07:31.8880809Z ##[group]Run npm run check:repo
+verify	Check source privacy and documentation	2026-10-20T08:07:31.8881341Z ^[[36;1mnpm run check:repo^[[0m
+verify	Check source privacy and documentation	2026-10-20T08:07:31.8936962Z shell: /usr/bin/bash -e {0}
+verify	Check source privacy and documentation	2026-10-20T08:07:31.8937393Z env:
+verify	Check source privacy and documentation	2026-10-20T08:07:31.8937687Z   CI: true
+verify	Check source privacy and documentation	2026-10-20T08:07:31.8937991Z ##[endgroup]
+verify	Check source privacy and documentation	2026-10-20T08:07:32.0032393Z 
+verify	Check source privacy and documentation	2026-10-20T08:07:32.0033336Z > chainsentinel-mandate@0.1.0 check:repo
+verify	Check source privacy and documentation	2026-10-20T08:07:32.0034187Z > node scripts/check-repo.mjs
+verify	Check source privacy and documentation	2026-10-20T08:07:32.0034636Z 
+verify	Check source privacy and documentation	2026-10-20T08:07:32.7231106Z Repository checks passed: 261 tracked files, 457 local links, original templates, private-file exclusions and credential patterns.
+verify	Check source privacy and documentation	2026-10-20T08:07:32.7233052Z Pattern checks supplement human review; they do not prove that every possible secret is absent.
+verify	Post Set up Node	﻿2026-10-20T08:07:32.7407278Z Post job cleanup.
+verify	Post Set up Node	2026-10-20T08:07:32.8499016Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-80061c9adb6f52ae5c39fa124807633bf991bc6a4372dd393049476de1900406, not saving cache.
+verify	Post Check out source	﻿2026-10-20T08:07:32.8625240Z Post job cleanup.
+verify	Post Check out source	2026-10-20T08:07:32.9515327Z [command]/usr/bin/git version
+verify	Post Check out source	2026-10-20T08:07:32.9584096Z git version 2.55.0
+verify	Post Check out source	2026-10-20T08:07:32.9640568Z Temporarily overriding HOME='/home/runner/work/_temp/0adda183-23e2-4421-9a27-ef926d045bb2' before making global git config changes
+verify	Post Check out source	2026-10-20T08:07:32.9648748Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Check out source	2026-10-20T08:07:32.9657422Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/chainsentinel-mandate/chainsentinel-mandate
+verify	Post Check out source	2026-10-20T08:07:32.9709625Z Removing SSH command configuration
+verify	Post Check out source	2026-10-20T08:07:32.9716233Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Check out source	2026-10-20T08:07:32.9770272Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Check out source	2026-10-20T08:07:33.0063185Z Removing HTTP extra header
+verify	Post Check out source	2026-10-20T08:07:33.0064419Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Check out source	2026-10-20T08:07:33.0136846Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Check out source	2026-10-20T08:07:33.0479199Z Removing includeIf entries pointing to credentials config files
+verify	Post Check out source	2026-10-20T08:07:33.0499368Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Check out source	2026-10-20T08:07:33.0589857Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-10-20T08:07:33.1389105Z Cleaning up orphan processes

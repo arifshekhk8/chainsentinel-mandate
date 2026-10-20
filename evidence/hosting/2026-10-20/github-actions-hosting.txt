@@ -1,0 +1,325 @@
+verify	Set up job	﻿2026-10-20T07:56:33.7199573Z Current runner version: '2.337.0'
+verify	Set up job	2026-10-20T07:56:33.7235956Z ##[group]Runner Image Provisioner
+verify	Set up job	2026-10-20T07:56:33.7237440Z Hosted Compute Agent
+verify	Set up job	2026-10-20T07:56:33.7255991Z Version: 20261012.601
+verify	Set up job	2026-10-20T07:56:33.7257372Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+verify	Set up job	2026-10-20T07:56:33.7258961Z Build Date: 2026-10-12T17:48:21Z
+verify	Set up job	2026-10-20T07:56:33.7260504Z Worker ID: {53ca50fd-d131-434c-8f3b-ea7df7cbdcd6}
+verify	Set up job	2026-10-20T07:56:33.7261976Z Region: centralus
+verify	Set up job	2026-10-20T07:56:33.7262971Z Cloud: Azure
+verify	Set up job	2026-10-20T07:56:33.7264041Z ##[endgroup]
+verify	Set up job	2026-10-20T07:56:33.7266446Z ##[group]Operating System
+verify	Set up job	2026-10-20T07:56:33.7267566Z Ubuntu
+verify	Set up job	2026-10-20T07:56:33.7268895Z 24.04.5
+verify	Set up job	2026-10-20T07:56:33.7269890Z LTS
+verify	Set up job	2026-10-20T07:56:33.7270847Z ##[endgroup]
+verify	Set up job	2026-10-20T07:56:33.7271843Z ##[group]Runner Image
+verify	Set up job	2026-10-20T07:56:33.7272970Z Image: ubuntu-24.04
+verify	Set up job	2026-10-20T07:56:33.7274080Z Version: 20261012.334.1
+verify	Set up job	2026-10-20T07:56:33.7275917Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+verify	Set up job	2026-10-20T07:56:33.7279584Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+verify	Set up job	2026-10-20T07:56:33.7281366Z ##[endgroup]
+verify	Set up job	2026-10-20T07:56:33.7283412Z ##[group]GITHUB_TOKEN Permissions
+verify	Set up job	2026-10-20T07:56:33.7286419Z Contents: read
+verify	Set up job	2026-10-20T07:56:33.7287964Z Metadata: read
+verify	Set up job	2026-10-20T07:56:33.7289269Z ##[endgroup]
+verify	Set up job	2026-10-20T07:56:33.7292330Z Secret source: Actions
+verify	Set up job	2026-10-20T07:56:33.7294126Z Cache mode: write
+verify	Set up job	2026-10-20T07:56:33.7295663Z Prepare workflow directory
+verify	Set up job	2026-10-20T07:56:33.8473885Z Prepare all required actions
+verify	Set up job	2026-10-20T07:56:33.8626834Z Getting action download info
+verify	Set up job	2026-10-20T07:56:34.1223834Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+verify	Set up job	2026-10-20T07:56:34.2312113Z Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+verify	Set up job	2026-10-20T07:56:34.9157370Z Complete job name: verify
+verify	Check out source	﻿2026-10-20T07:56:34.9953291Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+verify	Check out source	2026-10-20T07:56:34.9954468Z with:
+verify	Check out source	2026-10-20T07:56:34.9954965Z   persist-credentials: false
+verify	Check out source	2026-10-20T07:56:34.9955581Z   repository: arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T07:56:34.9960526Z   token: ***
+verify	Check out source	2026-10-20T07:56:34.9961063Z   ssh-strict: true
+verify	Check out source	2026-10-20T07:56:34.9961541Z   ssh-user: git
+verify	Check out source	2026-10-20T07:56:34.9962005Z   clean: true
+verify	Check out source	2026-10-20T07:56:34.9962494Z   sparse-checkout-cone-mode: true
+verify	Check out source	2026-10-20T07:56:34.9963065Z   fetch-depth: 1
+verify	Check out source	2026-10-20T07:56:34.9963539Z   fetch-tags: false
+verify	Check out source	2026-10-20T07:56:34.9964020Z   show-progress: true
+verify	Check out source	2026-10-20T07:56:34.9964505Z   lfs: false
+verify	Check out source	2026-10-20T07:56:34.9964949Z   submodules: false
+verify	Check out source	2026-10-20T07:56:34.9965459Z   set-safe-directory: true
+verify	Check out source	2026-10-20T07:56:34.9965998Z   allow-unsafe-pr-checkout: false
+verify	Check out source	2026-10-20T07:56:34.9966882Z env:
+verify	Check out source	2026-10-20T07:56:34.9967343Z   CI: true
+verify	Check out source	2026-10-20T07:56:34.9967784Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:35.1135064Z Syncing repository: arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T07:56:35.1138802Z ##[group]Getting Git version info
+verify	Check out source	2026-10-20T07:56:35.1140591Z Working directory is '/home/runner/work/chainsentinel-mandate/chainsentinel-mandate'
+verify	Check out source	2026-10-20T07:56:35.1162245Z [command]/usr/bin/git version
+verify	Check out source	2026-10-20T07:56:35.1320494Z git version 2.55.0
+verify	Check out source	2026-10-20T07:56:35.1361952Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:35.1372457Z Temporarily overriding HOME='/home/runner/work/_temp/d3c99c22-32c2-4cfe-af1a-5031b0ac24b9' before making global git config changes
+verify	Check out source	2026-10-20T07:56:35.1375219Z Adding repository directory to the temporary git global config as a safe directory
+verify	Check out source	2026-10-20T07:56:35.1381735Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/chainsentinel-mandate/chainsentinel-mandate
+verify	Check out source	2026-10-20T07:56:35.1467059Z Deleting the contents of '/home/runner/work/chainsentinel-mandate/chainsentinel-mandate'
+verify	Check out source	2026-10-20T07:56:35.1470609Z ##[group]Determining repository object format
+verify	Check out source	2026-10-20T07:56:35.1500243Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:35.1512948Z ##[group]Initializing the repository
+verify	Check out source	2026-10-20T07:56:35.1516759Z [command]/usr/bin/git init /home/runner/work/chainsentinel-mandate/chainsentinel-mandate
+verify	Check out source	2026-10-20T07:56:35.1600091Z hint: Using 'master' as the name for the initial branch. This default branch name
+verify	Check out source	2026-10-20T07:56:35.1621727Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verify	Check out source	2026-10-20T07:56:35.1641557Z hint: to use in all of your new repositories, which will suppress this warning,
+verify	Check out source	2026-10-20T07:56:35.1647643Z hint: call:
+verify	Check out source	2026-10-20T07:56:35.1660254Z hint:
+verify	Check out source	2026-10-20T07:56:35.1665055Z hint: 	git config --global init.defaultBranch <name>
+verify	Check out source	2026-10-20T07:56:35.1666516Z hint:
+verify	Check out source	2026-10-20T07:56:35.1684302Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verify	Check out source	2026-10-20T07:56:35.1688848Z hint: 'development'. The just-created branch can be renamed via this command:
+verify	Check out source	2026-10-20T07:56:35.1690773Z hint:
+verify	Check out source	2026-10-20T07:56:35.1691883Z hint: 	git branch -m <name>
+verify	Check out source	2026-10-20T07:56:35.1693201Z hint:
+verify	Check out source	2026-10-20T07:56:35.1695179Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verify	Check out source	2026-10-20T07:56:35.1697731Z Initialized empty Git repository in /home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/
+verify	Check out source	2026-10-20T07:56:35.1702504Z [command]/usr/bin/git remote add origin https://github.com/arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T07:56:35.1706434Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:35.1707971Z ##[group]Disabling automatic garbage collection
+verify	Check out source	2026-10-20T07:56:35.1709831Z [command]/usr/bin/git config --local gc.auto 0
+verify	Check out source	2026-10-20T07:56:35.1765002Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:35.1800612Z ##[group]Setting up auth
+verify	Check out source	2026-10-20T07:56:35.1802447Z Removing SSH command configuration
+verify	Check out source	2026-10-20T07:56:35.1805465Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Check out source	2026-10-20T07:56:35.1813908Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Check out source	2026-10-20T07:56:35.2330624Z Removing HTTP extra header
+verify	Check out source	2026-10-20T07:56:35.2350254Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Check out source	2026-10-20T07:56:35.2394442Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Check out source	2026-10-20T07:56:35.2674917Z Removing includeIf entries pointing to credentials config files
+verify	Check out source	2026-10-20T07:56:35.2682253Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Check out source	2026-10-20T07:56:35.2722810Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Check out source	2026-10-20T07:56:35.2978130Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verify	Check out source	2026-10-20T07:56:35.3036934Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path /home/runner/work/_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:35.3075355Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:35.3115943Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:35.3173368Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:35.3208380Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:35.3210880Z ##[group]Fetching the repository
+verify	Check out source	2026-10-20T07:56:35.3216454Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f4c08785491aa373cf4dcbe2005b6cddc4a2bc92:refs/remotes/origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T07:56:36.2716165Z From https://github.com/arifshekhk8/chainsentinel-mandate
+verify	Check out source	2026-10-20T07:56:36.2720311Z  * [new ref]         f4c08785491aa373cf4dcbe2005b6cddc4a2bc92 -> origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T07:56:36.2727246Z [command]/usr/bin/git branch --list --remote origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T07:56:36.2730364Z   origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T07:56:36.2735727Z [command]/usr/bin/git rev-parse refs/remotes/origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T07:56:36.2738923Z f4c08785491aa373cf4dcbe2005b6cddc4a2bc92
+verify	Check out source	2026-10-20T07:56:36.2744227Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:36.2746823Z ##[group]Determining the checkout info
+verify	Check out source	2026-10-20T07:56:36.2749963Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:36.2751740Z [command]/usr/bin/git sparse-checkout disable
+verify	Check out source	2026-10-20T07:56:36.2756820Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verify	Check out source	2026-10-20T07:56:36.2763654Z ##[group]Checking out the ref
+verify	Check out source	2026-10-20T07:56:36.2769072Z [command]/usr/bin/git checkout --progress --force -B deploy/render-owner-workspace refs/remotes/origin/deploy/render-owner-workspace
+verify	Check out source	2026-10-20T07:56:36.3269920Z Switched to a new branch 'deploy/render-owner-workspace'
+verify	Check out source	2026-10-20T07:56:36.3287657Z branch 'deploy/render-owner-workspace' set up to track 'origin/deploy/render-owner-workspace'.
+verify	Check out source	2026-10-20T07:56:36.3298006Z ##[endgroup]
+verify	Check out source	2026-10-20T07:56:36.3346016Z [command]/usr/bin/git log -1 --format=%H
+verify	Check out source	2026-10-20T07:56:36.3380836Z f4c08785491aa373cf4dcbe2005b6cddc4a2bc92
+verify	Check out source	2026-10-20T07:56:36.3390669Z ##[group]Removing auth
+verify	Check out source	2026-10-20T07:56:36.3393147Z Removing SSH command configuration
+verify	Check out source	2026-10-20T07:56:36.3401428Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Check out source	2026-10-20T07:56:36.3456457Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Check out source	2026-10-20T07:56:36.3695906Z Removing HTTP extra header
+verify	Check out source	2026-10-20T07:56:36.3700233Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Check out source	2026-10-20T07:56:36.3741498Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Check out source	2026-10-20T07:56:36.4037283Z Removing includeIf entries pointing to credentials config files
+verify	Check out source	2026-10-20T07:56:36.4042204Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Check out source	2026-10-20T07:56:36.4075379Z includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path
+verify	Check out source	2026-10-20T07:56:36.4081732Z includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path
+verify	Check out source	2026-10-20T07:56:36.4086373Z includeif.gitdir:/github/workspace/.git.path
+verify	Check out source	2026-10-20T07:56:36.4090276Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+verify	Check out source	2026-10-20T07:56:36.4098902Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path
+verify	Check out source	2026-10-20T07:56:36.4125254Z /home/runner/work/_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:36.4143574Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-bdbc5111\-ea81\-4fe9\-b636\-3dded30c77ea\.config
+verify	Check out source	2026-10-20T07:56:36.4186658Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path
+verify	Check out source	2026-10-20T07:56:36.4229683Z /home/runner/work/_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:36.4245681Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/chainsentinel-mandate/chainsentinel-mandate/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-bdbc5111\-ea81\-4fe9\-b636\-3dded30c77ea\.config
+verify	Check out source	2026-10-20T07:56:36.4290355Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+verify	Check out source	2026-10-20T07:56:36.4361020Z /github/runner_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:36.4404749Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-bdbc5111\-ea81\-4fe9\-b636\-3dded30c77ea\.config
+verify	Check out source	2026-10-20T07:56:36.4578100Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+verify	Check out source	2026-10-20T07:56:36.4612067Z /github/runner_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config
+verify	Check out source	2026-10-20T07:56:36.4626713Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-bdbc5111\-ea81\-4fe9\-b636\-3dded30c77ea\.config
+verify	Check out source	2026-10-20T07:56:36.4672851Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Check out source	2026-10-20T07:56:36.4916307Z Removing credentials config '/home/runner/work/_temp/git-credentials-bdbc5111-ea81-4fe9-b636-3dded30c77ea.config'
+verify	Check out source	2026-10-20T07:56:36.4927860Z ##[endgroup]
+verify	Set up Node	﻿2026-10-20T07:56:36.5304606Z ##[group]Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+verify	Set up Node	2026-10-20T07:56:36.5306303Z with:
+verify	Set up Node	2026-10-20T07:56:36.5307171Z   node-version: 25.2.1
+verify	Set up Node	2026-10-20T07:56:36.5308153Z   cache: npm
+verify	Set up Node	2026-10-20T07:56:36.5309263Z   check-latest: false
+verify	Set up Node	2026-10-20T07:56:36.5318723Z   token: ***
+verify	Set up Node	2026-10-20T07:56:36.5319929Z   package-manager-cache: true
+verify	Set up Node	2026-10-20T07:56:36.5321027Z env:
+verify	Set up Node	2026-10-20T07:56:36.5321854Z   CI: true
+verify	Set up Node	2026-10-20T07:56:36.5322707Z ##[endgroup]
+verify	Set up Node	2026-10-20T07:56:36.6782914Z Attempting to download 25.2.1...
+verify	Set up Node	2026-10-20T07:56:37.4789928Z Not found in manifest. Falling back to download directly from Node
+verify	Set up Node	2026-10-20T07:56:37.5446090Z Acquiring 25.2.1 - x64 from https://nodejs.org/dist/v25.2.1/node-v25.2.1-linux-x64.tar.gz
+verify	Set up Node	2026-10-20T07:56:38.0516018Z Extracting ...
+verify	Set up Node	2026-10-20T07:56:38.0661042Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/d7940e92-19ab-46ce-b0f5-c4fc99a03ca7 -f /home/runner/work/_temp/439148e3-6d2d-49bb-b8ce-3c3b79eb5045
+verify	Set up Node	2026-10-20T07:56:39.3992566Z Adding to the cache ...
+verify	Set up Node	2026-10-20T07:56:42.7245235Z Done
+verify	Set up Node	2026-10-20T07:56:42.7526027Z ##[group]Environment details
+verify	Set up Node	2026-10-20T07:56:43.0329488Z node: v25.2.1
+verify	Set up Node	2026-10-20T07:56:43.0330165Z npm: 11.6.2
+verify	Set up Node	2026-10-20T07:56:43.0330621Z yarn: 1.22.22
+verify	Set up Node	2026-10-20T07:56:43.0331311Z ##[endgroup]
+verify	Set up Node	2026-10-20T07:56:43.0349895Z [command]/opt/hostedtoolcache/node/25.2.1/x64/bin/npm config get cache
+verify	Set up Node	2026-10-20T07:56:43.1399445Z /home/runner/.npm
+verify	Set up Node	2026-10-20T07:56:43.3125530Z Cache hit for: node-cache-Linux-x64-npm-80061c9adb6f52ae5c39fa124807633bf991bc6a4372dd393049476de1900406
+verify	Set up Node	2026-10-20T07:56:44.4912614Z Received 75497472 of 105954151 (71.3%), 71.9 MBs/sec
+verify	Set up Node	2026-10-20T07:56:44.7289276Z Received 105954151 of 105954151 (100.0%), 81.6 MBs/sec
+verify	Set up Node	2026-10-20T07:56:44.7295601Z Cache Size: ~101 MB (105954151 B)
+verify	Set up Node	2026-10-20T07:56:44.7364369Z [command]/usr/bin/tar -xf /home/runner/work/_temp/f8feedc8-74c2-4d95-8b6b-545a35d92b09/cache.tzst -P -C /home/runner/work/chainsentinel-mandate/chainsentinel-mandate --use-compress-program unzstd
+verify	Set up Node	2026-10-20T07:56:44.9208190Z Cache restored successfully
+verify	Set up Node	2026-10-20T07:56:44.9279521Z Cache restored from key: node-cache-Linux-x64-npm-80061c9adb6f52ae5c39fa124807633bf991bc6a4372dd393049476de1900406
+verify	Install pinned source and hosting dependencies	﻿2026-10-20T07:56:44.9496596Z ##[group]Run npm ci --include=dev --no-fund
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:44.9497023Z ^[[36;1mnpm ci --include=dev --no-fund^[[0m
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:44.9497467Z ^[[36;1mnpm --prefix scripts/hosting ci --ignore-scripts --no-fund^[[0m
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:44.9765917Z shell: /usr/bin/bash -e {0}
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:44.9766441Z env:
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:44.9766655Z   CI: true
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:44.9766867Z ##[endgroup]
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:48.6109695Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:48.6120146Z added 29 packages, and audited 30 packages in 4s
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:48.6122275Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:48.6122790Z found 0 vulnerabilities
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:49.0921673Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:49.0922839Z added 1 package, and audited 2 packages in 361ms
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:49.0931218Z 
+verify	Install pinned source and hosting dependencies	2026-10-20T07:56:49.0931717Z found 0 vulnerabilities
+verify	Build contracts and browser app	﻿2026-10-20T07:56:49.1030682Z ##[group]Run npm run build
+verify	Build contracts and browser app	2026-10-20T07:56:49.1031021Z ^[[36;1mnpm run build^[[0m
+verify	Build contracts and browser app	2026-10-20T07:56:49.1031267Z ^[[36;1mnpm run build:app^[[0m
+verify	Build contracts and browser app	2026-10-20T07:56:49.1093357Z shell: /usr/bin/bash -e {0}
+verify	Build contracts and browser app	2026-10-20T07:56:49.1093609Z env:
+verify	Build contracts and browser app	2026-10-20T07:56:49.1093794Z   CI: true
+verify	Build contracts and browser app	2026-10-20T07:56:49.1093987Z ##[endgroup]
+verify	Build contracts and browser app	2026-10-20T07:56:49.2211405Z 
+verify	Build contracts and browser app	2026-10-20T07:56:49.2212560Z > chainsentinel-mandate@0.1.0 build
+verify	Build contracts and browser app	2026-10-20T07:56:49.2213713Z > node scripts/foundry.mjs forge build
+verify	Build contracts and browser app	2026-10-20T07:56:49.2214478Z 
+verify	Build contracts and browser app	2026-10-20T07:56:49.7327097Z Compiling 20 files with Solc 0.8.37
+verify	Build contracts and browser app	2026-10-20T07:56:50.8599807Z Solc 0.8.37 finished in 1.13s
+verify	Build contracts and browser app	2026-10-20T07:56:50.8629691Z Compiler run successful!
+verify	Build contracts and browser app	2026-10-20T07:56:50.8667094Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T07:56:50.8668847Z     ╭▸ contracts/MandateVault.sol:211:13
+verify	Build contracts and browser app	2026-10-20T07:56:50.8669555Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8679733Z 211 │         if (block.timestamp < agentNotBefore) revert SessionNotStarted();
+verify	Build contracts and browser app	2026-10-20T07:56:50.8681470Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T07:56:50.8685012Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8686090Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T07:56:50.8687144Z 
+verify	Build contracts and browser app	2026-10-20T07:56:50.8688164Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T07:56:50.8689833Z     ╭▸ contracts/MandateVault.sol:212:13
+verify	Build contracts and browser app	2026-10-20T07:56:50.8690558Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8691599Z 212 │         if (block.timestamp >= agentExpiresAt) revert SessionExpired();
+verify	Build contracts and browser app	2026-10-20T07:56:50.8699566Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T07:56:50.8709371Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8710391Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T07:56:50.8712731Z 
+verify	Build contracts and browser app	2026-10-20T07:56:50.8729734Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T07:56:50.8730745Z     ╭▸ contracts/MandateVault.sol:218:13
+verify	Build contracts and browser app	2026-10-20T07:56:50.8731448Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8732912Z 218 │         if (block.timestamp < bill.notBefore) revert BillNotDue();
+verify	Build contracts and browser app	2026-10-20T07:56:50.8749426Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T07:56:50.8750056Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8751397Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T07:56:50.8751900Z 
+verify	Build contracts and browser app	2026-10-20T07:56:50.8762259Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T07:56:50.8769821Z     ╭▸ contracts/MandateVault.sol:219:13
+verify	Build contracts and browser app	2026-10-20T07:56:50.8770942Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8780379Z 219 │         if (block.timestamp >= bill.expiresAt) revert BillExpired();
+verify	Build contracts and browser app	2026-10-20T07:56:50.8781794Z     │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T07:56:50.8783093Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8784416Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T07:56:50.8785844Z 
+verify	Build contracts and browser app	2026-10-20T07:56:50.8787104Z warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+verify	Build contracts and browser app	2026-10-20T07:56:50.8789352Z     ╭▸ contracts/MandateVault.sol:315:39
+verify	Build contracts and browser app	2026-10-20T07:56:50.8790227Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8791751Z 315 │         if (expiresAt <= notBefore || expiresAt <= block.timestamp) revert InvalidWindow();
+verify	Build contracts and browser app	2026-10-20T07:56:50.8793530Z     │                                       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T07:56:50.8795444Z     │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8805756Z     ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#block-timestamp
+verify	Build contracts and browser app	2026-10-20T07:56:50.8806605Z 
+verify	Build contracts and browser app	2026-10-20T07:56:50.8807991Z warning[erc20-unchecked-transfer]: ERC20 'transfer' and 'transferFrom' calls should check the return value
+verify	Build contracts and browser app	2026-10-20T07:56:50.8809776Z    ╭▸ test/TestBase.sol:46:9
+verify	Build contracts and browser app	2026-10-20T07:56:50.8810755Z    │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8811634Z 46 │         token.transfer(address(vault), 1000 * UNIT);
+verify	Build contracts and browser app	2026-10-20T07:56:50.8815047Z    │         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+verify	Build contracts and browser app	2026-10-20T07:56:50.8816244Z    │
+verify	Build contracts and browser app	2026-10-20T07:56:50.8817625Z    ╰ help: https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer
+verify	Build contracts and browser app	2026-10-20T07:56:50.8818798Z 
+verify	Build contracts and browser app	2026-10-20T07:56:50.9827604Z 
+verify	Build contracts and browser app	2026-10-20T07:56:50.9839922Z > chainsentinel-mandate@0.1.0 build:app
+verify	Build contracts and browser app	2026-10-20T07:56:50.9864338Z > node scripts/build-app.mjs
+verify	Build contracts and browser app	2026-10-20T07:56:50.9864825Z 
+verify	Build contracts and browser app	2026-10-20T07:56:51.2570243Z Built the owner and deployment review apps.
+verify	Check hosted access, persistence and migration	﻿2026-10-20T07:56:51.2695271Z ##[group]Run node --test test/hosting.test.mjs test/hosting-migration.test.mjs
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.2695905Z ^[[36;1mnode --test test/hosting.test.mjs test/hosting-migration.test.mjs^[[0m
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.2757623Z shell: /usr/bin/bash -e {0}
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.2757886Z env:
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.2758086Z   CI: true
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.2758283Z ##[endgroup]
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.3709638Z (node:2373) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.3711503Z (Use `node --trace-warnings ...` to show where the warning was created)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.4121278Z ✔ initial cloud migration preserves a live SQLite source, reviews and pending hashes and refuses an overwrite (26.28348ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.6250239Z (node:2384) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.6259620Z (Use `node --trace-warnings ...` to show where the warning was created)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.7670410Z ✔ encrypted cloud state restores bills, reviews and original pending hashes after loss of the local file (37.596073ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.7807028Z ✔ cloud compare-and-set rejects an overlapping stale process without replacing newer records (15.619354ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.7966995Z ✔ a stale read-only process fails its revision check before serving the owner (16.946747ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.8097341Z ✔ restart fencing stops the older hosted instance even when the restored database bytes are identical (11.645633ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.8183044Z ✔ storage failure prevents the first broadcast and leaves the process locked (9.626913ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.8285936Z ✔ a lost storage acknowledgment never broadcasts and restart recovers the committed original hash (10.314555ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.8410164Z ✔ original owner hashes are durable before receipt RPC, and unchanged reads do not upload again (12.277229ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.8606519Z ✔ cloud restore rejects a wrong encryption key and never overwrites an existing local file (8.605906ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.9225668Z ✔ login and all app/API routes are protected; the health check exposes no workspace data (52.320162ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.9555101Z ✔ authenticated writes still need both the public origin and the original application CSRF token (20.360758ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:51.9579906Z ✔ sessions use secure cookies, expire, reject tampering, and sign out invalidates the token (19.87297ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:52.0047027Z ✔ wrong passwords cannot reach the app, and repeated failures receive rate-limit responses (40.743877ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:52.1019620Z ✔ a failed durability check blocks the app response and further work (15.185793ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7073253Z ✔ the existing local executor pays exact bills through the durable provider and restored receipts prevent replay (2708.715011ms)
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7222816Z ℹ tests 15
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7239289Z ℹ suites 0
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7246552Z ℹ pass 15
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7247422Z ℹ fail 0
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7248123Z ℹ cancelled 0
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7249498Z ℹ skipped 0
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7259544Z ℹ todo 0
+verify	Check hosted access, persistence and migration	2026-10-20T07:56:54.7260196Z ℹ duration_ms 3409.740037
+verify	Check source privacy and documentation	﻿2026-10-20T07:56:54.7340469Z ##[group]Run npm run check:repo
+verify	Check source privacy and documentation	2026-10-20T07:56:54.7341023Z ^[[36;1mnpm run check:repo^[[0m
+verify	Check source privacy and documentation	2026-10-20T07:56:54.7419027Z shell: /usr/bin/bash -e {0}
+verify	Check source privacy and documentation	2026-10-20T07:56:54.7419321Z env:
+verify	Check source privacy and documentation	2026-10-20T07:56:54.7419594Z   CI: true
+verify	Check source privacy and documentation	2026-10-20T07:56:54.7419802Z ##[endgroup]
+verify	Check source privacy and documentation	2026-10-20T07:56:54.8599051Z 
+verify	Check source privacy and documentation	2026-10-20T07:56:54.8609548Z > chainsentinel-mandate@0.1.0 check:repo
+verify	Check source privacy and documentation	2026-10-20T07:56:54.8619225Z > node scripts/check-repo.mjs
+verify	Check source privacy and documentation	2026-10-20T07:56:54.8619852Z 
+verify	Check source privacy and documentation	2026-10-20T07:56:55.7702231Z Repository checks passed: 260 tracked files, 457 local links, original templates, private-file exclusions and credential patterns.
+verify	Check source privacy and documentation	2026-10-20T07:56:55.7704343Z Pattern checks supplement human review; they do not prove that every possible secret is absent.
+verify	Post Set up Node	﻿2026-10-20T07:56:55.7913868Z Post job cleanup.
+verify	Post Set up Node	2026-10-20T07:56:55.9095231Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-80061c9adb6f52ae5c39fa124807633bf991bc6a4372dd393049476de1900406, not saving cache.
+verify	Post Check out source	﻿2026-10-20T07:56:55.9245025Z Post job cleanup.
+verify	Post Check out source	2026-10-20T07:56:56.0169219Z [command]/usr/bin/git version
+verify	Post Check out source	2026-10-20T07:56:56.0239499Z git version 2.55.0
+verify	Post Check out source	2026-10-20T07:56:56.0302000Z Temporarily overriding HOME='/home/runner/work/_temp/b3b5207b-0ebf-4917-aaa6-5c544e47b0a3' before making global git config changes
+verify	Post Check out source	2026-10-20T07:56:56.0309695Z Adding repository directory to the temporary git global config as a safe directory
+verify	Post Check out source	2026-10-20T07:56:56.0311439Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/chainsentinel-mandate/chainsentinel-mandate
+verify	Post Check out source	2026-10-20T07:56:56.0401022Z Removing SSH command configuration
+verify	Post Check out source	2026-10-20T07:56:56.0419718Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verify	Post Check out source	2026-10-20T07:56:56.0471183Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verify	Post Check out source	2026-10-20T07:56:56.0793574Z Removing HTTP extra header
+verify	Post Check out source	2026-10-20T07:56:56.0794852Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verify	Post Check out source	2026-10-20T07:56:56.0910774Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verify	Post Check out source	2026-10-20T07:56:56.1217926Z Removing includeIf entries pointing to credentials config files
+verify	Post Check out source	2026-10-20T07:56:56.1219694Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verify	Post Check out source	2026-10-20T07:56:56.1254361Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verify	Complete job	﻿2026-10-20T07:56:56.1787869Z Cleaning up orphan processes

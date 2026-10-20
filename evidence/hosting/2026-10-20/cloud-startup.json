@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-10-20T07:53:46.084Z",
+  "mode": "owner-and-agent",
+  "chainId": 11155111,
+  "drafts": 3,
+  "reviewed": 3,
+  "payments": [
+    {
+      "status": "confirmed",
+      "hash": "0xa35b0bd2785c1b9272e571d2a5197eb5530089151c6b8e751935b02941931ba4"
+    },
+    {
+      "status": "confirmed",
+      "hash": "0x37ba350085b7cf15423745251aa71c8530c7c5915493534663f7eb0a46029ac9"
+    }
+  ],
+  "balance": "650000000",
+  "agent": "0x0000000000000000000000000000000000000000",
+  "policyVersion": "7",
+  "liveModelCalls": 0,
+  "publicTransactions": 0
+}

@@ -1,5 +1,7 @@
 # Mandate progress
 
+**Current hosting status, 20 October 2026:** [Mandate](https://chainsentinel-mandate.onrender.com) is live on Render Free with encrypted Neon Free persistence. Protected browser access, three reviewed bills/two original receipts and identical history after an actual restart are verified; 16 hosting checks and matching Linux CI pass. No new model call or public transaction occurred. Login details remain private. [Hosting verification](evidence/HOSTING_RESULTS.md) takes precedence over older hosting/next-action notes below. The competition submission is still pending.
+
 **Updated 19 October 2026, Asia/Dhaka. Latest completed project step: Step 5.**
 **Current task:** user-requested full review, folder/document cleanup and private GitHub handoff completed; explain the project before any Step 6 work. **Step 6 is deferred by the user.**
 

@@ -2,6 +2,8 @@
 
 The hosting adapter runs the existing Sepolia application on Render Free and keeps an encrypted copy of its SQLite workspace in Neon Free. Use synthetic bills and test tokens only. The owner key stays in the browser wallet; the server uses only the existing restricted test-agent key. Deployment and startup do not grant on-chain access or send payments.
 
+**Verified live, 20 October 2026:** [Open Mandate](https://chainsentinel-mandate.onrender.com). Protected sign-in, the original three reviewed bills/two receipts and identical history after a real restart pass. Use the private owner login file locally; never publish it. [Evidence](../evidence/HOSTING_RESULTS.md).
+
 ## Source and configuration
 
 The private GitHub repository remains private. The deployment branch is `deploy/render-owner-workspace`. [render.yaml](../render.yaml) specifies one free Node service in Singapore, `/healthz` readiness and manual deployments. Direct API creation uses the same settings; no Blueprint sync is active unless explicitly configured later. Keep these two representations synchronized when changing hosting.

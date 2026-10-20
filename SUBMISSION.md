@@ -1,5 +1,7 @@
 # Mandate — reviewer and submission guide
 
+**Current hosting status, 20 October 2026:** [Mandate](https://chainsentinel-mandate.onrender.com) is live on Render Free with encrypted Neon Free persistence. Protected browser access, three reviewed bills/two original receipts and identical history after an actual restart are verified; 16 hosting checks and matching Linux CI pass. No new model call or public transaction occurred. Login details remain private. [Hosting verification](evidence/HOSTING_RESULTS.md) takes precedence over older hosting/next-action notes below. The competition submission is still pending.
+
 **Document review, 19 October 2026:** current behavior and Step 5 evidence were checked against the source. [Full isolated local review](evidence/maintenance/2026-10-19/full-review/results.json) passed; [the evidence index](evidence/README.md) and [relocation map](evidence/locations.json) describe the organized folders. Raw measured records and all 47 frozen source files remain unchanged. Step 6 is deferred.
 
 **Team:** ChainSentinel. **Event:** 2026 Shenzhen International FinTech Competition, International Track. **Topic:** F — Agent Wallet. **Repository:** [arifshekhk8/chainsentinel-mandate](https://github.com/arifshekhk8/chainsentinel-mandate), private. **Snapshot date:** 19 October 2026, Asia/Dhaka.
