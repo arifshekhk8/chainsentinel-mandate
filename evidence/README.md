@@ -1,49 +1,21 @@
 # Evidence index
 
-**Updated 19 October 2026.** Start with the current reports below. Step 5 is complete within its documented scope; Step 6 has not started. Local/scripted tests, live model measurements and public Sepolia receipts are separate evidence.
+All results are dated observations, with failed attempts and limitations retained. Repeated regressions are not independent evaluation cases. Raw receipts, source snapshots and case definitions keep their original bytes.
 
-## Read first
-
-| Report | What it establishes |
+| Evidence | Purpose |
 | --- | --- |
-| [Sepolia results](STEP5_SEPOLIA_RESULTS.md) | Exact public 200 + 150 MDT payments, 650 MDT remaining, duplicate/daily/stop rejections, owner revocation, costs and wallet compatibility limits |
-| [Groq v5 results](STEP5_GROQ_RESULTS.md) | Completed 40-case repaired local regression, all attempts, safe N13 miss and comparison limits |
-| [Full project review](maintenance/2026-10-19/full-review/results.json) | Fresh isolated local build/format, contract, identity, app, agent, evaluator, local Sepolia and browser checks |
-| [Testing guide](../TESTING.md) | Requirement-to-test map and original suite scopes |
+| [Recorded 20 October demo](RECORDED_DEMO_RESULTS.md) | Fresh 75 MDT payment, 575 MDT remaining and confirmed access revocation |
+| [19 October Sepolia report](STEP5_SEPOLIA_RESULTS.md) | Setup, exact approvals, original 200/150 MDT payments, simulations, revocation and costs |
+| [Groq evaluation](STEP5_GROQ_RESULTS.md) | Repaired 40-case run, measured comparisons, N13 miss and prior attempts |
+| [Earlier Gemini evaluation](STEP5_EVALUATION_RESULTS.md) | Independent partial attempt and quota limitation |
+| [Contract checks](STEP2_RESULTS.md) | Roles, exact money boundaries, replay, timing and token integrity |
+| [Owner checks](STEP3_RESULTS.md) | Source review, exact approvals, UI and persistence |
+| [Agent checks](STEP4_RESULTS.md) | Intent, planning, confirmation and recovery |
+| [Gemini development](STEP4_GEMINI_RESULTS.md) · [Live workflow](STEP4_LIVE_WORKFLOW_RESULTS.md) | Model integration and browser/local-payment proof, separate from fixed evaluation |
+| [Public preparation](STEP5_SEPOLIA_PREPARATION.md) | Local rehearsal and disclosed harness failures |
+| [Hosting checks](HOSTING_RESULTS.md) | Login, encrypted persistence, restart, local/browser checks and qualifications |
+| [Review checks](REVIEW_CHECKS.json) | Current source-layout, file preservation, privacy/link and reproduction checks |
 
-[Private repository handoff audit](maintenance/2026-10-19/repository-review.json) records pushed source/organization revisions, preserved hashes, privacy checks and local validation. GitHub Actions provides the actual latest-commit CI status.
+Raw artifacts are grouped under `local/`, `evaluation/`, `sepolia/`, `hosting/` and `maintenance/`. The [relocation map](locations.json) resolves historical embedded artifact paths. Seventeen historical source snapshots stay at their frozen paths; [the integration freeze](../demo/evaluation-freeze-sepolia-v1.json) records all 47 pinned source hashes. The fixed [40 cases](../demo/cases.json) remain unchanged.
 
-## Artifact folders
-
-| Folder | Contents |
-| --- | --- |
-| [sepolia/public/](sepolia/public/) | Original public export, receipt/state audits, cost checks, wallet-wrapper recoveries and owner-stop proof |
-| [sepolia/preparation/](sepolia/preparation/) | Local rehearsal, setup screenshots and passing/failing preparation logs; UI attempts are under `ui/` |
-| [step5-evaluation-runs/](step5-evaluation-runs/) | Original dated fixture/live attempts and analyses; names remain pinned by the evaluator |
-| [evaluation/history/](evaluation/history/) | Quota observations, interruptions and development calls; not merged into final metrics |
-| [evaluation/checks/](evaluation/checks/) | Versioned offline agent-regression logs |
-| [evaluation/scripted/](evaluation/scripted/) | Scripted local payment proofs, not live-model measurements |
-| [evaluation/ui/](evaluation/ui/) | Versioned isolated UI logs and screenshots |
-| [local/](local/) | Earlier Step 2–4 local receipts, Gemini workflow evidence and screenshots |
-| [maintenance/2026-10-19/](maintenance/2026-10-19/) | Dated document/repository checks and the current full local review |
-| [history/](history/) | Verbatim earlier progress journal; current status stays in root PROGRESS.md |
-
-## Original reports
-
-[Step 2](STEP2_RESULTS.md) · [Step 3](STEP3_RESULTS.md) · [Step 4 core](STEP4_RESULTS.md) · [Gemini development](STEP4_GEMINI_RESULTS.md) · [Gemini browser workflow](STEP4_LIVE_WORKFLOW_RESULTS.md) · [Partial Gemini evaluation](STEP5_EVALUATION_RESULTS.md) · [Groq evaluation](STEP5_GROQ_RESULTS.md) · [Sepolia preparation](STEP5_SEPOLIA_PREPARATION.md) · [Public Sepolia results](STEP5_SEPOLIA_RESULTS.md).
-
-## Why some source snapshots stay here
-
-The 17 `step5-*.mjs` files at this folder's root are historical source snapshots. Original evaluation freezes refer to those exact paths and hashes. They remain there to preserve reproducibility; they are not duplicate active application files. Active code belongs in `app/` and `scripts/`.
-
-[locations.json](locations.json) maps every moved artifact's original path to its grouped location and SHA-256. Raw JSON, log and image bytes were preserved. Embedded historical paths inside measured records were intentionally retained; resolve them through this map. Readable Markdown links point to current locations.
-
-Frozen tests/demo commands can emit fresh files at their original output paths. A fresh output is a new local observation, not a replacement for the curated historical snapshots in these folders. The current full review therefore used an isolated source copy. No failed attempt, original receipt or safe completion miss was deleted as cleanup.
-
-## Current receipt proofs
-
-- [Public execution export](sepolia/public/step5-sepolia-2026-10-19T15-52-14-777Z.json)
-- [Independent exact payment verification](sepolia/public/step5-sepolia-payment-verification.json)
-- [Confirmed revocation and OnlyAgent call](sepolia/public/step5-sepolia-revocation-verification.json)
-- [Export/13-hash verification](sepolia/public/step5-sepolia-export-verification.json)
-- [Prior final source/privacy checks](sepolia/public/step5-sepolia-final-checks.json)
+Internal planning history, registration correspondence, editorial previews, raw recordings and document/video production files are excluded from this judge-facing tree. The original submitted source ZIP remains unchanged in the delivered package; its manifest and historical visibility wording describe that earlier artifact.

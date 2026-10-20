@@ -1,0 +1,67 @@
+{
+  "submissionDate": "2026-10-20",
+  "policy": "Original submitted bytes preserved. Hashes verified against anonymous Drive downloads before submission. Repository presentation was organized subsequently without changing these artifacts.",
+  "driveFolder": "https://drive.google.com/drive/folders/19YKvnvqd5wzL9QtmsGvZ18Bhrl1FyG7I?usp=drive_link",
+  "files": [
+    {
+      "name": "Mandate-Demo.mp4",
+      "bytes": 13996080,
+      "sha256": "25f63519a21cd40d583c7dd93edab447612e9ea68ad35f231c69127a8b7d12e4"
+    },
+    {
+      "name": "Mandate-Execution-Evidence.docx",
+      "bytes": 54768,
+      "sha256": "09cd7d25fb5be6be0944a110826bafc32c2c038d170dc3a4f98e0d369b6a371f"
+    },
+    {
+      "name": "Mandate-Execution-Evidence.pdf",
+      "bytes": 298093,
+      "sha256": "8792f2f40525690f91b7cb8e0cab5c9e363c8062b5f0fa8c41dbef2e311dada7"
+    },
+    {
+      "name": "Mandate-Presentation.pdf",
+      "bytes": 487115,
+      "sha256": "eb297ac51de83698c7f5359a643a3a8a106bb4cee0f8ac8ca29a0c44702555aa"
+    },
+    {
+      "name": "Mandate-Presentation.pptx",
+      "bytes": 512712,
+      "sha256": "ae94a8b4d2b8ba93d8c3366f40d63f3f5db530e26e48ab853d089f710a8ede35"
+    },
+    {
+      "name": "Mandate-Security-Assessment.docx",
+      "bytes": 51463,
+      "sha256": "dc2dacb05a17d0cb0fd89828691c4a71b80edcefea76ba316feb77a4dab863ec"
+    },
+    {
+      "name": "Mandate-Security-Assessment.pdf",
+      "bytes": 246911,
+      "sha256": "7db1b41b5e657e1e603ac17a4534d3e061a8590fa09908e312acab070bc4066e"
+    },
+    {
+      "name": "Mandate-Source.zip",
+      "bytes": 11358904,
+      "sha256": "dfe8891fd84d130098a6107ff85f439a616065aa92fe28a2451ead354307b82b"
+    },
+    {
+      "name": "Mandate-Source.zip.sha256",
+      "bytes": 85,
+      "sha256": "350487726356bda25a2b7c36e9665a8cc316ac1e3b1016cada01830aeeec69d5"
+    },
+    {
+      "name": "Mandate-Technical-Report.docx",
+      "bytes": 143421,
+      "sha256": "20e26ca5d5d5f732debeecbca7393b21e35c781324bdff6a2ff024545a069453"
+    },
+    {
+      "name": "Mandate-Technical-Report.pdf",
+      "bytes": 404897,
+      "sha256": "5f200fa6be06a9c63e969443b6f6ac8b732b30565217e738c36882615c58788d"
+    },
+    {
+      "name": "Mandate-Transaction-Logs.zip",
+      "bytes": 159418,
+      "sha256": "c96991dc35ba4fc9fb45dcf1a8fd1bc5cac05093030fb4f4c53ad710e859296e"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "verifiedAt": "2026-10-20T08:10:33.460Z",
+  "chainId": 11155111,
+  "drafts": 3,
+  "reviewed": 3,
+  "payments": [
+    {
+      "hash": "0xa35b0bd2785c1b9272e571d2a5197eb5530089151c6b8e751935b02941931ba4",
+      "status": "confirmed"
+    },
+    {
+      "hash": "0x37ba350085b7cf15423745251aa71c8530c7c5915493534663f7eb0a46029ac9",
+      "status": "confirmed"
+    }
+  ],
+  "balance": "650000000",
+  "policyVersion": "7",
+  "agent": "0x0000000000000000000000000000000000000000",
+  "provider": "live-groq",
+  "model": "openai/gpt-oss-120b",
+  "fingerprint": "fe9d0737300772f2c898c643db43f280ff30dc9b0a3a37e5555384305630c6b4",
+  "privatePaths": [
+    {
+      "path": "/.env",
+      "status": 404
+    },
+    {
+      "path": "/local-data/sepolia/agent-key.json",
+      "status": 404
+    },
+    {
+      "path": "/scripts/hosting/start.mjs",
+      "status": 404
+    }
+  ],
+  "cookies": [
+    {
+      "name": "__Host-mandate_session",
+      "secure": true,
+      "httpOnly": true,
+      "sameSite": "Strict"
+    }
+  ],
+  "mobileOverflow": false,
+  "scriptErrors": 0,
+  "revisionBefore": 6,
+  "secretsAbsent": true
+}

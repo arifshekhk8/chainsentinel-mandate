@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-20T08:25:21.949Z",
+  "url": "https://chainsentinel-mandate.onrender.com",
+  "deployedImplementation": "8495f599ea635e5e68a5643df43225da7164d60a",
+  "cloudRevision": 7,
+  "decryptedCloudSha256": "57d7055032473211e007ffa0e6ab785863d40b3f3e476d30007ca9846e59c782",
+  "initialSnapshotSha256": "57d7055032473211e007ffa0e6ab785863d40b3f3e476d30007ca9846e59c782",
+  "allWorkspaceBytesPreserved": true,
+  "loginFilePermissions": "600",
+  "modelCallsMade": 0,
+  "publicTransactionsSent": 0
+}

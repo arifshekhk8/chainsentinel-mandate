@@ -1,0 +1,25 @@
+{
+  "network": [
+    {
+      "path": "/",
+      "status": 303
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/_hosted.css",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 403
+    }
+  ],
+  "errors": [],
+  "location": "/login",
+  "notice": null,
+  "balance": null,
+  "cookies": []
+}

@@ -17,7 +17,7 @@ The local contract core passes its required checks. This is not the complete app
 
 ## Commands and observed results
 
-Run from the project root using the [README instructions](../README.md#run-checks-and-the-contract-demonstration).
+Run from the project root using the [README instructions](../README.md#reproduce-locally).
 
 | Command | Observed result |
 | --- | --- |

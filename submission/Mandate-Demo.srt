@@ -1,0 +1,180 @@
+1
+00:00:00,130 --> 00:00:01,650
+Hello, respected judges.
+
+2
+00:00:02,650 --> 00:00:05,850
+We are Team ChainSentinel from Bangladesh.
+
+3
+00:00:06,430 --> 00:00:10,950
+My name is MD Arif Shekh. My teammates are Meherab and Irin.
+
+4
+00:00:11,250 --> 00:00:14,000
+We chose Topic F: Agent Wallet.
+
+5
+00:00:14,610 --> 00:00:21,150
+Businesses need to pay bills on time, but full AI wallet access can risk their money.
+
+6
+00:00:21,850 --> 00:00:27,100
+We built Mandate to pay approved bills while the owner keeps control.
+
+7
+00:00:27,510 --> 00:00:34,030
+The owner sets limits. AI understands requests, and a contract checks each payment.
+
+8
+00:00:34,173 --> 00:00:36,483
+Let us look at Rules & access.
+
+9
+00:00:36,653 --> 00:00:46,533
+The maximum amount per bill is 250 MDT.
+
+10
+00:00:47,033 --> 00:00:51,383
+MDT is the test token we created.
+
+11
+00:00:51,733 --> 00:00:56,433
+The vault currently holds 650 MDT.
+
+12
+00:00:57,193 --> 00:01:00,700
+The daily budget is 400 MDT, and the reserve is 300.
+
+13
+00:01:00,820 --> 00:01:03,567
+I am sending the access grant to the wallet.
+
+14
+00:01:18,340 --> 00:01:19,600
+The agent is active now.
+
+15
+00:01:19,790 --> 00:01:28,050
+Now let us ask our AI: "Pay that one."
+
+16
+00:01:28,530 --> 00:01:33,950
+This request is unclear, so the AI should ask for clarification.
+
+17
+00:01:34,010 --> 00:01:40,050
+It needs to know which bill we want to pay.
+
+18
+00:01:40,240 --> 00:01:44,430
+"Which bill would you like to pay? Please provide the bill ID."
+
+19
+00:01:44,603 --> 00:01:47,583
+Now let us give a clear instruction:
+
+20
+00:01:49,243 --> 00:01:58,263
+"Pay HOST-1002 only."
+
+21
+00:02:01,797 --> 00:02:04,433
+Let us approve the bill first.
+
+22
+00:02:05,298 --> 00:02:06,308
+Send to wallet.
+
+23
+00:02:09,738 --> 00:02:12,258
+The wallet opens successfully.
+
+24
+00:02:12,479 --> 00:02:14,699
+Let us confirm the approval transaction.
+
+25
+00:02:14,760 --> 00:02:17,000
+It is approved. We can see it here.
+
+26
+00:02:17,420 --> 00:02:19,150
+Now let us tell the AI:
+
+27
+00:02:19,300 --> 00:02:25,100
+"Pay HOST-1002 only."
+
+28
+00:02:25,980 --> 00:02:26,967
+Let us ask AI.
+
+29
+00:02:29,147 --> 00:02:31,667
+Here, the app asks for permission.
+
+30
+00:02:40,767 --> 00:02:41,767
+Nice.
+
+31
+00:02:41,867 --> 00:02:46,367
+This is the new payment we just made.
+
+32
+00:02:46,567 --> 00:02:52,167
+The website now shows Confirmed for the 75 MDT payment.
+
+33
+00:02:52,627 --> 00:02:56,067
+The balance is 575 MDT.
+
+34
+00:02:56,107 --> 00:03:00,117
+The transaction link shows its public record on Sepolia.
+
+35
+00:03:00,827 --> 00:03:06,017
+The earlier 200 and 150 MDT payments are separate records.
+
+36
+00:03:06,287 --> 00:03:11,267
+We can check each payment instead of relying only on an AI answer.
+
+37
+00:03:11,437 --> 00:03:14,117
+Let us remove the agent access.
+
+38
+00:03:14,317 --> 00:03:18,117
+This stops new payments without the required permission.
+
+39
+00:03:18,397 --> 00:03:20,517
+We can do this from our panel.
+
+40
+00:03:20,693 --> 00:03:24,030
+We need to revoke permission.
+
+41
+00:03:24,236 --> 00:03:26,866
+I checked the action. Send to wallet.
+
+42
+00:03:27,047 --> 00:03:30,167
+This is how we remove the agent permission.
+
+43
+00:03:32,767 --> 00:03:34,267
+Let us wait for confirmation.
+
+44
+00:03:34,587 --> 00:03:35,417
+It is confirmed.
+
+45
+00:03:35,787 --> 00:03:36,697
+Thank you so much.
+

@@ -1,0 +1,34 @@
+{
+  "verifiedAt": "2026-10-20T08:16:23.417Z",
+  "url": "https://chainsentinel-mandate.onrender.com",
+  "serviceId": "srv-dbbi29e7bikc738l0pn0",
+  "liveDeployId": "dep-dbbi2a67bikc738l0tu0",
+  "commit": "8495f599ea635e5e68a5643df43225da7164d60a",
+  "plan": "free",
+  "restartHttpStatus": 200,
+  "revisionBefore": 6,
+  "revisionAfter": 7,
+  "historyMatches": true,
+  "fingerprint": "fe9d0737300772f2c898c643db43f280ff30dc9b0a3a37e5555384305630c6b4",
+  "drafts": 3,
+  "reviewed": 3,
+  "payments": [
+    {
+      "hash": "0xa35b0bd2785c1b9272e571d2a5197eb5530089151c6b8e751935b02941931ba4",
+      "status": "confirmed"
+    },
+    {
+      "hash": "0x37ba350085b7cf15423745251aa71c8530c7c5915493534663f7eb0a46029ac9",
+      "status": "confirmed"
+    }
+  ],
+  "balance": "650000000",
+  "agent": "0x0000000000000000000000000000000000000000",
+  "policyVersion": "7",
+  "scriptErrors": 0,
+  "mobileOverflow": false,
+  "signOutApiStatus": 401,
+  "liveModelCalls": 0,
+  "publicTransactions": 0,
+  "note": "Render restart retained the existing deployment record; fresh cloud revision and identical restored owner history verify the new process."
+}

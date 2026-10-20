@@ -1,0 +1,1447 @@
+{
+  "version": "mandate-source-v1",
+  "preparedDate": "2026-10-20",
+  "privateRepository": "https://github.com/arifshekhk8/chainsentinel-mandate",
+  "sourceBranch": "deploy/render-owner-workspace",
+  "sourceCommit": "3fe846b56197b8cc04e2ac3756531bb151e7bc43",
+  "deployedImplementation": "8495f599ea635e5e68a5643df43225da7164d60a",
+  "codePolicy": "Application, contracts, scripts, tests and lockfiles are byte-identical to the verified source commit. Only reviewer documentation/labels and dependency notices differ.",
+  "sourceAccess": "This archive supplies source review without a repository invitation. Repository visibility is unchanged.",
+  "files": {
+    ".env.example": {
+      "sha256": "7fd92fe83574b37032feb57b7c0d2667c9ea25d460d357ccd4dbfe606cf23a5d",
+      "bytes": 627,
+      "origin": "verified-hosting-commit"
+    },
+    ".gitattributes": {
+      "sha256": "abaa9fdbb5f24e08eafceed192a23b27bc4e66bda95285a44d1722f4f814d487",
+      "bytes": 86,
+      "origin": "verified-hosting-commit"
+    },
+    ".github/pull_request_template.md": {
+      "sha256": "ef343f44554ed909008207ace42b9d9ead646f55f221a0006a4b2588e02b3611",
+      "bytes": 461,
+      "origin": "verified-hosting-commit"
+    },
+    ".github/workflows/checks.yml": {
+      "sha256": "f9f92990449cc4440043d9430f47c8a96da01ee08e44ebb1003482683bff4b1b",
+      "bytes": 1804,
+      "origin": "verified-hosting-commit"
+    },
+    ".github/workflows/hosting.yml": {
+      "sha256": "c19bb7f1560632d65926f22a69c0612fe41ddec0ac88757e5061c04fa4b1f43d",
+      "bytes": 1323,
+      "origin": "verified-hosting-commit"
+    },
+    ".gitignore": {
+      "sha256": "ce58b773e8a687101a0b2de2077e78584cd24ef1a079e7e68d4d814dcccb9fef",
+      "bytes": 442,
+      "origin": "verified-hosting-commit"
+    },
+    "AGENTS.md": {
+      "sha256": "59ee6d021338b9b9439a754e92e5db47fd327f36e3994404a5c17b48bbc6c67a",
+      "bytes": 5980,
+      "origin": "verified-hosting-commit"
+    },
+    "ARCHITECTURE.md": {
+      "sha256": "d970c09ae9eb074dc7088575483bbf105010dfef5a54b0c782209370597ec3af",
+      "bytes": 22794,
+      "origin": "verified-documentation-with-snapshot-notice"
+    },
+    "PROGRESS.md": {
+      "sha256": "7a28e16bab70ff6e5f3472bbfab16dd84112d6d3a8cd3142ab183913beee0ce6",
+      "bytes": 917,
+      "origin": "reviewer-handover-documentation"
+    },
+    "PROJECT_PLAN.md": {
+      "sha256": "e3b8058eae75ea076aa088e9396be63f276fbf87e2dd6fdc45baaec57293a45c",
+      "bytes": 18515,
+      "origin": "verified-documentation-with-snapshot-notice"
+    },
+    "README.md": {
+      "sha256": "d6de8196812f94c68b858f4c6fc3be459f680705111eb817032a2610fa827801",
+      "bytes": 4963,
+      "origin": "reviewer-handover-documentation"
+    },
+    "REQUIREMENTS.md": {
+      "sha256": "735cc292bac55b1d1926792376543f04e0dea36b5490ff3db5f22c3b1371f84d",
+      "bytes": 12584,
+      "origin": "verified-documentation-with-snapshot-notice"
+    },
+    "SECURITY.md": {
+      "sha256": "980c4a7721665fa01e19b05b5061c7a328e457af081b5f6fecaf8ef51f52756c",
+      "bytes": 23448,
+      "origin": "verified-documentation-with-snapshot-notice"
+    },
+    "SUBMISSION.md": {
+      "sha256": "7f5badcab4ab6374158279cac48b43886b02096829d01a5b8ed71d75faea5b0e",
+      "bytes": 12655,
+      "origin": "verified-documentation-with-snapshot-notice"
+    },
+    "TESTING.md": {
+      "sha256": "37ad8367ae8c557a62b4e208b83c0421ac6af6434ceae77ecc6487113cb28a6a",
+      "bytes": 29103,
+      "origin": "verified-documentation-with-snapshot-notice"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "sha256": "f27c9c4df4ceeee174843e130ad56cf8927c5fe0df1a2e5430449d4ecce0aaeb",
+      "bytes": 27640,
+      "origin": "dependency-notices"
+    },
+    "app/agent.mjs": {
+      "sha256": "788f358fe68e9394708d7f88afb2f0c5f11c531a552b6be9439ed7f3d2e9d225",
+      "bytes": 8301,
+      "origin": "verified-hosting-commit"
+    },
+    "app/client.mjs": {
+      "sha256": "ade7efc7ad5a1593f67d1ee2cf07b1270c0a7a0847a48bc80cbe74d58a9ea08b",
+      "bytes": 34692,
+      "origin": "verified-hosting-commit"
+    },
+    "app/errors.mjs": {
+      "sha256": "96193ddec1e9b9a11071fabc21ebefcf7653d45da38e09a97619f1564a561a3e",
+      "bytes": 234,
+      "origin": "verified-hosting-commit"
+    },
+    "app/executor.mjs": {
+      "sha256": "0f16eb03c930a5e39ce46b09e4c852dc54d15905c1b60e3e7b25df75be86e7cc",
+      "bytes": 8830,
+      "origin": "verified-hosting-commit"
+    },
+    "app/intake.mjs": {
+      "sha256": "6dcb80ad8345ef524a0045da5c77b8d579b85af50872b783244ac80399bdfbf1",
+      "bytes": 4709,
+      "origin": "verified-hosting-commit"
+    },
+    "app/model.mjs": {
+      "sha256": "e456df64e0c3f5ef85d63855027cbaa1f03a1da543556a20b71833863abe4662",
+      "bytes": 18205,
+      "origin": "verified-hosting-commit"
+    },
+    "app/pdf-worker.mjs": {
+      "sha256": "07cbf893bea57407d49215e0ae5b2107e3ca14457a4c7d65922336900e1a691f",
+      "bytes": 1331,
+      "origin": "verified-hosting-commit"
+    },
+    "app/planner.mjs": {
+      "sha256": "1761e1d04e4baa4bcc12997c76f4ea9da203fc976e85e418df99199f7d5e2347",
+      "bytes": 4515,
+      "origin": "verified-hosting-commit"
+    },
+    "app/public/app.css": {
+      "sha256": "023af631adbb3d66031f8e8636ba88b8f3a958a3b6033a8682e63a4b0a683a3c",
+      "bytes": 15796,
+      "origin": "verified-hosting-commit"
+    },
+    "app/public/index.html": {
+      "sha256": "030b086d3f95cdd857ee938a30a4d3759bbc84442bb68ae561e877b8f010e76a",
+      "bytes": 10000,
+      "origin": "verified-hosting-commit"
+    },
+    "app/public/setup.css": {
+      "sha256": "2a3264185c069f39265a0237ed7c690b9b4a33810b47b3251ad1ba0c0d814286",
+      "bytes": 2143,
+      "origin": "verified-hosting-commit"
+    },
+    "app/public/setup.html": {
+      "sha256": "2323e8df19626cba256f8d67c3fc057ca8152950ff4ca7c4e2d80dff9fa10eb5",
+      "bytes": 2368,
+      "origin": "verified-hosting-commit"
+    },
+    "app/samples.mjs": {
+      "sha256": "58e58696fcbd93f338b905bb1888e1ce115aa30a42f78ca0a351593a295cf92c",
+      "bytes": 2687,
+      "origin": "verified-hosting-commit"
+    },
+    "app/sepolia-policy.mjs": {
+      "sha256": "7df6077b903c50c7650c721e871f4be00bdbc6c215a1e0b7c36fd59fc0df8055",
+      "bytes": 3486,
+      "origin": "verified-hosting-commit"
+    },
+    "app/server.mjs": {
+      "sha256": "b4d648f6782fd08bb67b8de70e1d9597990d8e2eb92327bd998f4047d6080517",
+      "bytes": 8841,
+      "origin": "verified-hosting-commit"
+    },
+    "app/service.mjs": {
+      "sha256": "91ed643d77321531cf89fdc73256e766ecfc9a7cb758c9fb99777b763f7d3dcb",
+      "bytes": 22636,
+      "origin": "verified-hosting-commit"
+    },
+    "app/setup-client.mjs": {
+      "sha256": "06ffac7818288deeca03c9ed75da95bf77b7b1d586307287cc85105ffc759362",
+      "bytes": 11026,
+      "origin": "verified-hosting-commit"
+    },
+    "app/setup.mjs": {
+      "sha256": "355bb899a9e4fef9582ad8332d54689a3c12046e131ea9b364e8f2cd65d653c4",
+      "bytes": 13694,
+      "origin": "verified-hosting-commit"
+    },
+    "app/store.mjs": {
+      "sha256": "9ddb8c4fb2af393c4be15eb65d28e51be98a3e201f729b94d0368d453c4c7cd7",
+      "bytes": 6980,
+      "origin": "verified-hosting-commit"
+    },
+    "competition/HOSTING.md": {
+      "sha256": "fd8f41e3026bfa67a8fe413da8841a037d45759016ff085da2a5071166328dab",
+      "bytes": 5017,
+      "origin": "verified-hosting-commit"
+    },
+    "competition/HOSTING_ACCESS.md": {
+      "sha256": "89ec586cfd283594548968ecb27c7f64de99644285ff80f165d39c8b6ce9c9a4",
+      "bytes": 3349,
+      "origin": "verified-hosting-commit"
+    },
+    "competition/JUDGE_REVIEW.md": {
+      "sha256": "cf6d7494596e598fa6c97524f093bbf52d1385d3fed9c365fa878da6cbb312da",
+      "bytes": 3174,
+      "origin": "reviewer-access-guide"
+    },
+    "competition/REGISTRATION_DRAFT.md": {
+      "sha256": "dc4e55e0013662be5cb6c9be7899ffd41e8617dd05dcf67505a02ab29e2857b6",
+      "bytes": 7092,
+      "origin": "verified-hosting-commit"
+    },
+    "competition/poster.jpeg": {
+      "sha256": "549363afc781883697c393c29883369d73d286915168fd256185c9e0b9cefbd3",
+      "bytes": 136130,
+      "origin": "verified-hosting-commit"
+    },
+    "competition/registration.xlsx": {
+      "sha256": "d0660876236f3476539d73701703032e6819cf4609ba481cd1b15061872462a2",
+      "bytes": 12646,
+      "origin": "verified-hosting-commit"
+    },
+    "competition/requirements.md": {
+      "sha256": "30002d275532f3f9836b310aedeaa11fbf38968443bc375e4f3f3e49fc60ef74",
+      "bytes": 7475,
+      "origin": "verified-hosting-commit"
+    },
+    "competition/rules.pdf": {
+      "sha256": "9005e42629435a1e129a8367c8d3d5e3714b6ea0bbab30713cd6be2f2bdd0c5a",
+      "bytes": 1731263,
+      "origin": "verified-hosting-commit"
+    },
+    "contracts/MandateDemoToken.sol": {
+      "sha256": "e89ffe793d3d7534c6ba3e6b56b509aaa92384092bee0ae0e564c5feb3ee10e3",
+      "bytes": 585,
+      "origin": "verified-hosting-commit"
+    },
+    "contracts/MandateVault.sol": {
+      "sha256": "69c130677e4690e05a9dce0ee294b63e11ac2499407e95e406f547c9c28af1b4",
+      "bytes": 12678,
+      "origin": "verified-hosting-commit"
+    },
+    "contracts/TestNetworks.sol": {
+      "sha256": "3c393cad7e9d7a8a50b11fe82f3f2e0d681bf6eb23a237c1ecfc71de5f72d9cc",
+      "bytes": 380,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/SCENARIO.md": {
+      "sha256": "5ee8e48d8af5b4f7136bd03dfeb273d3d52782c56a3e17852f2cd3c541a188c4",
+      "bytes": 11466,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/cases.json": {
+      "sha256": "55c9adfb923653ba851a13652fb885b55afd6120345a65597d90dc6c9ccc505b",
+      "bytes": 67205,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze-groq-v1.json": {
+      "sha256": "b35b1d98ee77dc8780ba8b6d3f25d079731868ed925fa30fc7252c2787af8e3d",
+      "bytes": 5189,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze-groq-v2.json": {
+      "sha256": "cebb2c0baa02cc58c514b9379efb92d69778d2b3372e1544b052a10ab3b12dd7",
+      "bytes": 6515,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze-groq-v3.json": {
+      "sha256": "1caadefb424060e8e79acaf45bdf8167c65b434fce3f36d6f8d6f19477727bab",
+      "bytes": 7929,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze-groq-v4.json": {
+      "sha256": "0692b4fe3589a2050a1a5e3e8d77005a6fa6b26a0d12b07628639881144cd3de",
+      "bytes": 9662,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze-groq-v5.json": {
+      "sha256": "49e3c246364385ad863d501506c6fdc5aed9724edc37eb4eab1b1f50880c18ae",
+      "bytes": 10862,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze-sepolia-v1.json": {
+      "sha256": "9677eec68dae07e26f132b8f6bade5bf475df0ad961cd79af49727fafc3bd2c4",
+      "bytes": 13850,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze-v2.json": {
+      "sha256": "3dc0203b7eb04559566843f02fb661d1dec4544408e7902409538535fa30a35d",
+      "bytes": 4314,
+      "origin": "verified-hosting-commit"
+    },
+    "demo/evaluation-freeze.json": {
+      "sha256": "ce38091da8b7073281f059d6d8dbcfc28c534c049cef819ae532b1cbdf2bb787",
+      "bytes": 3666,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/HOSTING_RESULTS.md": {
+      "sha256": "b3d8f897c3b8812d67012712fa17d77d2882ada7d2412e26cc8261d1ee953b54",
+      "bytes": 14292,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/README.md": {
+      "sha256": "9067724662b39018fa44cad1a59ec8e03dd34f0dcd4adb254f7fba38e011b31d",
+      "bytes": 4918,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP2_RESULTS.md": {
+      "sha256": "7ec69533f44c2ce940cb5877e0c243a0192ef57b2c3f7652325ee6a6d3ea9d3b",
+      "bytes": 7106,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP3_RESULTS.md": {
+      "sha256": "34b22620d873d104d6981521a8c7b569c467244ad0e1f2c864a357d018fd6ab1",
+      "bytes": 6074,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP4_GEMINI_RESULTS.md": {
+      "sha256": "76ece95b5f82a23f7d7118557b091f81a4db36e9e3d3c1c9f8a98e17b87d4452",
+      "bytes": 4622,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP4_LIVE_WORKFLOW_RESULTS.md": {
+      "sha256": "10dfce9c56478dbe780ccde326981a319904f02df3accab49e015cbf438dc28c",
+      "bytes": 3979,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP4_RESULTS.md": {
+      "sha256": "bf095ba9f4861ca904dbf7c93c7352d18cb71e0adc58b514cade5df0008d843a",
+      "bytes": 5059,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP5_EVALUATION_RESULTS.md": {
+      "sha256": "462e201e95be96f12bcada49b8a5ab878dbfaf91254c8ca6a0e6b69335399d22",
+      "bytes": 9341,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP5_GROQ_RESULTS.md": {
+      "sha256": "b817b68e669ad7ea8c085c58fe854a82e8e81ef9591d08091c4cad5dce3223f9",
+      "bytes": 14978,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP5_SEPOLIA_PREPARATION.md": {
+      "sha256": "567028e418c5b5a8204d94e8ed8a9818979ed2000ec476609ef3d10b65b46282",
+      "bytes": 10233,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/STEP5_SEPOLIA_RESULTS.md": {
+      "sha256": "6ade59cee4cdd6c6843bd7ad5b156491c84daab8aed30f405e8e9dde7c9644f6",
+      "bytes": 18876,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/checks/step5-agent-context-regression.txt": {
+      "sha256": "458f6ba4962924a998ce7f287c6d472c3cda32ce5033e4078a87fc83f9f297f6",
+      "bytes": 6027,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/checks/step5-agent-regression.txt": {
+      "sha256": "f40092412adf1761b5457861cdddd30c57024476e9f65b9f3e5e472cfe7be5c0",
+      "bytes": 5740,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/checks/step5-agent-v4-regression.txt": {
+      "sha256": "9df4b2719f239508a73e08230ecbac2d31ba3eeb8a376943e0efebec89dedbe0",
+      "bytes": 6009,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/checks/step5-agent-v5-regression.txt": {
+      "sha256": "c467949d6bd3f65a238d39efe9e6b330fa7c7553d3670c7354d2f70b55e97df8",
+      "bytes": 6123,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/history/step5-gemini-reset-check.json": {
+      "sha256": "c6aed0945f7e3062000dd2e6663d603ff55f190bf860651f27a9c69bd7697623",
+      "bytes": 801,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/history/step5-groq-development.json": {
+      "sha256": "701a42166426f5dafc872a7398b7ed95e341aa99d7996bd9470fc54b5a8ec98e",
+      "bytes": 9458,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/history/step5-groq-v1-interruption.json": {
+      "sha256": "8af7ecd1d8ee642919370605fe04b5625e09488e5260c17d0e2594614a5ac12f",
+      "bytes": 658,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/history/step5-groq-v4-interruption.json": {
+      "sha256": "1bb45894d245e26328aceb6a6ebd6842b760e1fbe03b6cc3a9529c4c0b8b9c47",
+      "bytes": 709,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/history/step5-quota-observation.json": {
+      "sha256": "fd0f9acad27d7ced4d32b52825d38b4c66dcfb62753b21d65873557b5a533b26",
+      "bytes": 1045,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/scripted/step5-scripted-agent-context-regression.json": {
+      "sha256": "b29a25734c71467abac15767121291613fd601c86bb6f44a51b553b69cdd3bf6",
+      "bytes": 6140,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/scripted/step5-scripted-agent-regression.json": {
+      "sha256": "77c10c1f2e33a7a2e616e1710777978aa398b62ffcba7178bc9447649ad475bd",
+      "bytes": 6140,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/scripted/step5-scripted-agent-v4-regression.json": {
+      "sha256": "13e36b1c0190632be1105bdc0d3045ffad9a77a41adbc9b13132faf0e81b56eb",
+      "bytes": 6140,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/scripted/step5-scripted-agent-v5-regression.json": {
+      "sha256": "d46f12e8bc498cc4e9ab63695d26bf0de52abe33421caba5fd27df5deb1d26f8",
+      "bytes": 6140,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/initial/results.txt": {
+      "sha256": "c35d75292cf78a81a81b1b3d1751ccc68fba462082851db04a121f8f0a702309",
+      "bytes": 2409,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/initial/step3-desktop.png": {
+      "sha256": "1f3f911b9274f7aed1eaaf832cb577a339c44860f5d0139d04ae2a238e933501",
+      "bytes": 140020,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/initial/step3-mobile.png": {
+      "sha256": "8b8d625c7a130662a473c65aff503d3e5f199b5938b13962bb7de9da552cca5d",
+      "bytes": 98420,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/initial/step3-owner-approval.json": {
+      "sha256": "b3640794d65f3e76930fc1c23d202bc843906488d55e82b0ad367108625d96f3",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/initial/step3-review.png": {
+      "sha256": "cca85173c08b4b33bc032f869268241adc3f085cf6c4841cbba628010e5d0bde",
+      "bytes": 213159,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/initial/step4-agent-desktop.png": {
+      "sha256": "24ebcdf2573a890a37221b22403310ef777e8e1de03f35e2f7f40ab58ff2e9b0",
+      "bytes": 261051,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/initial/step4-agent-mobile.png": {
+      "sha256": "ac744d423a7eb801f0d2c177a007a0724c3b8550abda8c8ad979a80093abe504",
+      "bytes": 181220,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v4/results.txt": {
+      "sha256": "1f4b5a04284da02bf6c209199d618579265753622ded59a2347c6a68941821c2",
+      "bytes": 2528,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v4/step3-desktop.png": {
+      "sha256": "1f3f911b9274f7aed1eaaf832cb577a339c44860f5d0139d04ae2a238e933501",
+      "bytes": 140020,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v4/step3-mobile.png": {
+      "sha256": "8b8d625c7a130662a473c65aff503d3e5f199b5938b13962bb7de9da552cca5d",
+      "bytes": 98420,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v4/step3-owner-approval.json": {
+      "sha256": "d4981c2934d4bca44106d37c07f0ae0701b97d92940f4d05d0410c3a5ce8e0ce",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v4/step3-review.png": {
+      "sha256": "0e71e67eef70c3ba1d0d51c5e4f64a682936b9141a07a9172f49b857ad7809de",
+      "bytes": 213057,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v4/step4-agent-desktop.png": {
+      "sha256": "1a93e9ab54e6bba4bf43b8455474557fe39cccc647cd5081ab377152310a9a4e",
+      "bytes": 260752,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v4/step4-agent-mobile.png": {
+      "sha256": "ac744d423a7eb801f0d2c177a007a0724c3b8550abda8c8ad979a80093abe504",
+      "bytes": 181220,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v5/results.txt": {
+      "sha256": "9567dbe695895aaea8b3f84760e51b270f5aae7bd79301daacd48a4b8912cc6b",
+      "bytes": 2528,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v5/step3-desktop.png": {
+      "sha256": "1f3f911b9274f7aed1eaaf832cb577a339c44860f5d0139d04ae2a238e933501",
+      "bytes": 140020,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v5/step3-mobile.png": {
+      "sha256": "8b8d625c7a130662a473c65aff503d3e5f199b5938b13962bb7de9da552cca5d",
+      "bytes": 98420,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v5/step3-owner-approval.json": {
+      "sha256": "5c1d0d6084f7ed726f2aa2818d7d6338a7ba00ff5f40727d2b2460e2ca89ba74",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v5/step3-review.png": {
+      "sha256": "822df729922e10cc13ba9e80476c51bd591c1e001709820d623d7bed8344e50d",
+      "bytes": 213593,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v5/step4-agent-desktop.png": {
+      "sha256": "bc8a5575427153694760f99da62b47d6c2fbbc4ec31ddae8c14056af2d01e5b9",
+      "bytes": 260952,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/evaluation/ui/v5/step4-agent-mobile.png": {
+      "sha256": "0d67f54d27b9654c9ba9bd32fecd5a7266f1f5407b59a9a2673e701151202153",
+      "bytes": 181208,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/history/progress-through-step5-2026-10-19.txt": {
+      "sha256": "a5b72b07991a304abe1d516b094e6bdd62c59865bc29bc85282c26dc4e4dacd8",
+      "bytes": 68034,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/browser-first-failure.json": {
+      "sha256": "beca49097dfe54546e12369269bda8f509427bb5a93887b6ee6aa79a34870b84",
+      "bytes": 345,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/browser-first-failure.png": {
+      "sha256": "741beed0c9889f85b9a6b999fc2b46f1681d1df51dfb50e05fa0e0847b7cce9f",
+      "bytes": 9617,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/browser-v2/login-desktop.png": {
+      "sha256": "d8df7ff3046e6fec7262a832ff7f0946da12b53e00add2a4ac8b6f0dc5383985",
+      "bytes": 25040,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/browser-v2/owner-desktop.png": {
+      "sha256": "813d293c6b35f2dea52269fcdbfb5838408476793978fb4ea28e56f8ed013a32",
+      "bytes": 259443,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/browser-v2/owner-mobile.png": {
+      "sha256": "e76b9b7a48444c413f4639c624da04261ad2f92d7a91fe6cce3f58e92c1fe3e1",
+      "bytes": 209186,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/browser-v2/verification.json": {
+      "sha256": "94d0ffa2b550a73ea844b257de87e015ed4ad2b7d053d25d031874efb6d58d53",
+      "bytes": 323,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/cloud-startup.json": {
+      "sha256": "521f43bc070c0df3c320e4f75b35e97c083415bd0beba9bceb07ee22f5b234bc",
+      "bytes": 558,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/final-audit.json": {
+      "sha256": "3468d5215d4bfbfeb7d0a636e0901bd5c77b913f001abd5259bd8d6d0b15c9b4",
+      "bytes": 510,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/github-actions-hosting-browser.txt": {
+      "sha256": "b07dc23fa766b012ce278294648abc4b8d5b7c1a0417b4bbc9baf1f134486919",
+      "bytes": 70880,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/github-actions-hosting.txt": {
+      "sha256": "29e113c680b6582104a3a12ec50dad147f90254e6fcfaabbb18f4a2052cd35e2",
+      "bytes": 38335,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/after-restart-desktop.png": {
+      "sha256": "4c5ff89e447b2492b3083d8c8c98f8fe9ea13c4e42f8cfb4481d96d2a02fd453",
+      "bytes": 259360,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/after-restart-mobile-fresh.png": {
+      "sha256": "0c52e37479cf2e2ebb7043304b9de6492b2eb30bea9be78291ec77488cdec079",
+      "bytes": 216843,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/after-restart-mobile-viewport.png": {
+      "sha256": "de3ec97b31bde395bb24609ada10b119bb01c452cab9b2d73a4e5c4bdefd079f",
+      "bytes": 52799,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/after-restart-mobile.png": {
+      "sha256": "d9b1ae531e9e669b8170a2c99a9393b1138fae361b8bf1d0b34060cffdad5997",
+      "bytes": 184584,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/before-restart.json": {
+      "sha256": "6b7ea761cfb177bbc7513ad3daa5e2749155320e014aa739119679b38da6af1b",
+      "bytes": 1108,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/login.png": {
+      "sha256": "d8df7ff3046e6fec7262a832ff7f0946da12b53e00add2a4ac8b6f0dc5383985",
+      "bytes": 25040,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/mobile-capture-check.json": {
+      "sha256": "b30a693d250676a2307c44ac341951a8b863dd3889be7f475db8261d57c5307c",
+      "bytes": 268,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/owner-desktop.png": {
+      "sha256": "554004636556005cf467bd5f21948a1ef2ac6cb41cd325e4873545130b11ed54",
+      "bytes": 259335,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/owner-mobile.png": {
+      "sha256": "d03072414535c9ffeb1536d62014121553d3412dae1a1e8fbf9ac8409f797ff1",
+      "bytes": 209137,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/live/restart-verification.json": {
+      "sha256": "6e94e1ef5a1c8ae7929d7c1f521df8a09ee7e2d31deaa7644c0954a09286b778",
+      "bytes": 1134,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/login-desktop.png": {
+      "sha256": "d8df7ff3046e6fec7262a832ff7f0946da12b53e00add2a4ac8b6f0dc5383985",
+      "bytes": 25040,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/hosting/2026-10-20/origin-policy-reproduction.json": {
+      "sha256": "ba0cf47252f9216276b1f2dbb036fb03d3609acce6e452c05a247b96ead77695",
+      "bytes": 151,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step2/step2-local-demo.json": {
+      "sha256": "c04d558015fc50a8bf3ed2189e2a7e2dee1c35ebd51d5af7dfd8cf6c75f61114",
+      "bytes": 5944,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step3/step3-desktop.png": {
+      "sha256": "acd07516e55c97df94d92bc7d5bb8df58f2b6c19a7cada4fa654bc50b026dc32",
+      "bytes": 140037,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step3/step3-mobile.png": {
+      "sha256": "43391457b8f2a67186dcac8f441e028ebed44c8d0ff228dcda12ac5493c92552",
+      "bytes": 98434,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step3/step3-owner-approval.json": {
+      "sha256": "b19f50f8b36ca838e334c9fdf2f4c0d870c153e435d29f13247787a92820cd33",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step3/step3-review.png": {
+      "sha256": "d8503c94897ed371b89bb00cc9643e9195ef13d5d33ecce4d3edca556e0eddad",
+      "bytes": 213773,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step4/step4-agent-desktop.png": {
+      "sha256": "900f190b416e4b2b871cde8a72f99f00ad6e3ea3a8508037393053bc8b39f6dd",
+      "bytes": 260529,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step4/step4-agent-mobile.png": {
+      "sha256": "6ce3336480598a5af0ab474db1a25baea9a6c063222dfc5c74152f463ed9159f",
+      "bytes": 180381,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step4/step4-gemini-live-check.json": {
+      "sha256": "617ba1f76b35bb19bce45f85102579f3b955516f21bef62a84f2027151772b91",
+      "bytes": 4143,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step4/step4-live-workflow-desktop.png": {
+      "sha256": "78b5ac9d2dd4e7d934c1394adb3216268fb245fddf694817c98bb7e374937bab",
+      "bytes": 264045,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step4/step4-live-workflow.json": {
+      "sha256": "d3b6ba7966154fcdef961299d0a956c4fb7e66e895c98380040a62c07a092ad8",
+      "bytes": 10781,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/local/step4/step4-local-agent.json": {
+      "sha256": "184f5b78bd8cf784f2745cafc18967fa98b1aa76da5caea27e2a1231f0a67b32",
+      "bytes": 6140,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/locations.json": {
+      "sha256": "502b35c23834b218ff2ec7dc5f2915c0efa3cc7bd1f57df19d96992ce3ae4467",
+      "bytes": 28372,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/build-app.txt": {
+      "sha256": "d85e84c33a50922c98a75a35f8eff62e9c8df0162c49ed20257f8de7faceb8c5",
+      "bytes": 115,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/build.txt": {
+      "sha256": "63de6034798320602fc2aa55b15fa540cc4f1b4634ade2435d55514f179b12b9",
+      "bytes": 2881,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/format-check.txt": {
+      "sha256": "9235c44dd9591b2dbe8c6e0d1bb65096090843b18d7cb69cdee187b93a9f92fb",
+      "bytes": 89,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/results.json": {
+      "sha256": "6a1857d81f92e8ea33e85de30bf4129980884984aec3ac53ad69030090d977c6",
+      "bytes": 2309,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/test-agent.txt": {
+      "sha256": "e570441b64c929f69e565a0c47c62f892a1569475956ab30effb0ff367d282df",
+      "bytes": 6106,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/test-app.txt": {
+      "sha256": "e6226146ed07893cec17811fd3a2abe88e9b73ca8b296821f9f9b280a2d3bb89",
+      "bytes": 3510,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/test-evaluation.txt": {
+      "sha256": "fa02c1d64fe3ee51aecff60677d1950c6b8474ea2737e5d9c83a1509aa31488e",
+      "bytes": 1235,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/test-identity.txt": {
+      "sha256": "f2b239aa3e644e93431b4c4a707466d1f87eca4e86a662b046bd13a5ff95acd3",
+      "bytes": 581,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/test-sepolia.txt": {
+      "sha256": "f506acaa531a8cf6304c17ced168691dfd3e81a78b9b92d7b947ac4fce2e9583",
+      "bytes": 1453,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/test-ui.txt": {
+      "sha256": "10faec620ff3daea3dbbf7a48bb605178df9d4b7f0f66cb548e49a444b79a4d7",
+      "bytes": 3138,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/full-review/test.txt": {
+      "sha256": "5f15354a69ee160886aa8bc5bdbf8a2a0f2271ee6f8753d6352b572b5f62bce5",
+      "bytes": 4520,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/repository-review.json": {
+      "sha256": "088d6b68e79c09f3a787e4b444f1cda9e15880f74ffd84da2ad53558cb8ef4f3",
+      "bytes": 2843,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/maintenance/2026-10-19/step5-documentation-sync-checks.json": {
+      "sha256": "61a5d1e503e250e27bffa1d0ee400d5adbf22500a1f6e1e1632cd9f184621bf1",
+      "bytes": 2957,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-agent-regression.txt": {
+      "sha256": "b62ac61e76eff707285057ec1ad50fae202c19ee5ee7c0381baa8e8fc0e5422e",
+      "bytes": 6117,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-app-regression.txt": {
+      "sha256": "c9f086471567ebefcec8f1cb5be8629d3e34c67e5ffcaede9f313ee5efc137b7",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-evaluator-regression.txt": {
+      "sha256": "7dc449ddcc88a24ffd76428f97e7709aa4763e3ddf3029de9bb73cca20da7cbe",
+      "bytes": 1242,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-owner-recovery-focused.txt": {
+      "sha256": "8f1c8dae9a94f8159b3470807a244c785f4a7b5fe1d62ae02d4cfd50a23c01aa",
+      "bytes": 621,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-final.txt": {
+      "sha256": "3379b455494113873de32c7bf765182c5cf362f188a3f4b7a9884d5bf1e7a847",
+      "bytes": 1447,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v1.txt": {
+      "sha256": "1cc427b57acd7882a101eca3e9ba20791be6049bf65a585b75d2e602d136e6f5",
+      "bytes": 2679,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v2.txt": {
+      "sha256": "f0264547696ffb5049bcca9b32f1ea5c07dc2812361f9c678e6cb304b4558f3d",
+      "bytes": 2264,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v3.txt": {
+      "sha256": "a9d6f5606750a5c8349e240779c1d160187b0223c683c02697a301ca4f2e3dff",
+      "bytes": 1369,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-preparation-tests-v4.txt": {
+      "sha256": "bf6956fa0b4fd2730d05f6e5a1be130cf317e3d80d59ac3b9e64c1ea7056b5bd",
+      "bytes": 1451,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/checks/step5-sepolia-setup-ui-focused.txt": {
+      "sha256": "b26f007b03d26d0801da1ceeac296e31cdcbb2c7309c848254324b4348883a68",
+      "bytes": 889,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/step5-sepolia-preparation-final-checks.json": {
+      "sha256": "1ed1ea34602eb7aef947947940620179feb32f20101e8e1f3c06919663cffeb8",
+      "bytes": 1242,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/step5-sepolia-preparation-local.json": {
+      "sha256": "11355c5e254194568bc86a625752bc4bae304d9583e3c5fa968096c124798fd2",
+      "bytes": 5733,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/step5-sepolia-scripted-agent-regression.json": {
+      "sha256": "b3b7af7b09a2dc92ab0062e77c1cffe907c215f2dccdde2aed3e528e61fccd03",
+      "bytes": 6140,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/step5-sepolia-session.json": {
+      "sha256": "1858bfba87aec46e56fc01ab0538fec34826396f351ace8b3da0882650e032b8",
+      "bytes": 31595,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/step5-sepolia-setup-review-local.png": {
+      "sha256": "d31aef7d5b10334c12c4300787b9db53987f678e7bde56475355032da069e7ae",
+      "bytes": 203360,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v1/results.txt": {
+      "sha256": "d388f61d3863b6594d053a0f5b196005bd4c723c01c589273b0c62519c651d59",
+      "bytes": 7703,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v1/step3-desktop.png": {
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec",
+      "bytes": 139853,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v1/step3-mobile.png": {
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364",
+      "bytes": 98223,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v1/step3-owner-approval.json": {
+      "sha256": "ce85db72a333807e0d868fb897dc4e7a1a98d2e70ce39f2ab65ab814b0cc60a5",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v1/step3-review.png": {
+      "sha256": "ab0e69676ee03996d8e1eeeb1c2d784bfc8add4b0bc87002d257619cd103c645",
+      "bytes": 211221,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v1/step4-agent-desktop.png": {
+      "sha256": "99607e9285abeb8cb721c9c815f2cdffb3175c4ae5510247b5dbcd7a98e0ecee",
+      "bytes": 260890,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v1/step4-agent-mobile.png": {
+      "sha256": "9095a02c51b22ab647d9d19bcace4f2cb5a6ab14d20b85666b90e2ac113486ab",
+      "bytes": 181034,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v2/results.txt": {
+      "sha256": "3ba6f046d912b538c6fe02d1e0084aa20c978621669d5c1d5c9e7a86815e822e",
+      "bytes": 2938,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v2/step3-desktop.png": {
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec",
+      "bytes": 139853,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v2/step3-mobile.png": {
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364",
+      "bytes": 98223,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v2/step3-owner-approval.json": {
+      "sha256": "d6d61f179eb5e7c12ce0afcf3d5bbf57a18ed16e3005d361ae55ac0163d9d1a7",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v2/step3-review.png": {
+      "sha256": "69619acce7a4f7ccf290411e607c52439b3d55130b27a6f1daf02904c1476c68",
+      "bytes": 211298,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v2/step4-agent-desktop.png": {
+      "sha256": "b132df05e1ca89582b3ba5d02f82038369b009905c4a52020a1b76962ce8f0ee",
+      "bytes": 260456,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v2/step4-agent-mobile.png": {
+      "sha256": "8c78cbe38526c120f5713cfcba0387dbf7282e4cf740c79db97d32e8679d909b",
+      "bytes": 181022,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v3/results.txt": {
+      "sha256": "d1ea8a7b09d0b4a5f2095147c9c91cdfb87123452e9f4ab53f487ef98178e370",
+      "bytes": 5206,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v3/step3-desktop.png": {
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec",
+      "bytes": 139853,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v3/step3-mobile.png": {
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364",
+      "bytes": 98223,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v3/step3-owner-approval.json": {
+      "sha256": "14f6e3b55581a0db59b32e243ab2398cc46bd71c25a78539b3516639e4b75319",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v3/step3-review.png": {
+      "sha256": "250a96de6cd77c13197a53abc7359068da72c31d80d05df6b9664f931704710e",
+      "bytes": 211529,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v3/step4-agent-desktop.png": {
+      "sha256": "fe16813b1ddbf7542eacdaf2ed864003454c41d5de1ae0cbd5b1c45971569481",
+      "bytes": 260420,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v3/step4-agent-mobile.png": {
+      "sha256": "9095a02c51b22ab647d9d19bcace4f2cb5a6ab14d20b85666b90e2ac113486ab",
+      "bytes": 181034,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v4/results.txt": {
+      "sha256": "1219c439a3017c4f000635f5df1916e9e67b4f1827089a96868110a52339e330",
+      "bytes": 3079,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v4/step3-desktop.png": {
+      "sha256": "caeae4bab6548a8d97841ef25842baf25a22f2fee652cd795e33f47fcd1a61ec",
+      "bytes": 139853,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v4/step3-mobile.png": {
+      "sha256": "4f15312f3062fb6debc3f1b1b96b228e79c2e7ca2d93f17db82a33892159e364",
+      "bytes": 98223,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v4/step3-owner-approval.json": {
+      "sha256": "362a3e7e07ddc7bc33024dd36d35a720c22e10b07002a9acd804380854f9a72f",
+      "bytes": 3515,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v4/step3-review.png": {
+      "sha256": "0efdcfa94decf28bb4f1bb0c4564c0124f9ae8c591efdbd1fac46a751fa75d75",
+      "bytes": 211754,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v4/step4-agent-desktop.png": {
+      "sha256": "5b2faa98c598062a317207688728b3f9a09ac4f162ed748f38125fda013fdbb0",
+      "bytes": 260018,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/preparation/ui/v4/step4-agent-mobile.png": {
+      "sha256": "9095a02c51b22ab647d9d19bcace4f2cb5a6ab14d20b85666b90e2ac113486ab",
+      "bytes": 181034,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-2026-10-19T15-52-14-777Z.json": {
+      "sha256": "fb8ee64852392ce7c99255ba1520427ed7fc0899c692baec8779c8ed358331b7",
+      "bytes": 62076,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-agent-access-inspection.json": {
+      "sha256": "899632e441dc9b3cde04f672781bc379ac0672ba399f55e8f76908569f513939",
+      "bytes": 10002,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-agent-access-reconciliation.json": {
+      "sha256": "401d3a0729762272423111b295b3d476223bd5c54b5bb294761b118effab929b",
+      "bytes": 11816,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-agent-funding-review.json": {
+      "sha256": "f8013da47d69a64fae84d2215df03798b14dd32f8e1c865543e95deec1b5853a",
+      "bytes": 1269,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-agent-funding-verification.json": {
+      "sha256": "94ef10d3253fa59cfff143e2a3b54a284fa53b56bea502bb1896251d8e9fc2bf",
+      "bytes": 6609,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-artline-inspection.json": {
+      "sha256": "876d6f63f4ead70ebaa8e89b7daab7b9b19ece197091a7fcc8fb55c69abc6867",
+      "bytes": 6204,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-bill-approval-verification.json": {
+      "sha256": "338e6b7214597939b70707c84518ceecd8732e0ca6749648dbdd797389b3f2d7",
+      "bytes": 16245,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-clarification-verification.json": {
+      "sha256": "fd4df49961406df16b62404eb508af68d2f2533ae34d88c53ca6a724b9ee8791",
+      "bytes": 2683,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-deposit-verification.json": {
+      "sha256": "00c0411463ac19cbf5c56d39cd3e02926c0da4ee930575f289782a3cfe7d339a",
+      "bytes": 3961,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-export-verification.json": {
+      "sha256": "d12e07d1d878e6c6f65171304816cad4c8ef61c05b04f4fae326ab354f0c1cf6",
+      "bytes": 5063,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-final-checks.json": {
+      "sha256": "9cea63b013d3bb9db280a935f1350b63a10fa9056e1b00d15fc1f48d32c32b7f",
+      "bytes": 1938,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-hostline-inspection.json": {
+      "sha256": "365d4dd5d5696390c47ca81229238e6bfe3d160fe748d50c454f2688203b638e",
+      "bytes": 10521,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-hostline-reconciliation.json": {
+      "sha256": "7703ed1ed7d7939844c439e7d30b1a01edffe719dff80ec7802b282c1b6dca19",
+      "bytes": 6174,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-owner-review-verification.json": {
+      "sha256": "81e182eb8b10b48284ca162c111656e6b94a590ae499eefd254e1c10e131e194",
+      "bytes": 1957,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-payment-plan-verification.json": {
+      "sha256": "c478b11788dd6393534081eba2c47f6702edbcd8ccb814238d4000394c5b8fed",
+      "bytes": 5840,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-payment-verification.json": {
+      "sha256": "b6a359975c11d70d9ba8ace726eb2c3ba045008be04c45ab88933612df7d52b6",
+      "bytes": 16231,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-read-only-observation.json": {
+      "sha256": "5436673e5bb202c1f8f0b8906fd3f604c2a5018617c373a9877c02e415a9603a",
+      "bytes": 5074,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-resume-verification.json": {
+      "sha256": "93fbe2cb9648fd5d3ee3eb151a77a1eef62308bf04c25a6f70a7f5fd4d47e052",
+      "bytes": 11697,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-revocation-verification.json": {
+      "sha256": "406f21db94def9d83ed1b7b9c5162298789859eef20fa54c8544ad76a5e1b8b2",
+      "bytes": 12119,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-sample-intake-verification.json": {
+      "sha256": "d58230fc7470e8f61c2d54a33f677adfb50b5f512ee95204fb51b323c68de4df",
+      "bytes": 2919,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-token-wallet-review.png": {
+      "sha256": "84e2c15a1aad04376b2486c3ba65fdc3ba14db8d5f5dd8cb8ee6ceedfebdaecc",
+      "bytes": 461582,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/sepolia/public/step5-sepolia-wallet-wrapper-recovery.json": {
+      "sha256": "9abf19a8d0c8c5224a36a7042f9bfd3dc0bb6d5b9a8a7490c0872b8f3fdbbbfb",
+      "bytes": 8017,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T06-07-07-912Z-fixtures.json": {
+      "sha256": "80b1f9d89a2cf090027a1d622a2858fa8ced32fa693a64625442bf51349e02d1",
+      "bytes": 12384,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T06-12-16-951Z-live.json": {
+      "sha256": "99e0f31399e200d219742404aaf1662c68868c9712772e829329ab7047401dd1",
+      "bytes": 15307,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T06-31-04-329Z-groq-live.json": {
+      "sha256": "8b5b196dedfbfa0dac9075f1b85cf2cd1311a9dc33e7ea78d31810f4f1758066",
+      "bytes": 24395,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T06-35-01-120Z-fixtures.json": {
+      "sha256": "9be764d288d9933630f63f3fe5876cd8e68d8e6760891972344ba11260814571",
+      "bytes": 14798,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T06-35-45-243Z-groq-live.json": {
+      "sha256": "2580297e60838f45079d298eeb886bb682410064f6d769733c83d12649ab666b",
+      "bytes": 23401,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T06-56-16-503Z-groq-live-analysis.json": {
+      "sha256": "6985db9be4a8d50d8fd2ddb5dcc84649d6315af172a09f7cfa12f849347b4c92",
+      "bytes": 25523,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T06-56-16-503Z-groq-live.json": {
+      "sha256": "49dba1939f31c3c81218df9310b3ba943a8b8d0f614d4a84c19b75bf95b580ec",
+      "bytes": 320518,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T08-34-52-616Z-groq-live.json": {
+      "sha256": "9215329623fca147a1df41f4345c28232afd7dd2fd3088274bda17007139e0a5",
+      "bytes": 30109,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T08-37-56-741Z-groq-live-analysis.json": {
+      "sha256": "2e87160ffe9a772fd92a25a5bef6dac636d5c5e98387f48ae259d4f231c5d86d",
+      "bytes": 25605,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-runs/2026-10-19T08-37-56-741Z-groq-live.json": {
+      "sha256": "f2df564c54746a02bc7d974dbdd0f8310355c0eb30c88a69915c2919e79ffd72",
+      "bytes": 328592,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-v1-runner.mjs": {
+      "sha256": "7aebd014e3b3223d29d301e57c59cf16b646f3c8726f67ae50c9756f146b6c29",
+      "bytes": 25592,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-evaluation-v2-runner.mjs": {
+      "sha256": "80f7a159d5571c0d579dbe6dae90eb518ce18f169d275661d054d1c4de61d952",
+      "bytes": 30032,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-gemini-agent-v2.mjs": {
+      "sha256": "63a0b1d29fb2a4a236504b41967ab2684e6d68e086628772adc1ad484411f580",
+      "bytes": 7001,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-gemini-model-v2.mjs": {
+      "sha256": "ff37bcb9083d953b26acf9b6a9a2d870eabf8d98fdb70563e9af045272948e34",
+      "bytes": 12169,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v1-fixtures.mjs": {
+      "sha256": "018b1059e8a28ea2067d76847a398295137d31a721428a2e14be239ca0f08a8a",
+      "bytes": 9938,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v1-runner.mjs": {
+      "sha256": "81ccf5d0c3102140e78ad21b3b6deec27c655740308971086e5545404e33829b",
+      "bytes": 32849,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v2-model.mjs": {
+      "sha256": "18a66a0cc4cbe511f8f222292c42d45228a66c030e721074e02b52f973bc371c",
+      "bytes": 16615,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v2-runner.mjs": {
+      "sha256": "c746b33b975bb236ffbed1e3469fdf4a42329901bf9dda912ae29c775ab8e1d3",
+      "bytes": 35071,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v3-agent.mjs": {
+      "sha256": "87b432fb828a09e3ccac70fe39773c9fc90218e11a92d2c8de379267a9b1ce50",
+      "bytes": 7014,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v3-model.mjs": {
+      "sha256": "ea08c5afa579cd60d8994b76610e58a0eaf1e914844cf99cffb7f0fa0bb0aec9",
+      "bytes": 17418,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v3-runner.mjs": {
+      "sha256": "03a0668cda8c7a70cee8ed59876e701325c80129413eb82e3a6162a008bc2e7c",
+      "bytes": 37262,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v4-agent.mjs": {
+      "sha256": "161f64c3de512880d8ca8cea4012926b988a5a71bc0289aa3f6421203b2ff85e",
+      "bytes": 8277,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v4-runner.mjs": {
+      "sha256": "c1a950e9b9120fdc0de4c82cdccfae4aa11e80974876463f00b9f1563c93d25d",
+      "bytes": 39966,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v5-client.mjs": {
+      "sha256": "4084a9583e96ed11b7784a9698dd34443767c180692ee017bd8c110704a99f10",
+      "bytes": 33567,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v5-executor.mjs": {
+      "sha256": "b49bf47364a5adcf45562b3b50bec7fc694ab147e990ec81c4576c71eba2829f",
+      "bytes": 8124,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v5-runner.mjs": {
+      "sha256": "0dd3ee494fe554f7a357bb1531bc12abc7981938f738eadefa6ea7c903111632",
+      "bytes": 41852,
+      "origin": "verified-hosting-commit"
+    },
+    "evidence/step5-groq-v5-service.mjs": {
+      "sha256": "150e05979679e208e966dce6634a792fef73fce2e83b966921641f362c0c9978",
+      "bytes": 20461,
+      "origin": "verified-hosting-commit"
+    },
+    "foundry.toml": {
+      "sha256": "1c21b81399854c40b4a3a8a6acb4e73f0ef1cd3db0d133ced1fe71a4dbfeca7f",
+      "bytes": 354,
+      "origin": "verified-hosting-commit"
+    },
+    "package-lock.json": {
+      "sha256": "99f8557e3c9e8e4c0f802733ff8a4f0df477185654d0ac79fd4eb293c82c32b0",
+      "bytes": 38444,
+      "origin": "verified-hosting-commit"
+    },
+    "package.json": {
+      "sha256": "758dadc0bdbde528ed0183dd94dd0353bc15e19eb5c5bfcedce287bbd4beef79",
+      "bytes": 1842,
+      "origin": "verified-hosting-commit"
+    },
+    "playwright.config.mjs": {
+      "sha256": "192df540b41834f3a3fc8833e864e38acc1787c33a1736d50ccde5f5932332d3",
+      "bytes": 359,
+      "origin": "verified-hosting-commit"
+    },
+    "render.yaml": {
+      "sha256": "24bf84d1221c59eda9de774904d571a09ab3cada1181c9f146041771e44dcc8c",
+      "bytes": 826,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/bill-identity.mjs": {
+      "sha256": "a51a219b8f1e615dd16cf824ae5c42c559d8481d87e8323fbcf170b5a3cbe9e8",
+      "bytes": 955,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/build-app.mjs": {
+      "sha256": "7032741ee55ca61025cc6256c0b88f70f4a2d0f0ec5fb8f4410dffad58a7bc21",
+      "bytes": 1226,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/check-repo.mjs": {
+      "sha256": "a4addab8c0a0d69f1e0bba85d24036917e5ba935ad598a3e447b9b63472731e9",
+      "bytes": 3127,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/dev.mjs": {
+      "sha256": "54bdbf524d7fb65b5350806c6bb49887273fad54dd8f61525c24e81f26063a9d",
+      "bytes": 2420,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/evaluate.mjs": {
+      "sha256": "a0ad9d3cc635cc34159b73846f21b020a97b3483ee1f32112d41c511510df2e4",
+      "bytes": 44524,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/evaluation-fixtures.mjs": {
+      "sha256": "37fc75f4b92454f12528984b49e37a893b02ff1225da5d76f57f24b46611f22a",
+      "bytes": 10257,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/foundry.mjs": {
+      "sha256": "e5178e5a2c37ad79c57a810cabdd00d4552f71453b5f75dea78fd362ccdb053e",
+      "bytes": 1664,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/hosting/gateway.mjs": {
+      "sha256": "a5f44cb69e754990895bab44a0926e62287edb082cee0a725d30ce166d8eb36c",
+      "bytes": 10220,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/hosting/migration.mjs": {
+      "sha256": "161fd7cb1b2903117a944f4a830cbee54eab38cdc15820bfde94970801d350c7",
+      "bytes": 3114,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/hosting/neon.mjs": {
+      "sha256": "bbcda4010bb55f670e7f178f29f0b7f13a2c2ea01a9b3137b50cb3f0feacfa48",
+      "bytes": 1737,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/hosting/package-lock.json": {
+      "sha256": "4cb49b6993e8e2039dc016a2754b613aee98a909cfc5624ca9e289e2a8b5179e",
+      "bytes": 642,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/hosting/package.json": {
+      "sha256": "45f8397360f1ae397b5b2099adc6f8043e07c01e8516fbcf315f897269b3c8e4",
+      "bytes": 158,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/hosting/persistence.mjs": {
+      "sha256": "8a62173855596ae137e003725b6c48ac3c2dfdb7d566cfff1c71f7741c7c53b2",
+      "bytes": 5265,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/hosting/start.mjs": {
+      "sha256": "6d80561743145cdba7a7757b0e22e322295cfffe0bf79ca8558436abcea97002",
+      "bytes": 4718,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/live-check.mjs": {
+      "sha256": "e48ca6f4e4461629769060a74919bf659fec5eb777c573f46c97fd0593dcd404",
+      "bytes": 4245,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/live-workflow.mjs": {
+      "sha256": "f55464b98bf3f731fa0f1979d0c8b9775f82f7eb9cc6758915c9316002949a7f",
+      "bytes": 17719,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/local-chain.mjs": {
+      "sha256": "2585f2466537c104be8979fb78869e0e94d3e640618ba352af3b104b05030fbb",
+      "bytes": 5464,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/local-demo.mjs": {
+      "sha256": "5cab1f150f50e4c5b0a5679994bdbe2837458e91dfa7d5d45bd2caabbdc4e31d",
+      "bytes": 11727,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/sepolia-config.mjs": {
+      "sha256": "d7445e413befb1d5ba5fdc9aa69261c26892a38bc3469437c639fd439f3e8f4f",
+      "bytes": 3779,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/sepolia.mjs": {
+      "sha256": "d8a29cc103cc517e3131727a8eae4b162b9de7168361d737037766ad27a45d60",
+      "bytes": 6061,
+      "origin": "verified-hosting-commit"
+    },
+    "scripts/summarize-evaluation.mjs": {
+      "sha256": "8ecaf60929705ee492d487ba870e8b640142b462a5d8591d4472562a5006e8a7",
+      "bytes": 7793,
+      "origin": "verified-hosting-commit"
+    },
+    "test/MoneyBoundaries.t.sol": {
+      "sha256": "72ebdd96e0589da3d3f856a74942cea585fb59b80c3463bf9a5c79b0dd7ded0e",
+      "bytes": 6702,
+      "origin": "verified-hosting-commit"
+    },
+    "test/RolesAndApprovals.t.sol": {
+      "sha256": "436326238773b62f56538c449040b3a007d7959afaa343ec8df66536c06ea1c1",
+      "bytes": 11184,
+      "origin": "verified-hosting-commit"
+    },
+    "test/StopAndReplay.t.sol": {
+      "sha256": "a8c68c97856764a738d19ed1d142ed35adc171451fc39e480d880cc2ed9885de",
+      "bytes": 11447,
+      "origin": "verified-hosting-commit"
+    },
+    "test/TestBase.sol": {
+      "sha256": "60c6ba8835ba3914ea95e319cf99a7db0a2e17dd5b06622ace22dddf9747c9db",
+      "bytes": 4563,
+      "origin": "verified-hosting-commit"
+    },
+    "test/TransferIntegrity.t.sol": {
+      "sha256": "6ec93ae79ea1ccaf637ec925d146ed6854404fcdd510343c68abb856590f26af",
+      "bytes": 8065,
+      "origin": "verified-hosting-commit"
+    },
+    "test/agent.test.mjs": {
+      "sha256": "7ace79e3938e5ff9a4d1822127ab7c71c02a565115fcc3a51730c074338a4880",
+      "bytes": 30857,
+      "origin": "verified-hosting-commit"
+    },
+    "test/bill-identity.test.mjs": {
+      "sha256": "a73f63a5d9ba647dad1267bd2d86672fb035a9604eab7b36e2f44da5159380c6",
+      "bytes": 1680,
+      "origin": "verified-hosting-commit"
+    },
+    "test/evaluation.test.mjs": {
+      "sha256": "1c8adc43d5a0e13fb6350b5a54b48bf3edc790dfc67929f74639d594eddfc002",
+      "bytes": 7604,
+      "origin": "verified-hosting-commit"
+    },
+    "test/gemini-model.test.mjs": {
+      "sha256": "f87d2ba1c2a1928f592c54f5e91073f2a64dd2676ad0150928f0706750cf442f",
+      "bytes": 6623,
+      "origin": "verified-hosting-commit"
+    },
+    "test/groq-model.test.mjs": {
+      "sha256": "77e1c8ec55fc2bee2f654465dee8c49d35e17a2a89916a420ab3197fb73a5be6",
+      "bytes": 7419,
+      "origin": "verified-hosting-commit"
+    },
+    "test/hosting-browser.test.mjs": {
+      "sha256": "1d53915bd315df2117c71226339abe592073d40bac6de8597763d80da025064e",
+      "bytes": 2556,
+      "origin": "verified-hosting-commit"
+    },
+    "test/hosting-migration.test.mjs": {
+      "sha256": "63261858f3ceaa9af13d06aa24b6a1cede3ae48f3ddd29803f51f5bca52b0c63",
+      "bytes": 2444,
+      "origin": "verified-hosting-commit"
+    },
+    "test/hosting.test.mjs": {
+      "sha256": "ed0fcf2e5dee3345281ac653681c64878b2e395979a4dbdaee38e1e280f2e687",
+      "bytes": 14832,
+      "origin": "verified-hosting-commit"
+    },
+    "test/intake.test.mjs": {
+      "sha256": "deb232be2b094d79897a2909a03b51303f7bdcb0b429a5b5b19a7947b366f12e",
+      "bytes": 5077,
+      "origin": "verified-hosting-commit"
+    },
+    "test/owner-workflow.test.mjs": {
+      "sha256": "4bf23bd2e83f3d905f0963a26e49046ab795a0f7768b1e24bcbb70fe61c9ffed",
+      "bytes": 16468,
+      "origin": "verified-hosting-commit"
+    },
+    "test/sepolia.test.mjs": {
+      "sha256": "4ee3455d61de4e720107fb402831ea6a8c43195616731e193d7d366b0c95b740",
+      "bytes": 14699,
+      "origin": "verified-hosting-commit"
+    },
+    "test/server-shutdown.test.mjs": {
+      "sha256": "e9e92444806a37f5b2802185f68280476e1a665f259db326c7aeae25409de02b",
+      "bytes": 1499,
+      "origin": "verified-hosting-commit"
+    },
+    "test/ui/agent.spec.mjs": {
+      "sha256": "9d391ed08e8336685d800e7be3a82393812da5ee26a751ed7b25b93c889da418",
+      "bytes": 10558,
+      "origin": "verified-hosting-commit"
+    },
+    "test/ui/owner.spec.mjs": {
+      "sha256": "ff5cb82a9c9a7b82a275e94fbdeb3bcfc59e4dd37c6988148c5f7a6e465a9081",
+      "bytes": 13382,
+      "origin": "verified-hosting-commit"
+    },
+    "test/ui/setup.spec.mjs": {
+      "sha256": "c7397b03684c320b73180a0d82ebaecf2201f97defb90026dcae1723cb152e09",
+      "bytes": 5892,
+      "origin": "verified-hosting-commit"
+    }
+  }
+}

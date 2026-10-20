@@ -33,3 +33,7 @@ keystore/
 .~lock.*#
 .idea/
 .vscode/
+
+# Delivered large originals are preserved locally and linked through Drive.
+/submission/Mandate-Demo.mp4
+/submission/Mandate-Source.zip

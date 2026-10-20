@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-20T16:15:31.721353+00:00",
+  "status": "Local verification passed; remote results are published by GitHub Actions",
+  "scope": "Post-submission judge-facing source organization. No feature change, live model call, public transaction, deployment or Drive replacement.",
+  "publicRepositoryAuthorizedByTeam": true,
+  "freshPinnedInstall": {
+    "node": "25.2.1",
+    "npm": "11.6.2",
+    "rootAndHostingInstalledInDisposableCopy": true,
+    "auditVulnerabilitiesReported": 0
+  },
+  "checks": [
+    {
+      "name": "build",
+      "command": "npm run build",
+      "passed": true,
+      "testCount": null,
+      "seconds": 1.73
+    },
+    {
+      "name": "format",
+      "command": "npm run format:check",
+      "passed": true,
+      "testCount": null,
+      "seconds": 0.15
+    },
+    {
+      "name": "contracts",
+      "command": "npm test",
+      "passed": true,
+      "testCount": 58,
+      "seconds": 0.27
+    },
+    {
+      "name": "identity",
+      "command": "npm run test:identity",
+      "passed": true,
+      "testCount": 4,
+      "seconds": 0.27
+    },
+    {
+      "name": "owner",
+      "command": "npm run test:app",
+      "passed": true,
+      "testCount": 35,
+      "seconds": 18.86
+    },
+    {
+      "name": "agent",
+      "command": "npm run test:agent",
+      "passed": true,
+      "testCount": 59,
+      "seconds": 42.39
+    },
+    {
+      "name": "evaluation",
+      "command": "npm run test:evaluation",
+      "passed": true,
+      "testCount": 9,
+      "seconds": 0.27
+    },
+    {
+      "name": "sepolia-rehearsal",
+      "command": "npm run test:sepolia",
+      "passed": true,
+      "testCount": 11,
+      "seconds": 4.7
+    },
+    {
+      "name": "browser-build",
+      "command": "npm run build:app",
+      "passed": true,
+      "testCount": null,
+      "seconds": 0.21
+    },
+    {
+      "name": "browser",
+      "command": "npm run test:ui",
+      "passed": true,
+      "testCount": 19,
+      "seconds": 49.54
+    },
+    {
+      "name": "hosting",
+      "command": "node --test test/hosting.test.mjs test/hosting-migration.test.mjs test/hosting-browser.test.mjs",
+      "passed": true,
+      "testCount": 16,
+      "seconds": 2.58
+    }
+  ],
+  "totalPassingTests": 211,
+  "preservation": {
+    "originalSubmittedFilesUnchanged": 12,
+    "frozenSourcesUnchanged": 47,
+    "historicalSourceSnapshotsUnchanged": 17,
+    "retainedRawEvidenceArtifactsUnchanged": 175,
+    "applicationContractsAndTestsUnchanged": true,
+    "privateWorkingArchiveKeptOutsideRepository": true
+  },
+  "privacy": {
+    "knownPrivateValuesScanned": 9,
+    "knownPrivateValuesFound": 0,
+    "recursiveArchivePayloadsScanned": true,
+    "privateCredentialsIdentityDraftAndRawRecordingPathsExcluded": true,
+    "gitIndexCredentialAndLinkCheckerPassed": true
+  },
+  "authoredWhitespace": "Passed excluding unchanged original CI logs and the standard SRT terminal blank line; those raw bytes are preserved.",
+  "newLiveModelCalls": 0,
+  "newPublicTransactions": 0,
+  "deploymentChanges": 0,
+  "deliveredDriveFilesReplaced": 0,
+  "emailsSentByAssistant": 0,
+  "humanFullVideoPlaybackOrTalkRehearsalNotClaimed": true,
+  "githubActions": "https://github.com/arifshekhk8/chainsentinel-mandate/actions"
+}

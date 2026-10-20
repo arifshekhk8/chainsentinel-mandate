@@ -1,0 +1,10 @@
+[
+  {
+    "policy": "no-referrer",
+    "postedOrigin": "null"
+  },
+  {
+    "policy": "same-origin",
+    "postedOrigin": "http://127.0.0.1:60980"
+  }
+]

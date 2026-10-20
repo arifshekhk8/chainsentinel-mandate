@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-10-20T08:05:14.413Z",
+  "anonymousApi": 401,
+  "bills": "3",
+  "balance": "650",
+  "network": "Sepolia test network",
+  "mobileOverflow": false,
+  "scriptErrors": 0,
+  "signedOutApi": 401,
+  "mode": "local TLS proxy, real Neon, read-only Sepolia",
+  "liveModelCalls": 0,
+  "publicTransactions": 0
+}

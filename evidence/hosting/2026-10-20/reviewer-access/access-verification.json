@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-10-20T08:40:56.243Z",
+  "url": "https://chainsentinel-mandate.onrender.com",
+  "deployId": "dep-dbbihkfavr4c73e0ecpg",
+  "commit": "8495f599ea635e5e68a5643df43225da7164d60a",
+  "anonymousStatus": 401,
+  "oldPasswordStatus": 401,
+  "newLoginStatus": 200,
+  "logoutStatus": 401,
+  "cookie": {
+    "secure": true,
+    "httpOnly": true,
+    "sameSite": "Strict"
+  },
+  "otherRuntimeVariablesUnchanged": true,
+  "passwordStyle": "ChainSentinel and Mandate prefix; four random EFF words and six random digits",
+  "credentialStoredOnlyInIgnoredPrivateFiles": true,
+  "loginFileMode": "600",
+  "scriptErrors": 0,
+  "newLiveModelCalls": 0,
+  "newPublicTransactions": 0,
+  "judgeRole": "Shared full workspace; no read-only role implemented",
+  "retainedWorkspace": {
+    "reviewedBills": 3,
+    "confirmedPayments": 2,
+    "receiptHashes": [
+      "0x37ba350085b7cf15423745251aa71c8530c7c5915493534663f7eb0a46029ac9",
+      "0xa35b0bd2785c1b9272e571d2a5197eb5530089151c6b8e751935b02941931ba4"
+    ],
+    "vaultBalanceUnits": "650000000",
+    "tokenDecimals": 6,
+    "policyVersion": "7",
+    "agent": "0x0000000000000000000000000000000000000000",
+    "currentUtcDaySpentUnits": "0"
+  }
+}

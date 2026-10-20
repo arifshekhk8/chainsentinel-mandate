@@ -579,10 +579,6 @@
     "evidence/step5-groq-v5-runner.mjs"
   ],
   "generatedOutputPolicy": "Frozen test/demo commands can emit fresh files at their original evidence paths. Saved historical artifacts here are curated snapshots. Do not overwrite them with a later run.",
-  "progressHistory": {
-    "path": "evidence/history/progress-through-step5-2026-10-19.txt",
-    "sha256": "a5b72b07991a304abe1d516b094e6bdd62c59865bc29bc85282c26dc4e4dacd8"
-  },
   "directoryMoves": [
     {
       "from": "evidence/step5-ui-regression",
